@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  
+  --color-ivory: #FAF7F2;
+  --color-warm-ivory: #F5EDE0;
+  --color-cream: #F2E9D8;
+  --color-espresso: #2C1810;
+  --color-darkest-espresso: #1F1410;
+  --color-mid-espresso: #3A2418;
+  --color-deep-gold: #8F6F3E;
+  --color-gold: #C4A067;
+  --color-light-gold: #EFD9A8;
+  --color-grey: #888780;
+  --color-light-grey: #D3D1C7;
+  --color-very-light-grey: #E8E5DC;
+  --color-sage: #7BAF7A;
+  --color-deep-sage: #4A7E49;
+  --color-deep-rose: #8C5249;
+}
+
+/* Custom scrollbar and subtle transitions */
+html {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #2C1810;
+}
+
+::selection {
+  background-color: #EFD9A8;
+  color: #2C1810;
+}
+
+/* Base styling for high-end feel */
+.text-balance {
+  text-wrap: balance;
+}
+

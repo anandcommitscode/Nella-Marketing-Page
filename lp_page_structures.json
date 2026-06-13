@@ -1,0 +1,170 @@
+{
+  "pages": [
+    {
+      "path": "/",
+      "title": "Homepage",
+      "sections": [
+        "Hero: the beauty companion that keeps up with you.",
+        "The Problem: you're already doing the work",
+        "What Nella Does: four things, done properly.",
+        "The Intelligence Moment: the bit a notes app cannot do.",
+        "How it Works",
+        "Glow Score Teaser: the only score that tells you the truth.",
+        "Social Proof: loved by the women who built her.",
+        "Pricing Snapshot: free to start. £4.99 to understand.",
+        "FAQ Teaser: in case you were wondering.",
+        "Final CTA"
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/why-nella",
+      "title": "Why Nella",
+      "sections": [
+        "Opening Claim",
+        "The Problem",
+        "The Vision",
+        "What this means in practice",
+        "Who it is for",
+        "Final CTA"
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/what-it-does",
+      "title": "What It Does",
+      "sections": [
+        "Hero: four things, done properly.",
+        "The four-step flow",
+        "this is nella"
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/made-for-her",
+      "title": "Made For Her",
+      "sections": [
+        "Hero: made for her.",
+        "which one of these is you?",
+        "nella adapts to you."
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/intelligence",
+      "title": "The Intelligence",
+      "sections": [
+        "Hero: the intelligence behind her.",
+        "three things nella knows.",
+        "what nella is not."
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/pricing",
+      "title": "Pricing",
+      "sections": [
+        "Hero: free to start. £4.99 to understand.",
+        "what is in each.",
+        "what you get for £4.99.",
+        "FAQs: in case you were wondering."
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/about",
+      "title": "About Nella",
+      "sections": [
+        "Hero: about nella.",
+        "Three cards layout",
+        "Final CTA"
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/stories",
+      "title": "Stories / Blog",
+      "sections": [
+        "Hero: the things she actually wants to know.",
+        "by category.",
+        "the latest."
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/for-salons",
+      "title": "For Salons",
+      "sections": [
+        "Hero: for salons.",
+        "how the partnership works."
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/support",
+      "title": "Support",
+      "sections": [
+        "Hero: support."
+      ],
+      "hasDynamicSubpages": true
+    },
+    {
+      "path": "/waitlist",
+      "title": "Waitlist",
+      "sections": [
+        "Hero: the waitlist."
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/download",
+      "title": "Download",
+      "sections": [
+        "Hero: get nella."
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/thanks",
+      "title": "Thanks",
+      "sections": [
+        "Hero: Thanks for joining"
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/privacy",
+      "title": "Privacy Policy",
+      "sections": [
+        "1. Information We Collect",
+        "2. How We Use Your Information",
+        "3. Plain-English Commitments",
+        "4. Your Rights (GDPR)",
+        "5. Contact Us"
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/terms",
+      "title": "Terms of Service",
+      "sections": [
+        "1. Acceptance of Terms",
+        "2. Subscriptions and Payments",
+        "3. Disclaimer",
+        "4. Termination",
+        "5. Governing Law"
+      ],
+      "hasDynamicSubpages": false
+    },
+    {
+      "path": "/cookies",
+      "title": "Cookies Policy",
+      "sections": [
+        "1. What Are Cookies?",
+        "2. Cookies We Use",
+        "3. Your Choices"
+      ],
+      "hasDynamicSubpages": false
+    }
+  ]
+}

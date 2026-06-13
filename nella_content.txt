@@ -1,0 +1,1894 @@
+Nella marketing website: content and copy
+This document contains the complete v1 content and copy for the nella marketing website, ready for developer handoff. It is structured page by page, with each page carrying its own SEO block, copy section by section, and CTA logic.
+The document is organised in three parts:
+Voice and pattern library
+Page content and copy, page by page (38 pages including the three blog articles, each written end to end with SEO, keywords, meta tags, internal links, and CTA)
+Microcopy, reusable strings, and final developer notes
+Table of contents
+Part 1: Voice and pattern library
+Part 2: Page content and copy
+Home (/)
+Why nella (/why-nella)
+Made for her hub (/made-for-her)
+Made for her, the tracker (/made-for-her/track)
+Made for her, the refiner (/made-for-her/refine)
+Made for her, the explorer (/made-for-her/discover)
+What it does hub (/what-it-does)
+Tracking (/what-it-does/tracking)
+Routines (/what-it-does/routines)
+Aftercare (/what-it-does/aftercare)
+Insights (/what-it-does/insights)
+Pricing (/pricing)
+The intelligence hub (/intelligence)
+Ingredient conflicts (/intelligence/ingredient-conflicts)
+Treatment cycles (/intelligence/treatment-cycles)
+The glow score, explained (/intelligence/glow-score)
+About hub (/about)
+Our story (/about/story)
+How we think about your data (/about/privacy-principles)
+Press (/about/press)
+Stories hub (/stories)
+Blog article: what to do after botox (/stories/what-to-do-after-botox)
+Blog article: can you use retinol and vitamin C together (/stories/can-you-use-retinol-and-vitamin-c)
+Blog article: the right order for your skincare routine, AM and PM (/stories/skincare-routine-order)
+Stories category: Treatments (/stories/treatments)
+Stories category: Skincare (/stories/skincare)
+Stories category: Aftercare (/stories/aftercare)
+Stories category: Money (/stories/money)
+Stories category: Occasions (/stories/occasions) 29a. Blog article: the wedding beauty timeline (/stories/wedding-beauty-timeline)
+Support hub (/support)
+FAQ (/support/faq)
+Contact (/support/contact)
+Waitlist (/waitlist)
+Download (/download)
+For salons (/for-salons)
+404
+Thank you (/thanks)
+Persona LP, the tracker (/lp/organiser)
+Persona LP, the refiner (/lp/ritualist)
+Persona LP, the explorer (/lp/explorer)
+Legal pages (/privacy, /terms, /cookies)
+Part 3: Microcopy, reusable strings, and final developer notes
+Part 1: Voice and pattern library
+How nella sounds
+She writes the way she would speak to a close friend over a glass of wine. Confident, warm, specific, never showing off. The site reads like one woman talking to another. Lowercase mental register, sentence case as default, full stops doing the work that em dashes used to do.
+Words nella uses
+Track, log, check, see, remember, know, sort, fix, stop, start, ready, due, overdue, paused, on, off, today, tomorrow, every, all, your, hers, mine. Plain English nouns: routine, treatment, product, clinic, score, history, money, spend, shelf. Comfortable specifics: retinol, microneedling, botox, vitamin C, brow lamination, gel manicure.
+Words nella does not use
+Unlock, empower, transform, journey, elevate, level up, discover (as a verb), seamless, intuitive (as a marketing word), holistic, curated, bespoke, premium, leverage, harness, dive in, get started, take control, optimise (as a marketing word), revolutionary, game-changer, ultimate, smart (overused, but locked as the feature name "smart reminders"), personalised (clinical, but locked as the feature name "personalised intelligence cards"), wellness (when she means beauty). On the question of "we": nella speaks as nella across the proposition pages, the stories, and the product pages. The company behind her (mynella Ltd) speaks where a legal or organisational commitment is being made (the privacy principles, the terms, the press kit ownership, the legal pages). Everywhere else, "we" gives way to the brand voice: "every message gets read" rather than "we read every message."
+Sentence rules
+Sentences are short. Three lines on a phone is the upper bound, two is better. Paragraphs are two to four sentences. If a paragraph runs longer, it gets split. Lists are used when items are genuinely a list. Prose is used when items belong together as a thought.
+Capitalisation rules
+The brand is lowercase always: nella, nella Core, nella Pro. Headings are sentence case. Buttons are sentence case. The only places title case appears are external brand names referenced verbatim (App Store, Apple, Reddit, Instagram, TikTok).
+How nella names a benefit
+Plain noun. Tracking. Routines. Aftercare. Insights. No adjective, no verb, no possessive.
+How nella writes a CTA
+The CTA is a clear action with no marketing wrapper. Pre-launch state: "join the waitlist." Post-launch state: "get nella." Secondary actions follow the same logic: "see pricing," "read the article," "open in the App Store."
+How nella writes a hero
+Hero headline is short. Six to ten words. Subheading is one sentence. CTA is one button. Supporting visual is the app or the score. The whole block fits above the fold on a 390 pixel viewport.
+How nella opens a page
+A direct statement of what the page is about, in her voice. Never a question to the reader as the first line. Never "welcome to." Never throat-clearing.
+Phase-aware CTA convention
+Every CTA in this document carries two states:
+Pre-launch: "join the waitlist" → /waitlist
+Post-launch: "get nella" → /download
+The CMS phase flag switches them. Where the CTA appears as a secondary button or text link, the same logic applies (e.g. "join the waitlist" becomes "download nella").
+Part 2: Page content and copy
+Document structure for each page
+Every page below carries the same blocks:
+SEO block. Meta title (under 60 characters), meta description (under 155 characters), H1, primary keyword, secondary keywords, canonical URL, og image note, internal links out.
+Page intent. One line on the job of the page and who it serves first.
+Copy, section by section. Section heading (H2 or H3), then the copy that sits in that section, then any supporting notes for the developer (visual placement, list vs prose, table structure).
+CTA block. The final action on the page, phase-aware.
+Page 1: Home (/)
+SEO block
+Meta title: nella, the beauty intelligence app that remembers everything
+Meta description: every treatment, every product, every cost, in one place. nella tracks your beauty life so you do not have to.
+H1: every treatment, every product, every cost, in one place.
+Primary keyword: beauty tracking app
+Secondary keywords: skincare routine app, treatment tracker, aftercare app, beauty intelligence
+Canonical URL: https://mynella.app/
+OG image: (hero screenshot of the dashboard with the glow score visible, 1200 x 630)
+Internal links out: /why-nella, /made-for-her, /what-it-does, /pricing, /intelligence/glow-score
+Schema: SoftwareApplication, Organization
+Page intent
+The home page sets the voice, names the problem, shows the proof, and gets her to the App Store. It serves all three personas in one scroll. Mobile-first, designed to be skimmed in 30 seconds and understood in 90.
+Section 1: Hero
+H1: the beauty companion that keeps up with you.
+Subheading: nella remembers everything, so you do not have to.
+Primary CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store (with App Store badge)
+Supporting visual: (iphone mockup showing the dashboard with the glow score, two upcoming treatments, and one daily check-in.)
+Section 2: The problem, named out loud
+H2: you’re already doing the work
+Body, three stacked lines:
+The treatments are booked, your routine is built. The products are bought and your aftercare is sort of remembered.
+It lives in your camera roll, your appointment threads, the leaflets in the bottom of your bag, the saved TikToks and that basket from last Tuesday.
+You've been doing all of it. Just not in one place.
+Note for design: ( three lines stacked on desktop. No icons.)
+Section 3: What nella does
+H2: four things, done properly.
+Body: 
+your treatments, your routines, your aftercare, and the bits you would have missed, finally seen.
+Four cards, each linking to its /what-it-does sub-page:
+
+Note for design: ( 2x2 grid on desktop, single column on mobile. Each card clickable, hover state lifts the card slightly.)
+Section 4: The intelligence moment
+H2: the bit a notes app cannot do.
+Body, two short paragraphs:
+you log microneedling on tuesday. by wednesday morning, your retinol is paused for seven days, your vitamin C for three. your routine knows. your aftercare runs itself. nella holds the picture, so you don't have to.
+that's the difference between a list and something that actually thinks.
+Note for design: (a single phone mockup beside the copy, showing the paused-product state in the routine view.)
+Text link: see how it works → /intelligence/ingredient-conflicts
+Section 5: How it works
+H2: how it works.
+Body lead-in: four steps. nothing complicated.
+Four-step block:
+start. tell nella about your treatments, your routine, the things you already do.
+log. every treatment, every product, every check-in. seconds.
+see. your dashboard fills out. your score calibrates. your spend appears.
+know. patterns emerge. aftercare runs itself. nella holds the picture.
+Note for developer: (Suggestion: horizontal on desktop with a screenshot per step, stacked on mobile. Each step number in the brand colour.)
+Section 6: Glow score teaser
+H2: the only score that tells you the truth.
+Body:
+one number, 0 to 100, every day. it moves with your treatments, your routine, your check-ins, your skin. calibrates over your first two weeks, then updates daily. every monday, the weekly card lands. 
+every month, a wrap card you can share, or keep to yourself. 
+some months you're glowing. some months you're just here. both deserve the card. 
+Note for developer: (Suggestion: a single mockup of the monthly wrap card, 1080 x 1920 ratio, sitting beside the copy.)
+Text link: how the score works → /intelligence/glow-score
+Section 7: Social proof
+H2: loved by the women who built her.
+Body for pre-launch state:
+nella was built by a community of women who take their beauty and self-care seriously. 
+"i used to forget when my brows were due. now nella tells me before i remember to look." rachel, 32
+"i thought my routine was working. nella's score told me where it actually was. it has gone up nineteen points since february." priya, 28
+"i did the research, booked the right clinic, paid the £180. nella made sure day three did not undo any of it." hannah, 35
+Post-launch state: (swap to App Store rating badge with star count, plus three real user quotes pulled from App Store reviews.)
+Section 8: Pricing snapshot
+H2: free to start. £4.99 to understand.
+Two cards, side by side:
+nella Core (free)
+track every treatment, every product, every day
+your AM and PM routine, with conflict logic
+daily check-in and monthly wrap
+aftercare and smart reminders
+up to 20 products
+no credit card, no expiry, no catch
+nella Pro (£4.99/month or £39.99/year)
+the full glow score breakdown, daily, weekly, monthly
+day-by-day aftercare for every treatment
+spend insights by treatment and all time
+your full history, from day one
+unlimited product shelf
+Text link: see the full comparison → /pricing
+Section 9: FAQ teaser
+H2: in case you were wondering.
+Five questions inline, accordion style:
+is nella free? yes. nella Core is free to use, forever. no credit card, no time limit. Pro is £4.99 a month if you want the deeper picture, with a 7 day free trial.
+what does nella actually track? every treatment, every product, every cost, every check-in. injectables, facials, hair, nails, brows, lashes, body, skincare. the lot, in one place.
+is it just for women who get botox? no. nella is for anyone who wants to own their beauty life. injectables, facials, hair, skincare, the routine you've been refining for years, or the one you're still figuring out.
+does nella share my data? no. nella does not sell your data, run ads, or share anything with brands or clinics. it is yours, and it stays yours.
+when is the app available? nella launches on iOS in August 2026. android follows. join the waitlist and you'll be the first to know.
+Text link: more questions → /support/faq
+Section 10: Final CTA
+H2: your beauty, one clean thread.
+Body: join the women who have stopped trying to remember it all.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Note for design: (full-width section, brand colour background, single button. Below the button, a thin text line: "free to use. £4.99 a month for Pro. cancel anytime.")
+Page 2: Why nella (/why-nella)
+SEO block
+Meta title: why nella exists, and what she does about it
+Meta description: every woman has her people. her hair girl, her brow girl, her aesthetics nurse. nella is the one who holds the whole picture.
+H1: every woman has her people.
+Primary keyword: beauty intelligence app
+Secondary keywords: beauty companion app, beauty record app, beauty manager app
+Canonical URL: https://mynella.app/why-nella
+OG image: (Danni to provide the avatar illustrations) 
+Internal links out: /made-for-her, /what-it-does, /intelligence
+Schema: WebPage, BreadcrumbList
+Page intent
+The manifesto page. Names the problem, lands the vision, sets the case for the category. Reaches the visitor who has just heard the brand for the first time and wants to know what it stands for. This is the page that earns belief.
+Section 1: Opening claim
+H1: every woman has her people.
+Body, three paragraphs:
+her hair girl who knows when it’s time for a cut when she goes for a colour. her brow girl who remembers that she likes them thick, not thin. her aesthetics nurse who knows exactly the look she is going for. her facialist, her nail tech, the friend who told her about the serum that actually worked.
+each one holds a piece of the picture. none of them holds the whole thing.
+nella is the one who does.
+Section 2: The problem
+H2: the system you have right now is a notes app and a memory.
+Body, two paragraphs:
+you spent £220 at one clinic, £90 at another, and you can't remember which one did the thing that actually worked. your retinol probably should have come back into your routine by now. your nails were due last week. your botox is somewhere between fine and slipping. 
+this is not a personal failing. it's the result of having no single place that holds any of your investment. 
+Section 3: The vision
+H2: nella is the one who holds the whole picture.
+Body, three paragraphs:
+she sits across every treatment, every clinic, every product, every cost. she knows when your last appointment was, what you paid, what you thought of it, and when the next one is due. she knows what is on your shelf, what you used this morning, and what to pause when you book microneedling on tuesday.
+the more you give her, the better she gets. after a month, she knows your patterns. after six months, she knows things about your beauty life you did not know yourself.
+she is not a clinic platform. she is not a calendar. she is not a notes app. she is the one place that holds the whole picture.
+Section 4: What this means in practice
+H2: what it actually does.
+Body lead-in:
+four things, done properly.
+Four short blocks, each two lines:
+tracking. every treatment, every clinic, every cost, in one place that remembers.
+routines. your AM and PM, in the right order, with the conflicts already sorted.
+aftercare. what to do, what to pause, what to put back on. day by day.
+insights. a daily score, a monthly wrap, and the patterns you could not see before.
+Text link: see how each one works → /what-it-does
+Section 5: Who it is for
+H2: nella is for you.
+Body, two paragraphs:
+if you have ever sat in a consultation and been asked when your last treatment was, and had to guess. if you've ever stood in front of your product shelf and tried to remember which order it all goes on. if you've ever come home from an appointment and not been sure what to do next.
+If you value evidence over vibes, nella is for you. 
+ Text link: see who nella is made for → /made-for-her
+Section 6: Final CTA
+H2: let nella hold the full picture. 
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Supporting line below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 3: Made for her hub (/made-for-her)
+SEO block
+Meta title: made for her: the women nella was built for
+Meta description: the woman who has forgotten when she last booked. the woman who built a routine and is not sure it is working. the woman who keeps trying new things.
+H1: made for her.
+Primary keyword: beauty app for women
+Secondary keywords: skincare app uk, treatment tracking app uk, beauty management app
+Canonical URL: https://mynella.app/made-for-her
+OG image: (Suggestion: three editorial-style portraits or three illustrated cards representing the three situations. Brand colour palette.)
+Internal links out: /made-for-her/track, /made-for-her/refine, /made-for-her/discover, /what-it-does
+Schema: WebPage, BreadcrumbList
+Page intent
+The identification page. The visitor places herself on one of three paths. None of the paths use internal persona language. Each one is named by behaviour, not by label.
+Section 1: Opener
+H1: made for her.
+Body, two paragraphs:
+nella is for the woman who has money in her beauty, attention in her routine, and no system holding any of it together. you might recognise yourself in one of these three. you might recognise yourself in all of them.
+either way, this is where to start.
+Section 2: Three cards
+H2: which one of these is you?
+Card 1, links to /made-for-her/track:
+you’ve forgotten when you last booked.
+your nails are due, your brows are overdue, your botox is somewhere on the calendar but you can't remember where. you have a notes app, a calendar, three group chats and a vague feeling of being behind.
+nella sorts the lot.
+(Suggestion: a small illustrative element here, possibly a phone mockup showing a treatment list. Visual element only, no second CTA.)
+read more → /made-for-her/track
+Card 2, links to /made-for-her/refine:
+you’ve built the routine, but not sure if it is working.
+five products in the AM, six in the PM. retinol on monday and thursday. vitamin C until you read the thing that said maybe not. you want to know what's doing the work and what's along for the ride. 
+nella tells you which is which. 
+read more → /made-for-her/refine
+Card 3, links to /made-for-her/discover:
+you’ve tried more things in the last year than most women try in five.
+skin boosters last spring, polynucleotides in september, the new thing your aesthetician mentioned last week. you go in informed and you come out with results. 
+nella holds the record. so you remember what worked, not just what you tried. 
+read more → /made-for-her/discover
+Section 3: Closing line
+H2: nella adapts to you. 
+Body, one paragraph:
+to whatever shape your beauty life is in this month. the score, the reminders, the routine, the aftercare. they all change based on what you actually do.
+Section 4: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 4: Made for her, the tracker (/made-for-her/track)
+SEO block
+Meta title: for the woman who has forgotten when she last booked
+Meta description: if your nails, your brows, and your botox are all overdue and you have no idea, nella is the system you have been missing.
+H1: for the woman who has forgotten when she last booked.
+Primary keyword: beauty appointment tracker
+Secondary keywords: treatment reminder app, beauty schedule app, salon appointment tracker
+Canonical URL: https://mynella.app/made-for-her/track
+OG image: ( phone mockup showing the upcoming treatments view with smart reminders.)
+Internal links out: /what-it-does/tracking, /what-it-does/aftercare, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The page for the woman whose primary pain is forgetting what is due and what she has spent. Speaks to the Organiser persona without using the label. The aim is recognition first, proof second, CTA third.
+Section 1: Hero
+H1: for the woman who has forgotten when she last booked.
+Subheading: your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
+Visual: (Suggestion: phone mockup showing the upcoming treatments list with status dots.)
+Section 2: The situation
+H2: sound like you?
+Body, one paragraph:
+you spent £250 on beauty last month... you think. your nail tech has texted twice. your highlights were march or april, you can't quite remember. your botox is due. or overdue. you've meant to write it all down. you haven't. 
+Section 3: What nella does for her
+H2: what nella does about it.
+Body, three short blocks:
+every treatment in one place. injectables, facials, hair, nails, brows, lashes, body. log it once, see it forever. 
+reminders that actually fit you. every treatment has its own cycle. nella knows when your nails are due in three weeks and your botox is due in twelve. you get told, not asked.
+spending that adds up properly. how much you spent this month, this quarter, this year. by category.
+Section 4: The features that do the work
+H2: the features behind it.
+Body lead-in:
+three features carry the weight. all in nella Core. 
+Three blocks, each three lines:
+treatment tracking. log a treatment in fifteen seconds. clinic, cost, rating, notes, photo if you want one.
+smart reminders. seven days before, on the day, three days overdue, fourteen days overdue. so it never sneaks up on you.
+spending totals. this month, three months, all time. by category. 
+Text link: see all the tracking features → /what-it-does/tracking
+Section 5: A small story
+H2: what it looks like in real life.
+Body, two paragraphs:
+rachel gets her nails done every three weeks, her brows every six, her botox quarterly, and her hair when she remembers. 
+before nella, that was four calendars and one ongoing feeling of being behind. now it's one dashboard, one reminder system, and a running spend total she actually looks at. 
+her brows haven't been overdue since february. 
+Section 6: Final CTA
+H2: stop trying to remember it all.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 5: Made for her, the refiner (/made-for-her/refine)
+SEO block
+Meta title: for the woman who built the routine and wants to know if it works
+Meta description: five products in the AM, six in the PM, and one nagging question. nella tells you whether your routine is actually doing the work.
+H1: for the woman who built the routine and wants to know if it works.
+Primary keyword: skincare routine tracker
+Secondary keywords: skincare routine app uk, skincare conflict checker, ingredient checker app
+Canonical URL: https://mynella.app/made-for-her/refine
+OG image: (phone mockup of the AM/PM routine view with the paused-state logic visible.)
+Internal links out: /what-it-does/routines, /intelligence/ingredient-conflicts, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The page for the woman whose primary pain is uncertainty about her routine. Speaks to the Ritualist without using the label. She is the most sceptical visitor on the site. The job is to give her evidence, not vibes.
+Section 1: Hero
+H1: you've built the routine. you're not sure it's working.
+Subheading: AM, PM, actives, conflicts, consistency. nella tells you whether the work is paying off. 
+Visual: (Suggestion: phone mockup of the routine checklist with retinol paused and vitamin C live, plus the streak count.)
+Section 2: The situation
+H2: sound like you?
+Body, one paragraph:
+you've spent six months building a routine. five products in the AM, six in the PM. retinol three nights a week. last week you read that one of your actives might be cancelling out another, and you've been confused about it since. you'd like to know, definitively, whether the work is doing the work.
+Section 3: What nella does for her
+H2: what nella does about it.
+Body, three short blocks:
+a routine that orders itself. AM and PM, in the right order, every time. cleanser, toner, actives, hydration, SPF. nella knows the order. you don't have to.
+conflicts already sorted. retinol and vitamin C, AHA and BHA, niacinamide and acid. nella knows which actives fight, which ones pause when, and which ones are safe to keep going. a score that tells you the truth. it moves with your routine consistency, your treatments, your check-ins, and how your skin is trending.
+a score that tells you the truth. it moves with your routine consistency, your treatments, your check-ins, and how your skin is trending. a number you can trust because it's built from what you actually do. 
+Section 4: The features that do the work
+H2: the features behind it.
+Three blocks:
+routine builder. AM and PM, all your products, in the right order automatically.
+conflict detection. every product cross-checked against every other. if two are fighting, nella tells you.
+glow score. updates daily after a fourteen-day calibration period. moves with your consistency, not with a guess.
+Text link: see how the conflict logic works → /intelligence/ingredient-conflicts
+Section 5: A small story
+H2: what it looks like in real life.
+Body, two paragraphs:
+priya has six products in her PM routine. retinol on mondays and thursdays, an AHA on wednesdays, vitamin C every morning. 
+before nella, that was a recurring fear that something was cancelling something else out, and a vague sense that her skin was about the same as it had been six months ago. three weeks in, the AHA is paused on retinol nights. 
+her PM routine is shorter. her glow score is moving up. and her skin trend, finally, is moving in the right direction. 
+.
+Section 6: Final CTA
+H2: find out if your routine is working.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 6: Made for her, the explorer (/made-for-her/discover)
+SEO block
+Meta title: for the woman investing in more treatments than most try in five years
+Meta description: skin boosters, polynucleotides, microneedling, the one your aesthetician just mentioned. nella holds the record so you know what worked.
+H1: for the woman who is properly in.
+Primary keyword: aesthetic treatment tracker
+Secondary keywords: treatment record app, aftercare app, aesthetic procedure tracker
+Canonical URL: https://mynella.app/made-for-her/discover
+OG image: (phone mockup of a logged treatment.)
+Internal links out: /what-it-does/aftercare, /what-it-does/tracking, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The page for the woman whose primary pain is exploration without record. Speaks to the Explorer without using the label. She is the most likely to convert to Pro, so the page leans gently into the aftercare and the spend insight value.
+Section 1: Hero
+H1: for the woman who is committed 
+Subheading: skin boosters in march, polynucleotides in september, microneedling somewhere in between. you have invested. nella holds the record so you know what worked, what it cost, and what to do next.
+Visual: (Suggestion: phone mockup of a logged treatment with the day-by-day aftercare countdown visible.)
+Section 2: The situation
+H2: sound like you?
+Body, one paragraph:
+you do your research before you book. you go to the right people. and the only thing standing between the money you've spent and the result you came for is whether you would do it again and  the record of it all. right now, you don’t know. it lives in screenshots, group chats, and three different camera roll albums.
+Section 3: What nella does for her
+H2: what nella does about it.
+Body, three blocks:
+a record that holds everything. clinic, cost, rating, notes, photos, your honest opinion. so when someone asks where you got the thing that worked, you actually know.
+aftercare that runs itself. log microneedling and nella starts the seven-day plan. log botox and the rules update. you do not have to remember anything.
+a way to compare what is actually working. which treatments are worth the money, which clinics deliver, which months you spend the most. 
+Section 4: The features that do the work
+H2: the features behind it.
+Three blocks:
+treatment logging. injectables, facials, hair, nails, brows, lashes, body, plus a custom "other" entry. log in seconds, see forever.
+aftercare that runs itself. automatic product pause logic when treatments are logged. day-by-day narratives for priority treatments.
+spending, broken down. what you spend, by treatment type, last month, last quarter, all time. 
+Text link: see how aftercare works → /what-it-does/aftercare
+Section 5: A small story
+H2: what it looks like in real life.
+Body, two paragraphs:
+hannah has tried more treatments in the last year than most women try in five. she does the research. she goes to the right people. all she needed is a single place that held the record at the standard her appointments deserved.
+now her logged treatments tell her exactly which clinic delivered and which one to leave behind. her aftercare runs itself the day she books anything new. and the friend who asked where she got that profhilo last spring got an actual answer.
+Section 6: Final CTA
+H2: know exactly what to expect, before and after.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 7: What it does hub (/what-it-does)
+SEO block
+Meta title: what nella does: tracking, routines, aftercare, insights
+Meta description: four things, done properly. nella tracks your treatments, orders your routine, runs your aftercare, and shows you the patterns.
+H1: four things, done properly.
+Primary keyword: beauty app features
+Secondary keywords: beauty tracking features, skincare app features, aftercare app features
+Canonical URL: https://mynella.app/what-it-does
+OG image: (a 2x2 grid of phone mockups, one per benefit.)
+Internal links out: /what-it-does/tracking, /what-it-does/routines, /what-it-does/aftercare, /what-it-does/insights, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The decision page. The visitor has identified herself on Made for her and now wants the proof. Four benefit blocks, with a clear path down into each. The four-step flow as orientation.
+Section 1: Hero
+H1: four things, done properly.
+Subheading: tracking, routines, aftercare, insights. each one designed for a woman who is actually using it.
+Section 2: How it works
+H2: the four-step flow.
+Body lead-in: nothing complicated. log it, see it, know it.
+Four-step block:
+start. tell nella about your treatments and your routine. it takes about five minutes.
+log. every treatment, every product, every day. one tap each.
+see. your dashboard fills out. your score calibrates over fourteen days.
+know. patterns emerge. aftercare runs itself. the picture is finally whole.
+Section 3: Four benefit cards
+H2: this is nella
+Card 1, links to /what-it-does/tracking:
+tracking. every treatment, every clinic, every cost. injectables, facials, hair, nails, brows, lashes, body. one place that remembers. smart reminders that fit your cycle.
+read more → /what-it-does/tracking
+Card 2, links to /what-it-does/routines:
+routines. your AM and PM in the right order, with the conflicts sorted. retinol and vitamin C, AHA and BHA. nella knows which products fight, which pause when, and which to keep going.
+read more → /what-it-does/routines
+Card 3, links to /what-it-does/aftercare:
+aftercare. log microneedling and your retinol pauses for seven days. log a peel and the rules update. day-by-day guidance for priority treatments. you don't have to remember a thing. 
+read more → /what-it-does/aftercare
+Card 4, links to /what-it-does/insights:
+insights. a daily score that tells you the truth. a monthly wrap that you can keep or share. spending patterns that finally add up. the bits a notes app cannot do.
+read more → /what-it-does/insights
+Section 4: Final CTA
+H2: nella holds the whole picture
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 8: Tracking (/what-it-does/tracking)
+SEO block
+Meta title: treatment tracking: every appointment, every clinic, every cost
+Meta description: log every treatment in fifteen seconds. nella keeps the record, sends the reminder, and tells you what you spent.
+H1: every appointment, every clinic, every cost.
+Primary keyword: treatment tracker app
+Secondary keywords: beauty appointment tracker, salon visit tracker, aesthetic treatment record
+Canonical URL: https://mynella.app/what-it-does/tracking
+OG image: (phone mockup of the treatment log with three entries and a spend total.)
+Internal links out: /intelligence/treatment-cycles, /what-it-does/insights, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The feature deep dive for the tracking benefit. Built for the Organiser primarily, but used by all three personas. Visual-heavy, with three feature blocks and a path to the treatment cycle intelligence page.
+Section 1: Hero
+H1: every appointment, every clinic, every cost.
+Subheading: the record you've been meaning to keep, finally in one place. log a treatment in seconds and never lose track again.
+Visual: (Suggestion: phone mockup of the treatment log view, three entries visible, clear timestamps.)
+Section 2: What it does
+H2: what are we tracking? 
+Body, two paragraphs:
+every treatment you get, from your nails, hair and brows, to your botox filler and facials, logged in seconds and held in one place. clinic, cost, rating, notes, photos if you want them. injectables, facials, hair, nails, brows, lashes, body, plus a custom entry for whatever you just tried. 
+once it's in nella, you have it forever. your beauty record is finally yours, and finally complete. 
+Section 3: The three features
+H2: the features behind it.
+Feature block 1:
+treatment logging. treatment logging. log every kind of treatment in seconds: injectables, facials, hair, nails, brows, lashes, body, plus a custom entry for anything else. clinic, cost, rating, notes, photos if you want them.
+(small mockup of the log entry screen.)
+Feature block 2:
+smart reminders. every treatment has its own cycle. nails every three weeks. brows every six. botox every twelve to sixteen. nella knows the cycle for every type and sends a heads-up seven days before you're due, again on the day, and again if you slip past. 
+(small mockup of the reminder notification.)
+Text link: see how the cycle logic works → /intelligence/treatment-cycles
+Feature block 3:
+spending totals. how much you spent this month, this quarter, this year. by category in Core. by treatment and by clinic in Pro. the number is yours the moment you log a treatment. no setup, no calculation, no spreadsheet. 
+(small mockup of the spending dashboard.)
+Section 4: Why this matters
+H2: why nella
+Body, one paragraph:
+a notes app can hold the words. a calendar can hold the date. neither of them knows that your last botox was on the fifth of february, you rated it eight out of ten, you paid £250, you said you'd go back, and you're due in week three of march. 
+nella does.
+Section 5: Related
+H2: related.
+Two cards:
+aftercare log a treatment, your aftercare runs itself. → /what-it-does/aftercare
+insights the patterns your tracking reveals over time. → /what-it-does/insights
+Section 6: Final CTA
+H2: stop trying to remember it all.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 9: Routines (/what-it-does/routines)
+SEO block
+Meta title: skincare routines: AM, PM, and the conflicts already sorted
+Meta description: your AM and PM in the right order, with the actives, the acids, and the pauses worked out. nella runs your routine so you do not have to.
+H1: your AM and PM, in the right order, every time.
+Primary keyword: skincare routine app
+Secondary keywords: AM PM routine app, skincare order app, retinol vitamin c checker
+Canonical URL: https://mynella.app/what-it-does/routines
+OG image: (Suggestion: phone mockup of the AM routine checklist, mid-completion.)
+Internal links out: /intelligence/ingredient-conflicts, /what-it-does/aftercare, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The deep dive on routines, written for the Ritualist primarily. This is the page that has to feel rigorous, because she is rigorous. Evidence over vibes.
+Section 1: Hero
+H1: your AM and PM, in the right order, every time.
+Subheading: five products, six products, seven. retinol three nights a week. vitamin C in the morning. nella holds the order, the schedule, and the conflicts.
+Visual: ( phone mockup showing the PM routine with one active paused.)
+Section 2: What it does
+H2: what your routine looks like in nella.
+Body, two paragraphs:
+every product in your routine, in the order they actually go on. cleanser, toner, actives, hydration, SPF. or the PM version, with the actives shifted and the retinol slotted into the right nights.
+if two products fight, nella tells you. if a product needs to pause because of a treatment, nella pauses it. if you’ve skipped your PM three nights running, nella notices.
+Section 3: The three features
+H2: the features behind it.
+Feature block 1:
+routine builder. AM and PM, automatic ordering, weekly frequency scheduling for the actives. retinol on mondays and thursdays. AHA on wednesdays. niacinamide every day. you tell nella what you use. nella works out when.
+Feature block 2:
+conflict detection. every active in your routine cross-checked against every other. retinol with AHA. vitamin C with niacinamide (the myth and the reality, see the ingredient conflict page for the science). if two are fighting, nella tells you. if the answer is more nuanced, nella tells you that too.
+Text link: see the full conflict logic → /intelligence/ingredient-conflicts
+Feature block 3:
+step completion tracking. one tap to mark a step done. nella holds the streak, feeds the glow score, and tells you on a wednesday morning that your PM consistency is at 82% percent this fortnight.
+Section 4: Why this matters
+H2: why this matters.
+Body, one paragraph:
+a routine that lives on a post-it is a routine you forget. a routine that lives in your head is a routine you guess at. nella is the only place where your products, your schedule, your treatments, and your skin actually sit together. 
+that's what makes it work.
+Section 5: Related
+H2: related.
+Two cards:
+aftercare the routine pauses itself the moment you log a treatment. → /what-it-does/aftercare
+insights your routine consistency feeds your score. → /what-it-does/insights
+Section 6: Final CTA
+H2: find out if your routine is actually working.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 10: Aftercare (/what-it-does/aftercare)
+SEO block
+Meta title: aftercare: what to do, what to pause, what to put back on
+Meta description: log microneedling and your retinol pauses for seven days. nella runs the aftercare so you do not have to remember a thing.
+H1: what to do, what to pause, what to put back on.
+Primary keyword: aftercare app
+Secondary keywords: treatment aftercare app, botox aftercare, microneedling aftercare, post-treatment skincare
+Canonical URL: https://mynella.app/what-it-does/aftercare
+OG image: ( phone mockup of a day-by-day aftercare timeline post-microneedling.)
+Internal links out: /intelligence/ingredient-conflicts, /what-it-does/routines, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+The deep dive on aftercare. This is the feature most likely to convert the Explorer to Pro, so the page leans gently into the Pro day-by-day narrative without hard selling. Educational tone, evidence over claims.
+Section 1: Hero
+H1: what to do, what to pause, what to put back on.
+Subheading: log a treatment and your aftercare runs itself. products paused, products brought back to life, and your aftercare guidance day by day.
+Visual: (Suggestion: phone mockup of the day-by-day aftercare view, post-microneedling, day three.)
+Section 2: What it does
+H2: what happens when you log a treatment.
+Body, two paragraphs:
+you log microneedling on a tuesday afternoon. by wednesday morning, your retinol is paused for seven days, your vitamin C for three, and your routine checklist for tonight shows you exactly what's safe to use. at twenty-four hours, nella checks in to ask how your skin feels. 
+if you're on Pro, the full seven-day recovery plan sits in your dashboard. day by day. what to expect, what to do, when each product returns. 
+aftercare that runs itself.
+Section 3: The three features
+H2: the features behind it.
+Feature block 1:
+automatic product pause logic. log a treatment and the right actives pause for the right number of days. retinol for seven post-microneedling. vitamin C for three. AHA for five post-peel. nella knows the rules and runs them.
+Feature block 2:
+day-by-day narratives. log microneedling on tuesday and from wednesday morning you get a day-by-day plan. day one: gentle cleanser only. day two: check-in. day three: hydration, no actives. day seven: retinol returns tomorrow. 
+Feature block 3:
+post-treatment check-ins. twenty-four hours after every priority treatment, nella asks how your skin feels. one tap to answer. the response feeds your skin trend and your glow score.
+Section 4: Why this matters
+H2: why this matters.
+Body, two paragraphs:
+you spent £180 on microneedling. the recovery is what determines whether you get the result. and the recovery is exactly the bit you forget when you’re tired on a wednesday evening and reaching for the retinol out of habit.
+nella does the remembering. you get the result.
+Section 5: Related
+H2: related.
+Two cards:
+routines the pauses live inside your routine, automatically. → /what-it-does/routines
+ingredient conflicts the science behind which products pause when. → /intelligence/ingredient-conflicts
+Section 6: Final CTA
+H2: know exactly what to do, before and after.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 11: Insights (/what-it-does/insights)
+SEO block
+Meta title: insights: your glow score, your patterns, your monthly wrap
+Meta description: a daily score that tells you the truth. a monthly wrap you can keep or share. spending patterns that finally add up.
+H1: the patterns you could not see before.
+Primary keyword: beauty insights app
+Secondary keywords: glow score app, beauty spend tracker, skincare progress tracker
+Canonical URL: https://mynella.app/what-it-does/insights
+OG image: (monthly wrap card mockup, 1080 x 1920 ratio scaled to OG dimensions.)
+Internal links out: /intelligence/glow-score, /pricing, /what-it-does/tracking
+Schema: WebPage, BreadcrumbList
+Page intent
+The page that sells the depth of nella, particularly the glow score and the monthly wrap. Visual-heavy. Pulls all three personas in different ways: Organiser wants the spend insight, Ritualist wants the score breakdown, Explorer wants the monthly wrap to share.
+Section 1: Hero
+H1: the patterns you could not see before.
+Subheading: a daily score, a weekly card, a monthly wrap. the bits a notes app can’t show you.
+Visual: (phone mockup of the dashboard showing the score number prominently, plus the weekly movement card.)
+Section 2: What it does
+H2: what insights actually means.
+Body, two paragraphs:
+every treatment you log, every product you use, every check-in you make. nella holds all of it. then she shows you the patterns. how your skin trend has moved this fortnight. what you spent on injectables this quarter versus last. which treatments are due, which are overdue, and which you keep saying you'll book. 
+the score moves daily. the wrap arrives monthly. the spend insights update the moment you log a cost.
+
+Section 3: The three features
+H2: the features behind it.
+Feature block 1:
+glow score. a number from 0 to 100, updated daily after a fourteen-day calibration. it moves with your treatments, your routine, your check-ins, and how your skin is trending. in Pro, you see the breakdown and the recommendations. in Core, you see the score and the statement.
+Text link: how the score is calculated → /intelligence/glow-score
+Feature block 2:
+monthly wrap. on the first of every month, a card lands in your dashboard. your score, your statement, your stats. designed  to share if you want to. designed for your eyes only if you don’t. 
+Feature block 3:
+spending, broken down. how much you spent, on what, where. month, quarter, year. trend comparisons across all three. by category in Core. by treatment and by clinic in Pro.
+Section 4: Why this matters
+H2: why this matters.
+Body, one paragraph:
+beauty is one of the only categories women spend hundreds of pounds on every month without ever seeing the running total. nella shows you the total, the patterns, and the score. 
+so you can stop guessing whether your routine is doing anything, whether your treatments are worth it, and whether you're on top of your beauty life.
+Section 5: Related
+H2: related.
+Two cards:
+tracking the data behind every insight starts with what you log. → /what-it-does/tracking
+the glow score, explained the science behind the number on your dashboard. → /intelligence/glow-score
+Section 6: Final CTA
+H2: see the patterns. understand the spend. know the score.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 12: Pricing (/pricing)
+SEO block
+Meta title: pricing: free to use, £4.99 a month for the full picture
+Meta description: nella Core is free, forever. nella Pro is £4.99 a month or £39.99 a year, with a seven-day free trial. cancel anytime.
+H1: free to start. £4.99 to understand.
+Primary keyword: beauty app pricing
+Secondary keywords: skincare app cost, treatment tracker price, nella subscription
+Canonical URL: https://mynella.app/pricing
+OG image: (clean two-card pricing layout rendered as an image.)
+Internal links out: /what-it-does, /support/faq, /intelligence/glow-score
+Schema: WebPage, BreadcrumbList, Product (for Pro)
+Page intent
+The transactional page. The visitor is here to find out what it costs. The job is to be transparent, lean, and unapologetic about the value of Pro without hard selling. Two cards, one comparison table, one value paragraph, a short FAQ, a CTA.
+Section 1: Hero
+H1: free to start. £4.99 to understand.
+Subheading: nella Core is free, forever. nella Pro is £4.99 a month, for the part of your beauty life that is currently held in a notes app and a memory.
+Section 2: Two cards
+Card 1: nella Core
+nella Core free no expiry. no credit card. no catch.
+what is in it:
+log every treatment you get, unlimited
+AM and PM routine with conflict logic
+daily skin check-ins and monthly wraps
+aftercare and smart treatment reminders
+spending totals 
+your glow score number and statement
+product shelf up to 20 products
+3-month rolling history
+Button: join the waitlist (pre-launch) / get nella on the App Store (post-launch)
+Card 2: nella Pro
+nella Pro £4.99/month or £39.99/year (save 33%) seven-day free trial. cancel anytime.
+what Pro adds:
+the full glow score breakdown, daily, weekly, monthly 
+day-by-day aftercare for every priority treatment
+spending insights by treatment type, by month, by quarter, and all time
+your full history, all the way back to day one
+unlimited product shelf
+Button: start your 7 day free trial
+(Suggestion: post-launch only, this button leads into the App Store subscription flow. Pre-launch, this card is visible but the button reads "join the waitlist".)
+Section 3: The comparison
+H2: what is in each.
+Comparison table:
+Section 4: What you get for £4.99
+H2: what you get for £4.99.
+Body, two paragraphs:
+your full glow score, with the breakdown and the recommendations. your day-by-day aftercare for every treatment, the bit that determines whether the money you spent at the clinic does the work you booked it for. your spending pattern across treatments, clinics, and categories, so you can see what's actually returning. your full history, all the way back to your first logged appointment.
+
+most women using nella have at least one treatment a month that costs more than a year of Pro. Pro is the part that protects the rest of what you spend and tells you the truth about what's working. that's what the £4.99 is for.
+
+Section 5: Pricing FAQ
+H2: in case you were wondering.
+Five questions, accordion style:
+is there a free trial for Pro? yes. seven days, no commitment, no credit card needed if you join through the App Store with an existing apple id. cancel before day seven and you pay nothing.
+can i cancel anytime? yes. cancel in your apple subscriptions settings and Pro stops at the end of the current billing period. nella Core stays free, with your data intact.
+what happens to my data if i downgrade to Core? nothing. your data is yours either way. Core users see the last three months of history. Pro users see all of it. if you re-subscribe to Pro later, your full history reappears.
+monthly or annual? monthly is £4.99. annual is £39.99, which works out as £3.33 a month. annual saves you 33% if you are sure you are in.
+what happens if i pause my treatments for a while? nothing changes. your data stays. your reminders pause naturally as your cycles slip, then nudge gently when you are due to come back. there is no penalty for taking a season off and no scolding when you return.
+Section 6: Final CTA
+H2: ready when you are.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 13: The intelligence hub (/intelligence)
+SEO block
+Meta title: the intelligence behind nella: ingredients, cycles, scores
+Meta description: the conflict logic, the cycle logic, the score logic. how nella turns what you track into intelligence you can use.
+H1: the intelligence behind it.
+Primary keyword: skincare ingredient intelligence
+Secondary keywords: skincare conflict logic, treatment cycle science, glow score explained
+Canonical URL: https://mynella.app/intelligence
+OG image: (brand colour, with the line "the intelligence behind it" rendered as type.)
+Internal links out: /intelligence/ingredient-conflicts, /intelligence/treatment-cycles, /intelligence/glow-score, /what-it-does
+Schema: WebPage, BreadcrumbList
+Page intent
+The hub for the Ritualist, primarily. The page that has to feel rigorous, evidence-led, and honest. This is where the most sceptical visitor finds out whether nella is the real thing.
+Section 1: Hero
+H1: the intelligence behind her.
+Subheading: nella takes what you track and turns it into what you can use. here's how she does it.
+Section 2: Three intelligence stories
+H2: three things nella knows.
+Card 1, links to /intelligence/ingredient-conflicts:
+ingredient conflicts. which actives fight, which pair, which need a pause, and for how long. the science behind why your retinol goes off the menu the day you book microneedling, and why your vitamin C is back on after three.
+read more → /intelligence/ingredient-conflicts
+Card 2, links to /intelligence/treatment-cycles:
+treatment cycles. why your nails are due in three weeks and your botox in twelve. how nella knows the cycle for every treatment type, and how the reminder logic escalates from gentle to overdue.
+read more → /intelligence/treatment-cycles
+Card 3, links to /intelligence/glow-score:
+the glow score. the glow score. what nella measures, why those four things matter, and how the number calibrates to you over your first two weeks. plus what the score is actually telling you as it moves.
+read more → /intelligence/glow-score
+Section 3: A note on what nella is not
+H2: what nella is not.
+Body, two paragraphs:
+nella is not a medical product. the score is not a diagnosis. the aftercare is not clinical advice. it's a personal organisation tool for a woman who is already getting treatments and using products, designed to keep the picture whole and the timing right.
+ every feature is built on the question "what does she need to know now?" the answer is rarely complicated. the value is in the consistency of getting it right.
+Section 4: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 14: Ingredient conflicts (/intelligence/ingredient-conflicts)
+SEO block
+Meta title: ingredient conflicts: which actives fight, and which to pause
+Meta description: retinol and vitamin C, AHA and BHA, niacinamide and acid. the science behind nella's conflict logic, in plain english.
+H1: which actives fight, and which to pause.
+Primary keyword: skincare ingredient conflicts
+Secondary keywords: can you use retinol with vitamin c, niacinamide and vitamin c, retinol AHA, skincare ingredient guide
+Canonical URL: https://mynella.app/intelligence/ingredient-conflicts
+OG image: (mock up of in-app notification treatment conflict detection.)
+Internal links out: /what-it-does/routines, /stories/skincare, /what-it-does/aftercare
+Schema: WebPage, BreadcrumbList, FAQPage (if Q&A blocks used)
+Page intent
+A deep, educational page for the Ritualist. Has to be detailed, accurate, and useful. This page also pulls strong SEO traffic on its own, particularly for "can you use retinol with vitamin c" type queries.
+Section 1: Hero
+H1: which actives fight, and which to pause.
+Subheading: every product in your routine cross-checked against every other. nella’s conflict logic, explained. 
+Section 2: The principle
+H2: how nella thinks about conflicts.
+Body, three paragraphs:
+a conflict is not always a hard stop. some pairs are myths. some pairs are fine if you separate them by twelve hours. some pairs genuinely need a pause for a number of days. 
+nella treats them differently because they're different. every product in your routine is tagged for its active ingredients. every treatment you log carries its own rules about which actives go off the menu and for how long. when a conflict appears, nella tells you what's happening and what to do about it. 
+what follows is the conflict logic for the pairs that come up most. the full library lives inside the app.
+Section 3: The most common conflicts
+H2: the conflicts that come up most.
+Block 1:
+retinol and vitamin C. the myth says they cancel each other out. the reality says they work on different pathways and most skin tolerates them on different days. nella keeps them apart in the schedule. vitamin C in the AM, retinol in the PM, on the nights you've set retinol to run.
+
+Block 2:
+retinol and AHA or BHA. both are exfoliating. used together they can overwhelm the skin barrier. nella separates them: AHA on one PM, retinol on another, never on the same night.
+Block 3:
+niacinamide and vitamin C. the older science said they cancelled out. the newer science says modern formulations are mostly fine. nella allows them together but flags it if your formulation is one of the older versions.
+Block 4:
+retinol and microneedling. retinol pauses for seven days post-microneedling. the skin barrier is recovering. retinol on day three is not how you protect a £180 treatment.
+Block 5:
+vitamin C and microneedling. vitamin C pauses for three days post-microneedling. low pH on a recovering barrier is a bad idea. nella holds it back automatically.
+Section 4: What happens in the app
+H2: what happens when you log a treatment.
+Body, two paragraphs:
+you log a glycolic peel on saturday. the moment you save the entry, your AHA pauses for five days. your retinol pauses for seven. your routine checklist for tonight updates: gentle cleanser, ceramide moisturiser, SPF tomorrow morning. day five: AHA returns. day seven: retinol returns. nella tells you. your routine resumes itself.
+Section 5: A note on the science
+H2: a note on the science.
+Body, one paragraph:
+nella's conflict logic was built with input from licenced practioners and published dermatology research. the rules are reviewed quarterly. where the science is unsettled, nella errs on the side of the longer pause. your face is not the place for guesswork.
+Section 6: Related
+H2: related.
+Two cards:
+routines see how the conflict logic lives inside your daily checklist. → /what-it-does/routines
+aftercare the treatments that trigger the pauses, day by day. → /what-it-does/aftercare
+Section 7: Final CTA
+H2: the conflict logic that runs itself.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 15: Treatment cycles (/intelligence/treatment-cycles)
+SEO block
+Meta title: treatment cycles: why your reminders fit you, not a generic schedule
+Meta description: every treatment has its own cycle. nails every three weeks. botox every twelve to sixteen. nella knows the cycles, so your reminders actually make sense.
+H1: why your reminders fit you, not a generic schedule.
+Primary keyword: beauty treatment cycles
+Secondary keywords: how often botox, how often microneedling, treatment schedule app
+Canonical URL: https://mynella.app/intelligence/treatment-cycles
+OG image: (mock up of treatment list)
+Internal links out: /what-it-does/tracking, /stories/treatments, /what-it-does/aftercare
+Schema: WebPage, BreadcrumbList
+Page intent
+A reference page on treatment cycles. Useful for SEO on "how often" queries. The depth here is what makes nella's reminders credible to the visitor.
+Section 1: Hero
+H1: why your reminders fit you.
+Subheading: every treatment has its own rhythm. nella knows each one, so you get a heads-up that actually lands.
+Section 2: The principle
+H2: how nella thinks about cycles.
+Body, two paragraphs:
+every treatment has its own cycle length. nails grow in three weeks. brows in six. botox holds for twelve to sixteen. dermal filler lasts six to twelve months depending on the product and the area. these aren't arbitrary. they're biological. 
+nella holds the cycle for every treatment you log. so the reminder you get is based on when this one is actually due.
+Section 3: The cycles, by category
+H2: your beauty rotation
+nails sit at 2-3 weeks.
+brows sit at 4-6 weeks.
+hydrafacial sits at 4-6 weeks.
+botox sits at 12-16 weeks.
+dermal filler sits at 6-12 months, depending on product and area.
+a treatment that needs three weeks gets a three-week cycle. one that needs three months gets three months. nella holds the right one for each.
+the full list of treatments and their cycles lives inside the app.
+
+Section 4: How the reminders escalate
+H2: the reminder logic.
+Body lead-in:
+for every treatment, nella sends four nudges across roughly a month.
+Four-step block:
+seven days before due. a heads-up. plenty of time to book.
+on the day. if you have not booked yet, this is the nudge.
+three days overdue. it is slipping. one more chance to catch it.
+fourteen days overdue. the cycle has broken. nella tells you, then stops nagging.
+Section 5: Related
+H2: related.
+Two cards:
+tracking see how the cycle data fits inside the treatment log. → /what-it-does/tracking
+stories on treatments honest guides to what treatments cost, last, and feel like. → /stories/treatments
+Section 6: Final CTA
+H2: reminders that actually fit you.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 16: The glow score, explained (/intelligence/glow-score)
+SEO block
+Meta title: the glow score, explained: what nella measures 
+Meta description: a number from 0 to 100, calibrated to you over your first two weeks, then updated daily. the only beauty score that tells you the truth.
+H1: what your score is measuring 
+Primary keyword: beauty score app
+Secondary keywords: skincare score, treatment tracking score, glow score nella
+Canonical URL: https://mynella.app/intelligence/glow-score
+OG image: (the score circle on its own glowing, number 97)
+Internal links out: /what-it-does/insights, /what-it-does/routines, /pricing
+Schema: WebPage, BreadcrumbList
+Page intent
+A transparent, evidence-led explanation of how the glow score is calculated. The page that takes the score from "gimmick" to "the thing that tells me the truth" for the Ritualist.
+Section 1: Hero
+H1: what your score is really measuring.
+Subheading: a number from 0 to 100, calibrated to you over your first two weeks, then updated daily. 
+Section 2: The principle
+H2: what a score should actually do.
+Body, two paragraphs:
+a score that goes up when nothing has changed is a vanity metric. a score that goes up when you take care of yourself tells you something. nella's score is the second one.
+four things feed it. each one is something you actually do. each one moves the number, in its own way.
+Section 3: The four inputs
+H2: the four things your score responds to. 
+Block 1:
+treatments on track. how many of your treatments are inside their expected cycle window. nails due, brows due, botox holding. the cycle of treatments is the spine of your beauty life. the largest single input because the cycle of treatments is the spine of your beauty life.
+Block 2:
+skin trend. the direction of your daily skin check-in responses over the last fourteen days. moving up, holding steady, slipping. the second largest input because your skin is the result that everything else feeds.
+Block 3:
+check-in streak. how consistently you have done your daily skin check-in over the last 14 days. not the absolute streak, the percentage. the input that rewards consistency without punishing a bad week.
+Block 4:
+routine consistency. how many of your scheduled routine steps you've completed in the last fortnight. AM and PM. retinol on the right nights. SPF in the morning. the smallest of the four because consistency without trend is not the whole picture.
+Section 4: The tiers
+H2: what the number actually means.
+Body lead-in:
+a 67 today is not the same as a 67 last month. the score moves with your routine, your treatments, your check-ins, and your skin. its job is to show you the trend, not give you a grade. if it's moving up, something is working. if it's moving down, something is slipping. if it's holding, you're on rhythm. nella will tell you why it moved. that's the part that's useful.
+
+Section 5: The calibration
+H2: the first 14 days.
+Body, one paragraph:
+your score isn't visible for the first fourteen days. nella needs that time to learn your patterns: your treatment cycles, your check-in habit, your routine consistency. without it, the number would be a guess. 
+on day fifteen, the score appears
+Section 6: Core versus Pro
+H2: what you see on Core and what you see on Pro.
+Body, two short paragraphs:
+on Core, you see the score and a one-line statement. "on your game. everything is working." or "drifting. the brows are overdue." the headline.
+on Pro, you see why. a breakdown of what’s working for you, and what isn’t. nella will personalise your recommendations to get your score moving in the right direction. "your skin trend is pulling your score down. you've missed three evening check-ins this week." 
+Section 7: Related
+H2: related.
+Two cards:
+insights the score is one part of the insights picture. see the rest. → /what-it-does/insights
+routines routine consistency is one of the four inputs. → /what-it-does/routines
+Section 8: Final CTA
+H2: the score that tells you the truth.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 17: About hub (/about)
+SEO block
+Meta title: about nella: who built her, why, and how she handles your data
+Meta description: nella was built by women who were tired of trying to remember it all. read the story, the data principles, and the press.
+H1: about nella.
+Primary keyword: nella app
+Secondary keywords: mynella ltd, nella founder, beauty app uk
+Canonical URL: https://mynella.app/about
+Internal links out: /about/story, /about/privacy-principles, /about/press
+Schema: AboutPage, Organization
+Page intent
+The trust hub. Short, points outward to the three sub-pages. The visitor here is checking who is behind the app and whether to trust them with her data.
+Section 1: Hero
+H1: about nella.
+Subheading: built in the UK, by women who take their beauty life seriously.
+Section 2: Three cards
+Card 1, links to /about/story:
+our story our story. why nella exists. the gap, the build, and the women who shaped her.
+read more → /about/story
+Card 2, links to /about/privacy-principles:
+how nella thinks about your data no ads. no data sales. no sponsored content. your beauty life is yours. here is how it stays that way.
+read more → /about/privacy-principles
+Card 3, links to /about/press:
+press coverage, press kit, and contact details for journalists and partners.
+read more → /about/press
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 18: Our story (/about/story)
+SEO block
+Meta title: our story: why nella exists
+Meta description: every woman has her people. her hair girl, her brow girl, her aesthetics nurse. nella exists because none of them held the whole picture. until now.
+H1: the story behind nella.
+Primary keyword: nella founder story
+Secondary keywords: mynella ltd founder, beauty app uk story
+Canonical URL: https://mynella.app/about/story
+Internal links out: /why-nella, /about/privacy-principles
+Schema: AboutPage, Person (for founder)
+Page intent
+The founder story. Voice-led, personal, short. The visitor here wants to know the human behind the brand.
+Section 1: Hero
+H1: the story behind nella.
+Visual: logo
+Section 2: The story
+Body:
+it started with a treatment. i'd just had it done. something new, something i'd researched, something i was happy to invest in. i got home, and i didn't know what to do next.
+the aftercare instructions were in my memory, sort of. the product i'd been told to pause was noted, sort of. nothing was in the wrong place. but nothing was in the right place either.
+surely there is a better way to do this? 
+i'd spent years working investing in my own beauty and self-care. over time, i started paying attention to what my friends got done, asking more questions at appointments, seeking advice from reddit forums.  the same thing kept coming back: women are deeply, genuinely passionate about this stuff. their treatments, their routines, the products that worked, the ones that didn't. they have hair girls, brow girls and aesthetics nurses they've been seeing for years. they spend hundreds of pounds a month, sometimes thousands. and they hold all of it in their heads.
+the beauty industry runs on loyalty. a woman doesn't switch her hairdresser on a whim. she finds the people she trusts and she stays. every woman has her people, and each one holds a piece of the picture.
+the gap i kept noticing was that no one held the whole thing. there was nowhere for her treatments to live next to her routine, next to her aftercare, next to her spend. nowhere that remembered. nowhere that connected the dots.
+i then understood that these women deserve their investments to be documented and rewarded. so we built nella. 
+nella remembers everything. she judges nothing. she always knows what's next. she's the digital one in the line-up of people you trust.
+Danni 
+
+Section 4: What nella is registered as
+H2: the official bit.
+Body, one paragraph:
+nella is built by mynella Ltd, registered in England and Wales. company number 17142670. the app is built in the UK, by a team based in the UK, for women in the UK first.
+Section 5: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 19: How we think about your data (/about/privacy-principles)
+SEO block
+Meta title: how nella thinks about your data: no ads, no sales, no compromise
+Meta description: nella does not sell your data, run ads, or share with brands or clinics. your beauty life is yours. here is exactly how it stays that way.
+H1: your data, your beauty life.
+Primary keyword: beauty app privacy
+Secondary keywords: nella privacy, skincare app data privacy, GDPR beauty app
+Canonical URL: https://mynella.app/about/privacy-principles
+Internal links out: /privacy, /support/contact
+Schema: AboutPage
+Page intent
+The privacy principles page. Distinct from the legal /privacy page. This is the plain-english version that builds trust with the woman who is rightly cautious about putting her treatment history and her photos into an app.
+Section 1: Hero
+H1: your data, your beauty life.
+Subheading: what nella does with your data, in plain english.
+Section 2: The five principles
+H2: five things nella will never do.
+Block 1:
+your data is not sold. not to brands, not to clinics, not to advertisers, not to anyone. your treatment history is not a product. your spend is not a metric for someone else's quarterly review.
+Block 2:
+no ads in the app. nella's business is the subscription. that means the only person nella has to please is you.
+Block 3:
+no sponsored content. no "featured" treatments. no paid placement in your routine. no brand-sponsored reviews. if nella recommends something, it’s because it earned the recommendation.
+Block 4:
+your data will never be shared with your clinic. nella sits across every clinic you use. that means no single clinic gets to see what you have done at the others. this is the whole point.
+Block 5:
+easy to leave. you can export everything you have logged at any time. you can delete your account at any time. your data is yours, every step of the way.
+Section 3: How your data is protected
+H2: how your data is held.
+Body, two paragraphs:
+nella is built on Supabase, with row-level security at the database layer. that means every piece of your data is locked to your account specifically, not visible across users by default. authentication uses industry-standard practices. data is encrypted in transit and at rest.
+mynella Ltd is GDPR compliant. the full privacy policy lives at /privacy.
+Section 4: If you want to know more
+H2: if you want to know more.
+Body, one paragraph:
+the full legal version of the privacy policy is here: /privacy. if you have a specific question that is not covered, you can email support@mynella.app. every message gets read.
+Section 5: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 20: Press (/about/press)
+SEO block
+Meta title: nella in the press: coverage, press kit, and contact
+Meta description: coverage of nella, the beauty intelligence app. download the press kit or get in touch at press@mynella.app.
+H1: nella in the press.
+Primary keyword: nella press
+Secondary keywords: nella media coverage, beauty app press, nella press kit
+Canonical URL: https://mynella.app/about/press
+Internal links out: /about/story, /about/privacy-principles
+Schema: WebPage
+Page intent
+The press hub. Short. Contact details, downloadable press kit, list of coverage. The visitor here is a journalist or a brand partner.
+Section 1: Hero
+H1: nella in the press.
+Subheading: coverage, press kit, and how to get in touch.
+Section 2: Coverage
+H2: coverage.
+Body, pre-launch:
+nella launches in august 2026.  press coverage from launch onwards will be listed here.
+Section 3: The press kit
+H2: the press kit.
+Body, two paragraphs:
+the nella press kit includes brand logos in colour and mono, founder photography, app screenshots in high resolution, and a one-page fact sheet on the company.
+download the full kit: [placeholder: link to ZIP, hosted by Sanity asset CDN]
+Section 4: Get in touch
+H2: for press enquiries.
+Body:
+hello@mynella.app
+Section 5: The short version
+H2: the one-paragraph version.
+Body:
+nella is the beauty intelligence app for women who invest in their appearance through treatments and skincare. built by mynella Ltd in the UK, the app combines treatment tracking, skincare routine management with ingredient conflict detection, aftercare intelligence, smart reminders, and a composite lifestyle score. nella launches on iOS in August 2026 with a freemium model, nella Core free and nella Pro at £4.99 a month.
+Page 21: Stories hub (/stories)
+SEO block
+Meta title: nella stories: honest guides to treatments, skincare, aftercare, and money
+Meta description: the things she actually wants to know. honest guides to treatments, skincare conflicts, aftercare, beauty spend, and the timeline for the big occasions.
+H1: the things she actually wants to know.
+Primary keyword: beauty advice uk
+Secondary keywords: treatment guides uk, skincare guides, aftercare guides, beauty spend uk
+Canonical URL: https://mynella.app/stories
+OG image: TBC
+Internal links out: /stories/treatments, /stories/skincare, /stories/aftercare, /stories/money, /stories/occasions
+Schema: Blog, BreadcrumbList
+Page intent
+The content hub. Short header copy, then category cards, then the latest articles. The visitor arrived here either via SEO on a specific article or by clicking through from the footer.
+Section 1: Hero
+H1: the things you actually wants to know.
+Subheading: honest guides, written for the woman who get the treatments, already does the routine, and just wants the actual answers.
+Section 2: Categories
+H2: by category.
+Five category cards:
+treatments. what to expect, what it costs, what it feels like, how long it lasts. honest guides to the treatments you’re already getting or thinking about. → /stories/treatments
+skincare. the order, the conflicts, the actives, the actually-doing-something. the bit of beauty that takes the most thought and gets the least good information. → /stories/skincare
+aftercare. what to do, what to skip, what to put back on. day-by-day, for the treatments that need it most. → /stories/aftercare
+money. what beauty actually costs in the UK. honest breakdowns of what you're paying for and what you're really getting. → /stories/money
+occasions. the timeline for weddings, holidays, big birthdays. what to book, when, and why. → /stories/occasions
+Section 3: Latest articles
+H2: the latest.
+Body, dynamic: the latest three articles, in a grid. each card carries the article hero image, category, headline, excerpt, and read time.
+(Suggestion: editorial grid, 3 columns on desktop, 1 on mobile. Each card linked to /stories/[slug]. Pulled from Sanity Article documents, sorted by publish date descending.)
+Section 4: Final CTA
+H2: the newsletter.
+Body, one paragraph:
+one email a month. the best of what gets published, no fluff, no upsell. you can unsubscribe in one click.
+Email capture field and button: subscribe
+
+Page 22: Story article 1 (full copy)
+Article slug
+/stories/what-to-do-after-botox
+Category
+Aftercare
+SEO block
+Meta title: what to do after botox: the honest day-by-day guide
+Meta description: botox aftercare, by the day, in plain english. what to avoid, when results show, and how to protect your investment for the full twelve weeks.
+H1: what to do after botox: the honest day-by-day guide.
+Primary keyword: botox aftercare
+Secondary keywords: botox aftercare uk, what to do after botox, botox recovery, botox dos and donts
+Canonical URL: https://mynella.app/stories/what-to-do-after-botox
+OG image: TBC
+Internal links out: /what-it-does/aftercare, /intelligence/treatment-cycles, /stories/aftercare
+Schema: Article, BreadcrumbList
+Author: none 
+Read time: 6 minutes
+Word count target: 1,100 to 1,300
+Article
+H1: what to do after botox: the honest day-by-day guide.
+Lead paragraph:
+you have just had botox. the redness is fading, you have been told not to lie down, and you are now googling whether you can wash your face. this is the version of the guide that answers the actual questions. 
+H2: the first four hours.
+Body:
+stay upright. do not lie flat. do not press your face into a pillow. do not rub the treated areas. that is the only hard rule for the first four hours, and the reason is straightforward: the product needs time to settle where it was placed. movement disperses it. dispersal is what causes uneven results.
+you can wash your face, gently, with a non-foaming cleanser. you can apply makeup if you have to, but go light and avoid pressing on the injection points. you can drink water normally. you can walk, sit, work, talk.
+H2: the first twenty-four hours.
+Body:
+no exercise. no sauna. no sunbed. nothing that elevates your body temperature or your heart rate significantly. the reason is the same as the first four hours, just on a longer scale: while the product is binding, blood flow and heat can shift it.
+no alcohol. this one is less about the product itself and more about the bruising. alcohol thins the blood. botox injection sites can bruise. you do not want to make that worse on day one.
+you can sleep normally on the first night, but if you have had forehead or brow treatment, sleep on your back if you can. one night. then back to normal.
+H2: day two to day three.
+Body:
+the bumps from the injections are gone by now. some bruising may still be visible. results will not have shown yet. this is the single most common moment of doubt and the answer is: it is normal. botox does not work on contact. it works by blocking the chemical signal between nerves and muscles, and that process takes time.
+you can resume exercise from day two if you feel fine. you can go back to your normal skincare routine, including actives. retinol, vitamin C, AHAs, BHAs, all fine. the skin barrier is not affected by botox the way it is by treatments like microneedling or peels.
+H2: day three to day fourteen.
+Body:
+results start to show. for most people, the first sign is the forehead softening. you may notice that you cannot raise your eyebrows quite as high as before, or that a frown line you have lived with for years just is not appearing. this is normal. it is also a sign the treatment is working.
+this is also the period of the most common doubt. you're somewhere in the middle. you can see something happening but it doesn't look finished yet. that's because it isn't. botox binds gradually. the cleaving of nerve signals happens over days, not minutes. by day ten to fourteen, the result is fully visible.
+resist the urge to assess too early. one of the most common mistakes is judging the result at day five or seven, when it's still developing. wait the full two weeks.
+
+H2: the two-week review.
+Body: 
+at day fourteen, the result is fully visible. this is when most UK clinics book a review appointment to assess the outcome, address any asymmetry, and make a small adjustment if one area hasn't fully responded. 
+the review isn't an automatic top-up. some patients need a small adjustment. most don't. either is fine. if your practitioner offered a review, this is when it lands. if you have any concerns about asymmetry, drooping, or unexpected effects, raise them at this review.
+H2: day fourteen onwards
+Body:
+once the result is in, it's in for the cycle, which for most people and most areas is twelve to sixteen weeks. from here, normal life resumes completely. you can travel, fly, exercise, drink, do whatever you do. 
+your skincare is unaffected. facials and skin treatments that involve pressure on the face can resume. 
+H2: the questions everyone asks.
+Body lead-in:
+short answers, for the questions that come up most.
+H3: can i have a glass of wine the same day?
+it is recommended that you do not. alcohol increases bruising risk. wait twenty-four hours.
+H3: can i fly the same day?
+yes. cabin pressure does not affect botox. the no-lying-down rule is for the first four hours, which most flights respect by accident.
+H3: can i exercise the next morning?
+most practitioners say to wait twenty-four hours. some say forty-eight. err on the side of waiting if you can.
+H3: can i wear makeup?
+after four hours, yes. go light at the injection points for the first day.
+H3: what if i see no result by day five?
+this is normal. wait until day fourteen  or your practitioner review before you draw any conclusions. if there is still no visible effect by then, go back to your practitioner.
+H3: when is my next botox due?
+twelve to sixteen weeks for most people and most areas. if you keep your appointments roughly on cycle, the effect compounds. if you let it lapse completely, the muscle returns to full strength.
+H2: the bit nobody tells you.
+Body:
+most botox aftercare guides stop at day seven. but the actual question for most women is what to do over the next twelve weeks to protect the investment. the answer is mostly: nothing dramatic. SPF every morning is the single biggest factor in how long the effect appears to last, because UV breaks down collagen and accentuates the lines that botox is softening.
+beyond that, the things you do anyway help. sleep, water, a routine that suits your skin. there is no magic post-botox skincare regime. the magic is consistency, which is exactly what most women are missing.
+H2: how nella handles this.
+Body, two paragraphs:
+when you log botox in nella, the app does not pause any of your skincare actives, because it does not need to. your retinol, your vitamin C, your acids: all fine post-botox. what nella does instead is set the next reminder for week eleven, send the post-treatment check-in at day three, and quietly track whether your skin trend is moving the way it should over the cycle.
+if you have not booked your next botox by week thirteen, nella tells you. if you have booked it, you forget about it until the reminder arrives. that is the point.
+Soft CTA at end of article:
+H2: stop trying to remember your aftercare.
+nella holds every treatment, every aftercare rule, every check-in. for free.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Internal link block at bottom:
+Note: 
+a note from nella. 
+this article is general guidance, not personal medical advice. nella is a lifestyle app, not a medical product. if you have specific concerns about your treatment, your aftercare, or your skin, your practitioner is the person to ask. they know you. nella knows the rest.
+read more in aftercare: /stories/aftercare see how nella's aftercare works: /what-it-does/aftercare the treatment cycle for botox: /intelligence/treatment-cycles
+Page 23: Story article 2 (full copy)
+Article slug
+/stories/can-you-use-retinol-and-vitamin-c
+Category
+Skincare
+SEO block
+Meta title: can you use retinol and vitamin C together? the actual answer
+Meta description: the myth, the reality, and the schedule that actually works. how to use retinol and vitamin C without cancelling either one out.
+H1: can you use retinol and vitamin C together? the actual answer.
+Primary keyword: can you use retinol with vitamin c
+Secondary keywords: retinol and vitamin c together, vitamin c am retinol pm, skincare ingredient conflicts
+Canonical URL: https://mynella.app/stories/can-you-use-retinol-and-vitamin-c
+OG image: tbc
+Internal links out: /intelligence/ingredient-conflicts, /what-it-does/routines, /stories/skincare
+Schema: Article, BreadcrumbList
+Author: none
+Read time: 5 minutes
+Word count target: 900 to 1,100
+Article
+H1: can you use retinol and vitamin C together? the actual answer.
+Lead paragraph:
+the short answer is yes, with the right schedule. the long answer involves a small amount of chemistry, a recurring myth, and the schedule most dermatologists actually recommend. here is the version you can use tonight.
+H2: the myth.
+Body:
+the original concern, which is still repeated everywhere from tiktok to product packaging, is that vitamin C and retinol cancel each other out. the science behind that claim is partly accurate and largely outdated.
+the accurate bit: vitamin C is most stable and most effective at a low pH, around 3 to 3.5. retinol is most effective at a higher pH, around 5.5 to 6. used in the same routine, back to back, the pH conflict can reduce the effectiveness of one or both.
+the outdated bit: modern formulations have largely solved this. most well-formulated vitamin C serums use ascorbic acid in a form that is stable across a wider pH range. most well-formulated retinols are buffered to work alongside other actives. the chemistry that made the original advice cautious has moved on.
+H2: the reality.
+Body:
+for most women, using vitamin C in the morning and retinol at night is the cleanest, most effective schedule. it sidesteps the pH question entirely because the two products never meet on your skin. it also matches the way these ingredients actually work: vitamin C is an antioxidant that protects against daytime UV and pollution damage, retinol is a cell-turnover ingredient that does its work overnight.
+if you have been told you cannot use both, you can. you just need the schedule.
+H2: the schedule that works for most skin.
+Body lead-in:
+a simple template, three frequencies, depending on how reactive your skin is.
+H3: if your skin tolerates actives well.
+vitamin C every morning. retinol three to five nights a week. on the off-nights, hydrating or barrier-supporting actives like niacinamide or peptides.
+H3: if your skin is on the sensitive side.
+vitamin C every other morning. retinol two nights a week. always with a moisturiser layered on top of the retinol, and SPF religiously every morning.
+H3: if you are new to either.
+introduce one at a time. start with vitamin C in the AM for two weeks. if your skin is happy, introduce retinol once a week in the PM. build up gradually over six weeks to two or three nights.
+H2: the rules underneath the schedule.
+Body lead-in:
+four rules that make the schedule work, regardless of which version of it you are on.
+H3: rule one: SPF in the morning, every morning.
+retinol and vitamin C both increase sun sensitivity. SPF 30 minimum, SPF 50 if you can. without it, you are undoing the work of both ingredients.
+H3: rule two: do not layer retinol with AHA or BHA on the same night.
+retinol and exfoliating acids are both active. used together, they can overwhelm the skin barrier. AHA on one PM, retinol on another. never both at once.
+H3: rule three: moisturise on retinol nights.
+retinol can be drying. a good moisturiser layered over the top reduces irritation without reducing effectiveness.
+H3: rule four: wait for the burn-in.
+retinol takes six to twelve weeks to show its full effect. vitamin C takes about four to six. if you have just started, do not judge either product before three months.
+H2: when to keep them apart, and for how long.
+Body, two paragraphs:
+there is one situation where retinol comes off the menu entirely: post-treatment recovery. if you have had microneedling, retinol pauses for seven days. if you have had a chemical peel, longer, depending on the grade. vitamin C also pauses, usually for three days, for similar reasons: the skin barrier is recovering and low-pH actives are an additional stress it does not need.
+outside of those windows, the schedule above holds.
+H2: the products to look for.
+Body:
+(Suggestion: do not recommend specific products here, to keep the article evergreen and out of affiliate territory. Use ingredient guidance only.)
+for vitamin C, look for L-ascorbic acid at 10 to 20 percent, or a more stable derivative like sodium ascorbyl phosphate if your skin is sensitive. for retinol, start at 0.3 percent if you are new, build to 0.5 or 1 percent over time. tretinoin is prescription-only in the UK and stronger than retinol by a wide margin.
+H2: how nella handles this.
+Body, two paragraphs:
+in nella, your vitamin C lives in your AM routine and your retinol lives in your PM, with the right frequency for each. when you log a treatment that requires a pause, both actives are paused automatically and added back to your routine on the right day.
+if you have an older vitamin C formulation that does conflict with niacinamide or with your retinol, nella flags it during onboarding. the conflict logic is not generic, it is specific to what is on your shelf.
+Soft CTA at end of article:
+H2: stop guessing whether your routine is working.
+nella holds the schedule, the conflicts, and the pauses. for free.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Internal link block at bottom:
+Note: 
+a note from nella. 
+this article is general guidance, not personal medical advice. nella is a lifestyle app, not a medical product. if you have specific concerns about your treatment, your aftercare, or your skin, your practitioner is the person to ask. they know you. nella knows the rest.
+read more in skincare: /stories/skincare see the full conflict logic: /intelligence/ingredient-conflicts how routines work in nella: /what-it-does/routines
+Page 24: Story article 3 (full copy)
+Article slug
+/stories/skincare-routine-order
+Category
+Skincare
+SEO block
+Meta title: skincare routine order: why it's not working and how to fix it
+Meta description: the right order matters less than the four things that quietly break most routines. inconsistency, over-actives, skipped hydration, no SPF.
+H1: the right order for your skincare routine, AM and PM (and why it might not be working).
+Primary keyword: skincare routine order
+Secondary keywords: AM skincare order, PM skincare order, skincare layering, why is my skincare routine not working
+Canonical URL: https://mynella.app/stories/skincare-routine-order
+OG image: TBC
+Internal links out: /what-it-does/routines, /intelligence/ingredient-conflicts, /stories/skincare
+Schema: Article, BreadcrumbList, HowTo
+Author: none
+Read time: 6 minutes
+Word count target: 1,000 to 1,200
+Article
+H1: the right order for your skincare routine, AM and PM (and why it might not be working).
+Lead paragraph:
+most women asking about skincare order know the order. cleanser, actives, hydration, SPF. thinnest to thickest. the question underneath is the one nobody answers properly: i am following the order, so why does my skin still look the same. the honest answer is that the order is rarely the thing that is broken. four other things almost always are.
+H2: the order is the easy part.
+Body:
+the principle takes one line: thinnest to thickest, water-based before oil-based, actives between cleanser and moisturiser, SPF last in the morning. it is genuinely that simple. if your routine is in roughly the right order, the order is not the problem.
+what tends to be the problem is one or more of four quieter things. they look like consistency issues, ingredient choices, or "my skin is just like this." they are not. they are the four things that break a routine without ever announcing themselves.
+H2: the four things that break a routine.
+H3: one: your actives are running at the wrong frequency.
+retinol does its work at three to five nights a week, consistently, over six to twelve weeks. most routines aim for three and land at two. vitamin C is similar in the morning: daily is the brief, four times a week is what actually happens. the dose-response curve for both ingredients is steep at the lower end, which means the difference between two nights of retinol and four is much larger than the difference between four and six. half the people who think retinol is not working for them are simply not using it often enough for long enough.
+H3: two: too many actives, too close together.
+retinol on monday, AHA on tuesday, BHA on wednesday, vitamin C every morning. the routine looks rigorous. the skin barrier reads it as constant low-grade assault. the result is the same skin that the actives are meant to be improving, only now it is also red around the nose and tight along the jaw. one active per evening, with at least one rest night between exfoliating acids and retinol, is almost always more effective than three.
+H3: three: the hydration step quietly disappears.
+actives are exciting. SPF is non-negotiable. moisturiser and hydrating serum are the bit in the middle that gets skipped on a tuesday night because the actives feel like the real work. they are not. a routine without proper hydration is a routine where every active is being asked to do its job on a skin barrier that is not equipped to receive it. hyaluronic acid on damp skin, then moisturiser, in both the AM and the PM. it is not the glamorous part of the routine. it is the part that decides whether the rest of it lands.
+H3: four: SPF that is not really happening.
+SPF every morning. SPF 30 minimum, SPF 50 if you can. applied all over the face and neck. reapplied if you are outside for more than a couple of hours. most routines tick the first box, sometimes the second, almost never the third or fourth. UV is the single largest factor in how fast collagen breaks down, how persistent pigmentation becomes, and how visible the work of your retinol ever gets. a perfect PM routine with a sloppy AM SPF is a routine running net negative. this is the unflattering truth about most plateaus.
+H2: the order, for reference.
+Body lead-in:
+if you do want the order, plainly stated, this is it. AM first, then PM. brief because the order is the easy part.
+H3: AM, in order.
+cleanser. (optional toner.) vitamin C serum. hydrating serum. moisturiser. SPF. (makeup, if you wear it.)
+H3: PM, in order.
+makeup removal, if needed. cleanser. (optional toner.) one active (retinol on retinol nights, an exfoliating acid on those nights, never both). hydrating serum. moisturiser. (optional face oil or sleep mask.)
+H2: the rules that actually matter.
+Body, four short blocks:
+wait between actives. let each one absorb. it makes a real difference.
+one active per session. retinol and AHA on the same night is too much for most skin. niacinamide is the exception, it sits comfortably alongside almost everything.
+water-based before oil-based. a serum will not penetrate through an oil. a hyaluronic acid will not work if you have already applied moisturiser.
+SPF, every morning. even in winter. even if you work indoors. even if it is grey.
+H2: when something changes.
+Body, one paragraph:
+booked a treatment, the order changes. microneedling means no retinol for seven days, no vitamin C for three, no acids for at least a week. peels are longer, depending on grade. botox does not change the routine. (full pause logic: /intelligence/ingredient-conflicts.)
+H2: how nella handles this.
+Body, two paragraphs:
+in nella, your routine is held in the right order automatically and scheduled at the right frequency for each active. retinol on the nights it should be, vitamin C every morning, hydration in the step where it gets remembered, SPF as the final tick of the morning routine. the order is not the thing you have to hold in your head.
+what nella also holds is the four breaks. how consistently you have actually completed your routine over the last fourteen days. how often your hydration step is missed. whether your SPF is being logged every morning or only most mornings. those four inputs do not just sit in your dashboard, they feed your score. so when your skin is not moving the way you expected, you can see why. and fix the actual thing, not the order.
+Soft CTA at end of article:
+H2: stop guessing why it is not working.
+nella holds the order, the frequency, the hydration, and the SPF. for free.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Internal link block at bottom:
+Note: 
+a note from nella. 
+this article is general guidance, not personal medical advice. nella is a lifestyle app, not a medical product. if you have specific concerns about your treatment, your aftercare, or your skin, your practitioner is the person to ask. they know you. nella knows the rest.
+read more in skincare: /stories/skincare how routines work in nella: /what-it-does/routines the full conflict logic: /intelligence/ingredient-conflicts
+Page 25: Stories category: Treatments (/stories/treatments)
+SEO block
+Meta title: treatments: honest guides to what you are booking, before you book it
+Meta description: what to expect, what it costs, what it feels like, what it lasts. honest guides to the treatments you are getting or thinking about.
+H1: treatments.
+Primary keyword: beauty treatment guides uk
+Secondary keywords: botox guide uk, microneedling guide, profhilo guide, treatment costs uk
+Canonical URL: https://mynella.app/stories/treatments
+OG image: TBC
+Internal links out: /stories, /intelligence/treatment-cycles, /stories/aftercare
+Schema: CollectionPage, BreadcrumbList
+Page intent
+The category page for the Treatments pillar. Short header, then a chronological grid of articles in this category.
+Section 1: Hero
+H1: treatments.
+Subheading: honest guides to the treatments you are already getting, or thinking about. no upsell, no fluff, no clinic sponsorship.
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 26: Stories category: Skincare (/stories/skincare)
+SEO block
+Meta title: skincare: the order, the conflicts, the actually-doing-something
+Meta description: routine order, ingredient conflicts, actives, and the actual answer to the questions reddit will not stop asking.
+H1: skincare.
+Primary keyword: skincare advice uk
+Secondary keywords: skincare routine uk, retinol guide uk, vitamin c guide, skincare layering
+Canonical URL: https://mynella.app/stories/skincare
+OG image: TBC
+Internal links out: /stories, /intelligence/ingredient-conflicts, /what-it-does/routines
+Schema: CollectionPage, BreadcrumbList
+Section 1: Hero
+H1: skincare.
+Subheading: the order, the conflicts, the actives, and the bit of beauty that takes the most thought and gets the least good information.
+Section 2: Article grid
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 27: Stories category: Aftercare (/stories/aftercare)
+SEO block
+Meta title: aftercare: what to do after every treatment that needs it
+Meta description: day-by-day aftercare for botox, microneedling, peels, and the treatments you have just booked. honest, plain-english, no clinic upsell.
+H1: aftercare.
+Primary keyword: treatment aftercare uk
+Secondary keywords: botox aftercare, microneedling aftercare, peel aftercare, filler aftercare
+Canonical URL: https://mynella.app/stories/aftercare
+OG image: TBC
+Internal links out: /stories, /what-it-does/aftercare, /intelligence/ingredient-conflicts
+Schema: CollectionPage, BreadcrumbList
+Section 1: Hero
+H1: aftercare.
+Subheading: what to do, what to skip, what to put back on. day by day, for the treatments that actually need it.
+Section 2: Article grid
+
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 28: Stories category: Money (/stories/money)
+SEO block
+Meta title: money: what beauty actually costs in the UK
+Meta description: what botox costs, what a facial costs, what you actually spend on beauty in a year. honest breakdowns, no upsell.
+H1: money.
+Primary keyword: beauty cost uk
+Secondary keywords: how much does botox cost uk, facial cost uk, beauty spend uk, beauty budget uk
+Canonical URL: https://mynella.app/stories/money
+OG image: TBC
+Internal links out: /stories, /what-it-does/tracking, /what-it-does/insights
+Schema: CollectionPage, BreadcrumbList
+Section 1: Hero
+H1: money.
+Subheading: what beauty actually costs in the UK. honest numbers, real averages, no clinic sponsorship.
+Section 2: Article grid
+Body:
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 29: Stories category: Occasions (/stories/occasions)
+SEO block
+Meta title: occasions: timelines for weddings, holidays, big birthdays
+Meta description: what to book, when, and why. beauty timelines for the moments you are planning around, six months out to the morning of.
+H1: occasions.
+Primary keyword: wedding beauty timeline
+Secondary keywords: pre-holiday treatments, big birthday beauty plan, beauty timeline uk
+Canonical URL: https://mynella.app/stories/occasions
+OG image: TBC
+Internal links out: /stories, /what-it-does/insights, /what-it-does/tracking
+Schema: CollectionPage, BreadcrumbList
+Section 1: Hero
+H1: occasions.
+Subheading: the timeline for the moments you are planning around. weddings, holidays, birthdays, anniversaries. what to book, when, and why.
+Section 2: Article grid
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 29a: Story article 4 (full copy): the wedding beauty timeline
+Article slug
+/stories/wedding-beauty-timeline
+Category
+Occasions
+SEO block
+Meta title: the wedding beauty timeline: what to book, when, and what to leave alone
+Meta description: the twelve-month beauty plan for your wedding, week by week. what to do early, what to do late, and the treatments to avoid in the final month.
+H1: the wedding beauty timeline: what to book, when, and what to leave alone.
+Primary keyword: wedding beauty timeline
+Secondary keywords: wedding skincare timeline, pre-wedding treatments, wedding beauty plan, bridal beauty schedule
+Canonical URL: https://mynella.app/stories/wedding-beauty-timeline
+OG image: TBC
+Internal links out: /stories/occasions, /what-it-does/insights, /intelligence/treatment-cycles, /stories/aftercare
+Schema: Article, BreadcrumbList, HowTo
+Author: none 
+Read time: 7 minutes
+Word count target: 1,200 to 1,400
+Article
+H1: the wedding beauty timeline: what to book, when, and what to leave alone.
+Lead paragraph:
+a wedding is the one occasion where the timing of your beauty matters more than the spend. start the right things early and they work. start them late and they backfire. this is the twelve-month plan in plain english, from the early baseline work down to the morning of, with the bit at the end that most timelines forget to mention: what not to do in the final four weeks.
+H2: twelve to nine months out.
+Body:
+the long game work goes here. this is the only window where you have time for things that compound: a serious skincare routine that calibrates over three months, body work that requires a full course, dental whitening if you are doing it, and any consultation appointments with the people you trust.
+book your skin consultation now. start a properly built routine, with retinol and vitamin C scheduled at sustainable frequencies. if you are considering injectables or skin treatments you have never had before, this is when you trial them. you want to see how your face responds with a year of margin, not a month. trial profhilo, trial polynucleotides, trial a new aesthetician. start your laser hair removal course, which needs six to eight sessions across as many months. start any orthodontic or dental work that requires runway.
+H2: nine to six months out.
+Body:
+this is the locking-in window. the treatments you trialled and liked move into a regular cadence. brows go on a six-week cycle so they peak around the dress fitting. facials settle into a four to six-week rhythm. hair colour finds the tone you want, which sometimes takes two or three sittings to get right.
+if you are doing botox for the wedding, you do not need to book it now. but if it is new to you, your trial appointment goes here. you want to see the effect at full peak (around week two) and the wear-off pattern (around week ten) before you decide on a wedding-day cadence. the same goes for any filler. trial it, see how you feel about it for the full duration, then decide whether to repeat closer to the day.
+H2: six to three months out.
+Body:
+this is the consolidation window. your routine is doing its work. your treatments are on cycle. the photographer is booked, the venue is paid for, and your skin is roughly where you want it to be by the wedding.
+this is also the right window for any course-based treatments that finish before the final month. a course of three microneedling sessions, spaced four to six weeks apart, starts here. a course of skin boosters or polynucleotides starts here. you want the last session of any course to land at least six weeks before the wedding, not the week before.
+your hair gets a proper trial with whoever is doing it on the day, with the dress photographs or fabric swatches. so does your makeup. the bridal trial does not have to be expensive. it has to be definitive.
+H2: three to one month out.
+Body:
+the final treatment window for anything that comes with downtime, swelling, or unpredictability. botox lands here, three to four weeks out, so the result is fully settled by the day. botox takes about two weeks to reach full effect, which gives you a two-week buffer for any review or small adjustment your practitioner suggests. earlier than three weeks risks under-settled results. later than two weeks means walking into the wedding mid-development. four weeks out is the sweet spot.
+filler timing depends on the area. lip filler needs at least six weeks, ideally eight, because lips swell and bruise more than other areas, and small bumps can take a full month to settle. cheek, jaw, or chin filler needs six to eight weeks. anything sooner risks visible swelling or bruising on the day.
+at four weeks out, the final microneedling, the final peel of any grade, the final deep facial that involves extractions. anything more aggressive than a hydrating treatment stops at this point.
+H2: the final month: what to do, what to leave alone
+Body:
+this is the section most timelines skip. the bit where you do less, not more.
+no new actives, no new products, no new clinics. the routine you have been running for six months is the one you finish on. introducing a new serum in the final month is one of the most common ways to walk into the wedding with a reaction you have never seen before.
+no aggressive treatments. no microneedling, no peels, no laser, no aggressive extractions. a calm hydrating facial two weeks out is fine. anything more is gambling with downtime you cannot afford. no significant changes to your hair colour in the final four weeks unless it is the same colourist doing the same shade. the touch-up window is the week before, not earlier and not later.
+no last-minute injectables. the temptation is real and the regret is consistent. if you missed the six-week window for botox, the answer is to skip it for the wedding and do it the week after, not to squeeze it in at three weeks. the same for filler, even more so.
+H2: the final two weeks.
+Body:
+the final brow shape and tint at twelve days out, so it has settled and softened by the day. if you have lash extensions, the final infill at five to seven days out. if you have lash lifts, the same timing. eyebrow lamination, if you do it, two to three weeks out, never closer.
+hair colour in the seven to ten-day window. close enough to look fresh, far enough to look natural rather than just-coloured. a glossing or toner appointment two days before is the optional extra that takes a colour from very good to excellent.
+nails in the forty-eight to seventy-two hour window. close enough that they survive the day, far enough that the cuticles have settled.
+H2: the day before and the morning of.
+Body:
+the day before is for the things you would do anyway. your standard PM routine. extra hydration if your skin is feeling tight, nothing new. a moisturising mask if it is in your usual rotation. early to bed and water, the two things every bride knows and half of them skip.
+the morning of is for the routine you have been running for six months, exactly as you have been running it. cleanser, the serums you trust, the moisturiser that sits well under makeup, SPF (yes, even with your wedding hair and makeup on top, the photographs are the reason). if you have wedding makeup booked, the artist will work over the top. if you are doing your own, give your moisturiser and SPF five to ten minutes to fully settle before you start.
+H2: how nella handles all of this.
+Body, two paragraphs:
+once you set your wedding date in nella, the timeline above becomes your timeline. the reminders adjust. the treatment cycles recalibrate. your routine knows the wedding is coming and protects against the things that would undermine it. no new actives in the final month. no aggressive treatments inside the four-week window. the final brow appointment timed to land twelve days out, the nails timed to land within seventy-two hours.
+what nella also holds is the record. every trial, every clinic, every product, every outcome from the twelve months of preparation. so when your sister is planning hers eighteen months later, you do not have to remember. nella does.
+Soft CTA at end of article:
+H2: plan a wedding without holding it all in your head.
+nella holds the timeline, the treatments, and the rules. for free.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Internal link block at bottom:
+this article is general guidance, not personal medical advice. nella is a lifestyle app, not a medical product. if you have specific concerns about your treatment, your aftercare, or your skin, your practitioner is the person to ask. they know you. nella knows the rest.
+
+read more in occasions: /stories/occasions the treatment cycle reference: /intelligence/treatment-cycles aftercare guides: /stories/aftercare
+Page 30: Support hub (/support)
+SEO block
+Meta title: nella support: FAQ and contact
+Meta description: answers to the most common questions about nella, and how to get in touch if your question is not here.
+H1: support.
+Primary keyword: nella support
+Secondary keywords: nella faq, nella help, nella contact
+Canonical URL: https://mynella.app/support
+OG image: (Suggestion: brand colour, "support" as type.)
+Internal links out: /support/faq, /support/contact
+Schema: WebPage, BreadcrumbList
+Section 1: Hero
+H1: support.
+Subheading: answers to the most common questions, and how to get in touch if yours is not here.
+Section 2: Two cards
+Card 1, links to /support/faq:
+FAQ. answers to the questions that come up most. organised by category, searchable, updated when things change.
+read more → /support/faq
+Card 2, links to /support/contact:
+contact. if your question is not in the FAQ, send it to hello@mynella.app or use the form. every message gets read.
+read more → /support/contact
+Section 3: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Page 31: FAQ (/support/faq)
+SEO block
+Meta title: FAQ: the questions that come up most
+Meta description: how nella works, what it costs, what data it holds, and what happens if you cancel. the answers, in plain english.
+H1: frequently asked questions.
+Primary keyword: nella faq
+Secondary keywords: how does nella work, is nella free, nella cancel, nella data
+Canonical URL: https://mynella.app/support/faq
+OG image: (Suggestion: clean type-only layout, "FAQ" with the brand colour.)
+Internal links out: /pricing, /about/privacy-principles, /support/contact
+Schema: FAQPage, BreadcrumbList
+Page intent
+The full FAQ. Organised by category so the visitor can find what she needs. Every question is also tagged in Sanity so it can be embedded on other pages (the home FAQ teaser pulls from here, for example).
+Section 1: Hero
+H1: frequently asked questions.
+Subheading: the questions that come up most. organised by category. in plain english.
+Section 2: Category navigation
+Body: anchor links to the categories below.
+getting started
+features
+pricing and subscriptions
+account and privacy
+troubleshooting
+Section 3: Getting started
+H2: getting started.
+Accordion list:
+what is nella? nella is a beauty intelligence app for women who invest in treatments and skincare. she tracks your treatments, organises your routine, runs your aftercare, and shows you the patterns. one app, every clinic, every product, every cost.
+who is nella for? women in the UK who have more than three treatments a month, or a skincare routine with four or more products, or who spend more than £100 a month on beauty. if any of that sounds like you, nella is for you.
+which devices does nella work on? iOS first. android is in phase two. 
+how do i join the waitlist? enter your email at /waitlist. you will get one email when nella launches. nothing else in between.
+when does nella launch? August 2026. get the link first.
+Section 4: Features
+H2: features.
+Accordion list:
+what does nella actually track? every treatment you get, every product in your routine, every cost you carry, your daily skin check-in, and your glow score. plus aftercare automatically for treatments that need it.
+how does the glow score work? a number from 0 to 100, calculated daily after a fourteen-day calibration. full detail: /intelligence/glow-score.
+how do the reminders work? every treatment has its own cycle length. nella knows the cycle for every type and sends a heads-up seven days before you are due, on the day, and again if you slip. full detail: /intelligence/treatment-cycles.
+what happens when i log a treatment? nella adds it to your history with cost, clinic, rating, notes, and photos if you want them. if the treatment triggers any product pauses (microneedling pauses retinol, for example), those pauses start automatically.
+does nella know about ingredient conflicts? yes. every product in your routine is cross-checked against every other for active conflicts. retinol and AHA, vitamin C and niacinamide, the standard ones. full detail: /intelligence/ingredient-conflicts.
+can i see my full history? on nella Core, you see the last three months. on nella Pro, you see everything you have logged since day one.
+Section 5: Pricing and subscriptions
+H2: pricing and subscriptions.
+Accordion list:
+is nella free? yes. nella Core is free, forever, with no credit card needed and no time limit.
+what does nella Pro cost? £4.99 a month or £39.99 a year (saves 33%). 7-day free trial. cancel anytime.
+how do i start the free trial? download the app, choose Pro at the paywall, and start the seven-day trial. cancel before day seven and you pay nothing.
+can i cancel anytime? yes. cancel in your apple subscriptions settings and Pro stops at the end of the current billing period. your data stays. you go back to Core.
+what happens to my data if i cancel Pro? nothing disappears. you still have your account and your tracking. you just lose access to the Pro-only features: the score breakdown, day-by-day aftercare, spending insights, full history, and unlimited shelf.
+do you offer refunds? refunds are handled by the App Store, not by us. apple's standard refund policy applies. 
+Section 6: Account and privacy
+H2: account and privacy.
+Accordion list:
+does nella sell my data? no. nella does not sell your data, run ads, or share with brands or clinics. your beauty life is yours. full detail: /about/privacy-principles.
+is nella GDPR compliant? yes. nella is built and operated in the UK and complies with UK GDPR. our full privacy policy: /privacy.
+how is my data stored? on Supabase with row-level security. your data is locked to your account specifically. encrypted in transit and at rest.
+can i delete my account? yes, anytime. one tap in settings. your data is removed from active systems immediately and from backups within thirty days.
+can a clinic see my data? no. nella sits across every clinic you use, which is the whole point. no individual clinic sees what you have done at the others.
+Section 7: Troubleshooting
+H2: troubleshooting.
+Accordion list:
+my reminders are not coming through. check that notifications are enabled in your iOS settings under nella. if they are on and you are still not getting reminders, email support@mynella.app and the issue gets looked into.
+my glow score is not showing. the score calibrates over the first fourteen days. if you are past day fourteen and still cannot see it, check that you have logged at least one treatment and at least seven check-ins. if the issue persists, contact us.
+i cannot log in. try resetting your password from the login screen. if that does not work, email support@mynella.app.
+a treatment type is missing. log it as "other" and flag what was missing. treatment types get added based on what people actually ask for.
+i found a bug. email support@mynella.app with what you were doing and what happened. screenshots help. every report gets read.
+Section 8: Still got a question?
+H2: still got a question?
+Body:
+if it is not on this page, send it to hello@mynella.app or use the form: /support/contact. every message gets read.
+Page 32: Contact (/support/contact)
+SEO block
+Meta title: contact nella: hello@mynella.app or the form
+Meta description: send your question, your feedback, or your bug. every message gets read and answered within two working days.
+H1: get in touch.
+Primary keyword: nella contact
+Secondary keywords: nella support contact, contact mynella, nella feedback
+Canonical URL: https://mynella.app/support/contact
+Internal links out: /support/faq, /about/privacy-principles
+Schema: ContactPage
+Section 1: Hero
+H1: get in touch.
+Subheading: every message lands in the same inbox. all of them get read, with an answer back within two working days.
+Section 2: The form
+Form fields:
+your name (required)
+your email (required)
+topic (dropdown: question, feedback, bug report, press, salons, other)
+your message (required)
+Submit button: send
+Below form: if you prefer email, write to hello@mynella.app directly.
+Section 3: a small note on what does not get a reply
+H2: a small note.
+Body:
+sales pitches, cold marketing outreach, and requests to add a clinic to a directory do not get a reply. if you are press, write to hello@mynella.app with PRESS in the subject. if you are a salon interested in partnering, /for-salons has the full picture.
+Page 33: Waitlist (/waitlist)
+SEO block
+Meta title: join the nella waitlist
+Meta description: be the first to know when nella launches on iOS. one email when she is live, nothing else in between.
+H1: the waitlist.
+Primary keyword: nella waitlist
+Secondary keywords: nella signup, nella launch, beauty app waitlist
+Canonical URL: https://mynella.app/waitlist
+Internal links out: /why-nella, /what-it-does
+Schema: WebPage
+Note: post-launch, this page redirects to /download.
+Page intent
+Single-purpose page. Email capture. The visitor is here because she clicked a pre-launch CTA. The job is to take her email cleanly and tell her what happens next. Pre-launch only.
+Section 1: Hero
+H1: the waitlist.
+Subheading: be first in when nella launches. one email, when she is live. nothing else in between.
+Section 2: The form
+Form fields:
+your email (required)
+(Suggestion: optional first name, removes friction if omitted but personalises the launch email if provided.)
+Submit button: join the waitlist
+
+Section 3: What happens next
+H2: what happens next.
+Body, three short blocks:
+one email, on launch day. the link to the App Store, plus a personal note from the founder.
+no marketing in between. no weekly newsletter. no promotional emails. one email, when she is ready.
+a head start on Pro. waitlist members get an extended free trial. Section 4: A note on your email
+Body, one paragraph:
+your email is held by nella and used only to tell you when the app is live. it will not be passed on, sold, or used for anything else. you can ask for it to be deleted at any time. write to support@mynella.app.
+Section 5: Final block
+Body:
+if you are not ready to join the waitlist, the rest of the site is open. start with /why-nella.
+Page 34: Download (/download)
+SEO block
+Meta title: download nella on the App Store
+Meta description: nella is live on iOS. one tap to install, free to use, £4.99 for Pro.
+H1: download nella.
+Primary keyword: download nella
+Secondary keywords: nella app store, nella ios, nella android
+Canonical URL: https://mynella.app/download
+OG image: (Suggestion: clean App Store badge plus QR code for desktop visitors.)
+Internal links out: /pricing, /what-it-does
+Schema: WebPage, SoftwareApplication
+Note: pre-launch this page redirects to /waitlist.
+Page intent
+The smart deep-link page. Detects device and routes accordingly. Post-launch only.
+Section 1: Hero
+H1: download nella.
+Subheading: free to use. £4.99 a month for Pro. cancel anytime.
+Section 2: Mobile state
+Body, two app store buttons:
+App Store badge (links to nella iOS listing)
+Google Play badge (visible when android launches in phase two)
+Section 3: Desktop state
+Body, one paragraph:
+scan the QR code with your phone camera to open nella in the App Store. or send yourself the link.
+QR code visible.
+Text link below: send me the link → opens a small modal with an email field. (Suggestion: same Sanity-backed capture as the waitlist.)
+Section 4: A note for android
+Body, pre-android-launch:
+nella is iOS first. android is coming in phase two. join the waitlist at /waitlist to be the first to know.
+Page 35: For salons (/for-salons)
+SEO block
+Meta title: for salons: partner with nella
+Meta description: nella sits across every clinic her client visits. partnering means more retention, more rebookings, and the right aftercare every time.
+H1: for salons.
+Primary keyword: beauty app for salons
+Secondary keywords: salon partnership uk, nella for salons, salon client retention app
+Canonical URL: https://mynella.app/for-salons
+Internal links out: /why-nella, /what-it-does, /support/contact
+Schema: WebPage
+Page intent
+Direct-link only. Reached from Instagram, TikTok, or salon QR codes. The visitor is a salon owner or aesthetic practitioner. The job is to explain the partnership cleanly and capture interest.
+Section 1: Hero
+H1: for salons.
+Subheading: nella sits across every clinic her client visits. partnering with the right ones means you stay in her picture between appointments, not just at them.
+Section 2: The proposition
+H2: why partner with nella.
+Body, three blocks:
+you stay in her picture between visits. nella reminds her when her treatments are due, holds her aftercare, and tracks her progress. when she is due back, you are top of mind because you are in her record. not in a generic calendar.
+she comes back better prepared. her routine is in nella. her last treatment date is in nella. her aftercare is in nella. when she walks in for her next appointment, she is not guessing. that is better for her and faster for you.
+you become part of a wider picture, not a closed one. nella does not lock her into one clinic. that is the whole point. it means the women using nella are the women who care about their results enough to track them, which is exactly the client you want walking through the door.
+Section 3: How the partnership works
+H2: how it works.
+Body, four short blocks:
+materials. nella business cards or leaflets with a QR code, designed to fit your reception space. 
+a dedicated landing page. each partner salon gets a co-branded landing page at /lp/salon/[your-name]. your client scans the QR, lands on a page with your salon's branding, and downloads nella.
+no fees, no commissions. the partnership is free for the salon. no fees in, no commissions out. nella's revenue is the subscription, paid by the client.
+a salon code, optional. a unique code printed on your card or leaflet that gives your clients a longer free trial on Pro. 
+Section 4: Who nella partners with
+H2: who nella partners with.
+Body, two paragraphs:
+aesthetic clinics, facialists, advanced skin specialists, brow specialists, and selected hair colourists. independent practitioners whose work earns the recommendation, not just chains chasing footfall. the criteria is consistent: regulated treatments, qualified practitioners, and a standard of care that matches what your clients are already used to.
+nella does not partner with clinics or practitioners offering unregulated injectables, treatments outside MHRA guidance, or anything that would not survive a second-opinion conversation. this is not exclusivity for its own sake. it is the only way the partnership delivers for the client, which is the only reason it exists.
+Section 5: Get in touch
+H2: start a partnership.
+Form fields:
+salon or clinic name (required)
+your name (required)
+your email (required)
+your location (required)
+treatments offered (text field)
+average clients per week (optional)
+your message (required)
+Submit button: start the conversation
+Section 6: The short version
+H2: the short version.
+Body:
+partnering with nella means your salon stays present in the everyday life of a client who is investing properly in her appearance. she remembers you because nella does. she comes back because the aftercare worked. partnership is free for the salon, the client gets a longer free trial, and the standard for who joins is high on purpose. that is the whole deal.
+Page 36: 404
+SEO block
+Meta title: page not found
+Meta description: the page you are looking for is not here. start from the home page, or one of the suggestions below.
+H1: this page is not where you left it.
+Schema: WebPage
+Robots: noindex
+Section 1: Hero
+H1: this page is not where you left it.
+Subheading: the URL has changed, the article has moved, or the link was always a bit dodgy. either way, you are here now.
+Section 2: Where to go next
+H2: where to go next.
+Four links:
+the home page → /
+why nella exists → /why-nella
+what nella does → /what-it-does
+the stories → /stories
+Section 3: A small joke that is not a joke
+Body, one paragraph:
+if you came here from a link that should have worked, write to support@mynella.app and flag it. it will get fixed.
+Page 37: Thank you (/thanks)
+SEO block
+Meta title: thank you
+Schema: WebPage
+Robots: noindex
+Section 1: Hero
+H1: got it. thank you.
+Subheading, dynamic:
+
+from waitlist: you are on the list. one email lands when nella is live.
+from contact: your message is in. an answer follows within two working days.
+from salon enquiry: thanks for getting in touch. an answer follows within two working days.
+from newsletter: subscription confirmed. one email a fortnight, nothing else.
+Section 2: While you are here
+H2: while you are here.
+Body, two links:
+read why nella exists → /why-nella
+see what nella does → /what-it-does
+Page 38: Persona LP, the tracker (/lp/organiser)
+SEO block
+Meta title: the beauty app that finally remembers it all
+Meta description: your nails, your botox, your highlights, your brows. nella tracks them so you do not have to.
+H1: finally, an app that remembers it for you.
+Primary keyword: beauty tracking app
+Canonical URL: https://mynella.app/lp/organiser
+Robots: noindex (paid traffic only, no organic indexing)
+Schema: WebPage
+Page intent
+Paid-traffic landing page for ads targeting Organiser audiences. Tighter than the home page, designed for one-tap install or waitlist conversion. Ad-matched copy.
+Section 1: Hero
+H1: finally, an app that remembers it for you.
+Subheading: your nails are overdue. your botox might be too. nella tracks every treatment, every clinic, every cost. so you do not have to.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Section 2: What it does
+H2: what nella does.
+Three short blocks:
+logs every treatment in fifteen seconds. clinic, cost, rating, notes, photo if you want one.
+reminds you when each one is due. nails every three weeks, botox every twelve. the cycle for every treatment, held for you.
+adds up what you spend. this month, this quarter, this year. you finally know.
+Section 3: Social proof
+Body:
+"i used to forget when my brows were due. now nella tells me before i remember to look." rachel, 32
+Section 4: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 39: Persona LP, the refiner (/lp/ritualist)
+SEO block
+Meta title: the routine app that knows what fights what
+Meta description: retinol, vitamin C, AHA, BHA. nella holds your routine and the conflicts, so you finally know if it is working.
+H1: find out if your routine is actually working.
+Primary keyword: skincare routine app
+Canonical URL: https://mynella.app/lp/ritualist
+Robots: noindex
+Schema: WebPage
+Section 1: Hero
+H1: find out if your routine is actually working.
+Subheading: five products in the AM, six in the PM, and one nagging question. nella holds the order, the conflicts, and the consistency score that tells you the truth.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Section 2: What it does
+H2: what nella does.
+Three short blocks:
+orders your AM and PM automatically. cleanser, toner, actives, hydration, SPF. the right order, every time.
+catches every active conflict. retinol and AHA, vitamin C and niacinamide. if two products fight, nella tells you.
+scores your consistency, properly. four inputs, weighted. not a vanity number. a real measure of whether you are doing the work.
+Section 3: Social proof
+Body:
+"i finally know what is doing the work in my routine and what is just sitting there." priya, 28
+Section 4: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 40: Persona LP, the explorer (/lp/explorer)
+SEO block
+Meta title: the aftercare app for the woman who is properly in
+Meta description: skin boosters, polynucleotides, microneedling. nella holds the record and runs the aftercare so the money you spent does the work it is meant to.
+H1: the app for the woman who is properly in.
+Primary keyword: aesthetic treatment tracker
+Canonical URL: https://mynella.app/lp/explorer
+Robots: noindex
+Schema: WebPage
+Section 1: Hero
+H1: the app for the woman who is properly in.
+Subheading: new treatment in the diary. you do the research, you go to the right people, you spend the money. nella holds the aftercare day by day so what you booked does what it is supposed to.
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Section 2: What it does
+H2: what nella does.
+Three short blocks:
+logs every new treatment, with everything. clinic, cost, rating, notes, photos. so you remember which one actually worked.
+runs the aftercare automatically. microneedling tuesday, retinol paused for seven days. you do not have to remember a thing.
+tells you what to expect next. day one, day three, day seven. nella holds the timeline so you protect what you just paid for.
+Section 3: Social proof
+Body:
+"i did the research, booked the right clinic, paid the £180. nella made sure day three did not undo any of it." hannah, 35
+Section 4: Final CTA
+CTA:
+Pre-launch: join the waitlist
+Post-launch: get nella on the App Store
+Below button: free to use. £4.99 a month for Pro. cancel anytime.
+Page 41: Legal pages
+These pages exist for compliance. Copy is supplied by the legal provider, not written here.
+/privacy
+Meta title: nella privacy policy Meta description: the full privacy policy for nella, in legal language. for the plain-english version, see /about/privacy-principles. H1: privacy policy. Body: [placeholder: full privacy policy supplied by iubenda or equivalent legal provider] Robots: index (so legal compliance is searchable)
+/terms
+Meta title: nella terms of service Meta description: the terms of service for using nella. by using the app, you agree to these terms. H1: terms of service. Body: [placeholder: full terms supplied by legal provider] Robots: index
+/cookies
+Meta title: nella cookie policy Meta description: what cookies nella uses, what they do, and how to manage them. H1: cookie policy. Body: [placeholder: full cookie policy supplied by legal provider] Robots: index
+Part 3: Microcopy and reusable strings
+This section holds the reusable strings used across the site. These live in Sanity Site Settings or as constants in the front-end, so a single edit propagates everywhere.
+Header
+Logo (lowercase wordmark): nella
+Nav item 1: why nella
+Nav item 2: made for her
+Nav item 3: what it does
+Primary CTA, pre-launch: join the waitlist
+Primary CTA, post-launch: get nella
+Footer
+Tagline below logo: the beauty intelligence app that remembers everything.
+Company line: nella is built by mynella Ltd, 17142670. 
+Footer column headers: product / stories / company / legal / connect
+Cookie consent banner
+Headline: cookies. one quick thing.
+Body: nella uses cookies for the basic stuff: to keep you logged in, to remember your preferences, to measure how the site is performing. nothing creepy, no third-party advertising trackers, no selling your data on. you can read the full policy or just say yes.
+Primary button: that is fine Secondary button: manage preferences Tertiary link: read the policy → /cookies
+Newsletter signup (used on /stories and in the footer)
+Headline: the nella stories. Subheadline: one email a fortnight. the best of what gets published. unsubscribe in one click. Email field placeholder: your email Button: subscribe
+Waitlist confirmation message (on /thanks)
+you are on the list. one email, on launch day. nothing else in between.
+Contact form confirmation message (on /thanks)
+your message is in. every one gets read, with an answer back within two working days.
+Salon enquiry confirmation message (on /thanks)
+thanks. every salon enquiry gets read, with an answer back within two working days.
+Newsletter confirmation message (on /thanks)
+subscribed. you will get one email a fortnight. unsubscribe link in every one.
+App Store badge alt text
+download nella on the App Store
+Google Play badge alt text
+download nella on Google Play
+Loading states
+general loading: a moment.
+form submitting: sending.
+video loading: loading.
+Empty states
+no treatments logged yet: nothing here yet. log your first treatment.
+no products in shelf yet: nothing here yet. add your first product.
+score not yet calibrated: your score is calibrating. fourteen days from your first check-in.
+Error states
+generic error: something has gone wrong. try again, or write to hello@mynella.app.
+form validation error (missing field): this bit is missing. please add it.
+form validation error (invalid email): that email is not quite right. try again.
+Phase-aware CTA strings
+These swap automatically based on siteSettings.launchPhase in Sanity.
+Pre-launch state:
+primary button: join the waitlist
+destination: /waitlist
+supporting line below button: one email, on launch day. nothing else in between.
+Post-launch state:
+primary button: get nella on the App Store
+destination: /download (which device-detects)
+supporting line below button: free to use. £4.99 a month for Pro. cancel anytime.
+Part 4: Final consistency notes for the developer
+A short list of things to check before launch.
+Voice consistency. The site is written in one voice. Sentence case headings throughout. Lowercase brand name throughout. No em dashes. No exclamation marks. No marketing verbs.
+CTA consistency. Every primary CTA on every page uses the phase-aware string. Every secondary CTA uses the same logic. Where a CTA appears as a text link instead of a button, the verb is consistent ("read more", "see how it works", "see all the features").
+Internal linking. Every page links to at least two other pages on the site. Most link to three or four. Internal links use descriptive anchor text, not "click here" or "read more" alone.
+Heading hierarchy. Every page has one H1. Every section is an H2. Sub-sections are H3. The hierarchy is never skipped.
+Meta titles. Every meta title is under 60 characters. Where possible, the brand name "nella" appears in the title for brand recognition in search.
+Meta descriptions. Every meta description is under 155 characters and reads as a natural sentence, not a keyword list.
+Alt text. Every image carries descriptive alt text. (Suggestion: alt text written by the developer in line with the image content, not auto-generated. Examples provided in OG image notes.)
+Schema. Each page has its schema noted in the SEO block. Implement as JSON-LD in the page head.
+Phase toggle. Every CTA, every "join the waitlist" reference, every App Store badge presence is wired to the siteSettings.launchPhase flag in Sanity. Flipping the flag switches the whole site.

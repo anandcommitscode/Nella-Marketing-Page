@@ -1,0 +1,198 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Sparkles, CalendarCheck, CheckCircle2, TrendingUp, Activity, BarChart2, Check, ArrowUpRight, ArrowRight, X } from 'lucide-react';
+import CtaSection from '../../../components/CtaSection';
+
+export const metadata: Metadata = {
+  title: 'the glow score, explained: what nella measures',
+  description: 'a number from 0 to 100, calibrated to you over your first two weeks, then updated daily. the only beauty score that tells you the truth.',
+  keywords: ['beauty score app', 'skincare score', 'treatment tracking score', 'glow score nella'],
+  alternates: {
+    canonical: 'https://mynella.app/intelligence/glow-score'
+  }
+};
+
+export default function GlowScorePage() {
+  return (
+    <div className="space-y-0">
+      <div className="text-left max-w-5xl mx-auto px-6 py-12 space-y-12">
+        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
+          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+          <span className="text-grey font-normal">&gt;</span>
+          <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
+          <span className="text-grey font-normal">&gt;</span>
+          <span className="text-espresso">The Glow Score</span>
+        </div>
+
+        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+          <div className="inline-flex items-center gap-1.5 justify-center">
+            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
+            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+          </div>
+
+          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
+            What your score is really measuring.
+          </h1>
+
+          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
+            a number from 0 to 100, calibrated to you over your first two weeks, then updated daily.
+          </p>
+        </div>
+
+        <div className="space-y-10 max-w-4xl mx-auto">
+          <div className="space-y-4">
+            <h2 className="font-display font-semibold text-[24px] text-espresso">What a score should actually do.</h2>
+            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
+              <p>a score that goes up when nothing has changed is a vanity metric. a score that goes up when you take care of yourself tells you something. nella's score is the second one.</p>
+              <p>four things feed it. each one is something you actually do. each one moves the number, in its own way.</p>
+            </div>
+          </div>
+
+          <div className="space-y-6 pt-2">
+            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4">The four things your score responds to.</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {/* Card 1: Treatments on Track */}
+              <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                  <div className="flex items-center justify-center gap-6 z-10 w-full">
+                    {/* Mockup: Cycle Progress Wheel */}
+                    <div className="relative w-20 h-20 rounded-full border-[4px] border-[#E8E5DC] flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <svg className="absolute inset-0 w-full h-full -rotate-90">
+                        <circle cx="36" cy="36" r="36" fill="transparent" stroke="#DEC68B" strokeWidth="4" strokeDasharray="226" strokeDashoffset="50" className="transition-all duration-1000 ease-out group-hover:strokeDashoffset-0" />
+                      </svg>
+                      <span className="font-display font-bold text-[18px] text-espresso">3/4</span>
+                    </div>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-1.5 text-[10px] font-bold text-espresso bg-white px-2 py-1 rounded shadow-sm border border-[#E8E5DC] group-hover:translate-x-1 transition-transform duration-300 delay-75">
+                        <Check size={10} className="text-[#8F6F3E]" /> Botox Active
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] font-bold text-espresso bg-white px-2 py-1 rounded shadow-sm border border-[#E8E5DC] group-hover:translate-x-1 transition-transform duration-300 delay-150">
+                        <X size={10} className="text-red-400" /> Brows Due
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-3 flex-grow">
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">treatments on track.</h4>
+                  <p className="text-[14px] text-grey font-sans leading-relaxed">how many of your treatments are inside their expected cycle window. nails due, brows due, botox holding. the cycle of treatments is the spine of your beauty life. the largest single input because the cycle of treatments is the spine of your beauty life.</p>
+                </div>
+              </div>
+
+              {/* Card 2: Skin Trend */}
+              <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                  <div className="w-full max-w-[200px] z-10 flex flex-col gap-2 relative">
+                    <div className="flex justify-between items-center px-1">
+                      <span className="text-[10px] font-bold text-grey uppercase tracking-wider">14-Day Trend</span>
+                      <span className="text-[11px] font-bold text-[#8F6F3E] flex items-center gap-0.5">+12 <ArrowUpRight size={12} /></span>
+                    </div>
+                    <div className="h-16 w-full flex items-end justify-between gap-1 group-hover:px-1 transition-all duration-500">
+                      {[40, 45, 42, 50, 55, 60, 58, 65, 70, 68, 75, 80, 82, 85].map((h, i) => (
+                        <div key={i} className="w-full bg-[#DEC68B] rounded-t-sm opacity-50 group-hover:opacity-100 transition-all duration-300" style={{ height: `${h}%`, transitionDelay: `${i * 30}ms` }}></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-3 flex-grow">
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">skin trend.</h4>
+                  <p className="text-[14px] text-grey font-sans leading-relaxed">the direction of your daily skin check-in responses over the last fourteen days. moving up, holding steady, slipping. the second largest input because your skin is the result that everything else feeds.</p>
+                </div>
+              </div>
+
+              {/* Card 3: Check-in Streak */}
+              <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                  <div className="w-full max-w-[220px] bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] z-10 group-hover:-translate-y-1 transition-transform duration-500">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CalendarCheck size={14} className="text-[#8F6F3E]" />
+                      <span className="text-[11px] font-bold text-espresso">Activity Grid</span>
+                    </div>
+                    <div className="grid grid-cols-7 gap-1">
+                      {Array.from({ length: 14 }).map((_, i) => (
+                        <div key={i} className={`h-4 rounded-sm ${i === 4 || i === 10 ? 'bg-[#E8E5DC]' : 'bg-[#DEC68B] group-hover:bg-[#8F6F3E] transition-colors duration-500'} `} style={{ transitionDelay: `${i * 40}ms` }}></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-3 flex-grow">
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">check-in streak.</h4>
+                  <p className="text-[14px] text-grey font-sans leading-relaxed">how consistently you have done your daily skin check-in over the last 14 days. not the absolute streak, the percentage. the input that rewards consistency without punishing a bad week.</p>
+                </div>
+              </div>
+
+              {/* Card 4: Routine Consistency */}
+              <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                  <div className="w-full max-w-[180px] space-y-2 z-10">
+                    {['Cleanser', 'Vitamin C', 'Moisturiser', 'SPF 50'].map((item, i) => (
+                      <div key={i} className={`flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-[#E8E5DC] shadow-sm transition-transform duration-500 ${i % 2 === 0 ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}>
+                        <div className="w-4 h-4 rounded-full bg-cream border border-[#8F6F3E]/30 flex items-center justify-center shrink-0">
+                          <Check size={10} className="text-[#8F6F3E]" />
+                        </div>
+                        <span className="text-[10px] font-bold text-espresso">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="p-6 md:p-8 space-y-3 flex-grow">
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">routine consistency.</h4>
+                  <p className="text-[14px] text-grey font-sans leading-relaxed">how many of your scheduled routine steps you've completed in the last fortnight. AM and PM. retinol on the right nights. SPF in the morning. the smallest of the four because consistency without trend is not the whole picture.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-4 pt-8">
+            <h2 className="font-display font-semibold text-[24px] text-espresso">What the number actually means.</h2>
+            <p className="text-[14px] text-grey font-sans leading-relaxed">
+              a 67 today is not the same as a 67 last month. the score moves with your routine, your treatments, your check-ins, and your skin. its job is to show you the trend, not give you a grade. if it's moving up, something is working. if it's moving down, something is slipping. if it's holding, you're on rhythm. nella will tell you why it moved. that's the part that's useful.
+            </p>
+          </div>
+
+          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
+            <h2 className="font-semibold text-espresso mb-1 text-[16px]">The first 14 days.</h2>
+            <p>
+              your score isn't visible for the first fourteen days. nella needs that time to learn your patterns: your treatment cycles, your check-in habit, your routine consistency. without it, the number would be a guess. on day fifteen, the score appears.
+            </p>
+          </div>
+
+          <div className="space-y-4 pt-8">
+            <h2 className="font-display font-semibold text-[24px] text-espresso">What you see on Core and what you see on Pro.</h2>
+            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
+              <p>on Core, you see the score and a one-line statement. "on your game. everything is working." or "drifting. the brows are overdue." the headline.</p>
+              <p>on Pro, you see why. a breakdown of what's working for you, and what isn't. nella will personalise your recommendations to get your score moving in the right direction. "your skin trend is pulling your score down. you've missed three evening check-ins this week."</p>
+            </div>
+          </div>
+
+          <div className="space-y-4 pt-12 border-t border-[#E8E5DC] mt-12">
+            <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link href="/what-it-does/insights" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="group-hover:translate-x-1 transition-transform duration-300">
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">insights</h4>
+                  <p className="text-[14px] text-grey">the score is one part of the insights picture. see the rest.</p>
+                </div>
+              </Link>
+              <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                <div className="group-hover:translate-x-1 transition-transform duration-300">
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">routines</h4>
+                  <p className="text-[14px] text-grey">routine consistency is one of the four inputs.</p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <CtaSection
+        title="Ready to see your score?"
+        subtitle="track your beauty life. watch the number move."
+        backgroundClass="bg-transparent"
+      />
+    </div>
+  );
+}
