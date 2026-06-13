@@ -25,7 +25,7 @@ export default function PrivacyView({ onNavigate }: PrivacyViewProps) {
       </section>
 
       {/* The 4 pillars */}
-      <section className="space-y-8 border-t border-[#E8E5DC] pt-12">
+      <section className="space-y-8 pt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <div className="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center text-[16px] text-red-700">

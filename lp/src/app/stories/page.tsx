@@ -14,7 +14,7 @@ export default function StoriesHubPage() {
   return (
     <div className="space-y-0">
       <div className="text-left max-w-7xl mx-auto px-6 py-12 space-y-16">
-      <section className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+      <section className="space-y-6 text-center pb-16">
         <div className="inline-flex items-center gap-1.5 justify-center">
           <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
           <span className="font-display italic text-[13px] text-[#8F6F3E]">the editorial</span>

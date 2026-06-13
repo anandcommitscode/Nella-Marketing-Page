@@ -16,7 +16,7 @@ export default function IntelligenceHubPage() {
   return (
     <div className="space-y-0">
       <div className="text-left max-w-7xl mx-auto px-6 py-16 space-y-16">
-      <section className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+      <section className="space-y-6 text-center pb-16">
         <div className="inline-flex items-center gap-1.5 justify-center">
           <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
           <span className="font-display italic text-[13px] text-[#8F6F3E]">the intelligence</span>
@@ -41,7 +41,7 @@ export default function IntelligenceHubPage() {
             href="/intelligence/ingredient-conflicts"
             className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full block"
           >
-            <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+            <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
               <div className="absolute left-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
               {/* Graphic: Conflict resolution */}
               <div className="flex gap-4 items-center z-10 w-full max-w-[280px]">
@@ -86,7 +86,7 @@ export default function IntelligenceHubPage() {
             href="/intelligence/glow-score"
             className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full block"
           >
-            <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex flex-col items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden min-h-[280px]">
+            <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex flex-col items-center justify-center p-6 relative overflow-hidden min-h-[280px]">
               <div className="absolute right-[-10%] top-[-10%] w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-3xl"></div>
               
               <div className="w-full flex flex-col gap-6 z-10 items-center justify-center pt-8">
@@ -123,7 +123,7 @@ export default function IntelligenceHubPage() {
             href="/intelligence/treatment-cycles"
             className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full block"
           >
-            <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+            <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
               {/* Graphic: Cycle logic */}
               <div className="w-full max-w-[300px] flex flex-col gap-3 z-10 group-hover:-translate-y-2 transition-transform duration-500">
                 <div className="flex items-center gap-4 bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC]">

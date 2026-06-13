@@ -57,7 +57,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-12"
             >
-              <div className="space-y-6 pt-4 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 pt-4 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
@@ -267,7 +267,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">tracking deep dive</span>
@@ -285,7 +285,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The total record) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                       <div className="w-full max-w-[280px] flex flex-col gap-2 z-10">
                         {['Botox 50 units', 'Profhilo Session 1'].map((item, i) => (
@@ -309,7 +309,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 3: Right Side Tall (Visual proof) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 lg:p-14 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 lg:p-14 relative overflow-hidden">
                       <div className="relative w-full max-w-[160px] h-[280px] flex items-center justify-center z-10">
                          <div className="absolute top-0 w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[-6deg] group-hover:rotate-[-10deg] group-hover:-translate-x-2 transition-all duration-500 z-10">
                            <div className="w-full flex-1 bg-[#FAF7F2] rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]/40" /></div>
@@ -333,7 +333,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 2: Bottom Left (Smart cycles) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="w-full max-w-[280px] bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex items-center gap-4 z-10 group-hover:-translate-y-2 transition-transform duration-500">
                         <div className="relative w-14 h-14">
                           <svg className="absolute inset-0 w-full h-full -rotate-90">
@@ -367,7 +367,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">routines deep dive</span>
@@ -385,7 +385,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The perfect order) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                       <div className="w-full max-w-[280px] flex flex-col gap-2 z-10">
                         {['Cleanser', 'Vitamin C', 'Moisturiser'].map((item, i) => (
@@ -404,7 +404,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 3: Right Side Tall (Visual shelves) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 relative overflow-hidden">
                       <div className="w-[140px] h-[260px] bg-[#FAF7F2] border-[4px] border-white rounded-2xl shadow-inner flex flex-col justify-evenly items-center p-2 z-10 group-hover:scale-105 transition-transform duration-500">
                         <div className="w-full border-b-4 border-white pb-2 flex justify-center">
                            <div className="w-8 h-16 bg-[#F5EDE0] rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full"></div></div>
@@ -425,7 +425,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 2: Bottom Left (Conflict checking) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="flex items-center gap-3 z-10 bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] group-hover:scale-105 transition-transform duration-500">
                         <div className="px-3 py-1.5 bg-[#FAF7F2] rounded-lg text-[11px] font-bold text-espresso border border-[#E8E5DC]">Retinol</div>
                         <div className="w-6 h-6 rounded-full bg-[#FAF7F2] border border-[#E8E5DC] flex items-center justify-center text-[#8F6F3E] shrink-0">
@@ -453,7 +453,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">aftercare deep dive</span>
@@ -471,7 +471,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (Progress photos) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="h-[180px] bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="h-[180px] bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="flex gap-2 z-10 w-full max-w-[280px]">
                         {[1, 2, 3, 4, 5, 6, 7].map((day, i) => (
                           <div key={i} className={`flex-1 rounded-lg border border-[#E8E5DC] flex flex-col items-center justify-center py-2 transition-transform duration-500 delay-${i * 75} ${i < 3 ? 'bg-[#1F1410] text-[#FAF7F2] border-[#1F1410] group-hover:-translate-y-2' : 'bg-white text-grey group-hover:translate-y-1'}`}>
@@ -489,7 +489,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 3: Right Side Tall (The strict rules) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 relative overflow-hidden">
                       <div className="w-[90%] max-w-[220px] space-y-3 z-10">
                         {[
                           { title: 'No Sweating', subtitle: 'For 48 hours' },
@@ -517,7 +517,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 2: Bottom Left (Dynamic recovery) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="w-full max-w-[280px] space-y-2 z-10 group-hover:-translate-y-2 transition-transform duration-500">
                         <div className="flex items-center justify-between bg-white px-4 py-3 rounded-xl border border-[#E8E5DC] shadow-sm">
                           <div className="flex items-center gap-3">
@@ -549,7 +549,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">insights deep dive</span>
@@ -567,7 +567,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The glow score) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                       <div className="relative w-28 h-28 bg-white rounded-full flex items-center justify-center shadow-lg border-[4px] border-[#FAF7F2] z-10 group-hover:scale-110 transition-transform duration-700">
                         <svg className="absolute inset-0 w-full h-full -rotate-90">
@@ -584,7 +584,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 3: Right Side Tall (Spending truth) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-end justify-center pt-8 px-6 border-b border-[#E8E5DC]/60 relative overflow-hidden min-h-[280px]">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-end justify-center pt-8 px-6 relative overflow-hidden min-h-[280px]">
                       <div className="w-full h-full flex items-end justify-center gap-4 z-10 px-4 pb-4">
                         <div className="w-12 bg-[#DEC68B] rounded-t-xl h-[40%] group-hover:h-[60%] transition-all duration-500 shadow-sm relative flex items-start justify-center pt-2"><span className="text-[10px] font-bold text-espresso/50 -rotate-90 origin-center translate-y-6">Mar</span></div>
                         <div className="w-12 bg-[#8F6F3E] rounded-t-xl h-[80%] group-hover:h-[90%] transition-all duration-500 delay-75 shadow-sm relative flex items-start justify-center pt-2"><span className="text-[10px] font-bold text-white/50 -rotate-90 origin-center translate-y-6">Apr</span></div>
@@ -599,7 +599,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
                   {/* Card 2: Bottom Left (The monthly wrap) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="w-48 h-32 bg-gradient-to-br from-[#1F1410] to-[#3A2418] rounded-xl shadow-lg border border-[#3A2418] p-4 flex flex-col justify-between z-10 group-hover:scale-105 group-hover:rotate-2 transition-transform duration-500">
                         <div className="flex justify-between items-start text-[#FAF7F2]">
                           <div className="space-y-1">

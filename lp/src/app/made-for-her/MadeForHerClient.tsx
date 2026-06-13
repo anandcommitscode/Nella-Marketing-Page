@@ -56,7 +56,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-12"
             >
-              <div className="space-y-6 pt-4 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 pt-4 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[13px] text-[#8F6F3E]">who is nella for?</span>
@@ -197,7 +197,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the tracker pathway</span>
@@ -225,7 +225,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
                   {/* Card 1: Top Left */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 md:p-8 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 md:p-8 relative overflow-hidden">
                       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                       <div className="w-full max-w-[280px] flex flex-col gap-2 z-10">
                         {['Lip Filler 0.5ml', 'Brow Lamination'].map((item, i) => (
@@ -249,7 +249,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 3: Right Side Tall (Spending truth) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 relative overflow-hidden">
                       <div className="w-full max-w-[200px] flex flex-col gap-3 z-10">
                         {[{name: 'Botox', price: '£250', date: 'Oct 12'}, {name: 'Hydrafacial', price: '£150', date: 'Oct 5'}, {name: 'Nails', price: '£50', date: 'Oct 1'}].map((tx, i) => (
                           <div key={i} className="bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:-translate-y-1 transition-transform duration-500" style={{transitionDelay: `${i*100}ms`}}>
@@ -271,7 +271,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 2: Bottom Left (Reminders) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="w-full max-w-[280px] bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex items-center gap-4 z-10 group-hover:-translate-y-2 transition-transform duration-500">
                         <div className="relative w-12 h-12 bg-[#FAF7F2] rounded-full flex items-center justify-center border border-[#E8E5DC]">
                           <Bell size={20} className="text-[#8F6F3E] group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500" />
@@ -319,7 +319,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the refiner pathway</span>
@@ -347,7 +347,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="absolute right-10 top-1/2 -translate-y-1/2 w-48 h-48 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                       <div className="w-full max-w-[280px] flex flex-col gap-2 z-10">
                         {['AM Routine', 'PM Routine'].map((item, i) => (
@@ -366,7 +366,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 3: Right Side Tall */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden min-h-[280px]">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden min-h-[280px]">
                       <div className="w-full flex flex-col gap-6 z-10 items-center justify-center">
                         {[
                           { score: '82', label: 'Today', stroke: 'stroke-[#8F6F3E]', offset: '40' },
@@ -391,7 +391,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 2: Bottom Left */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-end justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-end justify-center p-6 relative overflow-hidden">
                       <div className="w-full max-w-[240px] bg-white h-[60px] rounded-t-2xl shadow-sm border-t border-l border-r border-[#E8E5DC] flex items-end justify-center pb-2 gap-2 z-10 group-hover:h-[70px] transition-all duration-500">
                         <div className="w-6 h-12 bg-[#FAF7F2] rounded border border-[#E8E5DC] group-hover:-translate-y-1 transition-transform"></div>
                         <div className="w-8 h-8 bg-[#1F1410] rounded-full shadow-sm group-hover:-translate-y-2 transition-transform delay-75"></div>
@@ -434,7 +434,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-10 max-w-5xl mx-auto"
             >
-              <div className="space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+              <div className="space-y-6 text-center pb-16">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the explorer pathway</span>
@@ -462,7 +462,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="flex gap-4 z-10">
                         <div className="bg-white p-3 rounded-xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:-translate-y-2 transition-transform duration-500">
                           <span className="text-[10px] text-grey uppercase font-bold">New Serum</span>
@@ -482,7 +482,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 3: Right Side Tall */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden min-h-[280px]">
+                    <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden min-h-[280px]">
                       <div className="w-[85%] h-[80%] bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 flex flex-col gap-3 z-10 group-hover:scale-105 transition-transform duration-500">
                         <div className="flex items-center justify-between border-b border-[#FAF7F2] pb-2">
                           <LineChart size={14} className="text-[#8F6F3E]" />
@@ -503,7 +503,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
                   {/* Card 2: Bottom Left */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
-                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                    <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="flex items-center gap-3 z-10 bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] group-hover:scale-105 transition-transform duration-500">
                         <div className="px-3 py-1.5 bg-[#FAF7F2] rounded-lg text-[11px] font-bold text-espresso border border-[#E8E5DC]">New Acid</div>
                         <div className="w-6 h-6 rounded-full bg-[#FAF7F2] border border-[#E8E5DC] flex items-center justify-center text-[#8F6F3E] shrink-0">

@@ -24,7 +24,7 @@ export default function GlowScorePage() {
           <span className="text-espresso">The Glow Score</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+        <div className="pt-4 space-y-6 text-center pb-16">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
@@ -54,7 +54,7 @@ export default function GlowScorePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Card 1: Treatments on Track */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="flex items-center justify-center gap-6 z-10 w-full">
                     {/* Mockup: Cycle Progress Wheel */}
                     <div className="relative w-20 h-20 rounded-full border-[4px] border-[#E8E5DC] flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
@@ -81,7 +81,7 @@ export default function GlowScorePage() {
 
               {/* Card 2: Skin Trend */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="w-full max-w-[200px] z-10 flex flex-col gap-2 relative">
                     <div className="flex justify-between items-center px-1">
                       <span className="text-[10px] font-bold text-grey uppercase tracking-wider">14-Day Trend</span>
@@ -102,7 +102,7 @@ export default function GlowScorePage() {
 
               {/* Card 3: Check-in Streak */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="w-full max-w-[220px] bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] z-10 group-hover:-translate-y-1 transition-transform duration-500">
                     <div className="flex items-center gap-2 mb-2">
                       <CalendarCheck size={14} className="text-[#8F6F3E]" />
@@ -123,7 +123,7 @@ export default function GlowScorePage() {
 
               {/* Card 4: Routine Consistency */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
-                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="h-[150px] bg-[#FAF7F2] w-full flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="w-full max-w-[180px] space-y-2 z-10">
                     {['Cleanser', 'Vitamin C', 'Moisturiser', 'SPF 50'].map((item, i) => (
                       <div key={i} className={`flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-[#E8E5DC] shadow-sm transition-transform duration-500 ${i % 2 === 0 ? 'group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}>
@@ -166,7 +166,7 @@ export default function GlowScorePage() {
             </div>
           </div>
 
-          <div className="space-y-4 pt-12 border-t border-[#E8E5DC] mt-12">
+          <div className="space-y-4 pt-12 mt-12">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/what-it-does/insights" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">

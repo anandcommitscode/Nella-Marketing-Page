@@ -114,12 +114,12 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
       </section>
 
       {/* Comparison table */}
-      <section className="space-y-6 pt-4 border-t border-[#E8E5DC]">
+      <section className="space-y-6 pt-4">
         <h3 className="font-display font-semibold text-[22px] text-espresso tracking-tight text-center">what is in each.</h3>
         <div className="overflow-x-auto shadow-2xs border border-[#E8E5DC] rounded-2xl bg-white">
           <table className="w-full text-left font-sans text-[12.5px]">
             <thead>
-              <tr className="bg-[#FAF7F2] text-espresso border-b border-[#E8E5DC] font-semibold">
+              <tr className="bg-[#FAF7F2] text-espresso font-semibold">
                 <th className="p-4">feature</th>
                 <th className="p-4 w-[160px]">core</th>
                 <th className="p-4 w-[160px]">pro</th>

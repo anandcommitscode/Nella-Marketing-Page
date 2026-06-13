@@ -23,7 +23,7 @@ export default function ArticleThreePage() {
           <span className="text-espresso">The £4.99 decision</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-12">
+        <div className="pt-4 space-y-6 text-center pb-12">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">business</span>
@@ -65,7 +65,7 @@ export default function ArticleThreePage() {
           <div className="p-8 sm:p-10 bg-white border border-[#E8E5DC] rounded-3xl space-y-8 shadow-sm my-10 relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
 
-            <div className="relative z-10 border-b border-[#E8E5DC] pb-6">
+            <div className="relative z-10 pb-6">
               <span className="text-[11px] font-semibold tracking-widest uppercase text-[#8F6F3E] mb-2 block">Level Two</span>
               <h3 className="font-display font-[600] text-[24px] sm:text-[28px] text-espresso">What £4.99 buys you.</h3>
             </div>

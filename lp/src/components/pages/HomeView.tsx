@@ -84,7 +84,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               </button>
             </div>
 
-            <div className="flex items-center gap-6 pt-3 border-t border-[#E8E5DC] w-full max-w-md">
+            <div className="flex items-center gap-6 pt-3 w-full max-w-md">
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   <span className="text-[20px] font-bold tracking-tight text-espresso font-mono leading-none">4.8</span>
@@ -134,7 +134,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-20 border-t border-b border-[#E8E5DC] bg-[#FAF7F2]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 text-left space-y-8">
           <div className="flex justify-start items-center gap-1.5">
             <span className="w-4 h-[1.5px] bg-[#8C5249]"></span>
@@ -241,7 +241,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 4: THE INTELLIGENCE MOMENT */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
             <div className="inline-flex items-center gap-1.5">
@@ -275,7 +275,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 5: HOW IT WORKS */}
-      <section className="py-20 bg-[#F5EDE0] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
@@ -303,7 +303,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 6: GLOW SCORE */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="p-4 bg-white border border-[#E8E5DC] rounded-3xl shadow-sm order-2 lg:order-1">
             <SurgicalMobileMockup initialScreen="journal" compact />
@@ -337,7 +337,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 7: SOCIAL PROOF */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 space-y-12 text-left">
           <div className="text-left space-y-3">
             <div className="inline-flex items-center gap-1.5 justify-start">
@@ -372,7 +372,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 8: PRICING SNAPSHOT */}
-      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
@@ -442,7 +442,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 9: FAQ */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-3xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[38px] text-espresso tracking-tight text-left">
@@ -480,7 +480,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       </section>
 
       {/* SECTION 10: FINAL CTA */}
-      <section className="py-24 bg-[#1F1410] text-[#FAF7F2] relative overflow-hidden border-t border-[#FAF7F2]/10 text-center">
+      <section className="py-24 bg-[#1F1410] text-[#FAF7F2] relative overflow-hidden/10 text-center">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-[#5A3027]/12 rounded-full blur-[120px] pointer-events-none"></div>
 
         <div className="max-w-3xl mx-auto px-6 space-y-8 relative z-10">

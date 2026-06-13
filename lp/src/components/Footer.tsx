@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1F1410] border-t border-[#3A2418] py-16 text-[#FAF7F2] lowercase mt-auto">
+    <footer className="bg-[#1F1410] py-16 text-[#FAF7F2] lowercase mt-auto">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6">
 
         {/* Left Column - Logo & Bio */}
@@ -66,7 +66,7 @@ export default function Footer() {
       </div>
 
       {/* Outer bottom label credits */}
-      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-[#3A2418] flex flex-col sm:flex-row justify-between items-center text-[12px] font-sans text-[#FAF7F2]/60 gap-4">
+      <div className="max-w-7xl mx-auto px-6 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center text-[12px] font-sans text-[#FAF7F2]/60 gap-4">
         <span className="sm:flex-1 text-center sm:text-left">&copy; {new Date().getFullYear()} mynella ltd. all rights reserved.</span>
         <span className="sm:flex-1 text-center hidden md:block">crafted in absolute compliance with our community guidelines.</span>
         <div className="sm:flex-1 text-center sm:text-right">

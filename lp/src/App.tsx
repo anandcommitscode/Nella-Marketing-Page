@@ -109,7 +109,7 @@ export default function App() {
       </div>
 
       {/* FOOTER */}
-      <footer className="bg-[#FAF7F2] border-t border-[#E8E5DC] py-12 text-[#2C1810] lowercase mt-auto">
+      <footer className="bg-[#FAF7F2] py-12 text-[#2C1810] lowercase mt-auto">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
           
           <div className="space-y-4 text-left">
@@ -167,7 +167,7 @@ export default function App() {
         </div>
 
         {/* Outer bottom label credits */}
-        <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-very-light-grey flex flex-col sm:flex-row justify-between items-center text-[11px] font-sans text-grey/85 gap-4">
+        <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] font-sans text-grey/85 gap-4">
           <span>&copy; {new Date().getFullYear()} nella digital skin lab. all rights reserved.</span>
           <span>crafted in absolute compliance with our community guidelines.</span>
         </div>

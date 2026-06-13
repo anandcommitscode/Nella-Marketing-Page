@@ -57,7 +57,7 @@ export default function SupportPage() {
           <span className="text-espresso">Support</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+        <div className="pt-4 space-y-6 text-center pb-16">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">we are here to help</span>

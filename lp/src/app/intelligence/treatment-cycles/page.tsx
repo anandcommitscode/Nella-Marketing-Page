@@ -24,7 +24,7 @@ export default function TreatmentCyclesPage() {
           <span className="text-espresso">Treatment Cycles</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+        <div className="pt-4 space-y-6 text-center pb-16">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
@@ -54,7 +54,7 @@ export default function TreatmentCyclesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-stretch">
               {/* Card 1: Nails */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group lg:col-span-2 h-full">
-                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="flex flex-col items-center gap-2 z-10 w-full">
                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm border border-[#E8E5DC] group-hover:-translate-y-1 transition-transform duration-300">
                       <Scissors size={20} className="text-[#8F6F3E]" />
@@ -73,7 +73,7 @@ export default function TreatmentCyclesPage() {
 
               {/* Card 2: Brows */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group lg:col-span-2 h-full">
-                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="relative w-16 h-16 flex items-center justify-center z-10">
                     <div className="absolute inset-0 border-2 border-dashed border-[#DEC68B] rounded-full group-hover:rotate-180 transition-transform duration-[2000ms] ease-linear"></div>
                     <RefreshCw size={24} className="text-[#8F6F3E]" />
@@ -87,7 +87,7 @@ export default function TreatmentCyclesPage() {
 
               {/* Card 3: Hydrafacial */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group lg:col-span-2 h-full">
-                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] flex items-center gap-3 z-10 group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="w-10 h-10 bg-[#FAF7F2] border border-[#E8E5DC] rounded-xl flex items-center justify-center">
                       <Sparkles size={16} className="text-[#8F6F3E]" />
@@ -106,7 +106,7 @@ export default function TreatmentCyclesPage() {
 
               {/* Card 4: Botox */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group lg:col-span-3 h-full">
-                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                   <div className="flex items-center gap-2 z-10">
                     {[1, 2, 3].map((month, i) => (
                       <div key={i} className="flex flex-col items-center gap-1.5 group-hover:-translate-y-1 transition-transform duration-500" style={{ transitionDelay: `${i * 100}ms` }}>
@@ -125,7 +125,7 @@ export default function TreatmentCyclesPage() {
 
               {/* Card 5: Dermal filler */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group md:col-span-2 lg:col-span-3 h-full">
-                <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 relative overflow-hidden">
                   <div className="absolute right-10 top-1/2 -translate-y-1/2 w-32 h-32 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                   <div className="bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex items-center gap-4 z-10 group-hover:scale-105 transition-transform duration-500">
                     <div className="w-12 h-12 rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0">
@@ -203,7 +203,7 @@ export default function TreatmentCyclesPage() {
             </div>
           </div>
 
-          <div className="space-y-4 pt-12 border-t border-[#E8E5DC] mt-12">
+          <div className="space-y-4 pt-12 mt-12">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/what-it-does/tracking" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">

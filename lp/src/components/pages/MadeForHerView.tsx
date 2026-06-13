@@ -190,7 +190,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
             </div>
 
             {/* A small story */}
-            <div className="border-t border-[#E8E5DC] pt-8 space-y-3">
+            <div className=" pt-8 space-y-3">
               <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 rachel gets her nails done every three weeks, her brows every six, her botox quarterly, and her hair when she remembers. before nella, that was four calendars and one ongoing feeling of being behind.
@@ -260,7 +260,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
             </div>
 
             {/* A small story */}
-            <div className="border-t border-[#E8E5DC] pt-8 space-y-3">
+            <div className=" pt-8 space-y-3">
               <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 priya has six products in her PM routine. retinol on mondays and thursdays, an AHA on wednesdays, vitamin C every morning. before nella, that was a recurring fear that something was cancelling something else out.
@@ -330,7 +330,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
             </div>
 
             {/* A small story */}
-            <div className="border-t border-[#E8E5DC] pt-8 space-y-3">
+            <div className=" pt-8 space-y-3">
               <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 hannah has tried more treatments in the last year than most women try in five. she does her research and goes to the best clinics, but she wanted a record that lived up to her standard of care.

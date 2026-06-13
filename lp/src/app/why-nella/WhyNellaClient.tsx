@@ -93,7 +93,7 @@ export default function WhyNellaClient() {
               <div className="max-w-2xl mx-auto w-full space-y-10">
 
                 {/* Transition Statement */}
-                <div className="space-y-4 text-left border-b border-[#E8E5DC] pb-8">
+                <div className="space-y-4 text-left pb-8">
                   <h2 className="font-display font-[600] text-[32px] md:text-[40px] text-[#1F1410] leading-tight tracking-tight">
                     The beauty industry thrives on you losing the thread.
                   </h2>
@@ -191,7 +191,7 @@ function Bottle3({ onHover, onLeave }: any) {
       className="w-10 sm:w-12 h-20 sm:h-24 rounded-lg bg-[#3A2418] border border-[#8F6F3E]/40 cursor-pointer relative shadow-xl transition-colors hover:border-[#8F6F3E]/80"
     >
       <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#1F1410] border border-[#8F6F3E]/50 rounded-t-sm"></div>
-      <div className="absolute top-4 w-full h-[60%] border-t border-b border-white/10 flex items-center justify-center">
+      <div className="absolute top-4 w-full h-[60%] border-t flex items-center justify-center">
         <div className="w-4 h-[2px] bg-white/20"></div>
       </div>
     </motion.div>

@@ -85,7 +85,7 @@ export default function HomeClient() {
             </div>
 
             {/* App Store Badge Row */}
-            <div className="flex items-center gap-6 pt-3 border-t border-[#E8E5DC] w-full max-w-md mt-1">
+            <div className="flex items-center gap-6 pt-3 w-full max-w-md mt-1">
               <div className="flex flex-col">
                 <div className="flex items-center gap-1">
                   <span className="text-[20px] font-bold tracking-tight text-espresso font-mono leading-none">4.8</span>
@@ -134,7 +134,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-20 border-t border-b border-[#E8E5DC] bg-[#FAF7F2]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="text-left space-y-4">
             <div className="flex items-center gap-1.5 justify-start mb-2">
@@ -241,7 +241,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 4: THE INTELLIGENCE MOMENT */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
             <div className="w-full flex items-center gap-1.5 justify-start mb-2">
@@ -275,7 +275,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 5: HOW IT WORKS */}
-      <section className="py-20 bg-[#F5EDE0] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <div className="w-full flex items-center gap-1.5 justify-start mb-2">
@@ -424,7 +424,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 6: GLOW SCORE */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <SurgicalMobileMockup initialScreen="journal" compact customImage="/mockups/glow-score.png" imageClassName="pt-12" />
@@ -458,7 +458,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 7: SOCIAL PROOF */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 space-y-12 text-left">
           <div className="text-left space-y-3">
             <div className="w-full flex items-center gap-1.5 justify-start mb-2">
@@ -482,7 +482,7 @@ export default function HomeClient() {
                   i used to forget when my brows were due. now nella tells me before i remember to look.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-[#E8E5DC] flex items-center gap-3">
+              <div className="pt-6 mt-6 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#FAF7F2] flex items-center justify-center text-espresso font-display font-bold text-lg">
                   r
                 </div>
@@ -500,7 +500,7 @@ export default function HomeClient() {
                   i thought my routine was working. nella's score told me where it actually was. it has gone up nineteen points since february.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-[#E8E5DC] flex items-center gap-3">
+              <div className="pt-6 mt-6 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#FAF7F2] flex items-center justify-center text-espresso font-display font-bold text-lg">
                   p
                 </div>
@@ -518,7 +518,7 @@ export default function HomeClient() {
                   i did the research, booked the right clinic, paid the £180. nella made sure day three did not undo any of it.
                 </p>
               </div>
-              <div className="pt-6 mt-6 border-t border-[#E8E5DC] flex items-center gap-3">
+              <div className="pt-6 mt-6 flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-[#FAF7F2] flex items-center justify-center text-espresso font-display font-bold text-lg">
                   h
                 </div>
@@ -533,7 +533,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 8: PRICING SNAPSHOT */}
-      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <div className="w-full flex items-center gap-1.5 justify-start mb-2">
@@ -604,7 +604,7 @@ export default function HomeClient() {
               </div>
 
               <ul className="space-y-3.5 text-[13.5px] text-espresso/80 font-sans flex-1 mb-8">
-                <div className="text-[12px] font-semibold text-espresso uppercase tracking-wider mb-4 border-b border-[#E8E5DC] pb-2">Everything in Core, plus:</div>
+                <div className="text-[12px] font-semibold text-espresso uppercase tracking-wider mb-4 pb-2">Everything in Core, plus:</div>
                 {['the full glow score breakdown, daily, weekly, monthly', 'day-by-day aftercare for every treatment', 'spend insights by treatment and all time', 'your full history, from day one', 'unlimited product shelf'].map((item, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
                     <Check size={16} className="text-[#8F6F3E] shrink-0 mt-0.5" />
@@ -628,7 +628,7 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 9: FAQ */}
-      <section className="py-20 bg-[#FAF7F2] border-t border-[#E8E5DC]">
+      <section className="py-20 bg-[#FAF7F2]">
         <div className="max-w-3xl mx-auto px-6 space-y-12">
           <div className="text-center space-y-3">
             <div className="w-full flex items-center gap-1.5 justify-center mb-2">

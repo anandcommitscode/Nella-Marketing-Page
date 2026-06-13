@@ -24,7 +24,7 @@ export default function IngredientConflictsPage() {
           <span className="text-espresso">Ingredient Conflicts</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center border-b border-[#E8E5DC] pb-16">
+        <div className="pt-4 space-y-6 text-center pb-16">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">conflict logic</span>
@@ -55,7 +55,7 @@ export default function IngredientConflictsPage() {
             <div className="flex flex-wrap justify-center gap-4">
               {/* Card 1: Retinol & Vit C */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
-                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 border-b border-[#E8E5DC]/60 relative overflow-hidden">
+                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 relative overflow-hidden">
                   <div className="flex gap-4 items-center z-10 w-full max-w-[240px]">
                     <div className="flex-1 bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] space-y-2 group-hover:-translate-y-1 transition-transform duration-500">
                       <div className="flex items-center gap-1.5 text-espresso">
@@ -85,7 +85,7 @@ export default function IngredientConflictsPage() {
 
               {/* Card 2: Retinol & AHA or BHA */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
-                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 border-b border-[#E8E5DC]/60">
+                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5">
                   <div className="flex gap-2 items-end z-10">
                     {[
                       { day: 'Mon', type: 'AHA', active: true, color: 'bg-warm-ivory text-[#8F6F3E]' },
@@ -110,7 +110,7 @@ export default function IngredientConflictsPage() {
 
               {/* Card 4: Retinol & Microneedling */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
-                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 border-b border-[#E8E5DC]/60 relative">
+                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 relative">
                   <div className="w-full max-w-[220px] space-y-3 z-10">
                     <div className="flex justify-between items-end mb-2">
                       <div className="flex items-center gap-1.5 text-espresso">
@@ -136,7 +136,7 @@ export default function IngredientConflictsPage() {
 
               {/* Card 5: Vitamin C & Microneedling */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(50%-0.5rem)]">
-                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 border-b border-[#E8E5DC]/60 relative">
+                <div className="h-[130px] bg-[#FAF7F2] w-full flex items-center justify-center p-5 relative">
                   <div className="bg-white p-3 rounded-2xl shadow-sm border border-[#E8E5DC] flex items-center gap-3 z-10 w-full max-w-[200px] group-hover:-translate-y-1 transition-transform duration-300">
                     <div className="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center relative overflow-hidden shrink-0">
                       <Lock size={16} className="text-grey z-10" />
@@ -156,7 +156,7 @@ export default function IngredientConflictsPage() {
 
               {/* Card 3: Niacinamide & Vit C (Moved to bottom) */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(50%-0.5rem)]">
-                <div className="h-[130px] bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex items-center justify-center p-5 border-b border-[#E8E5DC]/60 relative">
+                <div className="h-[130px] bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex items-center justify-center p-5 relative">
                   <div className="absolute right-10 top-1/2 -translate-y-1/2 w-32 h-32 bg-[#DEC68B]/10 rounded-full blur-2xl"></div>
                   <div className="bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgba(31,20,16,0.08)] border border-[#E8E5DC] flex items-start gap-4 z-10 w-full max-w-[400px] group-hover:scale-105 transition-transform duration-500">
                     <div className="w-10 h-10 rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 border border-[#E8E5DC]">
@@ -194,7 +194,7 @@ export default function IngredientConflictsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-12 border-t border-[#E8E5DC] mt-12">
+          <div className="space-y-4 pt-12 mt-12">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">

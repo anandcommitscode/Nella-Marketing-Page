@@ -100,7 +100,7 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
       </section>
 
       {/* SECTION 5: WHO IT IS FOR */}
-      <section className="space-y-6 border-t border-[#E8E5DC] pt-12">
+      <section className="space-y-6 pt-12">
         <h2 className="font-display font-semibold text-[24px] text-espresso tracking-tight">
           nella is for you.
         </h2>

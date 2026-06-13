@@ -117,7 +117,7 @@ export default function Navbar() {
                     key={item.name}
                     href={item.path}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`text-[16px] font-semibold py-1.5 border-b border-very-light-grey block ${
+                    className={`text-[16px] font-semibold py-1.5 block ${
                       isActive ? 'text-[#8F6F3E]' : 'text-espresso/80'
                     }`}
                   >
