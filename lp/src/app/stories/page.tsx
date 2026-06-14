@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function StoriesHubPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 py-12 space-y-16">
-      <section className="space-y-6 text-center pb-16">
+      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-16">
+      <section className="space-y-6 text-center">
         <div className="inline-flex items-center gap-1.5 justify-center">
           <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
           <span className="font-display italic text-[13px] text-[#8F6F3E]">the editorial</span>
@@ -103,7 +103,7 @@ export default function StoriesHubPage() {
       <CtaSection
         title="The thread."
         subtitle="Read the stories from the lab. And join the waitlist."
-        backgroundClass="bg-transparent mt-12"
+        backgroundClass="bg-transparent"
       />
     </div>
   );

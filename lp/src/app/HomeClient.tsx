@@ -44,7 +44,7 @@ export default function HomeClient() {
   return (
     <div className="space-y-0">
       {/* SECTION 1: HERO */}
-      <section className="relative pt-8 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+      <section className="relative pt-8 md:pt-16 md:pb-24 overflow-hidden">
         {/* Glow gradients */}
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-[#EFD9A8]/20 to-[#FAF7F2] blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-[10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-gradient-to-tr from-[#F4DDD0]/30 to-[#FAF7F2] blur-[100px] pointer-events-none"></div>
@@ -134,15 +134,15 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-20 bg-[#FAF7F2]">
+      <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="text-left space-y-4">
-            <div className="flex items-center gap-1.5 justify-start mb-2">
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">the problem</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-center">
               You're already doing the work
             </h2>
           </div>
@@ -156,15 +156,15 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 3: FOUR THINGS */}
-      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="text-left space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
+        <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
+          <div className="text-center space-y-3">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">four things</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
               Four things, done properly.
             </h2>
             <p className="text-[13.5px] text-grey font-sans">
@@ -241,15 +241,15 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 4: THE INTELLIGENCE MOMENT */}
-      <section className="py-20 bg-[#FAF7F2]">
+      <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">intelligence moment</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-center">
               The bit a notes app cannot do.
             </h2>
 
@@ -275,15 +275,15 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 5: HOW IT WORKS */}
-      <section className="py-20 bg-[#F5EDE0]">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="text-left space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+      <section className="py-12 md:py-20 bg-[#F5EDE0]">
+        <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
+          <div className="text-center space-y-3">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">process</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
               How it works.
             </h2>
             <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
@@ -291,7 +291,7 @@ export default function HomeClient() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="max-w-[1002px] mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Step 1 */}
             <div className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden relative">
               <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
@@ -424,19 +424,19 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 6: GLOW SCORE */}
-      <section className="py-20 bg-[#FAF7F2]">
+      <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
             <SurgicalMobileMockup initialScreen="journal" compact customImage="/mockups/glow-score.png" imageClassName="pt-12" />
           </div>
 
           <div className="space-y-6 text-left order-1 lg:order-2">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">glow score</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-center">
               The only score that tells you the truth.
             </h2>
 
@@ -458,15 +458,15 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 7: SOCIAL PROOF */}
-      <section className="py-20 bg-[#FAF7F2]">
+      <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 space-y-12 text-left">
-          <div className="text-left space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+          <div className="text-center space-y-3">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">social proof</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
               Loved by the women who built her.
             </h2>
             <p className="text-[14px] text-grey font-sans">
@@ -533,20 +533,20 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 8: PRICING SNAPSHOT */}
-      <section className="py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="text-left space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-2">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
+        <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
+          <div className="text-center space-y-3">
+            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
               <span className="font-display italic text-[13px] text-[#8F6F3E]">pricing</span>
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
+            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
               Free to start. £4.99 to understand.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[1002px] mx-auto w-full">
             {/* Core Card */}
             <div className="p-8 bg-white border border-[#E8E5DC] rounded-[32px] text-left shadow-2xs hover:shadow-sm transition-shadow flex flex-col h-full">
               <div className="space-y-3 mb-6">
@@ -628,8 +628,8 @@ export default function HomeClient() {
       </section>
 
       {/* SECTION 9: FAQ */}
-      <section className="py-20 bg-[#FAF7F2]">
-        <div className="max-w-3xl mx-auto px-6 space-y-12">
+      <section className="pt-12 md:pt-20 pb-0 bg-[#FAF7F2]">
+        <div className="max-w-[1050px] mx-auto px-6 space-y-12">
           <div className="text-center space-y-3">
             <div className="w-full flex items-center gap-1.5 justify-center mb-2">
               <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Check } from 'lucide-react';
+import { Check, Star } from 'lucide-react';
 import CtaSection from '../../components/CtaSection';
 import PhaseAwareCta from '../../components/PhaseAwareCta';
 
@@ -28,7 +28,7 @@ export default function PricingPage() {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 py-16 space-y-16">
+      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-16">
         <section className="space-y-6 text-center">
           <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none text-center">
             Free to start. £4.99 to understand.
@@ -39,7 +39,7 @@ export default function PricingPage() {
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4 sm:px-0">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {/* Core Card */}
           <div className="p-8 sm:p-10 bg-white border border-[#E8E5DC] rounded-[32px] flex flex-col justify-between shadow-sm">
             <div className="space-y-6">
@@ -83,8 +83,10 @@ export default function PricingPage() {
 
           {/* Pro Card */}
           <div className="p-8 sm:p-10 bg-white border-2 border-[#8F6F3E] rounded-[32px] flex flex-col justify-between relative shadow-xl shadow-[#8F6F3E]/5 mt-4 md:mt-0">
-            <div className="absolute top-0 right-8 -translate-y-1/2">
-              <span className="bg-[#8F6F3E] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">Unlimited</span>
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <span className="bg-[#8F6F3E] text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+                <Star size={12} fill="currentColor" strokeWidth={0} /> RECOMMENDED
+              </span>
             </div>
 
             <div className="space-y-6">
@@ -128,7 +130,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="space-y-8 pt-12 max-w-4xl mx-auto px-4 sm:px-0">
+        <section className="space-y-8 pt-12 w-full">
           <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight text-center">What is in each.</h2>
           
           <div className="border border-[#E8E5DC] rounded-[32px] bg-white overflow-hidden shadow-sm">
@@ -138,7 +140,7 @@ export default function PricingPage() {
                   <tr className="bg-[#1F1410] text-[#FAF7F2] font-semibold">
                     <th className="py-5 px-8 font-sans text-[14px] w-[45%]">Feature</th>
                     <th className="py-5 px-4 font-sans text-[14px] w-[25%]">nella Core</th>
-                    <th className="py-5 px-6 font-sans text-[14px] text-[#DEC68B] whitespace-nowrap w-[30%]">nella Pro</th>
+                    <th className="py-5 px-6 font-sans text-[14px] whitespace-nowrap w-[30%]">nella Pro</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#E8E5DC]/50">
@@ -150,25 +152,19 @@ export default function PricingPage() {
                         {row.name}
                       </td>
                       <td className="py-6 px-4">
-                        {row.core.includes('✓') ? (
-                          <div className="flex items-center gap-2">
-                            <Check size={16} className="text-[#8F6F3E] shrink-0" strokeWidth={3} />
-                            <span className="text-espresso font-medium group-hover:text-[#8F6F3E] transition-colors">{row.core.replace('✓', '').trim()}</span>
-                          </div>
-                        ) : (
-                          <span className="text-grey group-hover:text-espresso transition-colors">{row.core}</span>
-                        )}
+                        <div className="flex items-center gap-2">
+                          <Check size={16} className="text-[#8F6F3E] shrink-0" strokeWidth={3} />
+                          <span className="text-espresso font-medium group-hover:text-[#8F6F3E] transition-colors">{row.core.replace('✓', '').trim()}</span>
+                        </div>
                       </td>
-                      <td className="py-6 px-6">
+                      <td className="py-6 px-6 bg-[#FAF7F2]/50">
                         {row.pro.includes('✓') ? (
                           <div className="flex items-center gap-2">
-                            <div className="w-5 h-5 rounded-full bg-[#8F6F3E]/10 flex items-center justify-center shrink-0">
-                              <Check size={12} className="text-[#8F6F3E]" strokeWidth={3} />
-                            </div>
-                            <span className="text-[#8F6F3E] font-medium transition-colors whitespace-nowrap">{row.pro.replace('✓', '').trim()}</span>
+                            <Check size={16} className="text-[#8F6F3E] shrink-0" strokeWidth={3} />
+                            <span className="text-espresso font-medium group-hover:text-[#8F6F3E] transition-colors whitespace-nowrap">{row.pro.replace('✓', '').trim()}</span>
                           </div>
                         ) : (
-                          <span className="text-[#8F6F3E] font-medium transition-colors whitespace-nowrap">{row.pro}</span>
+                          <span className="text-grey group-hover:text-espresso transition-colors whitespace-nowrap">{row.pro}</span>
                         )}
                       </td>
                     </tr>
@@ -179,7 +175,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="space-y-4 max-w-4xl mx-auto px-4 sm:px-0 pt-8">
+        <section className="space-y-4 w-full pt-8">
           <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">What you get for £4.99.</h2>
           <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
             <p>
@@ -191,7 +187,7 @@ export default function PricingPage() {
           </div>
         </section>
 
-        <section className="space-y-8 pt-12 max-w-4xl mx-auto px-4 sm:px-0">
+        <section className="space-y-8 pt-12 w-full">
           <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">In case you were wondering.</h2>
           
           <div className="space-y-4">

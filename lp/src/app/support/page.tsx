@@ -50,14 +50,14 @@ export default function SupportPage() {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-5xl mx-auto px-6 py-12 space-y-16">
+      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-16">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
           <span className="text-grey font-normal">&gt;</span>
           <span className="text-espresso">Support</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center pb-16">
+        <div className="pt-4 space-y-6 text-center">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">we are here to help</span>
@@ -73,7 +73,7 @@ export default function SupportPage() {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-16">
+        <div className="w-full mx-auto space-y-16">
           <div className="bg-[#FAF7F2] border border-[#E0DCCE] rounded-[32px] p-8 sm:p-10 shadow-sm text-center flex flex-col items-center">
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm mb-6">
               <Mail size={20} className="text-[#8F6F3E]" strokeWidth={2.5} />

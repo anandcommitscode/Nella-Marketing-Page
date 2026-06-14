@@ -19,7 +19,7 @@ export default function CtaSection({
   backgroundClass = "bg-[#FAF7F2]"
 }: CtaSectionProps) {
   return (
-    <section className={`pt-4 pb-12 md:pt-8 md:pb-20 ${backgroundClass}`}>
+    <section className={`py-12 md:py-16 ${backgroundClass}`}>
       <div className="max-w-[1050px] mx-auto px-6">
         <div className="bg-[#1F1410] rounded-3xl py-20 px-8 text-center flex flex-col items-center justify-center space-y-8 shadow-xl border border-[#3A2418]">
           <div className="space-y-4 max-w-4xl mx-auto px-4">

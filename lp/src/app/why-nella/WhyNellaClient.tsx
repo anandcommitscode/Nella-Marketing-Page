@@ -10,12 +10,13 @@ export default function WhyNellaClient() {
 
   return (
     <motion.div
+      initial={{ backgroundColor: "#F5EDE0", color: "#1F1410" }}
       animate={{
         backgroundColor: isCleared ? "#FFFFFF" : "#F5EDE0",
         color: "#1F1410"
       }}
       transition={{ duration: 1.5, ease: "easeInOut" }}
-      className="w-full relative overflow-hidden"
+      className="w-full relative overflow-hidden bg-[#F5EDE0]"
     >
       <AnimatePresence mode="wait">
         {!isCleared ? (
@@ -23,7 +24,7 @@ export default function WhyNellaClient() {
             key="chaos"
             exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
             transition={{ duration: 1 }}
-            className="min-h-screen flex flex-col items-center pt-16 pb-32 px-6 relative z-10"
+            className="min-h-screen flex flex-col items-center pt-10 md:pt-16 pb-32 px-6 relative z-10"
           >
             {/* Ambient noise background */}
             <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] pointer-events-none mix-blend-multiply"></div>
@@ -89,7 +90,7 @@ export default function WhyNellaClient() {
             transition={{ duration: 1.2, delay: 0.5 }}
             className="w-full flex flex-col"
           >
-            <div className="min-h-screen flex flex-col items-center px-6 pt-16 pb-32">
+            <div className="min-h-screen flex flex-col items-center px-6 pt-10 md:pt-16">
               <div className="max-w-2xl mx-auto w-full space-y-10">
 
                 {/* Transition Statement */}

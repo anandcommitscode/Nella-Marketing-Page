@@ -24,7 +24,7 @@ export default function WaitlistClient() {
   };
 
   return (
-    <div className="text-left max-w-xl mx-auto px-6 py-16 space-y-12">
+    <div className="text-left max-w-xl mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-12">
       <div className="space-y-4 text-center">
         <div className="inline-flex items-center gap-1.5 justify-center">
           <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>

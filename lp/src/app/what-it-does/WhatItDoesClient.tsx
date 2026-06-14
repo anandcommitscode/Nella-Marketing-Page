@@ -24,7 +24,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 py-12 space-y-12">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-8 md:pt-8 md:pt-12 space-y-8 md:space-y-12">
         {activeTab !== 'hub' && (
           <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
             <Link href="/" className="hover:text-espresso transition-colors">
@@ -55,9 +55,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-12"
+              className="space-y-6 md:space-y-12"
             >
-              <div className="space-y-6 pt-4 text-center pb-16">
+              <div className="space-y-6 pt-4 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
@@ -71,13 +71,13 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                 </p>
               </div>
 
-              <div className="space-y-6">
-                <div className="text-left space-y-3">
-                  <h3 className="font-sans font-[600] text-[18px] text-espresso">The four-step flow.</h3>
-                  <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
-                    four steps. nothing complicated.
-                  </p>
-                </div>
+                <div className="space-y-6">
+                  <div className="text-center space-y-3 mb-10">
+                    <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">The four-step flow.</h2>
+                    <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                      four steps. nothing complicated.
+                    </p>
+                  </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Step 1 */}
@@ -206,7 +206,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               </div>
 
               <div className="space-y-4 pt-4">
-                <h3 className="font-sans font-[600] text-[18px] text-espresso">Explore the features.</h3>
+                <h2 className="font-display font-[600] text-[28px] sm:text-[32px] text-espresso tracking-tight text-center pb-2">Explore the features.</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
                     {
@@ -265,9 +265,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">tracking deep dive</span>
@@ -365,9 +365,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">routines deep dive</span>
@@ -405,16 +405,13 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                   {/* Card 3: Right Side Tall (Visual shelves) */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
                     <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 relative overflow-hidden">
-                      <div className="w-[140px] h-[260px] bg-[#FAF7F2] border-[4px] border-white rounded-2xl shadow-inner flex flex-col justify-evenly items-center p-2 z-10 group-hover:scale-105 transition-transform duration-500">
-                        <div className="w-full border-b-4 border-white pb-2 flex justify-center">
+                      <div className="w-[200px] h-[120px] bg-[#FAF7F2] border-[4px] border-white rounded-2xl shadow-inner flex flex-col justify-end p-3 z-10 group-hover:scale-105 transition-transform duration-500 relative">
+                        <div className="flex flex-row justify-evenly items-end w-full pb-2 z-10">
                            <div className="w-8 h-16 bg-[#F5EDE0] rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full"></div></div>
-                        </div>
-                        <div className="w-full border-b-4 border-white pb-2 flex justify-center">
                            <div className="w-10 h-14 bg-white rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-3 bg-[#FAF7F2] rounded-sm"></div></div>
-                        </div>
-                        <div className="w-full pb-2 flex justify-center">
                            <div className="w-12 h-12 bg-[#DEC68B]/20 rounded-full border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full"></div></div>
                         </div>
+                        <div className="w-full h-2 bg-white rounded-sm z-0"></div>
                       </div>
                     </div>
                     <div className="p-5 md:p-6 space-y-2.5">
@@ -451,9 +448,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">aftercare deep dive</span>
@@ -547,9 +544,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">insights deep dive</span>

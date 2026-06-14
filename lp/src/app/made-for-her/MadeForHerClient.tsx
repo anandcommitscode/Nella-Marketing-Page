@@ -24,7 +24,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 py-12 space-y-12">
+      <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-20 relative z-10">
         {activeTab !== 'hub' && (
           <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
             <Link href="/" className="hover:text-espresso transition-colors">
@@ -54,9 +54,9 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-12"
+              className="space-y-6 md:space-y-12 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 pt-4 text-center pb-16">
+              <div className="space-y-6 pt-4 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[13px] text-[#8F6F3E]">who is nella for?</span>
@@ -195,9 +195,9 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the tracker pathway</span>
@@ -218,7 +218,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               </div>
 
               <div className="space-y-6 pt-2">
-                <h2 className="font-display font-semibold text-[26px] sm:text-[28px] text-espresso mb-2">
+                <h2 className="font-display font-[600] text-[28px] sm:text-[32px] text-espresso tracking-tight text-center pb-2">
                   What nella does about it.
                 </h2>
 
@@ -317,9 +317,9 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the refiner pathway</span>
@@ -340,7 +340,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               </div>
 
               <div className="space-y-6 pt-2">
-                <h2 className="font-display font-semibold text-[26px] sm:text-[28px] text-espresso mb-2">
+                <h2 className="font-display font-[600] text-[28px] sm:text-[32px] text-espresso tracking-tight text-center pb-2">
                   What nella does about it.
                 </h2>
 
@@ -367,20 +367,27 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                   {/* Card 3: Right Side Tall */}
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
                     <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden min-h-[280px]">
-                      <div className="w-full flex flex-col gap-6 z-10 items-center justify-center">
-                        {[
-                          { score: '82', label: 'Today', stroke: 'stroke-[#8F6F3E]', offset: '40' },
-                          { score: '74', label: 'Yesterday', stroke: 'stroke-[#DEC68B]', offset: '60' },
-                          { score: '65', label: '2 days ago', stroke: 'stroke-[#E8E5DC]', offset: '90' }
-                        ].map((item, i) => (
-                          <div key={i} className={`relative w-${i === 0 ? '24' : '16'} h-${i === 0 ? '24' : '16'} bg-white rounded-full flex flex-col items-center justify-center shadow-md border-[3px] border-[#FAF7F2] group-hover:-translate-y-1 transition-transform duration-500`} style={{ transitionDelay: `${i * 100}ms` }}>
-                            <svg className="absolute inset-0 w-full h-full -rotate-90">
-                              <circle cx="50%" cy="50%" r="46%" fill="transparent" stroke="currentColor" strokeWidth="3" strokeDasharray="200" strokeDashoffset={item.offset} className={`text-transparent ${item.stroke}`} />
-                            </svg>
-                            <span className={`font-display font-bold text-espresso leading-none ${i === 0 ? 'text-[24px]' : 'text-[16px]'}`}>{item.score}</span>
-                            <span className="text-[8px] font-bold text-grey uppercase tracking-wider mt-0.5">{item.label}</span>
-                          </div>
-                        ))}
+                      <div className="w-[85%] bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 group-hover:-translate-y-2 transition-transform duration-500 z-10 relative overflow-hidden">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-[#DEC68B]/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                        <div className="flex justify-between items-start mb-4 relative z-10">
+                          <span className="text-[11px] font-bold uppercase tracking-widest text-[#8F6F3E]">Glow Score</span>
+                          <span className="text-[11px] font-bold text-[#8F6F3E] bg-[#FAF7F2] px-2 py-0.5 rounded-full border border-[#E8E5DC]">+8 pts</span>
+                        </div>
+                        <div className="flex items-end gap-3 mb-2 relative z-10">
+                          <span className="text-[48px] font-display font-bold text-espresso leading-none">82</span>
+                          <span className="text-[12px] text-grey font-medium pb-2">/ 100</span>
+                        </div>
+                        {/* Mini Bar Chart */}
+                        <div className="flex items-end gap-1.5 h-16 mt-6 relative z-10">
+                          {[35, 45, 50, 65, 74, 82].map((val, idx) => (
+                            <div key={idx} className="flex-1 bg-[#FAF7F2] rounded-t-sm relative group-hover:bg-[#F5EDE0] transition-colors h-full flex items-end">
+                              <div 
+                                className="w-full rounded-t-sm bg-gradient-to-t from-[#DEC68B] to-[#8F6F3E] opacity-70 group-hover:opacity-100 transition-all duration-700" 
+                                style={{ height: `${val}%`, transitionDelay: `${idx * 100}ms` }}
+                              ></div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                     <div className="p-6 md:p-8">
@@ -432,9 +439,9 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25 }}
-              className="space-y-10 max-w-5xl mx-auto"
+              className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center pb-16">
+              <div className="space-y-6 text-center">
                 <div className="inline-flex items-center gap-1.5 justify-center">
                   <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
                   <span className="font-display italic text-[11px] text-[#8F6F3E]">the explorer pathway</span>
@@ -455,7 +462,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               </div>
 
               <div className="space-y-6 pt-2">
-                <h2 className="font-display font-semibold text-[26px] sm:text-[28px] text-espresso mb-2">
+                <h2 className="font-display font-[600] text-[28px] sm:text-[32px] text-espresso tracking-tight text-center pb-2">
                   What nella does about it.
                 </h2>
 

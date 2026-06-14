@@ -17,7 +17,7 @@ export default function StoryClient() {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 py-12 space-y-16">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-16">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
           <span className="text-grey font-normal">&gt;</span>

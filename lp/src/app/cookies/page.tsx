@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <div className="text-left max-w-4xl mx-auto px-6 py-16 space-y-12">
+    <div className="text-left max-w-4xl mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-12">
       <div className="space-y-6 pt-4 pb-12">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>

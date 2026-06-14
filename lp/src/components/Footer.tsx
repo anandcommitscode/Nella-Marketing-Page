@@ -7,10 +7,10 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="bg-[#1F1410] py-16 text-[#FAF7F2] lowercase mt-auto">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-6">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-12 gap-x-6 gap-y-10 md:gap-6">
 
         {/* Left Column - Logo & Bio */}
-        <div className="md:col-span-6 space-y-5 text-left">
+        <div className="col-span-2 md:col-span-6 space-y-5 text-left">
           <Link href="/" className="flex items-center gap-1 select-none">
             <span className="font-display italic text-[24px] font-[600] tracking-tight text-[#FAF7F2] font-serif">nella</span>
           </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
 
         {/* Links Column 1 */}
-        <div className="md:col-span-2 text-left space-y-4">
+        <div className="col-span-1 md:col-span-2 text-left space-y-4">
           <h5 className="font-sans text-[11px] font-[700] tracking-widest text-[#DEC68B] uppercase pr-2">product</h5>
           <ul className="text-[13px] text-[#FAF7F2]/80 space-y-2.5 font-sans">
             <li><Link href="/what-it-does/routines" className="hover:text-white transition-colors">skincare routines</Link></li>
@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
 
         {/* Links Column 2 */}
-        <div className="md:col-span-2 text-left space-y-4">
+        <div className="col-span-1 md:col-span-2 text-left space-y-4">
           <h5 className="font-sans text-[11px] font-[700] tracking-widest text-[#DEC68B] uppercase pr-2">company</h5>
           <ul className="text-[13px] text-[#FAF7F2]/80 space-y-2.5 font-sans">
             <li><Link href="/why-nella" className="hover:text-white transition-colors">manifesto logic</Link></li>
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         {/* Links Column 3 */}
-        <div className="md:col-span-2 text-left space-y-4">
+        <div className="col-span-1 md:col-span-2 text-left space-y-4">
           <h5 className="font-sans text-[11px] font-[700] tracking-widest text-[#DEC68B] uppercase pr-2">legal notes</h5>
           <ul className="text-[13px] text-[#FAF7F2]/80 space-y-2.5 font-sans">
             <li><Link href="/terms" className="hover:text-white transition-colors">terms of use</Link></li>
@@ -70,7 +70,7 @@ export default function Footer() {
         <span className="sm:flex-1 text-center sm:text-left">&copy; {new Date().getFullYear()} mynella ltd. all rights reserved.</span>
         <span className="sm:flex-1 text-center hidden md:block">crafted in absolute compliance with our community guidelines.</span>
         <div className="sm:flex-1 text-center sm:text-right">
-          <Link href="/cookie-settings" className="hover:text-white transition-colors">cookie settings</Link>
+          <Link href="/cookies" className="hover:text-white transition-colors">cookie settings</Link>
         </div>
       </div>
     </footer>

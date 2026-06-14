@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 export default function AboutHubPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-5xl mx-auto px-6 py-16 space-y-16">
+      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-16">
 
-        <section className="space-y-6 text-center pb-16">
+        <section className="space-y-6 text-center">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">nella digital skin lab</span>
@@ -33,7 +33,7 @@ export default function AboutHubPage() {
           </p>
         </section>
 
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1050px] mx-auto">
           {/* Card 1 */}
           <Link
             href="/about/story"
@@ -97,7 +97,7 @@ export default function AboutHubPage() {
       <CtaSection
         title="Ready to track properly?"
         subtitle="free to use. £4.99 a month for Pro. cancel anytime."
-        backgroundClass="bg-transparent mt-12"
+        backgroundClass="bg-transparent"
       />
     </div>
   );

@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function TreatmentCyclesPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-5xl mx-auto px-6 py-12 space-y-12">
+      <div className="text-left max-w-[1002px] mx-auto w-full px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
           <span className="text-grey font-normal">&gt;</span>
@@ -24,7 +24,7 @@ export default function TreatmentCyclesPage() {
           <span className="text-espresso">Treatment Cycles</span>
         </div>
 
-        <div className="pt-4 space-y-6 text-center pb-16">
+        <div className="pt-4 space-y-6 text-center">
           <div className="inline-flex items-center gap-1.5 justify-center">
             <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
@@ -40,7 +40,7 @@ export default function TreatmentCyclesPage() {
           </p>
         </div>
 
-        <div className="space-y-10 max-w-4xl mx-auto">
+        <div className="space-y-10 max-w-[1002px] mx-auto w-full">
           <div className="space-y-4">
             <h2 className="font-display font-semibold text-[24px] text-espresso">How nella thinks about cycles.</h2>
             <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
