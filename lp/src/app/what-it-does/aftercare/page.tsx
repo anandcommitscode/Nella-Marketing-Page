@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import WhatItDoesClient from '../WhatItDoesClient';
 
 export const metadata: Metadata = {
-  title: 'the beauty aftercare app',
-  description: 'log a treatment and nella builds your recovery plan. automatic pauses for retinol and acids so you heal properly.',
-  keywords: ['beauty aftercare app'],
+  title: 'the cosmetic aftercare app that runs itself',
+  description: 'log a treatment and nella automatically loads your day-by-day aftercare. what to do, what to pause, and when to start again.',
+  keywords: ['cosmetic aftercare app', 'botox aftercare tracker', 'microneedling aftercare', 'aesthetic recovery'],
   alternates: {
     canonical: 'https://mynella.app/what-it-does/aftercare'
   }

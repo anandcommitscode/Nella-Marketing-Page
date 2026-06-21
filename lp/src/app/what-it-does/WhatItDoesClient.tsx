@@ -6,6 +6,8 @@ import { ArrowRight, Check, AlertCircle, Sparkles, HelpCircle, Activity, FileTex
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import CtaSection from '../../components/CtaSection';
+import PhaseAwareCta from '../../components/PhaseAwareCta';
+import SurgicalMobileMockup from '../../components/SurgicalMobileMockup';
 
 interface WhatItDoesClientProps {
   activeTab: 'hub' | 'tracking' | 'routines' | 'aftercare' | 'insights';
@@ -24,29 +26,139 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-7xl mx-auto px-6 pt-8 md:pt-8 md:pt-12 space-y-8 md:space-y-12">
-        {activeTab !== 'hub' && (
-          <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-            <Link href="/" className="hover:text-espresso transition-colors">
-              Home
-            </Link>
-            <span className="text-grey font-normal">&gt;</span>
-            <button
-              onClick={() => selectTab('hub')}
-              className="hover:text-espresso transition-colors"
-            >
-              What it Does
-            </button>
-            <span className="text-grey font-normal">&gt;</span>
-            <span className="text-espresso">
-              {activeTab === 'tracking' && 'Tracking'}
-              {activeTab === 'routines' && 'Routines'}
-              {activeTab === 'aftercare' && 'Aftercare'}
-              {activeTab === 'insights' && 'Insights'}
-            </span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0 relative z-20">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              {activeTab === 'hub' ? (
+                <span className="text-espresso font-semibold">What it Does</span>
+              ) : (
+                <>
+                  <button onClick={() => selectTab('hub')} className="hover:text-espresso transition-colors font-semibold">What it Does</button>
+                  <span className="font-normal text-[#1F1410]/30">&gt;</span>
+                  <span className="text-espresso font-semibold">
+                    {activeTab === 'tracking' && 'Tracking'}
+                    {activeTab === 'routines' && 'Routines'}
+                    {activeTab === 'aftercare' && 'Aftercare'}
+                    {activeTab === 'insights' && 'Insights'}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
-        )}
 
+          <div className="max-w-7xl mx-auto px-6 pt-4 pb-0 md:pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
+
+              {activeTab === 'hub' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    what it actually does.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    your treatments logged. your routines conflict-checked. your aftercare automated. four things, done properly.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'tracking' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    tracking.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    every treatment, every clinic, every cost, in one place that remembers. injectables, facials, hair, nails, brows, lashes, body. nella nudges you before each one is due.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'routines' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    routines.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    your AM and PM, in the right order, with the conflicts already sorted. build your routine and nella runs it, adjusts it, and tells you what is on tonight.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'aftercare' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    aftercare.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    what to do, what to pause, what to put back on. day by day.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'insights' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    insights.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    a daily score, a monthly wrap, and the patterns you could not see before.
+                  </p>
+                </>
+              )}
+
+              {/* Add standard CTA */}
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <SurgicalMobileMockup
+                  key={activeTab}
+                  initialScreen={
+                    activeTab === 'tracking' ? 'history' :
+                      activeTab === 'routines' ? 'routines' :
+                        activeTab === 'aftercare' ? 'checkin' :
+                          activeTab === 'insights' ? 'insights' :
+                            'what-it-does'
+                  }
+                  autoPlay
+                  lockedTab
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
         <AnimatePresence mode="wait">
           {activeTab === 'hub' && (
             <motion.div
@@ -57,27 +169,13 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-12"
             >
-              <div className="space-y-6 pt-4 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+              <div className="space-y-6">
+                <div className="text-center space-y-3 mb-10">
+                  <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">The four-step flow.</h2>
+                  <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                    four steps. nothing complicated.
+                  </p>
                 </div>
-                <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none text-center">
-                  What it actually does.
-                </h1>
-                <p className="text-[14px] sm:text-[15px] text-grey max-w-2xl mx-auto font-sans leading-relaxed text-center">
-                  a closed system for everything you put on and in your body.
-                </p>
-              </div>
-
-                <div className="space-y-6">
-                  <div className="text-center space-y-3 mb-10">
-                    <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">The four-step flow.</h2>
-                    <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
-                      four steps. nothing complicated.
-                    </p>
-                  </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Step 1 */}
@@ -267,21 +365,14 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">tracking deep dive</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  Every treatment in one place.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  log it once, see it forever.
+              <div className="text-center space-y-3 mb-6">
+                <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How tracking works.</h2>
+                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                  every appointment and cost, logged in seconds.
                 </p>
               </div>
 
-              <div className="space-y-6 pt-2">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The total record) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
@@ -311,18 +402,18 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
                     <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 lg:p-14 relative overflow-hidden">
                       <div className="relative w-full max-w-[160px] h-[280px] flex items-center justify-center z-10">
-                         <div className="absolute top-0 w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[-6deg] group-hover:rotate-[-10deg] group-hover:-translate-x-2 transition-all duration-500 z-10">
-                           <div className="w-full flex-1 bg-[#FAF7F2] rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]/40" /></div>
-                           <span className="text-[9px] font-bold text-grey">Day 1</span>
-                         </div>
-                         <div className="absolute top-[60px] w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[4deg] group-hover:rotate-[8deg] group-hover:translate-x-2 transition-all duration-500 z-20">
-                           <div className="w-full flex-1 bg-[#F5EDE0] rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]/60" /></div>
-                           <span className="text-[9px] font-bold text-grey">Day 3</span>
-                         </div>
-                         <div className="absolute top-[120px] w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[-2deg] group-hover:rotate-[-4deg] group-hover:translate-y-2 transition-all duration-500 z-30">
-                           <div className="w-full flex-1 bg-[#DEC68B]/20 rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]" /></div>
-                           <span className="text-[9px] font-bold text-grey">Day 7</span>
-                         </div>
+                        <div className="absolute top-0 w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[-6deg] group-hover:rotate-[-10deg] group-hover:-translate-x-2 transition-all duration-500 z-10">
+                          <div className="w-full flex-1 bg-[#FAF7F2] rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]/40" /></div>
+                          <span className="text-[9px] font-bold text-grey">Day 1</span>
+                        </div>
+                        <div className="absolute top-[60px] w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[4deg] group-hover:rotate-[8deg] group-hover:translate-x-2 transition-all duration-500 z-20">
+                          <div className="w-full flex-1 bg-[#F5EDE0] rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]/60" /></div>
+                          <span className="text-[9px] font-bold text-grey">Day 3</span>
+                        </div>
+                        <div className="absolute top-[120px] w-32 h-40 bg-white rounded-2xl shadow-md border border-[#E8E5DC] p-2 flex flex-col items-center gap-2 rotate-[-2deg] group-hover:rotate-[-4deg] group-hover:translate-y-2 transition-all duration-500 z-30">
+                          <div className="w-full flex-1 bg-[#DEC68B]/20 rounded-xl flex items-center justify-center"><UserCircle size={32} className="text-[#8F6F3E]" /></div>
+                          <span className="text-[9px] font-bold text-grey">Day 7</span>
+                        </div>
                       </div>
                     </div>
                     <div className="p-5 md:p-6 space-y-2.5">
@@ -367,21 +458,14 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">routines deep dive</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  Science, sorted.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  tell us what you own. we tell you what order to put it in, and what not to mix.
+              <div className="text-center space-y-3 mb-6">
+                <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How routines work.</h2>
+                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                  active ingredient management, science-backed.
                 </p>
               </div>
 
-              <div className="space-y-6 pt-2">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The perfect order) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
@@ -407,9 +491,9 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 md:p-12 relative overflow-hidden">
                       <div className="w-[200px] h-[120px] bg-[#FAF7F2] border-[4px] border-white rounded-2xl shadow-inner flex flex-col justify-end p-3 z-10 group-hover:scale-105 transition-transform duration-500 relative">
                         <div className="flex flex-row justify-evenly items-end w-full pb-2 z-10">
-                           <div className="w-8 h-16 bg-[#F5EDE0] rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full"></div></div>
-                           <div className="w-10 h-14 bg-white rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-3 bg-[#FAF7F2] rounded-sm"></div></div>
-                           <div className="w-12 h-12 bg-[#DEC68B]/20 rounded-full border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full"></div></div>
+                          <div className="w-8 h-16 bg-[#F5EDE0] rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full"></div></div>
+                          <div className="w-10 h-14 bg-white rounded-md border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-3 bg-[#FAF7F2] rounded-sm"></div></div>
+                          <div className="w-12 h-12 bg-[#DEC68B]/20 rounded-full border border-[#E8E5DC] shadow-sm relative"><div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-white rounded-full"></div></div>
                         </div>
                         <div className="w-full h-2 bg-white rounded-sm z-0"></div>
                       </div>
@@ -450,21 +534,14 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">aftercare deep dive</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  Recover properly.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  you pay for the treatment. you get the result in the recovery.
+              <div className="text-center space-y-3 mb-6">
+                <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How aftercare works.</h2>
+                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                  personalized, day-by-day healing protocols.
                 </p>
               </div>
 
-              <div className="space-y-6 pt-2">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (Progress photos) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
@@ -493,15 +570,15 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                           { title: 'No Makeup', subtitle: 'For 24 hours' },
                           { title: 'Avoid Sun', subtitle: 'For 7 days' }
                         ].map((rule, i) => (
-                          <div key={i} className="bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 flex items-center gap-3 group-hover:-translate-y-1 transition-transform duration-500" style={{transitionDelay: `${i*100}ms`}}>
-                             <div className="w-8 h-8 rounded-full bg-[#FAF7F2] border border-[#E8E5DC] flex items-center justify-center text-[#8F6F3E] shrink-0">
-                                <MessageCircle size={14} />
-                             </div>
-                             <div className="space-y-1 flex-1">
-                                <div className="text-[11px] font-bold text-espresso">{rule.title}</div>
-                                <div className="text-[9px] text-grey uppercase tracking-wider">{rule.subtitle}</div>
-                             </div>
-                             <Check size={14} className="text-[#DEC68B]" />
+                          <div key={i} className="bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 flex items-center gap-3 group-hover:-translate-y-1 transition-transform duration-500" style={{ transitionDelay: `${i * 100}ms` }}>
+                            <div className="w-8 h-8 rounded-full bg-[#FAF7F2] border border-[#E8E5DC] flex items-center justify-center text-[#8F6F3E] shrink-0">
+                              <MessageCircle size={14} />
+                            </div>
+                            <div className="space-y-1 flex-1">
+                              <div className="text-[11px] font-bold text-espresso">{rule.title}</div>
+                              <div className="text-[9px] text-grey uppercase tracking-wider">{rule.subtitle}</div>
+                            </div>
+                            <Check size={14} className="text-[#DEC68B]" />
                           </div>
                         ))}
                       </div>
@@ -546,21 +623,14 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">insights deep dive</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  See the truth.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  your glow score plotted against your spend and your products. see what actually works.
+              <div className="text-center space-y-3 mb-6">
+                <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How insights work.</h2>
+                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                  clear metrics matching your skin's actual progress.
                 </p>
               </div>
 
-              <div className="space-y-6 pt-2">
+              <div className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                   {/* Card 1: Top Left (The glow score) */}
                   <div className="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">

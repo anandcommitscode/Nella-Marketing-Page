@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertTriangle, Sparkles, Activity, Plus, Sun, Moon, PauseCircle, ShieldAlert, Lock } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
-  title: 'ingredient conflicts: which actives fight, and which to pause',
-  description: 'retinol and vitamin C, AHA and BHA, niacinamide and acid. the science behind nella\'s conflict logic, in plain english.',
-  keywords: ['skincare ingredient conflicts', 'can you use retinol with vitamin c', 'niacinamide and vitamin c', 'retinol AHA', 'skincare ingredient guide'],
+  title: 'the skincare ingredient conflict checker',
+  description: 'stop guessing what goes with what. nella knows when to pause the retinol and when to bring it back.',
+  keywords: ['skincare ingredient conflict checker', 'active ingredients manager', 'retinol compatibility', 'skincare conflict tracker'],
   alternates: {
     canonical: 'https://mynella.app/intelligence/ingredient-conflicts'
   }
@@ -15,33 +16,48 @@ export const metadata: Metadata = {
 export default function IngredientConflictsPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-[1002px] mx-auto w-full px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">Ingredient Conflicts</span>
-        </div>
-
-        <div className="pt-4 space-y-6 text-center">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">conflict logic</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0 relative z-20">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">Ingredient Conflicts</span>
+            </div>
           </div>
 
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            Which actives fight, and which to pause.
-          </h1>
+          <div className="max-w-7xl mx-auto px-6 pt-4 pb-0 md:pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
 
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
-            every product in your routine cross-checked against every other. nella's conflict logic, explained.
-          </p>
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">conflict logic</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                ingredient conflicts.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                retinol and vitamin C, AHA and BHA, niacinamide and acid. the science behind nella's conflict logic, in plain english.
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <SurgicalMobileMockup initialScreen="conflicts" autoPlay lockedTab />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="space-y-10 max-w-[1002px] mx-auto w-full">
-          <div className="space-y-4">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
+
+        <div className="space-y-10 w-full">
+          <div className="space-y-4 max-w-3xl">
             <h2 className="font-display font-semibold text-[24px] text-espresso">How nella thinks about conflicts.</h2>
             <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
               <p>a conflict is not always a hard stop. some pairs are myths. some pairs are fine if you separate them by twelve hours. some pairs genuinely need a pause for a number of days.</p>
@@ -50,7 +66,7 @@ export default function IngredientConflictsPage() {
             </div>
           </div>
 
-          <div className="space-y-6 pt-2">
+          <div className="space-y-6 pt-2 w-full">
             <h2 className="font-display font-semibold text-[24px] text-espresso mb-4">The conflicts that come up most.</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {/* Card 1: Retinol & Vit C */}
@@ -179,14 +195,14 @@ export default function IngredientConflictsPage() {
             </div>
           </div>
 
-          <div className="space-y-4 pt-8">
+          <div className="space-y-4 pt-8 max-w-3xl">
             <h2 className="font-display font-semibold text-[24px] text-espresso">What happens when you log a treatment.</h2>
             <p className="text-[14px] text-grey font-sans leading-relaxed">
               you log a glycolic peel on saturday. the moment you save the entry, your AHA pauses for five days. your retinol pauses for seven. your routine checklist for tonight updates: gentle cleanser, ceramide moisturiser, SPF tomorrow morning. day five: AHA returns. day seven: retinol returns. nella tells you. your routine resumes itself.
             </p>
           </div>
 
-          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
+          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8 max-w-3xl">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
             <h2 className="font-semibold text-espresso mb-1 text-[16px]">A note on the science.</h2>
             <p>
@@ -194,7 +210,7 @@ export default function IngredientConflictsPage() {
             </p>
           </div>
 
-          <div className="space-y-4 pt-12 mt-12">
+          <div className="space-y-4 pt-12 mt-12 w-full">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">

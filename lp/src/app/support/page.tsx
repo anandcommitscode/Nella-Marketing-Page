@@ -50,30 +50,44 @@ export default function SupportPage() {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-16">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">Support</span>
-        </div>
+      <div className="px-4 md:px-8 pt-0 md:pt-0">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 md:pt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
+              <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60 mb-2">
+                <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+                <span className="font-normal">&gt;</span>
+                <span className="text-espresso">Support</span>
+              </div>
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">we are here to help</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                contact.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                answers to the most common questions, and how to get in touch.
+              </p>
+            </div>
 
-        <div className="pt-4 space-y-6 text-center">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">we are here to help</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <img
+                  src="/heroes/support.png"
+                  alt="nella Support Preview"
+                  className="w-full h-auto object-contain object-bottom drop-shadow-2xl"
+                />
+              </div>
+            </div>
           </div>
-
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            Support.
-          </h1>
-
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
-            answers to the most common questions, and how to get in touch.
-          </p>
         </div>
+      </div>
 
-        <div className="w-full mx-auto space-y-16">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-16">
+
+        <div className="w-full max-w-3xl mx-auto space-y-16">
           <div className="bg-[#FAF7F2] border border-[#E0DCCE] rounded-[32px] p-8 sm:p-10 shadow-sm text-center flex flex-col items-center">
             <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-sm mb-6">
               <Mail size={20} className="text-[#8F6F3E]" strokeWidth={2.5} />
@@ -89,7 +103,7 @@ export default function SupportPage() {
               <HelpCircle size={24} className="text-[#8F6F3E]" strokeWidth={2.5} />
               <h2 className="font-display font-[600] text-[28px] text-espresso">Frequently asked questions.</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 gap-4">
               {faqs.map((faq, idx) => (
                 <div key={idx} className="p-6 bg-white border border-[#E8E5DC] rounded-2xl shadow-sm hover:shadow-md transition-shadow">
@@ -111,7 +125,7 @@ export default function SupportPage() {
       </div>
 
       <CtaSection
-        title="Ready to track properly?"
+        title="ready when you are."
         subtitle="free to use. £4.99 a month for Pro. cancel anytime."
         backgroundClass="bg-transparent"
       />

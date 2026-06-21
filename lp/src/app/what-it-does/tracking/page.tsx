@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import WhatItDoesClient from '../WhatItDoesClient';
 
 export const metadata: Metadata = {
-  title: 'the app that tracks your beauty treatments',
-  description: 'log your injectables, facials, hair, and nails. see your true spend and get nudged when your next appointment is due.',
-  keywords: ['track beauty treatments'],
+  title: 'the beauty treatment tracker that remembers so you don\'t have to',
+  description: 'your botox, your nails, your facials. every treatment logged with the date, the clinic, the provider, and the cost.',
+  keywords: ['beauty treatment tracker', 'botox app', 'aesthetic treatment log', 'beauty record app'],
   alternates: {
     canonical: 'https://mynella.app/what-it-does/tracking'
   }

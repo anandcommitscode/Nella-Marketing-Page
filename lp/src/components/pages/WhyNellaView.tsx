@@ -108,9 +108,12 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
           <p>
             if you have ever sat in a consultation and been asked when your last treatment was, and had to guess. if you&rsquo;ve ever stood in front of your product shelf and tried to remember which order it all goes on. if you&rsquo;ve ever come home from an appointment and not been sure what to do next.
           </p>
-          <p className="font-medium text-espresso italic">
-            if you value evidence over vibes, nella is for you.
-          </p>
+          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl relative overflow-hidden shadow-sm group hover:shadow-md transition-shadow duration-300 my-6">
+            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-30 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <h3 className="font-display font-[600] text-[20px] leading-tight text-espresso cursor-default">
+              if you value evidence over vibes, nella is for you.
+            </h3>
+          </div>
         </div>
 
         <div className="pt-2">

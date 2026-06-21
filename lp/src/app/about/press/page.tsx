@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Mail, Download, Newspaper } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
 
+
 export const metadata: Metadata = {
   title: 'nella in the press: coverage, press kit, and contact',
   description: 'coverage of nella, the beauty intelligence app. download the press kit or get in touch at press@mynella.app.',
@@ -15,32 +16,56 @@ export const metadata: Metadata = {
 export default function PressPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-5xl mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <Link href="/about" className="hover:text-espresso transition-colors">About</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">Press</span>
-        </div>
-
-        <div className="pt-4 space-y-6 text-center">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">press</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-hidden relative group">
+          {/* Desktop Image - Absolute to fill right column border to border */}
+          <div className="absolute right-0 top-0 bottom-0 w-[42%] hidden lg:block z-0">
+            <img
+              src="/nellapress.webp"
+              alt="Nella press"
+              className="w-full h-full object-cover object-center"
+            />
           </div>
 
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            Nella in the press.
-          </h1>
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <Link href="/about" className="hover:text-espresso transition-colors">About</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">Press</span>
+            </div>
+          </div>
 
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
-            coverage, assets, and contact.
-          </p>
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-12 md:pt-8 md:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:min-h-[360px]">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-center">
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">press</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                Nella in the press.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-[#1F1410]/80 max-w-[420px] font-sans leading-relaxed">
+                coverage, assets, and contact.
+              </p>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="block lg:hidden w-full relative z-10">
+              <img
+                src="/nellapress.webp"
+                alt="Nella press"
+                className="w-full h-auto max-h-[300px] object-cover object-center rounded-[20px]"
+              />
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-12 md:pt-16 space-y-8 md:space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {/* Contact Card */}
           <div className="relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] p-8 shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col items-center text-center justify-center space-y-5">
             <div className="w-14 h-14 rounded-full bg-[#FAF7F2] flex items-center justify-center text-[#8F6F3E] group-hover:scale-110 transition-transform shadow-sm">
@@ -66,9 +91,13 @@ export default function PressPage() {
                 download the press kit for logos, brand guidelines, and high-resolution screenshots.
               </p>
             </div>
-            <button className="px-6 py-3 bg-darkest-espresso text-[#FAF7F2] rounded-full text-[13px] font-bold tracking-wide hover:bg-espresso transition-all mt-2 shadow-lg active:scale-95">
+            <a
+              href="/nella_press_kit.pdf"
+              download
+              className="px-6 py-3 bg-darkest-espresso text-[#FAF7F2] rounded-full text-[13px] font-bold tracking-wide hover:bg-espresso transition-all mt-2 shadow-lg active:scale-95 text-center flex items-center justify-center cursor-pointer"
+            >
               Download PDF
-            </button>
+            </a>
           </div>
 
           {/* Coverage Card (Full Width) */}
@@ -83,7 +112,7 @@ export default function PressPage() {
                   the latest articles, features, and mentions of nella across the beauty and tech press.
                 </p>
               </div>
-              
+
               <div className="w-full md:w-auto flex-1">
                 <div className="p-8 border border-dashed border-[#DEC68B]/60 rounded-2xl text-center text-[13px] text-[#8F6F3E] italic bg-[#FAF7F2] w-full shadow-sm">
                   [Press coverage links will appear here]

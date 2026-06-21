@@ -35,7 +35,10 @@ export default function CtaSection({
             <PhaseAwareCta
               preLaunchText={buttonText}
               postLaunchText="get nella on the App Store"
-              className="px-8 py-4 rounded-2xl bg-[#FAF7F2] hover:bg-white text-[#1F1410] font-semibold text-[14px] lowercase shadow-lg transition-transform active:scale-98 inline-flex items-center justify-center font-sans tracking-wide"
+              className="group px-8 py-4 rounded-full text-[#1F1410] font-semibold text-[14px] lowercase shadow-lg transition-transform active:scale-98 inline-flex items-center justify-center gap-2.5 font-sans tracking-wide hover:opacity-90"
+              style={{
+                background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+              }}
             />
           </div>
 

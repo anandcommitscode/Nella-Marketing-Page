@@ -6,6 +6,8 @@ import { ArrowRight, Check, Sparkles, LogIn, TrendingUp, Calendar, Inbox, FlaskC
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import CtaSection from '../../components/CtaSection';
+import SurgicalMobileMockup from '../../components/SurgicalMobileMockup';
+import PhaseAwareCta from '../../components/PhaseAwareCta';
 
 interface MadeForHerClientProps {
   activeTab: 'hub' | 'track' | 'refine' | 'discover';
@@ -24,28 +26,123 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
   return (
     <div className="space-y-0">
-      <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-20 relative z-10">
-        {activeTab !== 'hub' && (
-          <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-            <Link href="/" className="hover:text-espresso transition-colors">
-              Home
-            </Link>
-            <span className="text-grey font-normal">&gt;</span>
-            <button
-              onClick={() => selectTab('hub')}
-              className="hover:text-espresso transition-colors"
-            >
-              Made for Her
-            </button>
-            <span className="text-grey font-normal">&gt;</span>
-            <span className="text-espresso">
-              {activeTab === 'track' && 'The Tracker Pathway'}
-              {activeTab === 'refine' && 'The Refiner Pathway'}
-              {activeTab === 'discover' && 'The Explorer Pathway'}
-            </span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0 relative z-20">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              {activeTab === 'hub' ? (
+                <span className="text-espresso font-semibold">Made for Her</span>
+              ) : (
+                <>
+                  <button onClick={() => selectTab('hub')} className="hover:text-espresso transition-colors font-semibold">Made for Her</button>
+                  <span className="font-normal text-[#1F1410]/30">&gt;</span>
+                  <span className="text-espresso font-semibold">
+                    {activeTab === 'track' && 'Tracker'}
+                    {activeTab === 'refine' && 'Refiner'}
+                    {activeTab === 'discover' && 'Explorer'}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
-        )}
 
+          <div className="max-w-7xl mx-auto px-6 pt-4 pb-0 md:pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
+
+              {activeTab === 'hub' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    made for her.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    if you have a face, and you occasionally put things on it, she is for you.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'track' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    the woman who has forgotten when she last booked.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'refine' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    the woman who wants to dial it in.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    she has a ten-step routine but isn't sure what's working. nella strips it back to the essentials.
+                  </p>
+                </>
+              )}
+
+              {activeTab === 'discover' && (
+                <>
+                  <div className="inline-flex items-center gap-1.5 justify-start">
+                    <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
+                  </div>
+                  <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                    the woman who tries everything.
+                  </h1>
+                  <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                    her algorithm is a dangerous place. nella helps her figure out what actually works.
+                  </p>
+                </>
+              )}
+
+              {/* Add standard CTA */}
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <SurgicalMobileMockup
+                  key={activeTab}
+                  initialScreen={
+                    activeTab === 'track' ? 'checkin' :
+                      activeTab === 'refine' ? 'routines' :
+                        activeTab === 'discover' ? 'shelf' :
+                          'shelf'
+                  }
+                  autoPlay
+                  lockedTab
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 pt-36 md:pt-56 relative z-10">
         <AnimatePresence mode="wait">
           {activeTab === 'hub' && (
             <motion.div
@@ -57,23 +154,12 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               className="space-y-6 md:space-y-12 max-w-[1002px] mx-auto w-full"
             >
               <div className="space-y-6 pt-4 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[13px] text-[#8F6F3E]">who is nella for?</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none text-center">
-                  Who is nella for?
-                </h1>
-                <p className="text-[14px] sm:text-[15px] text-grey max-w-2xl mx-auto font-sans leading-relaxed text-center">
-                  if you have a face, and you occasionally put things on it, she is for you.
-                </p>
                 <p className="text-[13px] font-medium text-espresso uppercase tracking-wider font-sans text-center">
                   but broadly, we see three types of women using her.
                 </p>
               </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
                 {/* Card 1 */}
                 <div
                   onClick={() => selectTab('track')}
@@ -95,12 +181,11 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                   </div>
                   {/* Content */}
                   <div className="mt-auto text-left w-full">
-                    <div className="text-[11.5px] font-semibold text-[#8F6F3E] uppercase tracking-wider mb-2">the tracker</div>
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      She has a spreadsheet.
+                      the woman who has forgotten when she last booked.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
-                      she knows her units. she knows her dates. she is the one her friends ask for clinic recommendations. she uses nella because her notes app wasn't built for this.
+                      your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
                     </p>
                     <div className="pt-4 flex flex-col gap-1">
                       <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
@@ -132,12 +217,11 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                   </div>
                   {/* Content */}
                   <div className="mt-auto text-left w-full">
-                    <div className="text-[11.5px] font-semibold text-[#8F6F3E] uppercase tracking-wider mb-2">the refiner</div>
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      She found what works.
+                      the woman who wants to dial it in.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
-                      she has used the same moisturiser since 2019. she gets botox twice a year. she uses nella to quietly maintain the routine she spent years perfecting.
+                      she has a ten-step routine but isn't sure what's working. nella strips it back to the essentials.
                     </p>
                     <div className="pt-4 flex flex-col gap-1">
                       <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
@@ -164,12 +248,11 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                   </div>
                   {/* Content */}
                   <div className="mt-auto text-left w-full">
-                    <div className="text-[11.5px] font-semibold text-[#8F6F3E] uppercase tracking-wider mb-2">the explorer</div>
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      She tries everything.
+                      the woman who tries everything.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
-                      her algorithm is a dangerous place. she buys the viral mask. she books the new facial. she uses nella to finally figure out which of them actually work.
+                      her algorithm is a dangerous place. nella helps her figure out what actually works.
                     </p>
                     <div className="pt-4 flex flex-col gap-1">
                       <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
@@ -197,19 +280,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">the tracker pathway</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  For the woman who has forgotten when she last booked.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
-                </p>
-              </div>
+              <div className="pt-4"></div>
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
@@ -251,15 +322,15 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                   <div className="md:col-span-2 lg:col-span-1 lg:row-span-2 relative overflow-hidden bg-white border border-[#E8E5DC] rounded-[32px] shadow-sm hover:shadow-md transition-all duration-300 group flex flex-col h-full">
                     <div className="bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] w-full flex-1 flex items-center justify-center p-8 relative overflow-hidden">
                       <div className="w-full max-w-[200px] flex flex-col gap-3 z-10">
-                        {[{name: 'Botox', price: '£250', date: 'Oct 12'}, {name: 'Hydrafacial', price: '£150', date: 'Oct 5'}, {name: 'Nails', price: '£50', date: 'Oct 1'}].map((tx, i) => (
-                          <div key={i} className="bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:-translate-y-1 transition-transform duration-500" style={{transitionDelay: `${i*100}ms`}}>
+                        {[{ name: 'Botox', price: '£250', date: 'Oct 12' }, { name: 'Hydrafacial', price: '£150', date: 'Oct 5' }, { name: 'Nails', price: '£50', date: 'Oct 1' }].map((tx, i) => (
+                          <div key={i} className="bg-white p-4 rounded-2xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:-translate-y-1 transition-transform duration-500" style={{ transitionDelay: `${i * 100}ms` }}>
                             <div className="flex justify-between items-center"><span className="text-[12px] font-bold text-espresso">{tx.name}</span><span className="text-[12px] font-bold text-[#8F6F3E]">{tx.price}</span></div>
                             <span className="text-[10px] text-grey">{tx.date}</span>
                           </div>
                         ))}
                         <div className="mt-2 bg-espresso p-4 rounded-2xl shadow-sm flex flex-col items-center justify-center gap-1 group-hover:scale-105 transition-transform duration-500">
-                           <span className="text-[10px] text-warm-ivory uppercase tracking-wider">This Month</span>
-                           <span className="text-[18px] font-display font-bold text-white">£450</span>
+                          <span className="text-[10px] text-warm-ivory uppercase tracking-wider">This Month</span>
+                          <span className="text-[18px] font-display font-bold text-white">£450</span>
                         </div>
                       </div>
                     </div>
@@ -319,19 +390,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">the refiner pathway</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  For the woman who has built the routine, but isn't sure it's working.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  five products in the AM, six in the PM. you want to know what is doing the work and what is along for the ride.
-                </p>
-              </div>
+              <div className="pt-4"></div>
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
@@ -381,8 +440,8 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                         <div className="flex items-end gap-1.5 h-16 mt-6 relative z-10">
                           {[35, 45, 50, 65, 74, 82].map((val, idx) => (
                             <div key={idx} className="flex-1 bg-[#FAF7F2] rounded-t-sm relative group-hover:bg-[#F5EDE0] transition-colors h-full flex items-end">
-                              <div 
-                                className="w-full rounded-t-sm bg-gradient-to-t from-[#DEC68B] to-[#8F6F3E] opacity-70 group-hover:opacity-100 transition-all duration-700" 
+                              <div
+                                className="w-full rounded-t-sm bg-gradient-to-t from-[#DEC68B] to-[#8F6F3E] opacity-70 group-hover:opacity-100 transition-all duration-700"
                                 style={{ height: `${val}%`, transitionDelay: `${idx * 100}ms` }}
                               ></div>
                             </div>
@@ -441,19 +500,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-10 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 text-center">
-                <div className="inline-flex items-center gap-1.5 justify-center">
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                  <span className="font-display italic text-[11px] text-[#8F6F3E]">the explorer pathway</span>
-                  <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-                </div>
-                <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight text-center">
-                  For the woman whose algorithm is a dangerous place.
-                </h1>
-                <p className="text-[14px] text-grey font-sans text-center max-w-2xl mx-auto">
-                  skin boosters, viral masks, the new £120 serum. you try everything. nella helps you figure out which of them actually work.
-                </p>
-              </div>
+              <div className="pt-4"></div>
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>

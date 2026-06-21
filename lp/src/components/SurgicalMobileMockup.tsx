@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * @license
  * SPDX-License-Identifier: Apache-2.0
@@ -5,19 +7,20 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { 
-  Menu, Bell, Check, Calendar, ClipboardList, Sparkles, 
-  Timer, ArrowRight, User, Heart, ChevronRight, 
-  Plus, Play, Info, Search, Shield, X, HelpCircle, ArrowLeft
+import {
+  Menu, Bell, Check, Calendar, ClipboardList, Sparkles,
+  Timer, ArrowRight, User, Heart, ChevronRight,
+  Plus, Play, Info, Search, Shield, X, HelpCircle, ArrowLeft, ShieldAlert
 } from 'lucide-react';
 
 export interface SurgicalMobileMockupProps {
-  initialScreen?: 'today' | 'routines' | 'journal' | 'splash';
+  initialScreen?: 'today' | 'routines' | 'journal' | 'splash' | 'shelf' | 'insights' | 'history' | 'checkin' | 'conflicts' | 'why-nella' | 'what-it-does';
   compact?: boolean;
   autoPlay?: boolean;
   customImage?: string;
   imageClassName?: string;
   lockedTab?: boolean;
+  interactive?: boolean;
 }
 
 export default function SurgicalMobileMockup({
@@ -26,7 +29,8 @@ export default function SurgicalMobileMockup({
   autoPlay = false,
   customImage,
   imageClassName = "",
-  lockedTab = false
+  lockedTab = false,
+  interactive = false
 }: SurgicalMobileMockupProps) {
   // Navigation & Onboarding state
   const [onboardingStep, setOnboardingStep] = useState<
@@ -37,17 +41,18 @@ export default function SurgicalMobileMockup({
     }
     return 'splash';
   });
-  
+
   const [activeTab, setActiveTab] = useState<'today' | 'shelf' | 'routine' | 'you'>(() => {
-    if (initialScreen === 'routines') return 'routine';
+    if (initialScreen === 'routines' || initialScreen === 'conflicts' || initialScreen === 'why-nella') return 'routine';
+    if (initialScreen === 'shelf') return 'shelf';
     return 'today';
   });
-  const [showInsights, setShowInsights] = useState(false);
-  const [showHistory, setShowHistory] = useState(false);
+  const [showInsights, setShowInsights] = useState(() => initialScreen === 'insights');
+  const [showHistory, setShowHistory] = useState(() => initialScreen === 'history' || initialScreen === 'what-it-does');
   const [showGlowScore, setShowGlowScore] = useState(() => {
     return initialScreen === 'journal';
   });
-  const [showCheckIn, setShowCheckIn] = useState(false);
+  const [showCheckIn, setShowCheckIn] = useState(() => initialScreen === 'checkin');
   const [glowScoreTab, setGlowScoreTab] = useState<'score' | 'weekly' | 'monthly'>('score');
   const [scoreShared, setScoreShared] = useState(false);
   const [showNotifModal, setShowNotifModal] = useState(false);
@@ -63,13 +68,13 @@ export default function SurgicalMobileMockup({
     'Lymphatic drainage massage': 'last mo'
   });
   const [selectedHair, setSelectedHair] = useState('Straight & sleek');
-  
+
   // Product shelf management
   const [searchQuery, setSearchQuery] = useState('');
   const [searchCategory, setSearchCategory] = useState<'All' | 'Moisturisers' | 'Cleansers' | 'Exfoliants'>('All');
   const [showSearchOverlay, setShowSearchOverlay] = useState(false);
   const [configuringProduct, setConfiguringProduct] = useState<any | null>(null);
-  
+
   const [shelfProducts, setShelfProducts] = useState<any[]>([
     { id: '1', name: 'Everglow Sunsafe Spf 50+ Pa+++ Matte Look Sunscreen', brand: 'Everglow', category: 'Sunscreen', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' },
     { id: '2', name: 'Exfomar', brand: 'Sostenica', category: 'Exfoliant', size: '50ml', timing: 'AM', verdict: 'Just trying it', status: 'active' }
@@ -84,6 +89,21 @@ export default function SurgicalMobileMockup({
   // Slider State (Before/After split slider)
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isSliding, setIsSliding] = useState(false);
+
+  // Dynamic states for page-specific animations
+  const [totalSpent, setTotalSpent] = useState(0);
+  const [averageSpent, setAverageSpent] = useState(0);
+  const [insightsCategory, setInsightsCategory] = useState<'all' | 'injectables' | 'skin' | 'hair' | 'nails'>('all');
+  const [historyItems, setHistoryItems] = useState<any[]>([
+    { label: "Classic facial", date: "yesterday", cost: "£45", category: "skin" },
+    { label: "Lymphatic drainage massage", date: "3 days ago", cost: "£80", category: "skin" },
+    { label: "Microneedling", date: "15 days ago", cost: "£120", category: "skin" },
+    { label: "Teeth whitening", date: "24 days ago", cost: "£90", category: "skin" },
+    { label: "Gel manicure", date: "last month", cost: "£45", category: "nails" }
+  ]);
+  const [showCycleDueWarning, setShowCycleDueWarning] = useState(false);
+  const [showConflictWarning, setShowConflictWarning] = useState(true);
+  const [conflictResolved, setConflictResolved] = useState(false);
 
   // Automatically trigger notification modal after 1.5s once in dashboard today tab
   useEffect(() => {
@@ -100,20 +120,297 @@ export default function SurgicalMobileMockup({
     if (!autoPlay) return;
 
     let isMounted = true;
-    const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
+    const delay = (ms: number) => new Promise(res => {
+      const t = setTimeout(res, ms);
+      return () => clearTimeout(t);
+    });
 
     const sequence = async () => {
-      while (isMounted) {
-        if (!isMounted) return; setOnboardingStep('splash'); await delay(2500);
-        if (!isMounted) return; setOnboardingStep('dashboard'); setActiveTab('today'); await delay(3000);
-        if (!isMounted) return; setOnboardingStep('dashboard'); setActiveTab('routine'); await delay(3000);
+      // If it's a splash (default sequence)
+      if (initialScreen === 'splash') {
+        while (isMounted) {
+          if (!isMounted) return; setOnboardingStep('splash'); await delay(2500);
+          if (!isMounted) return; setOnboardingStep('dashboard'); setActiveTab('today'); await delay(3000);
+          if (!isMounted) return; setOnboardingStep('dashboard'); setActiveTab('routine'); await delay(3000);
+        }
+      }
+
+      // If it's today (dashboard)
+      if (initialScreen === 'today') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setShowCheckIn(false);
+          setShowHistory(false);
+          setShowInsights(false);
+          await delay(4000);
+
+          if (!isMounted) return;
+          setShowCheckIn(true);
+          setShowHistory(false);
+          setShowInsights(false);
+          await delay(4500);
+
+          if (!isMounted) return;
+          setShowCheckIn(false);
+          setShowHistory(true);
+          setShowInsights(false);
+          await delay(4500);
+
+          if (!isMounted) return;
+          setShowCheckIn(false);
+          setShowHistory(false);
+          setShowInsights(true);
+          await delay(4500);
+        }
+      }
+
+      // If it's why-nella (Cycles main tabs)
+      if (initialScreen === 'why-nella') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setOnboardingStep('dashboard');
+          setActiveTab('routine');
+          setShowCheckIn(false);
+          setShowHistory(false);
+          setShowInsights(false);
+          await delay(3500);
+
+          if (!isMounted) return;
+          setActiveTab('shelf');
+          await delay(3500);
+
+          if (!isMounted) return;
+          setActiveTab('today');
+          await delay(3500);
+        }
+      }
+
+      // If it's what-it-does (Cycles main features)
+      if (initialScreen === 'what-it-does') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setOnboardingStep('dashboard');
+          setActiveTab('today');
+          setShowCheckIn(false);
+          setShowHistory(true);
+          setShowInsights(false);
+          await delay(3500);
+
+          if (!isMounted) return;
+          // Show routines (Skincare routines)
+          setShowHistory(false);
+          setActiveTab('routine');
+          await delay(3500);
+
+          if (!isMounted) return;
+          // Show checkin (Aftercare slider)
+          setActiveTab('today');
+          setShowCheckIn(true);
+          await delay(3500);
+
+          if (!isMounted) return;
+          // Show insights (Insights charts)
+          setShowCheckIn(false);
+          setShowInsights(true);
+          await delay(3500);
+
+          if (!isMounted) return;
+          // Show today dashboard (no overlays)
+          setShowInsights(false);
+          await delay(3500);
+        }
+      }
+
+      // If it's routines
+      if (initialScreen === 'routines') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setRoutineChecks({ '1': false, '2': false });
+          await delay(2500);
+
+          if (!isMounted) return;
+          setRoutineChecks({ '1': true, '2': false });
+          await delay(2500);
+
+          if (!isMounted) return;
+          setRoutineChecks({ '1': true, '2': true });
+          await delay(3000);
+        }
+      }
+
+      // If it's journal (Glow Score tab rotation)
+      if (initialScreen === 'journal') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setGlowScoreTab('score');
+          await delay(3500);
+
+          if (!isMounted) return;
+          setGlowScoreTab('weekly');
+          await delay(3500);
+
+          if (!isMounted) return;
+          setGlowScoreTab('monthly');
+          await delay(3500);
+        }
+      }
+
+      // If it's shelf (skincare product adding demo)
+      if (initialScreen === 'shelf') {
+        while (isMounted) {
+          if (!isMounted) return;
+          // Reset shelf products
+          setShelfProducts([
+            { id: '1', name: 'Everglow Sunsafe Spf 50+ Pa+++ Matte Look Sunscreen', brand: 'Everglow', category: 'Sunscreen', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' }
+          ]);
+          setShowSearchOverlay(false);
+          setConfiguringProduct(null);
+          await delay(2500);
+
+          if (!isMounted) return;
+          // Open search overlay
+          setShowSearchOverlay(true);
+          setSearchQuery('');
+          await delay(1500);
+
+          // Type search query: "exf"
+          if (!isMounted) return; setSearchQuery('e'); await delay(200);
+          if (!isMounted) return; setSearchQuery('ex'); await delay(200);
+          if (!isMounted) return; setSearchQuery('exf'); await delay(1200);
+
+          // Select the product
+          if (!isMounted) return;
+          setConfiguringProduct({ name: "Exfomar", brand: "Sostenica", category: "Exfoliant" });
+          await delay(2000);
+
+          // Add to shelf
+          if (!isMounted) return;
+          setShelfProducts([
+            { id: '1', name: 'Everglow Sunsafe Spf 50+ Pa+++ Matte Look Sunscreen', brand: 'Everglow', category: 'Sunscreen', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' },
+            { id: '2', name: 'Exfomar', brand: 'Sostenica', category: 'Exfoliant', size: '50ml', timing: 'AM', verdict: 'Just trying it', status: 'active' }
+          ]);
+          setConfiguringProduct(null);
+          setShowSearchOverlay(false);
+          await delay(4000);
+        }
+      }
+
+      // If it's insights (spending analysis counting up & filter demo)
+      if (initialScreen === 'insights') {
+        while (isMounted) {
+          if (!isMounted) return;
+          setTotalSpent(0);
+          setAverageSpent(0);
+          setInsightsCategory('all');
+          await delay(1200);
+
+          // Count up
+          for (let i = 0; i <= 385; i += 35) {
+            if (!isMounted) return;
+            setTotalSpent(i);
+            setAverageSpent(Math.round(i / 15));
+            await delay(80);
+          }
+          await delay(2500);
+
+          // Switch category filters
+          if (!isMounted) return;
+          setInsightsCategory('injectables');
+          await delay(3000);
+
+          if (!isMounted) return;
+          setInsightsCategory('skin');
+          await delay(3000);
+        }
+      }
+
+      // If it's history (treatment cycle & logging demo)
+      if (initialScreen === 'history') {
+        while (isMounted) {
+          if (!isMounted) return;
+          // Initial list without botox
+          setHistoryItems([
+            { label: "Classic facial", date: "yesterday", cost: "£45", category: "skin" },
+            { label: "Lymphatic drainage massage", date: "3 days ago", cost: "£80", category: "skin" },
+            { label: "Microneedling", date: "15 days ago", cost: "£120", category: "skin" },
+            { label: "Teeth whitening", date: "24 days ago", cost: "£90", category: "skin" },
+            { label: "Gel manicure", date: "last month", cost: "£45", category: "nails" }
+          ]);
+          setShowCycleDueWarning(false);
+          await delay(2000);
+
+          // Show treatment due alert card
+          if (!isMounted) return;
+          setShowCycleDueWarning(true);
+          await delay(3500);
+
+          // Animate logging botox session
+          if (!isMounted) return;
+          setShowCycleDueWarning(false);
+          // Prepend new treatment
+          setHistoryItems(prev => [
+            { label: "Botox (3 areas)", date: "just logged", cost: "£220", category: "injectables" },
+            ...prev
+          ]);
+          await delay(4500);
+        }
+      }
+
+      // If it's conflicts (ingredient conflict warning and resolution)
+      if (initialScreen === 'conflicts') {
+        while (isMounted) {
+          if (!isMounted) return;
+          // Setup active conflicts AM
+          setShelfProducts([
+            { id: '1', name: 'Everglow Sunsafe Spf 50+ Pa+++ Matte Look Sunscreen', brand: 'Everglow', category: 'Sunscreen', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' },
+            { id: '2', name: 'Retinol 1% Clinic Strength', brand: 'Exfomar', category: 'Retinol', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' }
+          ]);
+          setShowConflictWarning(true);
+          setConflictResolved(false);
+          await delay(4000);
+
+          // Resolve: move Retinol to PM
+          if (!isMounted) return;
+          setConflictResolved(true);
+          // Wait for resolution animation
+          await delay(1200);
+          if (!isMounted) return;
+          setShowConflictWarning(false);
+          // Update product timing to PM
+          setShelfProducts([
+            { id: '1', name: 'Everglow Sunsafe Spf 50+ Pa+++ Matte Look Sunscreen', brand: 'Everglow', category: 'Sunscreen', size: '30ml', timing: 'AM', verdict: 'Just trying it', status: 'active' },
+            { id: '2', name: 'Retinol 1% Clinic Strength', brand: 'Exfomar', category: 'Retinol', size: '30ml', timing: 'PM', verdict: 'Just trying it', status: 'active' }
+          ]);
+          await delay(4500);
+        }
       }
     };
 
     sequence();
 
     return () => { isMounted = false; };
-  }, [autoPlay]);
+  }, [autoPlay, initialScreen]);
+
+  // Before-After auto-slider sweep
+  useEffect(() => {
+    if (!autoPlay || !showCheckIn || isSliding) return;
+
+    let direction = 1;
+    const interval = setInterval(() => {
+      setSliderPosition(pos => {
+        let next = pos + direction * 0.4;
+        if (next >= 85) {
+          direction = -1;
+          next = 85;
+        } else if (next <= 15) {
+          direction = 1;
+          next = 15;
+        }
+        return next;
+      });
+    }, 20);
+    return () => clearInterval(interval);
+  }, [autoPlay, showCheckIn, isSliding]);
 
   // Before-After slide logic
   const handleSliderMove = (clientX: number, containerRect: DOMRect) => {
@@ -148,10 +445,10 @@ export default function SurgicalMobileMockup({
   ];
 
   return (
-    <div className="relative mx-auto max-w-[340px] md:max-w-[360px] w-full transition-all duration-300 scale-[0.85] sm:scale-90 md:scale-95 origin-center">
+    <div className={`relative mx-auto max-w-[340px] md:max-w-[360px] w-full transition-all duration-300 scale-[0.85] sm:scale-90 md:scale-95 origin-center ${!interactive ? 'pointer-events-none select-none' : ''}`}>
 
       {/* Phone bezel container */}
-      <div 
+      <div
         id="device-frame"
         onClickCapture={() => setHasInteracted(true)}
         className="relative bg-darkest-espresso rounded-[52px] p-[10px] shadow-[0_24px_50px_rgba(20,10,5,0.45),_inset_0_4px_6px_rgba(255,255,255,0.15)] border-4 border-[#3A2418] overflow-hidden"
@@ -163,27 +460,14 @@ export default function SurgicalMobileMockup({
           <div className="w-1.5 h-1.5 bg-[#001] rounded-full"></div>
         </div>
 
-        {/* Real-time styled iOS Status Bar */}
-        {!customImage && (
-          <div className="absolute top-[10px] left-0 right-0 px-8 flex justify-between items-center text-[10px] font-bold text-espresso/70 z-40 font-sans">
-            <span>11:38</span>
-            <div className="flex items-center gap-1.5">
-              <span className="text-[9px]">5G</span>
-              <div className="w-4.5 h-2.5 border border-espresso/50 rounded-sm p-[1px] flex">
-                <div className="bg-espresso h-full w-[80%] rounded-2xs"></div>
-              </div>
-            </div>
-          </div>
-        )}
-
         {/* Screen Dynamic Container */}
-        <div className="relative bg-[#FAF7F2] rounded-[42px] h-[645px] overflow-hidden flex flex-col pt-7 select-none border border-black/5">
+        <div className="relative bg-[#FAF7F2] rounded-[42px] h-[645px] overflow-hidden flex flex-col pt-12 select-none border border-black/5">
           {customImage && (
             <div className="absolute inset-0 w-full h-full z-20 pointer-events-none flex items-start justify-center bg-[#FAF7F2]">
-              <img 
-                src={customImage} 
-                alt="App Screen" 
-                className={`w-full h-full object-contain object-top ${imageClassName}`} 
+              <img
+                src={customImage}
+                alt="App Screen"
+                className={`w-full h-full object-contain object-top ${imageClassName}`}
               />
             </div>
           )}
@@ -191,7 +475,7 @@ export default function SurgicalMobileMockup({
           <AnimatePresence mode="wait">
             {/* SPLASH LAUNCH SCREEN */}
             {onboardingStep === 'splash' && (
-              <motion.div 
+              <motion.div
                 key="splash"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -211,10 +495,12 @@ export default function SurgicalMobileMockup({
 
                 {/* center logo & beauty intelligence */}
                 <div className="text-center space-y-4 relative z-10">
-                  <h1 className="font-display italic text-[82px] font-black tracking-tighter text-espresso leading-none pr-1">
-                    nella
-                  </h1>
-                  
+                  <img 
+                    src="/nellaBrown.png" 
+                    alt="nella logo" 
+                    className="h-16 w-auto object-contain mx-auto mb-2"
+                  />
+
                   <div className="flex items-center justify-center gap-2">
                     <span className="h-[1px] w-6 bg-deep-gold/30"></span>
                     <span className="text-[9px] font-sans font-bold tracking-[0.3em] uppercase text-deep-gold">
@@ -226,15 +512,15 @@ export default function SurgicalMobileMockup({
 
                 {/* Action CTA */}
                 <div className="w-full text-center space-y-4 relative z-10">
-                  <button 
+                  <button
                     onClick={() => setOnboardingStep('name-era')}
-                    className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 font-sans text-sm tracking-wide"
+                    className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 font-sans text-sm tracking-wide"
                   >
                     <span>get started</span>
                     <ArrowRight size={16} />
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => setOnboardingStep('login')}
                     className="text-[12px] font-sans text-espresso/70 hover:text-espresso transition-colors"
                   >
@@ -246,12 +532,12 @@ export default function SurgicalMobileMockup({
 
             {/* WELCOME BACK SIGN IN SCREEN */}
             {onboardingStep === 'login' && (
-              <motion.div 
+              <motion.div
                 key="login"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="absolute inset-0 bg-[#FAF7F2] flex flex-col justify-between p-6 z-20"
+                className="absolute inset-0 bg-[#FAF7F2] flex flex-col justify-between px-6 pb-6 pt-12 z-20"
               >
                 <div>
                   {/* Custom Navigation */}
@@ -277,11 +563,11 @@ export default function SurgicalMobileMockup({
                       {/* Email input */}
                       <div className="space-y-1 text-left">
                         <label className="text-[9.5px] font-bold text-espresso uppercase tracking-wider block">EMAIL</label>
-                        <input 
-                          type="email" 
-                          placeholder="Enter your email" 
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
                           className="w-full px-4 py-3 bg-[#FAF7F2] border border-very-light-grey rounded-2xl font-sans text-[13px] text-espresso focus:outline-none focus:border-deep-gold focus:ring-1 focus:ring-deep-gold"
-                          defaultValue="nella@beauty.com" 
+                          defaultValue="nella@beauty.com"
                         />
                       </div>
 
@@ -289,11 +575,11 @@ export default function SurgicalMobileMockup({
                       <div className="space-y-1 text-left">
                         <label className="text-[9.5px] font-bold text-espresso uppercase tracking-wider block">PASSWORD</label>
                         <div className="relative">
-                          <input 
-                            type="password" 
-                            placeholder="Create a password" 
+                          <input
+                            type="password"
+                            placeholder="Create a password"
                             className="w-full px-4 py-3 bg-[#FAF7F2] border border-very-light-grey rounded-2xl font-sans text-[13px] text-espresso focus:outline-none focus:border-deep-gold focus:ring-1 focus:ring-deep-gold"
-                            defaultValue="••••••••" 
+                            defaultValue="••••••••"
                           />
                         </div>
                       </div>
@@ -302,12 +588,12 @@ export default function SurgicalMobileMockup({
                 </div>
 
                 <div className="space-y-4">
-                  <button 
+                  <button
                     onClick={() => {
                       setUserName('Nella');
                       setOnboardingStep('dashboard');
                     }}
-                    className="w-full py-3.5 bg-espresso text-[#FAF7F2] rounded-2xl text-[13px] font-bold hover:bg-darkest-espresso shadow-lg transition-transform hover:scale-[1.01]"
+                    className="w-full py-3.5 bg-espresso text-[#FAF7F2] rounded-full text-[13px] font-bold hover:bg-darkest-espresso shadow-lg transition-transform hover:scale-[1.01]"
                   >
                     Log In
                   </button>
@@ -318,15 +604,15 @@ export default function SurgicalMobileMockup({
                     <div className="flex-grow border-t border-very-light-grey"></div>
                   </div>
 
-                  <button 
+                  <button
                     onClick={() => {
                       setUserName('Nella Google');
                       setOnboardingStep('dashboard');
                     }}
-                    className="w-full py-3 border border-very-light-grey bg-white hover:bg-cream/10 rounded-2xl flex items-center justify-center gap-2 font-sans text-[12px] font-semibold shadow-xs"
+                    className="w-full py-3 border border-very-light-grey bg-white hover:bg-cream/10 rounded-full flex items-center justify-center gap-2 font-sans text-[12px] font-semibold shadow-xs"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24">
-                      <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.578-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.11C18.28 1.845 15.547 1 12.24 1 5.48 1 0 6.48 0 13.24s5.48 12.24 12.24 12.24c7.057 0 11.751-4.965 11.751-11.96 0-.805-.084-1.42-.187-2.235H12.24z"/>
+                      <path fill="#EA4335" d="M12.24 10.285V14.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.859-3.578-7.859-8s3.53-8 7.859-8c2.46 0 4.105 1.025 5.047 1.926l3.227-3.11C18.28 1.845 15.547 1 12.24 1 5.48 1 0 6.48 0 13.24s5.48 12.24 12.24 12.24c7.057 0 11.751-4.965 11.751-11.96 0-.805-.084-1.42-.187-2.235H12.24z" />
                     </svg>
                     <span>CONTINUE WITH GOOGLE</span>
                   </button>
@@ -341,12 +627,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 1: name & era selection */}
             {onboardingStep === 'name-era' && (
-              <motion.div 
+              <motion.div
                 key="name-era"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 {/* Onboarding Header */}
                 <div className="flex justify-between items-center">
@@ -378,8 +664,8 @@ export default function SurgicalMobileMockup({
                         <span className="h-[1px] w-3 bg-deep-gold"></span>
                         <span className="text-[9px] font-bold text-deep-gold uppercase tracking-widest font-sans">your first name</span>
                       </div>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         value={userName}
                         onChange={(e) => setUserName(e.target.value)}
                         placeholder="Enter your name"
@@ -393,7 +679,7 @@ export default function SurgicalMobileMockup({
                         <span className="h-[1px] w-3 bg-deep-gold"></span>
                         <span className="text-[9px] font-bold text-deep-gold uppercase tracking-widest font-sans">your era</span>
                       </div>
-                      
+
                       <div className="space-y-1">
                         <h3 className="text-base font-display font-medium text-espresso">How long have you been <span className="italic font-bold">glowing?</span></h3>
                         <p className="text-[11px] text-grey">So we can tailor recommendations to where you are right now.</p>
@@ -411,16 +697,14 @@ export default function SurgicalMobileMockup({
                             <button
                               key={era.label}
                               onClick={() => setSelectedEra(era.label)}
-                              className={`w-full p-4 rounded-2.5xl border text-left flex justify-between items-center transition-all ${
-                                isSelected 
-                                  ? 'bg-warm-ivory border-deep-gold/60 text-espresso shadow-xs' 
-                                  : 'bg-white/40 border-very-light-grey text-espresso/80 hover:bg-[#FAF7F2]/50'
-                              }`}
+                              className={`w-full p-4 rounded-2.5xl border text-left flex justify-between items-center transition-all ${isSelected
+                                ? 'bg-warm-ivory border-deep-gold/60 text-espresso shadow-xs'
+                                : 'bg-white/40 border-very-light-grey text-espresso/80 hover:bg-[#FAF7F2]/50'
+                                }`}
                             >
                               <div className="flex items-center gap-3">
-                                <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${
-                                  isSelected ? 'border-deep-gold bg-[#8F6F3E] text-white' : 'border-light-grey bg-white'
-                                }`}>
+                                <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${isSelected ? 'border-deep-gold bg-[#8F6F3E] text-white' : 'border-light-grey bg-white'
+                                  }`}>
                                   {isSelected && <Check size={10} className="stroke-[3]" />}
                                 </div>
                                 <span className="text-[12.5px] font-bold font-sans">{era.label}</span>
@@ -434,10 +718,10 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('goals')}
                   disabled={!userName.trim()}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
                 >
                   <span>Continue</span>
                   <ArrowRight size={14} />
@@ -447,12 +731,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 2: skin goals */}
             {onboardingStep === 'goals' && (
-              <motion.div 
+              <motion.div
                 key="goals"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 <div className="flex justify-between items-center">
                   <button onClick={() => setOnboardingStep('name-era')} className="text-espresso">
@@ -491,7 +775,7 @@ export default function SurgicalMobileMockup({
 
                   <div className="flex flex-wrap gap-2 pt-2">
                     {[
-                      'Fine lines', 'Acne & breakouts', 'Dryness', 
+                      'Fine lines', 'Acne & breakouts', 'Dryness',
                       'Redness & sensitivity', 'Dullness', 'Texture', 'Dark spots'
                     ].map((concern) => {
                       const isSelected = selectedConcerns.includes(concern);
@@ -507,11 +791,10 @@ export default function SurgicalMobileMockup({
                               }
                             }
                           }}
-                          className={`px-3.5 py-2 rounded-full border text-[11.5px] font-bold font-sans transition-all active:scale-95 ${
-                            isSelected 
-                              ? 'bg-cream border-deep-gold text-espresso shadow-xs' 
-                              : 'bg-white/40 border-very-light-grey text-espresso/70'
-                          }`}
+                          className={`px-3.5 py-2 rounded-full border text-[11.5px] font-bold font-sans transition-all active:scale-95 ${isSelected
+                            ? 'bg-cream border-deep-gold text-espresso shadow-xs'
+                            : 'bg-white/40 border-very-light-grey text-espresso/70'
+                            }`}
                         >
                           {concern}
                         </button>
@@ -521,10 +804,10 @@ export default function SurgicalMobileMockup({
                   <p className="text-[10px] font-sans text-grey/80 text-center italic mt-1">tap a selected concern to deselect</p>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('treatments')}
                   disabled={selectedConcerns.length === 0}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
                 >
                   <span>That's about right</span>
                   <ArrowRight size={14} />
@@ -534,12 +817,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 3: Treatments */}
             {onboardingStep === 'treatments' && (
-              <motion.div 
+              <motion.div
                 key="treatments"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 <div className="flex justify-between items-center">
                   <button onClick={() => setOnboardingStep('goals')} className="text-espresso">
@@ -565,8 +848,8 @@ export default function SurgicalMobileMockup({
                   {/* Search treatment */}
                   <div className="relative">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-grey" size={14} />
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       placeholder="search treatments..."
                       className="w-full pl-9 pr-4 py-2 bg-[#F2E9D8]/40 border border-very-light-grey rounded-full font-sans text-[11.5px] text-espresso focus:outline-none"
                     />
@@ -607,11 +890,10 @@ export default function SurgicalMobileMockup({
                                     setSelectedTreatments(prev => [...prev, item]);
                                   }
                                 }}
-                                className={`px-3 py-1.5 rounded-full border text-[11px] font-semibold font-sans transition-all ${
-                                  isSelected 
-                                    ? 'bg-cream border-deep-gold text-espresso shadow-2xs' 
-                                    : 'bg-white/40 border-very-light-grey text-espresso/70'
-                                }`}
+                                className={`px-3 py-1.5 rounded-full border text-[11px] font-semibold font-sans transition-all ${isSelected
+                                  ? 'bg-cream border-deep-gold text-espresso shadow-2xs'
+                                  : 'bg-white/40 border-very-light-grey text-espresso/70'
+                                  }`}
                               >
                                 {item}
                               </button>
@@ -623,10 +905,10 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('recency')}
                   disabled={selectedTreatments.length === 0}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm disabled:opacity-40"
                 >
                   <span>These are my regulars</span>
                   <ArrowRight size={14} />
@@ -636,12 +918,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 4: Recency */}
             {onboardingStep === 'recency' && (
-              <motion.div 
+              <motion.div
                 key="recency"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 <div className="flex justify-between items-center">
                   <button onClick={() => setOnboardingStep('treatments')} className="text-espresso">
@@ -683,8 +965,8 @@ export default function SurgicalMobileMockup({
                             {['this wk', '2-3 wks', 'last mo', '2-3 mo', '6+ mo', "can't recall"].map((val) => {
                               const isActive = (lastHadRecency[tr] || 'last mo') === val;
                               return (
-                                <span 
-                                  key={val} 
+                                <span
+                                  key={val}
                                   onClick={() => setLastHadRecency(prev => ({ ...prev, [tr]: val }))}
                                   className={`cursor-pointer pb-1 transition-all ${isActive ? 'text-deep-gold font-bold scale-105' : ''}`}
                                 >
@@ -712,9 +994,9 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('hair')}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
                 >
                   <span>That's about right &rarr;</span>
                 </button>
@@ -723,12 +1005,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 5: Hair Style Profile */}
             {onboardingStep === 'hair' && (
-              <motion.div 
+              <motion.div
                 key="hair"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 <div className="flex justify-between items-center">
                   <button onClick={() => setOnboardingStep('recency')} className="text-espresso">
@@ -764,11 +1046,10 @@ export default function SurgicalMobileMockup({
                         <button
                           key={hair.label}
                           onClick={() => setSelectedHair(hair.label)}
-                          className={`p-4 rounded-2.5xl border text-center relative flex flex-col items-center justify-center gap-2 aspect-square transition-all ${
-                            isSelected 
-                              ? 'bg-cream border-deep-gold/60 text-espresso shadow-xs' 
-                              : 'bg-white/40 border-very-light-grey text-espresso/70'
-                          }`}
+                          className={`p-4 rounded-2.5xl border text-center relative flex flex-col items-center justify-center gap-2 aspect-square transition-all ${isSelected
+                            ? 'bg-cream border-deep-gold/60 text-espresso shadow-xs'
+                            : 'bg-white/40 border-very-light-grey text-espresso/70'
+                            }`}
                         >
                           {isSelected && (
                             <div className="absolute top-2 right-2 w-4.5 h-4.5 bg-deep-gold text-[#FAF7F2] rounded-full flex items-center justify-center text-[9px] font-bold">
@@ -784,14 +1065,14 @@ export default function SurgicalMobileMockup({
                 </div>
 
                 <div className="space-y-2">
-                  <button 
+                  <button
                     onClick={() => setOnboardingStep('shelf-setup')}
-                    className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all font-sans text-sm"
+                    className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all font-sans text-sm"
                   >
                     That's me &rarr;
                   </button>
 
-                  <button 
+                  <button
                     onClick={() => setOnboardingStep('shelf-setup')}
                     className="w-full py-2.5 text-[11px] font-bold text-grey/80 hover:text-espresso text-center transition-all underline underline-offset-2"
                   >
@@ -803,12 +1084,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 6: Shelf list and setup */}
             {onboardingStep === 'shelf-setup' && (
-              <motion.div 
+              <motion.div
                 key="shelf-setup"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="flex flex-col justify-between h-full p-5"
+                className="flex flex-col justify-between h-full px-5 pb-5 pt-3"
               >
                 <div className="flex justify-between items-center">
                   <button onClick={() => setOnboardingStep('hair')} className="text-espresso">
@@ -832,7 +1113,7 @@ export default function SurgicalMobileMockup({
                   </div>
 
                   {/* search clickable overlay starter */}
-                  <div 
+                  <div
                     onClick={() => setShowSearchOverlay(true)}
                     className="relative cursor-pointer"
                   >
@@ -854,7 +1135,7 @@ export default function SurgicalMobileMockup({
                             <p className="text-[9px] text-grey mt-0.5">{p.brand}</p>
                           </div>
                         </div>
-                        <button 
+                        <button
                           onClick={() => setShelfProducts(prev => prev.filter(x => x.id !== p.id))}
                           className="text-grey hover:text-deep-rose p-1"
                         >
@@ -865,9 +1146,9 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('welcome')}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
                 >
                   <span>That's what I've got</span>
                   <ArrowRight size={14} />
@@ -877,12 +1158,12 @@ export default function SurgicalMobileMockup({
 
             {/* STEP 7: Welcome summary dashboard live */}
             {onboardingStep === 'welcome' && (
-              <motion.div 
+              <motion.div
                 key="welcome"
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
-                className="flex flex-col justify-between h-full p-6 text-left"
+                className="flex flex-col justify-between h-full px-6 pb-6 pt-3 text-left"
               >
                 <div />
 
@@ -912,9 +1193,9 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => setOnboardingStep('dashboard')}
-                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-2xl shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
+                  className="w-full py-4 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] font-semibold rounded-full shadow-xl transition-all flex items-center justify-center gap-2 font-sans text-sm"
                 >
                   <span>Go to my dashboard</span>
                   <ArrowRight size={14} />
@@ -924,7 +1205,7 @@ export default function SurgicalMobileMockup({
 
             {/* CORE DASHBOARD SYSTEM AFTER ONBOARDING */}
             {onboardingStep === 'dashboard' && (
-              <motion.div 
+              <motion.div
                 key="dashboard"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -935,12 +1216,12 @@ export default function SurgicalMobileMockup({
                 <AnimatePresence>
                   {/* spending insights subpage */}
                   {showInsights && (
-                    <motion.div 
+                    <motion.div
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       exit={{ y: "100%" }}
                       transition={{ type: "spring", damping: 25 }}
-                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between p-5 text-left"
+                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between px-5 pb-5 pt-12 text-left"
                     >
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
@@ -953,7 +1234,7 @@ export default function SurgicalMobileMockup({
 
                         <div className="space-y-3">
                           <h2 className="text-[26px] font-display font-medium text-espresso leading-none">Spending insights</h2>
-                          
+
                           <div className="flex gap-1.5 p-1 bg-cream/40 rounded-full w-fit text-[11px] font-bold font-sans">
                             <span className="px-3 py-1 hover:bg-white rounded-full cursor-pointer">1M</span>
                             <span className="px-3 py-1 hover:bg-white rounded-full cursor-pointer">3M</span>
@@ -964,62 +1245,87 @@ export default function SurgicalMobileMockup({
                           <div className="p-5 rounded-2.5xl text-white space-y-4" style={{ background: 'linear-gradient(135deg, #3A2418 0%, #1F1410 100%)' }}>
                             <div>
                               <span className="text-[9px] font-bold text-[#EFD9A8]/80 uppercase tracking-widest block">TOTAL SPENT</span>
-                              <div className="text-[32px] font-display font-black text-[#FAF7F2] mt-0.5">&pound;0</div>
+                              <div className="text-[32px] font-display font-black text-[#FAF7F2] mt-0.5">&pound;{totalSpent}</div>
                               <p className="text-[9.5px] text-[#FAF7F2]/75 font-sans mt-0.5">across 15 treatments</p>
                             </div>
 
                             <div className="flex justify-between border-t border-white/10 pt-3 text-[10px] uppercase font-sans tracking-wider text-[#FAF7F2]/65">
-                              <div>AVG / TREATMENT <div className="font-bold text-white mt-0.5">&pound;0</div></div>
+                              <div>AVG / TREATMENT <div className="font-bold text-white mt-0.5">&pound;{averageSpent}</div></div>
                               <div className="text-right">VS LAST QUARTER <div className="font-bold text-light-gold mt-0.5">CONSISTENT</div></div>
                             </div>
                           </div>
 
                           {/* list categories */}
                           <div className="flex gap-1 overflow-x-auto text-[10.5px] font-bold font-sans hide-scrollbar">
-                            {['all', 'injectables', 'skin', 'hair', 'nails'].map(cat => (
-                              <span key={cat} className={`px-3 py-1.5 border rounded-full capitalize shrink-0 ${cat === 'all' ? 'bg-[#1F1410] border-transparent text-[#FAF7F2]' : 'bg-transparent border-very-light-grey text-grey'}`}>{cat}</span>
-                            ))}
+                            {(['all', 'injectables', 'skin', 'hair', 'nails'] as const).map(cat => {
+                              const isSelected = insightsCategory === cat;
+                              return (
+                                <span
+                                  key={cat}
+                                  onClick={() => {
+                                    if (lockedTab) return;
+                                    setInsightsCategory(cat);
+                                  }}
+                                  className={`px-3 py-1.5 border rounded-full capitalize shrink-0 cursor-pointer transition-all ${isSelected
+                                      ? 'bg-[#1F1410] border-transparent text-[#FAF7F2] shadow-2xs'
+                                      : 'bg-transparent border-very-light-grey text-grey hover:text-espresso'
+                                    }`}
+                                >
+                                  {cat}
+                                </span>
+                              );
+                            })}
                           </div>
 
                           {/* Breakdown list items */}
                           <div className="space-y-2 pt-2 overflow-y-auto max-h-[220px]" style={{ scrollbarWidth: 'none' }}>
-                            <span className="text-[8.5px] font-bold text-grey uppercase tracking-widest block">BREAKDOWN BY TREATMENT</span>
+                            <span className="text-[8.5px] font-bold text-grey uppercase tracking-widest block font-sans">BREAKDOWN BY TREATMENT</span>
                             {[
-                              { label: "Lymphatic drainage massage", count: "1 sessions" },
-                              { label: "Laser hair removal", count: "1 sessions" },
-                              { label: "Polynucleotides", count: "1 sessions" },
-                              { label: "Gel manicure", count: "1 sessions" },
-                              { label: "Veneers", count: "1 sessions" }
-                            ].map((item) => (
-                              <div key={item.label} className="p-3 bg-white border border-very-light-grey rounded-2xl flex justify-between items-center font-sans">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-cream/30 flex items-center justify-center text-[10px]">✨</div>
-                                  <div>
-                                    <h4 className="text-[11.5px] font-bold text-espresso leading-tight">{item.label}</h4>
-                                    <p className="text-[9px] text-grey mt-0.5">{item.count}</p>
-                                  </div>
-                                </div>
-                                <div className="text-right">
-                                  <div className="text-[11.5px] font-bold text-espresso">&pound;0</div>
-                                  <div className="text-[9px] text-grey">0%</div>
-                                </div>
-                              </div>
-                            ))}
+                              { label: "Polynucleotides", count: "1 session", cost: 250, category: "injectables" },
+                              { label: "Laser hair removal", count: "1 session", cost: 150, category: "skin" },
+                              { label: "Lymphatic drainage massage", count: "1 session", cost: 80, category: "skin" },
+                              { label: "Veneers", count: "1 session", cost: 55, category: "nails" },
+                              { label: "Gel manicure", count: "2 sessions", cost: 45, category: "nails" }
+                            ]
+                              .filter(item => insightsCategory === 'all' || item.category === insightsCategory)
+                              .map((item) => {
+                                const scaledCost = totalSpent ? Math.round((item.cost / 580) * totalSpent) : 0;
+                                const percent = Math.round((item.cost / 580) * 100);
+                                return (
+                                  <motion.div
+                                    layout
+                                    key={item.label}
+                                    className="p-3 bg-white border border-very-light-grey rounded-2xl flex justify-between items-center font-sans"
+                                  >
+                                    <div className="flex items-center gap-3">
+                                      <div className="w-8 h-8 rounded-full bg-cream/30 flex items-center justify-center text-[10px]">✨</div>
+                                      <div>
+                                        <h4 className="text-[11.5px] font-bold text-espresso leading-tight">{item.label}</h4>
+                                        <p className="text-[9px] text-grey mt-0.5">{item.count}</p>
+                                      </div>
+                                    </div>
+                                    <div className="text-right">
+                                      <div className="text-[11.5px] font-bold text-espresso">&pound;{scaledCost}</div>
+                                      <div className="text-[9px] text-grey">{percent}%</div>
+                                    </div>
+                                  </motion.div>
+                                );
+                              })}
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => setShowInsights(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-2xl font-bold font-sans text-xs">Done</button>
+                      <button onClick={() => setShowInsights(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-full font-bold font-sans text-xs">Done</button>
                     </motion.div>
                   )}
 
                   {/* treatment history subpage */}
                   {showHistory && (
-                    <motion.div 
+                    <motion.div
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       exit={{ y: "100%" }}
                       transition={{ type: "spring", damping: 25 }}
-                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between p-5 text-left"
+                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between px-5 pb-5 pt-12 text-left"
                     >
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
@@ -1032,45 +1338,81 @@ export default function SurgicalMobileMockup({
 
                         <div className="space-y-3 font-sans">
                           <h2 className="text-[26px] font-display font-medium text-espresso leading-none">Treatment History</h2>
+
+                          <AnimatePresence>
+                            {showCycleDueWarning && (
+                              <motion.div
+                                initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                                className="p-4 bg-deep-rose/10 border border-deep-rose/25 rounded-2.5xl text-left space-y-2"
+                              >
+                                <div className="flex items-center gap-1.5 text-[#A6695E] font-bold text-xs uppercase tracking-wider">
+                                  <Timer size={14} className="animate-pulse" />
+                                  <span>TREATMENT DUE REMINDER</span>
+                                </div>
+                                <p className="text-[12px] text-espresso leading-normal font-semibold">
+                                  Botox (3 areas) is due. It has been 12 weeks since your last session on March 15.
+                                </p>
+                                <button
+                                  onClick={() => {
+                                    setShowCycleDueWarning(false);
+                                    setHistoryItems(prev => [
+                                      { label: "Botox (3 areas)", date: "just logged", cost: "£220", category: "injectables" },
+                                      ...prev
+                                    ]);
+                                  }}
+                                  className="py-1.5 px-3 bg-espresso hover:bg-darkest-espresso text-[#FAF7F2] font-semibold rounded-full text-[10.5px] transition-all"
+                                >
+                                  Log Botox Session
+                                </button>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
                           <div className="p-4 bg-cream/30 border border-very-light-grey rounded-2.5xl text-left bg-gradient-to-r from-cream/20 to-cream/50">
                             <div className="text-xs font-bold text-grey uppercase">TRACKER INSIGHT</div>
                             <p className="text-[12px] text-espresso leading-normal mt-1 font-semibold">"15 history entries synchronised successfully from your offline offline-encrypted biometric partition."</p>
                           </div>
 
                           <div className="space-y-2 pt-2 overflow-y-auto max-h-[300px]" style={{ scrollbarWidth: 'none' }}>
-                            {[
-                              { label: "Classic facial", date: "yesterday", cost: "£0" },
-                              { label: "Lymphatic drainage massage", date: "3 days ago", cost: "£0" },
-                              { label: "Microneedling", date: "15 days ago", cost: "£0" },
-                              { label: "Teeth whitening", date: "24 days ago", cost: "£0" },
-                              { label: "Gel manicure", date: "last month", cost: "£0" }
-                            ].map((tr, idx) => (
-                              <div key={idx} className="p-3 bg-white border border-very-light-grey rounded-2xl flex justify-between items-center">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-8 h-8 rounded-full bg-cream flex items-center justify-center font-bold text-espresso text-xs">{tr.label.charAt(0)}</div>
-                                  <div>
-                                    <h4 className="text-[11.5px] font-bold text-espresso leading-tight">{tr.label}</h4>
-                                    <p className="text-[9px] text-grey">{tr.date}</p>
+                            <AnimatePresence initial={false}>
+                              {historyItems.map((tr, idx) => (
+                                <motion.div
+                                  layout
+                                  initial={{ opacity: 0, y: -15 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  exit={{ opacity: 0, scale: 0.95 }}
+                                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                  key={tr.label + '-' + idx}
+                                  className="p-3 bg-white border border-very-light-grey rounded-2xl flex justify-between items-center"
+                                >
+                                  <div className="flex items-center gap-3">
+                                    <div className="w-8 h-8 rounded-full bg-cream flex items-center justify-center font-bold text-espresso text-xs">{tr.label.charAt(0)}</div>
+                                    <div>
+                                      <h4 className="text-[11.5px] font-bold text-espresso leading-tight">{tr.label}</h4>
+                                      <p className="text-[9px] text-grey">{tr.date}</p>
+                                    </div>
                                   </div>
-                                </div>
-                                <span className="text-[11.5px] font-bold text-espresso">{tr.cost}</span>
-                              </div>
-                            ))}
+                                  <span className="text-[11.5px] font-bold text-espresso">{tr.cost}</span>
+                                </motion.div>
+                              ))}
+                            </AnimatePresence>
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => setShowHistory(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-2xl font-bold font-sans text-xs">Done</button>
+                      <button onClick={() => setShowHistory(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-full font-bold font-sans text-xs">Done</button>
                     </motion.div>
                   )}
 
                   {/* the glow score subpage */}
                   {showGlowScore && (
-                    <motion.div 
+                    <motion.div
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       exit={{ y: "100%" }}
                       transition={{ type: "spring", damping: 25 }}
-                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between p-5 text-left"
+                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between px-5 pb-5 pt-12 text-left"
                     >
                       <div className="space-y-4 flex-1 flex flex-col overflow-y-auto" style={{ scrollbarWidth: 'none' }}>
                         <div className="flex items-center justify-between">
@@ -1096,11 +1438,10 @@ export default function SurgicalMobileMockup({
                                 setGlowScoreTab(tab);
                                 setScoreShared(false);
                               }}
-                              className={`flex-1 py-1.5 rounded-full transition-all capitalize text-[10px] sm:text-[11px] ${
-                                glowScoreTab === tab 
-                                  ? 'bg-espresso text-white shadow-2xs' 
-                                  : 'text-grey hover:text-espresso'
-                              }`}
+                              className={`flex-1 py-1.5 rounded-full transition-all capitalize text-[10px] sm:text-[11px] ${glowScoreTab === tab
+                                ? 'bg-espresso text-white shadow-2xs'
+                                : 'text-grey hover:text-espresso'
+                                }`}
                             >
                               {tab === 'score' ? 'Daily Score' : tab === 'weekly' ? 'Weekly Card' : 'Monthly Wrap'}
                             </button>
@@ -1109,7 +1450,7 @@ export default function SurgicalMobileMockup({
 
                         {/* TAB CONTENT: DAILY SCORE */}
                         {glowScoreTab === 'score' && (
-                          <motion.div 
+                          <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="space-y-4 flex-1 flex flex-col justify-center py-2"
@@ -1117,7 +1458,7 @@ export default function SurgicalMobileMockup({
                             <div className="text-center space-y-3 relative py-4">
                               {/* Radial glow background */}
                               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 bg-deep-gold/10 rounded-full blur-2xl pointer-events-none animate-pulse" />
-                              
+
                               {/* Number Gauge Wheel */}
                               <div className="relative w-36 h-36 mx-auto rounded-full border-4 border-dashed border-[#EFD9A8]/50 flex flex-col items-center justify-center bg-white shadow-md">
                                 <span className="text-[10px] font-bold tracking-widest text-[#8F6F3E] uppercase leading-none font-sans">current score</span>
@@ -1152,14 +1493,14 @@ export default function SurgicalMobileMockup({
 
                         {/* TAB CONTENT: WEEKLY CARD */}
                         {glowScoreTab === 'weekly' && (
-                          <motion.div 
+                          <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="space-y-4 flex-1 flex flex-col justify-center py-2"
                           >
                             <div className="p-5 rounded-3xl text-[#1F1410] bg-gradient-to-br from-[#EFD9A8]/45 to-[#FAF7F2] border border-[#EFD9A8] space-y-4 shadow-sm relative overflow-hidden">
                               <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-deep-gold/10 rounded-full blur-xl pointer-events-none" />
-                              
+
                               <div className="flex justify-between items-start">
                                 <div>
                                   <span className="text-[9px] font-bold uppercase tracking-widest text-[#8F6F3E] block font-sans">weekly status card</span>
@@ -1188,9 +1529,9 @@ export default function SurgicalMobileMockup({
                               </div>
                             </div>
 
-                            <button 
+                            <button
                               onClick={() => setScoreShared(true)}
-                              className="w-full py-3 bg-espresso hover:bg-[#3A2418] text-[#FAF7F2] text-xs font-bold rounded-xl shadow-md font-sans tracking-wide"
+                              className="w-full py-3 bg-espresso hover:bg-[#3A2418] text-[#FAF7F2] text-xs font-bold rounded-full shadow-md font-sans tracking-wide"
                             >
                               {scoreShared ? '✓ shared successfully' : 'share weekly card'}
                             </button>
@@ -1199,7 +1540,7 @@ export default function SurgicalMobileMockup({
 
                         {/* TAB CONTENT: MONTHLY WRAP */}
                         {glowScoreTab === 'monthly' && (
-                          <motion.div 
+                          <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             className="space-y-4 flex-1 flex flex-col justify-center py-2"
@@ -1228,27 +1569,27 @@ export default function SurgicalMobileMockup({
                               </div>
                             </div>
 
-                            <button 
+                            <button
                               onClick={() => setScoreShared(true)}
-                              className="w-full py-3 bg-[#8F6F3E] hover:bg-[#3A2418] text-[#FAF7F2] text-xs font-bold rounded-xl shadow-md font-sans tracking-wide"
+                              className="w-full py-3 bg-[#8F6F3E] hover:bg-[#3A2418] text-[#FAF7F2] text-xs font-bold rounded-full shadow-md font-sans tracking-wide"
                             >
                               {scoreShared ? '✓ wrap saved to gallery' : 'share wrap card to story'}
                             </button>
                           </motion.div>
                         )}
                       </div>
-                      <button onClick={() => setShowGlowScore(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-2xl font-bold font-sans text-xs mt-3">Done</button>
+                      <button onClick={() => setShowGlowScore(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-full font-bold font-sans text-xs mt-3">Done</button>
                     </motion.div>
                   )}
 
                   {/* interactive skin checking / before-after split slider */}
                   {showCheckIn && (
-                    <motion.div 
+                    <motion.div
                       initial={{ y: "100%" }}
                       animate={{ y: 0 }}
                       exit={{ y: "100%" }}
                       transition={{ type: "spring", damping: 25 }}
-                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between p-5 text-left"
+                      className="absolute inset-0 bg-[#FAF7F2] z-40 flex flex-col justify-between px-5 pb-5 pt-12 text-left"
                     >
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
@@ -1270,7 +1611,7 @@ export default function SurgicalMobileMockup({
                               <span>AFTER (APR 20)</span>
                             </div>
 
-                            <div 
+                            <div
                               className="relative h-[170px] w-full rounded-2.5xl overflow-hidden cursor-ew-resize select-none border border-espresso/10"
                               onTouchMove={handleTouchMove}
                               onMouseMove={handleMouseMove}
@@ -1286,7 +1627,7 @@ export default function SurgicalMobileMockup({
                                 </div>
                               </div>
 
-                              <div 
+                              <div
                                 className="absolute inset-y-0 left-0 right-0 overflow-hidden bg-[#FAF7F2] border-r border-[#FAF7F2] shadow-[4px_0_10px_rgba(44,24,16,0.15)] pointer-events-none"
                                 style={{ width: `${sliderPosition}%` }}
                               >
@@ -1297,7 +1638,7 @@ export default function SurgicalMobileMockup({
                                 </div>
                               </div>
 
-                              <div 
+                              <div
                                 className="absolute top-0 bottom-0 w-[3px] bg-white pointer-events-none drop-shadow-md z-10"
                                 style={{ left: `${sliderPosition}%` }}
                               >
@@ -1314,7 +1655,7 @@ export default function SurgicalMobileMockup({
                             <span className="text-[9px] font-bold text-grey uppercase tracking-wider">SELECT LOG SYMPTOMS</span>
                             <div className="grid grid-cols-2 gap-2">
                               {['Redness Area', 'Dry Patches', 'Hydration', 'Pores'].map((smp) => (
-                                <button key={smp} className="p-2.5 rounded-xl border border-[#FAF7F2] bg-warm-ivory/50 text-left text-[11px] font-semibold text-espresso">
+                                <button key={smp} className="p-2.5 rounded-full border border-[#FAF7F2] bg-warm-ivory/50 text-left text-[11px] font-semibold text-espresso">
                                   {smp} · <span className="text-[#8F6F3E] text-[10px]">perfect</span>
                                 </button>
                               ))}
@@ -1322,7 +1663,7 @@ export default function SurgicalMobileMockup({
                           </div>
                         </div>
                       </div>
-                      <button onClick={() => setShowCheckIn(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-2xl font-bold font-sans text-xs">Verify Check-In</button>
+                      <button onClick={() => setShowCheckIn(false)} className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-full font-bold font-sans text-xs">Verify Check-In</button>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -1331,7 +1672,7 @@ export default function SurgicalMobileMockup({
 
                 {/* Main Tab Area with dynamic components */}
                 <div className="flex-1 overflow-y-auto px-4 py-3 custom-scrollbar text-left" style={{ scrollbarWidth: 'none' }}>
-                  
+
                   {activeTab === 'today' && (
                     <div className="space-y-3.5">
                       <div className="flex justify-between items-center text-[10px] font-bold tracking-wider uppercase font-sans">
@@ -1359,7 +1700,7 @@ export default function SurgicalMobileMockup({
                       </div>
 
                       {/* How is skin check in badge */}
-                      <div 
+                      <div
                         onClick={() => setShowCheckIn(true)}
                         className="p-3 bg-warm-ivory border border-[#EFD9A8]/40 rounded-2xl flex justify-between items-center cursor-pointer hover:bg-cream/20 transition-all active:scale-95 shadow-2xs"
                       >
@@ -1374,7 +1715,7 @@ export default function SurgicalMobileMockup({
                       </div>
 
                       {/* Daily Routine checklist shortcut */}
-                      <div 
+                      <div
                         onClick={() => setActiveTab('routine')}
                         className="p-3 bg-[#FAF7F2] border border-very-light-grey rounded-2xl flex justify-between items-center cursor-pointer shadow-3xs"
                       >
@@ -1393,7 +1734,7 @@ export default function SurgicalMobileMockup({
                       {/* QUICK ACTIONS SECTION GRID */}
                       <div className="space-y-2">
                         <span className="text-[8.5px] font-bold text-grey uppercase tracking-widest block">QUICK ACTIONS</span>
-                        
+
                         <div className="grid grid-cols-2 gap-2.5 font-sans">
                           {/* action 1 */}
                           <div onClick={() => setShowGlowScore(true)} className="p-3 bg-white border border-very-light-grey rounded-2xl cursor-pointer hover:bg-cream/5 text-left flex flex-col justify-between h-20 shadow-3xs">
@@ -1444,7 +1785,7 @@ export default function SurgicalMobileMockup({
                     <div className="space-y-4">
                       <div className="flex justify-between items-center text-[10px] font-bold tracking-wider font-sans text-grey uppercase">
                         <span>your products</span>
-                        <button 
+                        <button
                           onClick={() => {
                             setShowSearchOverlay(true);
                           }}
@@ -1461,8 +1802,8 @@ export default function SurgicalMobileMockup({
                       {/* search shelf */}
                       <div className="relative">
                         <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-grey" size={13} />
-                        <input 
-                          type="text" 
+                        <input
+                          type="text"
                           placeholder="search shelf..."
                           className="w-full pl-9 pr-4 py-2 bg-warm-ivory border border-very-light-grey rounded-full font-sans text-[11.5px] text-espresso"
                         />
@@ -1508,50 +1849,95 @@ export default function SurgicalMobileMockup({
 
                       {/* AM-PM Toggle */}
                       <div className="flex p-0.5 bg-cream/30 border border-very-light-grey rounded-full w-full font-sans text-[11.5px] font-bold">
-                        <button className="flex-1 py-1.5 bg-white text-espresso rounded-full shadow-2xs">☀️ AM · {shelfProducts.length}</button>
-                        <button className="flex-1 py-1.5 text-grey">🌙 PM · 0</button>
+                        <button className="flex-1 py-1.5 bg-white text-espresso rounded-full shadow-2xs">
+                          ☀️ AM · {shelfProducts.filter(p => p.timing === 'AM').length}
+                        </button>
+                        <button className="flex-1 py-1.5 text-grey">
+                          🌙 PM · {shelfProducts.filter(p => p.timing === 'PM').length}
+                        </button>
                       </div>
 
                       <div className="text-[10.5px] text-grey text-center font-sans tracking-wide">
                         ⓘ Hold to reorder · Swipe left to remove
                       </div>
 
+                      {/* Active Conflict Warning */}
+                      <AnimatePresence>
+                        {initialScreen === 'conflicts' && showConflictWarning && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0, marginBottom: 0 }}
+                            animate={{ opacity: 1, height: 'auto', marginBottom: 12 }}
+                            exit={{ opacity: 0, height: 0, marginBottom: 0 }}
+                            className="p-3.5 bg-deep-rose/10 border border-deep-rose/20 rounded-2.5xl flex flex-col gap-2 text-left font-sans text-xs text-espresso overflow-hidden"
+                          >
+                            <div className="flex items-center gap-1.5 text-[#A6695E] font-bold text-[11px] uppercase tracking-wider">
+                              <ShieldAlert size={14} className="animate-pulse" />
+                              <span>Active Conflict Detected</span>
+                            </div>
+                            <p className="text-[11px] text-grey leading-relaxed">
+                              <strong>Retinol</strong> and <strong>Vitamin C</strong> are scheduled together in AM. We recommend separating them.
+                            </p>
+                            <button
+                              onClick={() => {
+                                setConflictResolved(true);
+                                setTimeout(() => {
+                                  setShowConflictWarning(false);
+                                  setShelfProducts(prev => prev.map(p => p.id === '2' ? { ...p, timing: 'PM' } : p));
+                                }, 1000);
+                              }}
+                              className={`py-1.5 px-3 rounded-full text-[10.5px] font-bold transition-all self-start ${conflictResolved
+                                  ? 'bg-deep-sage text-white'
+                                  : 'bg-espresso hover:bg-darkest-espresso text-[#FAF7F2]'
+                                }`}
+                            >
+                              {conflictResolved ? '✓ Retinol moved to PM' : 'Move Retinol to PM'}
+                            </button>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+
                       {/* product task entries checklist */}
                       <div className="space-y-2.5 font-sans">
-                        {shelfProducts.map((p) => {
-                          const isDone = routineChecks[p.id];
-                          return (
-                            <div 
-                              key={p.id} 
-                              onClick={() => setRoutineChecks(prev => ({ ...prev, [p.id]: !isDone }))}
-                              className={`p-3.5 rounded-2.5xl border flex items-center justify-between cursor-pointer transition-all ${
-                                isDone ? 'bg-cream/30 border-deep-sage/40 opacity-80' : 'bg-white border-very-light-grey hover:bg-cream/10'
-                              }`}
-                            >
-                              <div className="flex items-center gap-3">
-                                {/* drag dots */}
-                                <div className="text-light-grey text-xs tracking-tighter select-none">::</div>
-                                <div>
-                                  <h4 className={`text-[12.5px] font-bold text-espresso leading-tight ${isDone ? 'line-through text-grey' : ''}`}>{p.name}</h4>
-                                  <p className="text-[10px] text-grey mt-0.5">{p.brand}</p>
-                                </div>
-                              </div>
-                              <button className={`w-5.5 h-5.5 rounded-full border flex items-center justify-center transition-all ${
-                                isDone ? 'bg-deep-sage border-transparent text-white' : 'border-light-grey bg-white'
-                              }`}>
-                                {isDone && <Check size={11} className="stroke-[3]" />}
-                              </button>
-                            </div>
-                          );
-                        })}
+                        <AnimatePresence initial={false}>
+                          {shelfProducts
+                            .filter(p => p.timing === 'AM')
+                            .map((p) => {
+                              const isDone = routineChecks[p.id];
+                              return (
+                                <motion.div
+                                  layout
+                                  initial={{ opacity: 0, y: 15 }}
+                                  animate={{ opacity: 1, y: 0 }}
+                                  exit={{ opacity: 0, x: -15, scale: 0.95 }}
+                                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                                  key={p.id}
+                                  onClick={() => setRoutineChecks(prev => ({ ...prev, [p.id]: !isDone }))}
+                                  className={`p-3.5 rounded-2.5xl border flex items-center justify-between cursor-pointer transition-all ${isDone ? 'bg-cream/30 border-deep-sage/40 opacity-80' : 'bg-white border-very-light-grey hover:bg-cream/10'
+                                    }`}
+                                >
+                                  <div className="flex items-center gap-3">
+                                    {/* drag dots */}
+                                    <div className="text-light-grey text-xs tracking-tighter select-none">::</div>
+                                    <div>
+                                      <h4 className={`text-[12.5px] font-bold text-espresso leading-tight ${isDone ? 'line-through text-grey' : ''}`}>{p.name}</h4>
+                                      <p className="text-[10px] text-grey mt-0.5">{p.brand}</p>
+                                    </div>
+                                  </div>
+                                  <button className={`w-5.5 h-5.5 rounded-full border flex items-center justify-center transition-all ${isDone ? 'bg-deep-sage border-transparent text-white' : 'border-light-grey bg-white'}`}>
+                                    {isDone && <Check size={11} className="stroke-[3]" />}
+                                  </button>
+                                </motion.div>
+                              );
+                            })}
+                        </AnimatePresence>
                       </div>
 
                       {/* add step cta */}
-                      <button 
+                      <button
                         onClick={() => {
                           setShowSearchOverlay(true);
                         }}
-                        className="w-full py-3.5 border border-dashed border-light-grey hover:border-espresso text-espresso/70 hover:text-espresso rounded-2xl flex items-center justify-center gap-1 font-sans text-xs font-bold transition-all"
+                        className="w-full py-3.5 border border-dashed border-light-grey hover:border-espresso text-espresso/70 hover:text-espresso rounded-full flex items-center justify-center gap-1 font-sans text-xs font-bold transition-all"
                       >
                         <Plus size={14} /> Add step
                       </button>
@@ -1562,7 +1948,7 @@ export default function SurgicalMobileMockup({
                   {activeTab === 'you' && (
                     <div className="space-y-4">
                       <div className="text-[10px] font-bold text-grey uppercase tracking-wider font-sans">your profile</div>
-                      
+
                       <div className="space-y-1">
                         <h2 className="text-[26px] font-display font-medium text-espresso leading-none">{userName || 'Nella'}.</h2>
                         <p className="text-[10.5px] text-grey font-sans uppercase font-bold tracking-wider">member since june 2026 · 1 days of glowing</p>
@@ -1606,8 +1992,8 @@ export default function SurgicalMobileMockup({
                           {
                             title: "ACCOUNT",
                             items: [
-                              { label: "Privacy & data", val: "what we keep, share, and never share", action: () => {} },
-                              { label: "Help & feedback", val: "FAQs · contact us · feature requests", action: () => {} }
+                              { label: "Privacy & data", val: "what we keep, share, and never share", action: () => { } },
+                              { label: "Help & feedback", val: "FAQs · contact us · feature requests", action: () => { } }
                             ]
                           }
                         ].map((sect) => (
@@ -1615,8 +2001,8 @@ export default function SurgicalMobileMockup({
                             <span className="text-[8.5px] font-bold text-deep-gold uppercase tracking-wider block">{sect.title}</span>
                             <div className="space-y-1.5">
                               {sect.items.map((it) => (
-                                <div 
-                                  key={it.label} 
+                                <div
+                                  key={it.label}
                                   onClick={it.action}
                                   className="p-3 bg-white border border-very-light-grey rounded-xl flex justify-between items-center cursor-pointer hover:bg-cream/5"
                                 >
@@ -1634,7 +2020,7 @@ export default function SurgicalMobileMockup({
 
                       {/* RESET INTERACTIVE APP TOUR OR LOGIN AGAIN SPLASH */}
                       <div className="pt-2 font-sans">
-                        <button 
+                        <button
                           onClick={() => {
                             setOnboardingStep('splash');
                             setUserName('');
@@ -1644,7 +2030,7 @@ export default function SurgicalMobileMockup({
                             ]);
                             setRoutineChecks({});
                           }}
-                          className="w-full py-3 border border-deep-rose/30 bg-deep-rose/5 text-deep-rose text-xs font-bold rounded-2xl flex items-center justify-center gap-1 hover:bg-deep-rose/10 active:scale-[0.98] transition-all"
+                          className="w-full py-3 border border-deep-rose/30 bg-deep-rose/5 text-deep-rose text-xs font-bold rounded-full flex items-center justify-center gap-1 hover:bg-deep-rose/10 active:scale-[0.98] transition-all"
                         >
                           🔄 Reset App & Onboarding
                         </button>
@@ -1665,7 +2051,7 @@ export default function SurgicalMobileMockup({
                     ].map((subtab) => {
                       const isSelected = activeTab === subtab.id;
                       return (
-                        <button 
+                        <button
                           key={subtab.id}
                           onClick={() => {
                             if (lockedTab) return;
@@ -1674,11 +2060,9 @@ export default function SurgicalMobileMockup({
                             setShowHistory(false);
                             setShowCheckIn(false);
                           }}
-                          className={`flex flex-col items-center gap-1.5 py-1 px-3.5 rounded-xl transition-all duration-200 ${
-                            lockedTab ? 'cursor-default pointer-events-none' : 'hover:scale-110 active:scale-95 cursor-pointer'
-                          } ${
-                            isSelected ? 'text-espresso font-black bg-espresso/[0.04]' : 'text-grey hover:text-espresso'
-                          }`}
+                          className={`flex flex-col items-center gap-1.5 py-1 px-3.5 rounded-xl transition-all duration-200 ${lockedTab ? 'cursor-default pointer-events-none' : 'hover:scale-110 active:scale-95 cursor-pointer'
+                            } ${isSelected ? 'text-espresso font-black bg-espresso/[0.04]' : 'text-grey hover:text-espresso'
+                            }`}
                         >
                           {subtab.icon}
                           <span className="text-[9px] font-bold uppercase tracking-wider">{subtab.label}</span>
@@ -1695,11 +2079,11 @@ export default function SurgicalMobileMockup({
           {/* Product Search & Add Overlay */}
           <AnimatePresence>
             {showSearchOverlay && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
-                className="absolute inset-0 bg-[#FAF7F2] z-50 flex flex-col justify-between p-5"
+                className="absolute inset-0 bg-[#FAF7F2] z-50 flex flex-col justify-between px-5 pb-5 pt-12"
               >
                 <div className="flex-1 flex flex-col space-y-4 text-left">
                   <div className="flex items-center justify-between">
@@ -1712,8 +2096,8 @@ export default function SurgicalMobileMockup({
 
                   <div className="relative">
                     <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-grey" size={13} />
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       placeholder="search products (e.g. CeraVe)..."
@@ -1724,8 +2108,8 @@ export default function SurgicalMobileMockup({
                   {/* filters inside search */}
                   <div className="flex gap-1.5 text-[10.5px] font-bold font-sans">
                     {['All', 'Moisturisers', 'Cleansers', 'Exfoliants'].map((cat: any) => (
-                      <span 
-                        key={cat} 
+                      <span
+                        key={cat}
                         onClick={() => setSearchCategory(cat)}
                         className={`px-3 py-1.5 border rounded-full cursor-pointer shrink-0 ${searchCategory === cat ? 'bg-[#1F1410] border-transparent text-[#FAF7F2]' : 'bg-transparent border-very-light-grey text-grey font-semibold'}`}
                       >
@@ -1739,8 +2123,8 @@ export default function SurgicalMobileMockup({
                       .filter(p => !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase()))
                       .filter(p => searchCategory === 'All' || p.category === searchCategory)
                       .map((p, idx) => (
-                        <div 
-                          key={idx} 
+                        <div
+                          key={idx}
                           onClick={() => setConfiguringProduct(p)}
                           className="p-3 bg-white/60 border border-very-light-grey rounded-2xl flex justify-between items-center cursor-pointer hover:bg-cream/15 font-sans"
                         >
@@ -1757,9 +2141,9 @@ export default function SurgicalMobileMockup({
                   </div>
                 </div>
 
-                <button 
-                  onClick={() => setShowSearchOverlay(false)} 
-                  className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-2xl font-bold font-sans text-xs"
+                <button
+                  onClick={() => setShowSearchOverlay(false)}
+                  className="w-full py-3.5 bg-darkest-espresso hover:bg-espresso text-[#FAF7F2] rounded-full font-bold font-sans text-xs"
                 >
                   Done
                 </button>
@@ -1770,11 +2154,11 @@ export default function SurgicalMobileMockup({
           {/* Product configuration sub-overlay */}
           <AnimatePresence>
             {configuringProduct && (
-              <motion.div 
+              <motion.div
                 initial={{ scale: 0.96, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.96, opacity: 0 }}
-                className="absolute inset-0 bg-[#FAF7F2] z-55 flex flex-col justify-between p-5 text-left"
+                className="absolute inset-0 bg-[#FAF7F2] z-55 flex flex-col justify-between px-5 pb-5 pt-12 text-left"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -1801,11 +2185,11 @@ export default function SurgicalMobileMockup({
                       <span className="text-[8.5px] font-bold text-grey uppercase tracking-widest block">ROUTINE</span>
                       <h4 className="text-[12.5px] font-bold text-espresso">When do you use it?</h4>
                     </div>
-                    
+
                     <div className="grid grid-cols-3 gap-2 text-[11px] font-bold">
-                      <button className="py-2.5 rounded-xl border border-deep-gold/40 bg-cream font-bold text-espresso text-center">☀ AM</button>
-                      <button className="py-2.5 rounded-xl border border-very-light-grey text-grey text-center">🌙 PM</button>
-                      <button className="py-2.5 rounded-xl border border-very-light-grey text-grey text-center">∞ Both</button>
+                      <button className="py-2.5 rounded-full border border-deep-gold/40 bg-cream font-bold text-espresso text-center">☀ AM</button>
+                      <button className="py-2.5 rounded-full border border-very-light-grey text-grey text-center">🌙 PM</button>
+                      <button className="py-2.5 rounded-full border border-very-light-grey text-grey text-center">∞ Both</button>
                     </div>
 
                     <div className="space-y-1 pt-1">
@@ -1814,13 +2198,13 @@ export default function SurgicalMobileMockup({
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 text-[11px] font-bold">
-                      <button className="py-2.5 rounded-xl border border-very-light-grey text-grey text-center">✨ Holy grail</button>
-                      <button className="py-2.5 rounded-xl border border-deep-gold/40 bg-cream font-bold text-espresso text-center">🔄 Just trying it</button>
+                      <button className="py-2.5 rounded-full border border-very-light-grey text-grey text-center">✨ Holy grail</button>
+                      <button className="py-2.5 rounded-full border border-deep-gold/40 bg-cream font-bold text-espresso text-center">🔄 Just trying it</button>
                     </div>
                   </div>
                 </div>
 
-                <button 
+                <button
                   onClick={() => {
                     const newProduct = {
                       id: String(shelfProducts.length + 1),
@@ -1835,8 +2219,8 @@ export default function SurgicalMobileMockup({
                     setShelfProducts(prev => [...prev, newProduct]);
                     setConfiguringProduct(null);
                     setShowSearchOverlay(false);
-                  }} 
-                  className="w-full py-4 bg-espresso hover:bg-darkest-espresso text-white rounded-2xl font-bold font-sans text-xs flex items-center justify-center gap-1 shadow-lg"
+                  }}
+                  className="w-full py-4 bg-espresso hover:bg-darkest-espresso text-white rounded-full font-bold font-sans text-xs flex items-center justify-center gap-1 shadow-lg"
                 >
                   Add to my shelf &rarr;
                 </button>

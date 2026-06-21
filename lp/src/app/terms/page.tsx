@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'nella terms of service',
-  description: 'the terms of service for using nella. by using the app, you agree to these terms.',
+  title: 'terms of service | nella',
+  description: 'the rules of the app, in standard legal format.',
   robots: {
     index: true,
     follow: true,
@@ -24,8 +24,11 @@ export default function TermsOfServicePage() {
         </div>
         
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-          Terms of service.
+          terms of service.
         </h1>
+        <p className="text-[14px] text-grey font-sans">
+          nella is not a medical device. it is a tracking and logic system based on standard clinical guidelines. it does not replace the advice of your dermatologist or aesthetic practitioner.
+        </p>
       </div>
 
       <div className="prose prose-sm sm:prose-base prose-espresso max-w-none text-[14px] text-grey font-sans leading-relaxed">

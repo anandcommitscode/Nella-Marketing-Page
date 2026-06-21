@@ -1,0 +1,2 @@
+"\"use client\";\n\nimport React from 'react';\nimport { Check, Sparkles, Star, BookOpen, Shield, Newspaper, Lock } from 'lucide-react';\n\nexport function PricingHeroIllustration() {\n  return (\n    <div className=\"relative w-full max-w-[400px] mx-auto 
+<truncated 9121 bytes>

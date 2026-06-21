@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CalendarDays, Activity, Bell, Clock, RefreshCw, Scissors, Sparkles, Syringe } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
-  title: 'treatment cycles: why your reminders fit you, not a generic schedule',
-  description: 'every treatment has its own cycle. nails every three weeks. botox every twelve to sixteen. nella knows the cycles, so your reminders actually make sense.',
-  keywords: ['beauty treatment cycles', 'how often botox', 'how often microneedling', 'treatment schedule app'],
+  title: 'aesthetic treatment cycle tracking and reminders',
+  description: 'botox wears off. microneedling needs a course. fillers dissolve. nella knows the timeline of your treatment and reminds you when it\'s time to go back.',
+  keywords: ['aesthetic treatment cycle tracking', 'botox reminder app', 'microneedling schedule', 'cosmetic maintenance tracker'],
   alternates: {
     canonical: 'https://mynella.app/intelligence/treatment-cycles'
   }
@@ -15,33 +16,48 @@ export const metadata: Metadata = {
 export default function TreatmentCyclesPage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-[1002px] mx-auto w-full px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">Treatment Cycles</span>
-        </div>
-
-        <div className="pt-4 space-y-6 text-center">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0 relative z-20">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">Treatment Cycles</span>
+            </div>
           </div>
 
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            Why your reminders fit you.
-          </h1>
+          <div className="max-w-7xl mx-auto px-6 pt-4 pb-0 md:pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
 
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
-            every treatment has its own rhythm. nella knows each one, so you get a heads-up that actually lands.
-          </p>
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                treatment cycles.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                botox wears off. microneedling needs a course. fillers dissolve. nella knows the timeline of your treatment and reminds you when it's time to go back.
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <SurgicalMobileMockup initialScreen="history" autoPlay lockedTab />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="space-y-10 max-w-[1002px] mx-auto w-full">
-          <div className="space-y-4">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
+
+        <div className="space-y-10 w-full">
+          <div className="space-y-4 max-w-3xl">
             <h2 className="font-display font-semibold text-[24px] text-espresso">How nella thinks about cycles.</h2>
             <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
               <p>every treatment has its own cycle length. nails grow in three weeks. brows in six. botox holds for twelve to sixteen. dermal filler lasts six to twelve months depending on the product and the area. these aren't arbitrary. they're biological.</p>
@@ -148,13 +164,13 @@ export default function TreatmentCyclesPage() {
                 </div>
               </div>
             </div>
-            <div className="text-[14px] text-grey font-sans leading-relaxed mt-4">
+            <div className="text-[14px] text-grey font-sans leading-relaxed mt-4 max-w-3xl">
               <p>a treatment that needs three weeks gets a three-week cycle. one that needs three months gets three months. nella holds the right one for each.</p>
               <p className="font-medium text-espresso mt-2">the full list of treatments and their cycles lives inside the app.</p>
             </div>
           </div>
 
-          <div className="space-y-4 pt-8">
+          <div className="space-y-4 pt-8 max-w-3xl">
             <h2 className="font-display font-semibold text-[24px] text-espresso">The reminder logic.</h2>
             <p className="text-[14px] text-grey font-sans leading-relaxed mb-6">
               for every treatment, nella sends four nudges across roughly a month.
@@ -203,7 +219,7 @@ export default function TreatmentCyclesPage() {
             </div>
           </div>
 
-          <div className="space-y-4 pt-12 mt-12">
+          <div className="space-y-4 pt-12 mt-12 w-full">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/what-it-does/tracking" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">

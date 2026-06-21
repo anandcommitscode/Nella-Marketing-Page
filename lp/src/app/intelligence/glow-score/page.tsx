@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sparkles, CalendarCheck, CheckCircle2, TrendingUp, Activity, BarChart2, Check, ArrowUpRight, ArrowRight, X } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
-  title: 'the glow score, explained: what nella measures',
-  description: 'a number from 0 to 100, calibrated to you over your first two weeks, then updated daily. the only beauty score that tells you the truth.',
-  keywords: ['beauty score app', 'skincare score', 'treatment tracking score', 'glow score nella'],
+  title: 'the skincare glow score explained',
+  description: 'one number, 0 to 100, every day. it moves with your treatments, your routine, your check-ins, your skin. calibrates over your first two weeks.',
+  keywords: ['skincare glow score', 'skin progress tracking app', 'beauty analytics', 'skin scoring system'],
   alternates: {
     canonical: 'https://mynella.app/intelligence/glow-score'
   }
@@ -15,32 +16,46 @@ export const metadata: Metadata = {
 export default function GlowScorePage() {
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-5xl mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">The Glow Score</span>
-        </div>
-
-        <div className="pt-4 space-y-6 text-center">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0 relative z-20">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-visible relative group">
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">The Glow Score</span>
+            </div>
           </div>
 
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            What your score is really measuring.
-          </h1>
+          <div className="max-w-7xl mx-auto px-6 pt-4 pb-0 md:pt-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
 
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-xl mx-auto font-sans leading-relaxed">
-            a number from 0 to 100, calibrated to you over your first two weeks, then updated daily.
-          </p>
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                the glow score.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
+                one number, 0 to 100, every day. it moves with your treatments, your routine, your check-ins, your skin. calibrates over your first two weeks.
+              </p>
+            </div>
+
+            {/* Right Column */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <div className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10">
+                <SurgicalMobileMockup initialScreen="journal" autoPlay lockedTab />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div className="space-y-10 max-w-4xl mx-auto">
+      <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
+        <div className="space-y-10 max-w-3xl">
           <div className="space-y-4">
             <h2 className="font-display font-semibold text-[24px] text-espresso">What a score should actually do.</h2>
             <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">

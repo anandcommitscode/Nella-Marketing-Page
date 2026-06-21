@@ -11,8 +11,12 @@ export default function Footer() {
 
         {/* Left Column - Logo & Bio */}
         <div className="col-span-2 md:col-span-6 space-y-5 text-left">
-          <Link href="/" className="flex items-center gap-1 select-none">
-            <span className="font-display italic text-[24px] font-[600] tracking-tight text-[#FAF7F2] font-serif">nella</span>
+          <Link href="/#hero" className="flex items-center gap-1 select-none">
+            <img 
+              src="/nellaGold.png" 
+              alt="nella logo" 
+              className="h-14 w-auto object-contain"
+            />
           </Link>
           <p className="text-[12.5px] text-[#FAF7F2]/70 leading-relaxed max-w-sm font-sans">
             honest skincare tracking and offline skin journaling. crafted with total biometric privacy.

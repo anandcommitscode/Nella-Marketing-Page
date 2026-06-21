@@ -43,107 +43,105 @@ export default function HomeClient() {
 
   return (
     <div className="space-y-0">
-      {/* SECTION 1: HERO */}
-      <section className="relative pt-8 md:pt-16 md:pb-24 overflow-hidden">
-        {/* Glow gradients */}
-        <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-gradient-to-br from-[#EFD9A8]/20 to-[#FAF7F2] blur-[120px] pointer-events-none"></div>
-        <div className="absolute bottom-[10%] left-[-5%] w-[40%] h-[40%] rounded-full bg-gradient-to-tr from-[#F4DDD0]/30 to-[#FAF7F2] blur-[100px] pointer-events-none"></div>
+      {/* SECTION 1: HERO — contained espresso gradient block */}
+      <section id="hero" className="relative px-4 pt-0 md:px-8 md:pt-0 z-20">
+        <div
+          className="relative rounded-[28px] md:rounded-[36px] overflow-visible"
+          style={{ background: 'linear-gradient(160deg, #3A2016 0%, #2C1810 50%, #20100A 100%)' }}
+        >
+          {/* Inner glow */}
+          <div className="absolute top-0 right-0 w-[60%] h-[60%] rounded-full bg-[#C4A067]/10 blur-[80px] pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-[50%] h-[50%] rounded-full bg-[#8F6F3E]/8 blur-[60px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 md:space-y-8 z-10">
-            <div className="w-full flex items-center gap-1.5 justify-start mb-4">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-              <span className="font-display italic text-[13px] text-[#8F6F3E]">beauty companion</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            </div>
-            <h1 className="font-display font-[600] text-[36px] sm:text-[54px] md:text-[60px] leading-[1.05] tracking-tight text-espresso text-left">
-              The beauty companion that keeps up with you.
-            </h1>
-
-            <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed max-w-xl text-balance">
-              nella remembers everything, so you do not have to.
-            </p>
-
-            {/* Hero CTA Buttons */}
-            <div className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-              <PhaseAwareCta
-                className="group px-6 py-4 rounded-2xl text-[#FAF7F2] text-[13.5px] font-semibold tracking-wide flex items-center justify-center gap-2.5 shadow-md shadow-espresso/15 transition-all duration-300 transform active:scale-98 cursor-pointer"
-                style={{
-                  background: 'linear-gradient(135deg, #3A2418 0%, #2C1810 50%, #1F1410 100%)'
-                }}
-              >
-                <span>{IS_PRE_LAUNCH ? 'join the waitlist' : 'get nella on the App Store'}</span>
-                <ArrowRight size={15} className="text-[#FAF7F2] transition-transform duration-300 group-hover:translate-x-1" />
-              </PhaseAwareCta>
-
-              <Link
-                href="/why-nella"
-                className="px-6 py-4 rounded-2xl bg-white border border-[#E8E5DC] text-espresso text-[13.5px] font-semibold tracking-wide flex items-center justify-center hover:bg-[#F5F0E8] hover:border-[#8F6F3E]/40 transition-all duration-300 shadow-sm cursor-pointer"
-              >
-                Why nella exists
-              </Link>
-            </div>
-
-            {/* App Store Badge Row */}
-            <div className="flex items-center gap-6 pt-3 w-full max-w-md mt-1">
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1">
-                  <span className="text-[20px] font-bold tracking-tight text-espresso font-mono leading-none">4.8</span>
-                  <div className="flex text-[#C4A067]">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={11} fill="currentColor" className="stroke-none" />
-                    ))}
-                  </div>
-                </div>
-                <span className="text-[10px] text-grey uppercase tracking-wider font-semibold mt-1 text-left">
-                  app store rating
-                </span>
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 md:pt-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+            {/* Left: text content */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-4 md:space-y-6 z-10 pb-0 self-start lg:pt-12">
+              <div className="flex items-center gap-1.5">
+                <span className="font-display italic text-[13px] text-[#C4A067]/90">beauty companion</span>
               </div>
-              <div className="h-8 w-[1.5px] bg-[#E8E5DC]"></div>
-              <button
-                onClick={() => router.push('/waitlist')}
-                className="bg-[#1F1410] hover:bg-black text-white px-3.5 py-1.5 rounded-xl flex items-center gap-2 transition-all shadow-xs cursor-pointer text-left"
-              >
-                <svg className="w-5 h-5 text-[#FAF7F2]" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71,19.5 C17.88,20.74 17.00,21.95 15.66,21.97 C14.32,22.00 13.89,21.18 12.37,21.18 C10.84,21.18 10.37,21.95 9.10,22.00 C7.79,22.05 6.80,20.68 5.96,19.47 C4.25,17.00 2.94,12.45 4.70,9.39 C5.57,7.87 7.13,6.91 8.82,6.88 C10.10,6.86 11.32,7.75 12.11,7.75 C12.89,7.75 14.37,6.68 15.92,6.84 C16.57,6.87 18.39,7.1 19.56,8.82 C19.47,8.88 17.39,10.1 17.41,12.63 C17.44,15.65 20.06,16.66 20.10,16.67 C20.08,16.74 19.67,18.11 18.71,19.5 M15.97,4.17 C16.63,3.37 17.07,2.28 16.95,1 C16.03,1.04 14.90,1.62 14.24,2.41 C13.68,3.07 13.19,4.18 13.35,5.43 C14.37,5.51 15.42,4.91 15.97,4.17 Z" />
-                </svg>
-                <div className="flex flex-col">
-                  <span className="text-[7.5px] text-[#FAF7F2]/60 font-bold uppercase leading-none">download on the</span>
-                  <span className="text-[11.5px] font-bold font-sans leading-tight mt-0.5 text-[#FAF7F2]">App Store</span>
-                </div>
-              </button>
-            </div>
-          </div>
+              <h1 className="font-display font-[600] text-[32px] sm:text-[44px] md:text-[50px] leading-[1.05] tracking-tight text-[#FAF7F2] text-left">
+                the beauty companion that keeps up with you.
+              </h1>
 
-          <div className="lg:col-span-5 relative flex justify-center items-center z-10 -mt-6 lg:-mt-12">
-            <div className="absolute top-[48%] left-[52%] -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] sm:w-[420px] sm:h-[420px] pointer-events-none select-none z-0">
-              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-deep-rose/8">
-                <path fill="currentColor" d="M42.5,-64.1C55.4,-54.3,66.3,-41.8,72.4,-27.2C78.4,-12.7,79.5,4,75.3,19.1C71,34.2,61.4,47.7,48.9,56.7C36.4,65.7,21,70.2,5.2,74C-10.7,77.8,-26.9,81,-40.4,75.6C-54,70.1,-64.8,56.1,-71.9,40.7C-79.1,25.3,-82.6,8.6,-79.8,-7.4C-77.1,-23.4,-68.2,-38.7,-56.3,-49C-44.4,-59.2,-29.6,-64.3,-14.8,-66C-0.1,-67.7,14.7,-65.9,42.5,-64.1Z" transform="translate(100 100)" />
-              </svg>
+              <p className="text-[14px] sm:text-[15px] text-[#FAF7F2]/70 leading-relaxed max-w-xl text-balance">
+                nella remembers everything, so you do not have to.
+              </p>
+
+              {/* Hero CTA Buttons */}
+              <div className="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+                <PhaseAwareCta
+                  className="group px-6 py-4 rounded-full text-[#1F1410] text-[13.5px] font-semibold tracking-wide flex items-center justify-center gap-2.5 shadow-lg transition-all duration-300 transform active:scale-98 cursor-pointer"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                >
+                  <span>{IS_PRE_LAUNCH ? 'join the waitlist' : 'get nella on the App Store'}</span>
+                  <ArrowRight size={15} className="text-[#1F1410] transition-transform duration-300 group-hover:translate-x-1" />
+                </PhaseAwareCta>
+
+                <Link
+                  href="/why-nella"
+                  className="px-6 py-4 rounded-full bg-white/10 border border-white/20 text-[#FAF7F2] text-[13.5px] font-semibold tracking-wide flex items-center justify-center hover:bg-white/15 transition-all duration-300 cursor-pointer"
+                >
+                  Why nella exists
+                </Link>
+              </div>
+
+              {/* App Store Badge Row */}
+              <div className="flex items-center gap-6 pt-3 w-full max-w-md mt-1">
+                <div className="flex flex-col">
+                  <div className="flex items-center gap-1">
+                    <span className="text-[20px] font-bold tracking-tight text-[#FAF7F2] font-mono leading-none">4.8</span>
+                    <div className="flex text-[#C4A067]">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={11} fill="currentColor" className="stroke-none" />
+                      ))}
+                    </div>
+                  </div>
+                  <span className="text-[10px] text-[#FAF7F2]/50 uppercase tracking-wider font-semibold mt-1 text-left">
+                    app store rating
+                  </span>
+                </div>
+                <div className="h-8 w-[1.5px] bg-white/20"></div>
+                <button
+                  onClick={() => router.push('/waitlist')}
+                  className="bg-white hover:bg-white/90 text-black px-3.5 py-1.5 rounded-full flex items-center gap-2 transition-all border border-transparent cursor-pointer text-left shadow-md"
+                >
+                  <svg className="w-5 h-5 text-black" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71,19.5 C17.88,20.74 17.00,21.95 15.66,21.97 C14.32,22.00 13.89,21.18 12.37,21.18 C10.84,21.18 10.37,21.95 9.10,22.00 C7.79,22.05 6.80,20.68 5.96,19.47 C4.25,17.00 2.94,12.45 4.70,9.39 C5.57,7.87 7.13,6.91 8.82,6.88 C10.10,6.86 11.32,7.75 12.11,7.75 C12.89,7.75 14.37,6.68 15.92,6.84 C16.57,6.87 18.39,7.1 19.56,8.82 C19.47,8.88 17.39,10.1 17.41,12.63 C17.44,15.65 20.06,16.66 20.10,16.67 C20.08,16.74 19.67,18.11 18.71,19.5 M15.97,4.17 C16.63,3.37 17.07,2.28 16.95,1 C16.03,1.04 14.90,1.62 14.24,2.41 C13.68,3.07 13.19,4.18 13.35,5.43 C14.37,5.51 15.42,4.91 15.97,4.17 Z" />
+                  </svg>
+                  <div className="flex flex-col">
+                    <span className="text-[7.5px] text-black/60 font-bold uppercase leading-none">download on the</span>
+                    <span className="text-[11.5px] font-bold font-sans leading-tight mt-0.5 text-black">App Store</span>
+                  </div>
+                </button>
+              </div>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative z-10 w-full"
-            >
-              <SurgicalMobileMockup initialScreen="splash" autoPlay />
-            </motion.div>
+
+            {/* Right: mockup — extends past bottom of banner */}
+            <div className="lg:col-span-5 relative flex justify-center items-end z-10 -mb-24 md:-mb-36">
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="relative w-full max-w-[360px] sm:max-w-[400px] md:max-w-[440px] z-10"
+              >
+                <SurgicalMobileMockup initialScreen="splash" autoPlay />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 2: THE PROBLEM */}
-      <section className="py-12 md:py-20 bg-[#FAF7F2]">
+      <section className="pt-36 md:pt-56 pb-12 md:pb-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="text-left space-y-4">
-            <div className="flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">the problem</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-center">
-              You're already doing the work
+            <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-left">
+              you're already doing the work
             </h2>
           </div>
 
@@ -159,13 +157,11 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
           <div className="text-center space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">four things</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              Four things, done properly.
+              four things, done properly.
             </h2>
             <p className="text-[13.5px] text-grey font-sans">
               your treatments, your routines, your aftercare, and the bits you would have missed, finally seen.
@@ -244,13 +240,11 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-left">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">intelligence moment</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-center">
-              The bit a notes app cannot do.
+            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
+              the bit a notes app cannot do.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -278,13 +272,11 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
           <div className="text-center space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">process</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              How it works.
+              how it works.
             </h2>
             <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
               four steps. nothing complicated.
@@ -427,17 +419,15 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <SurgicalMobileMockup initialScreen="journal" compact customImage="/mockups/glow-score.png" imageClassName="pt-12" />
+            <SurgicalMobileMockup initialScreen="journal" compact />
           </div>
 
           <div className="space-y-6 text-left order-1 lg:order-2">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">glow score</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
-            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-center">
-              The only score that tells you the truth.
+            <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
+              the only score that tells you the truth.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -461,13 +451,11 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-[#FAF7F2]">
         <div className="max-w-7xl mx-auto px-6 space-y-12 text-left">
           <div className="text-center space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">social proof</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              Loved by the women who built her.
+              loved by the women who built her.
             </h2>
             <p className="text-[14px] text-grey font-sans">
               nella was built by a community of women who take their beauty and self-care seriously.
@@ -536,13 +524,11 @@ export default function HomeClient() {
       <section className="py-12 md:py-20 bg-gradient-to-b from-[#FAF7F2] to-[#F5EDE0]">
         <div className="max-w-7xl mx-auto px-6 space-y-8 md:space-y-12">
           <div className="text-center space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">pricing</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              Free to start. £4.99 to understand.
+              free to start. £4.99 to understand.
             </h2>
           </div>
 
@@ -573,10 +559,13 @@ export default function HomeClient() {
               </ul>
 
               <PhaseAwareCta
-                className="w-full py-4 bg-[#FAF7F2] hover:bg-[#F2E9D8] text-espresso text-[13px] font-semibold rounded-xl transition-colors font-sans cursor-pointer border border-[#E0DCCE] flex items-center justify-center gap-2 mt-auto"
+                className="w-full py-4 text-[#1F1410] text-[13px] font-semibold rounded-full transition-all duration-300 font-sans cursor-pointer flex items-center justify-center gap-2 mt-auto hover:opacity-90 shadow-md"
+                style={{
+                  background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                }}
               >
                 <span>{IS_PRE_LAUNCH ? 'join the waitlist' : 'get nella on the App Store'}</span>
-                <ArrowRight size={14} className="text-espresso" />
+                <ArrowRight size={14} className="text-[#1F1410]" />
               </PhaseAwareCta>
             </div>
 
@@ -614,8 +603,8 @@ export default function HomeClient() {
               </ul>
 
               <Link
-                href="/pricing"
-                className="w-full py-4 text-[#FAF7F2] text-[13px] font-semibold rounded-xl transition-colors font-sans cursor-pointer flex items-center justify-center gap-2 mt-auto"
+                  href="/pricing"
+                  className="w-full py-4 text-[#FAF7F2] text-[13px] font-semibold rounded-full transition-colors font-sans cursor-pointer flex items-center justify-center gap-2 mt-auto"
                 style={{
                   background: 'linear-gradient(135deg, #3A2418 0%, #2C1810 50%, #1F1410 100%)'
                 }}
@@ -631,10 +620,8 @@ export default function HomeClient() {
       <section className="pt-12 md:pt-20 pb-0 bg-[#FAF7F2]">
         <div className="max-w-[1050px] mx-auto px-6 space-y-12">
           <div className="text-center space-y-3">
-            <div className="w-full flex items-center gap-1.5 justify-center mb-2">
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+            <div className="flex items-center gap-1.5 justify-center mb-2">
               <span className="font-display italic text-[13px] text-[#8F6F3E]">faq</span>
-              <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[38px] text-espresso tracking-tight text-center">
               In case you were wondering.

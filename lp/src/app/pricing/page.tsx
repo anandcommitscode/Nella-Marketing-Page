@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Check, Star } from 'lucide-react';
+import { Check, Star, X } from 'lucide-react';
 import CtaSection from '../../components/CtaSection';
 import PhaseAwareCta from '../../components/PhaseAwareCta';
 
@@ -28,16 +28,60 @@ export default function PricingPage() {
 
   return (
     <div className="space-y-0">
-      <div className="text-left max-w-[1050px] mx-auto px-6 pt-8 md:pt-16 space-y-8 md:space-y-16">
-        <section className="space-y-6 text-center">
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none text-center">
-            Free to start. £4.99 to understand.
-          </h1>
+      <div className="px-4 md:px-8 pt-0 md:pt-0">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-hidden relative group">
+          {/* Desktop Image - Absolute to fill right column border to border */}
+          <div className="absolute right-[2%] top-0 bottom-0 w-[43%] hidden lg:block z-0">
+            <img
+              src="/nellakapricinghero.png"
+              alt="pricing illustration"
+              className="w-full h-full object-contain object-center"
+            />
+          </div>
 
-          <p className="text-[14px] sm:text-[15px] text-grey max-w-2xl mx-auto font-sans leading-relaxed text-center">
-            nella Core is free, forever. nella Pro is £4.99 a month, for the part of your beauty life that is currently held in a notes app and a memory.
-          </p>
-        </section>
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">Pricing</span>
+            </div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-12 md:pt-8 md:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:min-h-[360px]">
+            {/* Left Column: Content */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-center">
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                free to start. <br />£4.99 to understand.
+              </h1>
+              <p className="text-[15px] sm:text-[16px] text-[#1F1410]/80 max-w-[420px] font-sans leading-relaxed">
+                nella Core is free, forever. nella Pro is £4.99 a month, for the part of your beauty life that is currently held in a notes app and a memory.
+              </p>
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="block lg:hidden w-full relative z-10">
+              <img
+                src="/nellakapricinghero.png"
+                alt="pricing illustration"
+                className="w-full h-auto max-h-[300px] object-cover object-center rounded-[20px]"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-left max-w-7xl mx-auto px-6 pt-12 md:pt-16 space-y-8 md:space-y-16">
 
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           {/* Core Card */}
@@ -76,7 +120,10 @@ export default function PricingPage() {
               <PhaseAwareCta
                 preLaunchText="join the waitlist"
                 postLaunchText="get nella on the App Store"
-                className="w-full py-4 bg-[#FAF7F2] hover:bg-[#F2E9D8] text-espresso border border-[#E0DCCE] rounded-2xl font-semibold text-[13.5px] transition-colors cursor-pointer text-center block"
+                className="w-full py-4 text-[#1F1410] rounded-full font-semibold text-[13.5px] transition-all cursor-pointer text-center block hover:opacity-90 shadow-md"
+                style={{
+                  background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                }}
               />
             </div>
           </div>
@@ -109,7 +156,7 @@ export default function PricingPage() {
                   'unlimited product shelf'
                 ].map((item, idx) => (
                   <li key={idx} className="flex gap-3 items-start">
-                    <div className="w-5 h-5 rounded-full bg-[#8F6F3E]/10 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-5 h-5 rounded-full bg-[#FAF7F2] flex items-center justify-center shrink-0 mt-0.5">
                       <Check size={12} className="text-[#8F6F3E]" strokeWidth={3} />
                     </div>
                     <span className="text-[13.5px] text-espresso font-medium leading-tight">{item}</span>
@@ -121,62 +168,77 @@ export default function PricingPage() {
               <PhaseAwareCta
                 preLaunchText="join the waitlist"
                 postLaunchText="start your 7 day free trial"
-                className="w-full py-4 text-[#FAF7F2] rounded-2xl font-semibold text-[13.5px] transition-all cursor-pointer text-center block hover:opacity-90 shadow-md"
+                className="w-full py-4 text-[#1F1410] rounded-full font-semibold text-[13.5px] transition-all cursor-pointer text-center block hover:opacity-90 shadow-md"
                 style={{
-                  background: 'linear-gradient(135deg, #3A2418 0%, #2C1810 50%, #1F1410 100%)'
+                  background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
                 }}
               />
             </div>
           </div>
         </section>
 
-        <section className="space-y-8 pt-12 w-full">
-          <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight text-center">What is in each.</h2>
-          
-          <div className="border border-[#E8E5DC] rounded-[32px] bg-white overflow-hidden shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full text-left font-sans text-[13.5px] min-w-[600px]">
-                <thead>
-                  <tr className="bg-[#1F1410] text-[#FAF7F2] font-semibold">
-                    <th className="py-5 px-8 font-sans text-[14px] w-[45%]">Feature</th>
-                    <th className="py-5 px-4 font-sans text-[14px] w-[25%]">nella Core</th>
-                    <th className="py-5 px-6 font-sans text-[14px] whitespace-nowrap w-[30%]">nella Pro</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-[#E8E5DC]/50">
-                  {comparisonRows.map((row, idx) => (
-                    <tr key={idx} className="group hover:bg-[#FAF7F2]/60 transition-colors relative">
-                      <td className="py-6 px-8 text-espresso font-medium relative">
-                        {/* Interactive Left Bar on Hover */}
-                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        {row.name}
-                      </td>
-                      <td className="py-6 px-4">
-                        <div className="flex items-center gap-2">
-                          <Check size={16} className="text-[#8F6F3E] shrink-0" strokeWidth={3} />
-                          <span className="text-espresso font-medium group-hover:text-[#8F6F3E] transition-colors">{row.core.replace('✓', '').trim()}</span>
+        <section className="space-y-8 pt-16 w-full max-w-[650px] mx-auto pb-12">
+          <h2 className="font-display font-[600] text-[28px] sm:text-[34px] text-espresso tracking-tight text-center">what is in each.</h2>
+
+          <div className="relative w-full pt-16 overflow-hidden pb-16">
+            <div className="w-full max-w-[650px] mx-auto">
+              {/* Header Row */}
+              <div className="grid grid-cols-[1fr_75px_12px_85px] md:grid-cols-[minmax(0,340px)_100px_40px_170px] gap-0 mb-4 items-end px-4 relative z-10">
+                <div></div>
+                <div className="text-center font-display font-[600] text-[11px] md:text-[18px] text-grey pb-4">nella Core</div>
+                <div></div>
+                <div className="text-center font-display font-[600] text-[13px] md:text-[22px] text-espresso pb-4 pt-6">nella Pro</div>
+              </div>
+
+              {/* Rows Container */}
+              <div className="relative">
+                {/* Pro Column Highlight Background (Floating Card) */}
+                <div className="absolute top-[-90px] bottom-0 right-4 w-[85px] md:w-[170px] bg-white rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-[#DEC68B]/50 z-0 overflow-hidden">
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#DEC68B] via-[#C4A067] to-[#B8924A]"></div>
+                </div>
+
+                <div className="relative z-10 flex flex-col">
+                  {comparisonRows.map((row, idx) => {
+                    const isCoreChecked = row.core.includes('✓');
+                    const isProChecked = row.pro.includes('✓');
+
+                    return (
+                      <div key={idx} className="grid grid-cols-[1fr_75px_12px_85px] md:grid-cols-[minmax(0,340px)_100px_40px_170px] gap-0 py-4 border-b border-[#E8E5DC]/60 items-center px-4">
+                        <div className="text-[12.5px] md:text-[14.5px] font-medium text-espresso pr-2 md:pr-4">{row.name}</div>
+
+                        {/* Core Column */}
+                        <div className="text-center flex items-center justify-center">
+                          {isCoreChecked ? (
+                            <Check className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#A3A095]" strokeWidth={2.5} />
+                          ) : (
+                            <X className="w-4 h-4 md:w-[18px] md:h-[18px] text-[#CDC5B8]" strokeWidth={2.5} />
+                          )}
                         </div>
-                      </td>
-                      <td className="py-6 px-6 bg-[#FAF7F2]/50">
-                        {row.pro.includes('✓') ? (
-                          <div className="flex items-center gap-2">
-                            <Check size={16} className="text-[#8F6F3E] shrink-0" strokeWidth={3} />
-                            <span className="text-espresso font-medium group-hover:text-[#8F6F3E] transition-colors whitespace-nowrap">{row.pro.replace('✓', '').trim()}</span>
-                          </div>
-                        ) : (
-                          <span className="text-grey group-hover:text-espresso transition-colors whitespace-nowrap">{row.pro}</span>
-                        )}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+
+                        {/* Spacer Column */}
+                        <div></div>
+
+                        {/* Pro Column */}
+                        <div className="text-center flex items-center justify-center">
+                          {isProChecked ? (
+                            <div className="w-[18px] h-[18px] md:w-[22px] md:h-[22px] rounded-full bg-[#FAF7F2] flex items-center justify-center shadow-sm border border-[#E8E5DC]/30">
+                              <Check className="w-2.5 h-2.5 md:w-[11.5px] md:h-[11.5px] text-[#8F6F3E]" strokeWidth={3.5} />
+                            </div>
+                          ) : null}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+
+              </div>
             </div>
           </div>
         </section>
 
         <section className="space-y-4 w-full pt-8">
-          <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">What you get for £4.99.</h2>
+          <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">what you get for £4.99.</h2>
           <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
             <p>
               your full glow score, with the breakdown and the recommendations. your day-by-day aftercare for every treatment, the bit that determines whether the money you spent at the clinic does the work you booked it for. your spending pattern across treatments, clinics, and categories, so you can see what's actually returning. your full history, all the way back to your first logged appointment.
@@ -188,8 +250,8 @@ export default function PricingPage() {
         </section>
 
         <section className="space-y-8 pt-12 w-full">
-          <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">In case you were wondering.</h2>
-          
+          <h2 className="font-display font-[600] text-[28px] text-espresso tracking-tight">in case you were wondering.</h2>
+
           <div className="space-y-4">
             <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl relative overflow-hidden shadow-sm group shadow-sm hover:shadow-md transition-shadow duration-300">
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-30 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -222,7 +284,7 @@ export default function PricingPage() {
       </div>
 
       <CtaSection
-        title="Ready when you are."
+        title="ready when you are."
         subtitle="free to use. £4.99 a month for Pro. cancel anytime."
         backgroundClass="bg-transparent"
       />

@@ -4,41 +4,63 @@ import CtaSection from '../../../components/CtaSection';
 import { Check } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'the £4.99 decision | stories',
-  description: 'why nella is entirely independent. no ads, no affiliate kickbacks, no selling your face to brands.',
+  title: 'why nella is a subscription (and always will be)',
+  description: 'we don\'t sell your face to skincare brands. we don\'t do affiliate links. we charge £4.99 a month so we work for you.',
+  keywords: ['beauty app subscription', 'ad free beauty app', 'independent skincare tracking', '£4.99 a month'],
   alternates: {
-    canonical: 'https://mynella.app/stories/the-subscription-decision'
+    canonical: 'https://mynella.app/stories/article-two'
   }
 };
 
 export default function ArticleThreePage() {
   return (
     <div className="space-y-0">
-      <article className="text-left max-w-5xl mx-auto px-6 pt-8 md:pt-12 space-y-8 md:space-y-12">
-        <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
-          <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <Link href="/stories" className="hover:text-espresso transition-colors">Stories</Link>
-          <span className="text-grey font-normal">&gt;</span>
-          <span className="text-espresso">The £4.99 decision</span>
-        </div>
-
-        <div className="pt-4 space-y-6 text-center pb-12">
-          <div className="inline-flex items-center gap-1.5 justify-center">
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
-            <span className="font-display italic text-[13px] text-[#8F6F3E]">business</span>
-            <span className="w-4 h-[1.5px] bg-[#8F6F3E]"></span>
+      <div className="px-4 md:px-8 pt-0 md:pt-0">
+        <div className="rounded-[28px] md:rounded-[36px] bg-[#E8D5CE] overflow-hidden relative group">
+          {/* Desktop Image - Absolute to fill right column border to border */}
+          <div className="absolute right-0 top-0 bottom-0 w-[56%] hidden lg:block z-0">
+            <img
+              src="/storiesarticletwo.webp"
+              alt="why we built nella"
+              className="w-full h-full object-contain object-center"
+            />
           </div>
 
-          <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-            The £4.99 decision.
-          </h1>
+          {/* Breadcrumbs inside the hero */}
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
+            <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
+              <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <Link href="/stories" className="hover:text-espresso transition-colors">Stories</Link>
+              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="text-espresso font-semibold">why we built nella on a subscription model</span>
+            </div>
+          </div>
 
-          <p className="text-[13px] text-grey font-medium uppercase tracking-wider">
-            published march 18th
-          </p>
+          <div className="max-w-7xl mx-auto px-6 pt-6 pb-12 md:pt-8 md:pb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center lg:min-h-[360px]">
+            {/* Left Column */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-center">
+              <div className="inline-flex items-center gap-1.5 justify-start">
+                <span className="font-display italic text-[13px] text-[#8F6F3E]">business</span>
+              </div>
+              <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
+                why we built nella on a subscription model.
+              </h1>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="block lg:hidden w-full relative z-10">
+              <img
+                src="/storiesarticletwo.webp"
+                alt="why we built nella"
+                className="w-full h-auto max-h-[450px] object-cover object-center rounded-[20px]"
+              />
+            </div>
+          </div>
         </div>
+      </div>
 
+      <article className="text-left max-w-7xl mx-auto px-6 pt-12 md:pt-16 space-y-8 md:space-y-12">
         <div className="space-y-8 text-[14.5px] text-grey font-sans leading-relaxed max-w-3xl mx-auto">
           <p>
             There are two ways to build an app that tracks what women put on and in their bodies. The first is to make it free and sell the data to beauty brands. The second is to charge a fair price and keep the data private.

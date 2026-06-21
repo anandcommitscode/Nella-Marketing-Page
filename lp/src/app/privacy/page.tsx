@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'nella privacy policy',
-  description: 'the full privacy policy for nella, in legal language. for the plain-english version, see /about/privacy-principles.',
+  title: 'privacy policy | nella',
+  description: 'our plain-english privacy policy. what we collect, where we store it, and why we will never sell it.',
   robots: {
     index: true,
     follow: true,
@@ -24,10 +24,10 @@ export default function PrivacyPolicyPage() {
         </div>
         
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-          Privacy policy.
+          privacy policy.
         </h1>
         <p className="text-[14px] text-grey font-sans">
-          For the plain-english version of how we handle your data, see our <Link href="/about/privacy-principles" className="text-[#8F6F3E] hover:underline">Privacy Principles</Link>.
+          we are building a system to hold the most intimate details of your beauty life. that requires a medical-grade approach to data. here is exactly what we do with your information, and more importantly, what we don't.
         </p>
       </div>
 

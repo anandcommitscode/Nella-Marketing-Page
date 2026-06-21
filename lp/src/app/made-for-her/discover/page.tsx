@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import MadeForHerClient from '../MadeForHerClient';
 
 export const metadata: Metadata = {
-  title: 'the beauty and skincare app for women',
-  description: 'track your skin boosters, viral masks, and new actives. nella connects the things you try to the results you see.',
-  keywords: ['beauty and skincare app'],
+  title: 'the beauty companion for the woman who tries everything',
+  description: 'her algorithm is a dangerous place. nella helps her figure out what actually works.',
+  keywords: ['beauty companion app', 'skincare tracking app', 'new beauty product tracker'],
   alternates: {
     canonical: 'https://mynella.app/made-for-her/discover'
   }
