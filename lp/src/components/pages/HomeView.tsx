@@ -56,7 +56,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </div>
 
             <h1 className="font-display font-[600] text-[36px] sm:text-[54px] md:text-[60px] leading-[1.05] tracking-tight text-espresso text-left normal-case">
-              the beauty companion <br />
+              The beauty companion <br />
               <span className="text-espresso lowercase">that keeps up with you.</span>
             </h1>
 
@@ -94,7 +94,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                     ))}
                   </div>
                 </div>
-                <span className="text-[10px] text-grey uppercase tracking-wider font-semibold mt-1">
+                <span className="text-[10px] text-grey tracking-wider font-semibold mt-1">
                   app store rating
                 </span>
               </div>
@@ -145,7 +145,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           </div>
 
           <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-left">
-            you&rsquo;re already doing the work
+            You&rsquo;re already doing the work
           </h2>
 
           <div className="space-y-4 max-w-2xl mx-auto font-sans text-[13.5px] text-grey leading-relaxed text-balance">
@@ -161,7 +161,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
-              four things, done properly.
+              Four things, done properly.
             </h2>
             <p className="text-[13.5px] text-grey font-sans">
               your treatments, your routines, your aftercare, and the bits you would have missed, finally seen.
@@ -250,7 +250,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </div>
 
             <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight">
-              the bit a notes app <br />cannot do.
+              The bit a notes app <br />cannot do.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -279,10 +279,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
-              how it works.
+              How it works.
             </h2>
-            <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
-              four steps. nothing complicated.
+            <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
+              Four steps. Nothing complicated.
             </p>
           </div>
 
@@ -316,7 +316,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </div>
 
             <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight">
-              the only score that <br />tells you the truth.
+              The only score that <br />tells you the truth.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -345,7 +345,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <span className="font-display italic text-[13px] text-deep-gold">love letters</span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight">
-              loved by the women who built her.
+              Loved by the women who built her.
             </h2>
             <p className="text-[14px] text-grey font-sans">
               nella was built by a community of women who take their beauty and self-care seriously.
@@ -376,7 +376,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-left">
-              free to start. £4.99 to understand.
+              Free to start. £4.99 to understand.
             </h2>
             <p className="text-[13.5px] text-grey font-sans">
               transparent pricing. no tricks, no secrets.
@@ -394,8 +394,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
               <ul className="space-y-2.5 text-[12.5px] text-espresso/80 font-sans">
                 {['track every treatment, every product, every day', 'your AM and PM routine, with conflict logic', 'daily check-in and monthly wrap', 'aftercare and smart reminders', 'up to 20 products'].map((item, idx) => (
-                  <li key={idx} className="flex gap-2 items-start">
-                    <Check size={14} className="text-deep-sage shrink-0 mt-0.5" />
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <div
+                      className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      style={{
+                        background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                      }}
+                    >
+                      <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -420,8 +427,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
               <ul className="space-y-2.5 text-[12.5px] text-espresso/80 font-sans">
                 {['the full glow score breakdown, daily, weekly, monthly', 'day-by-day aftercare for every treatment', 'spend insights by treatment and all time', 'your full history, from day one', 'unlimited product shelf'].map((item, idx) => (
-                  <li key={idx} className="flex gap-2 items-start">
-                    <Check size={14} className="text-deep-gold shrink-0 mt-0.5" />
+                  <li key={idx} className="flex gap-2.5 items-start">
+                    <div
+                      className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      style={{
+                        background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                      }}
+                    >
+                      <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -446,7 +460,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="max-w-3xl mx-auto px-6 space-y-12">
           <div className="text-left space-y-3">
             <h2 className="font-display font-[600] text-[32px] sm:text-[38px] text-espresso tracking-tight text-left">
-              in case you were wondering.
+              In case you were wondering.
             </h2>
           </div>
 
@@ -485,10 +499,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
 
         <div className="max-w-3xl mx-auto px-6 space-y-8 relative z-10">
           <h2 className="font-display font-[600] text-[34px] sm:text-[48px] tracking-tight text-[#FAF7F2]">
-            your beauty, one clean thread.
+            Your beauty, one clean thread.
           </h2>
           <p className="text-[14px] sm:text-[15px] text-[#FAF7F2]/90 max-w-lg mx-auto font-sans leading-relaxed">
-            join the women who have stopped trying to remember it all. nella tracks your treatments, orders your routine, runs your aftercare, and keeps your record safe.
+            Join the women who have stopped trying to remember it all. nella tracks your treatments, orders your routine, runs your aftercare, and keeps your record safe.
           </p>
 
           <div className="pt-2">
@@ -500,7 +514,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             </button>
           </div>
 
-          <p className="text-[10px] text-[#FAF7F2]/60 font-sans uppercase tracking-widest pt-2">
+          <p className="text-[10px] text-[#FAF7F2]/60 font-sans tracking-widest pt-2">
             free to use. £4.99 a month for Pro. cancel anytime.
           </p>
         </div>

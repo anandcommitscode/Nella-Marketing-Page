@@ -19,12 +19,12 @@ export default function PrivacyPolicyPage() {
       <div className="space-y-6 pt-4 pb-12">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
+          <span className="text-grey font-normal">›</span>
           <span className="text-espresso">Privacy Policy</span>
         </div>
         
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-          privacy policy.
+          Privacy policy.
         </h1>
         <p className="text-[14px] text-grey font-sans">
           we are building a system to hold the most intimate details of your beauty life. that requires a medical-grade approach to data. here is exactly what we do with your information, and more importantly, what we don't.

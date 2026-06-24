@@ -23,7 +23,7 @@ export default function IntelligenceHubPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Intelligence</span>
             </div>
           </div>
@@ -35,7 +35,7 @@ export default function IntelligenceHubPage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">the intelligence</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                the bit a notes app cannot do.
+                The bit a notes app cannot do.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                 the conflict logic, the cycle logic, the score logic. how nella turns what you track into intelligence you can use.
@@ -102,7 +102,7 @@ export default function IntelligenceHubPage() {
               </div>
               <div className="p-6 md:p-8">
                 <h3 className="font-display font-semibold text-[20px] text-espresso mb-3">
-                  ingredient conflicts.
+                  Ingredient conflicts.
                 </h3>
                 <p className="text-[14px] text-grey font-sans leading-relaxed max-w-xl mb-4">
                   which actives fight, which pair, which need a pause, and for how long. the science behind why your retinol goes off the menu the day you book microneedling, and why your vitamin C is back on after three.
@@ -146,7 +146,7 @@ export default function IntelligenceHubPage() {
               </div>
               <div className="p-6 md:p-8">
                 <h3 className="font-display font-semibold text-[20px] text-espresso mb-3">
-                  the glow score.
+                  The glow score.
                 </h3>
                 <p className="text-[14px] text-grey font-sans leading-relaxed mb-4">
                   what nella measures, why those four things matter, and how the number calibrates to you over your first two weeks. plus what the score is actually telling you as it moves.
@@ -197,7 +197,7 @@ export default function IntelligenceHubPage() {
               </div>
               <div className="p-6 md:p-8">
                 <h3 className="font-display font-semibold text-[20px] text-espresso mb-3">
-                  treatment cycles.
+                  Treatment cycles.
                 </h3>
                 <p className="text-[14px] text-grey font-sans leading-relaxed max-w-xl mb-4">
                   why your nails are due in three weeks and your botox in twelve. how nella knows the cycle for every treatment type, and how the reminder logic escalates from gentle to overdue.

@@ -37,7 +37,7 @@ export default function WaitlistView({ onNavigate }: WaitlistViewProps) {
         </div>
 
         <h1 className="font-display font-[600] text-[36px] tracking-tight text-espresso leading-none">
-          join the waitlist.
+          Join the waitlist.
         </h1>
 
         <p className="text-[14px] text-grey font-sans max-w-md mx-auto leading-relaxed">
@@ -81,7 +81,7 @@ export default function WaitlistView({ onNavigate }: WaitlistViewProps) {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full relative overflow-hidden group py-3.5 rounded-full text-[#FAF7F2] text-[13px] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider block cursor-pointer"
+                className="w-full relative overflow-hidden group py-3.5 rounded-full text-[#FAF7F2] text-[13px] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm block cursor-pointer"
                 style={{
                   background: 'linear-gradient(135deg, #3A2418 0%, #2C1810 50%, #1F1410 100%)'
                 }}
@@ -111,7 +111,7 @@ export default function WaitlistView({ onNavigate }: WaitlistViewProps) {
               <CheckCircle2 size={24} />
             </div>
             <h3 className="font-display font-semibold text-[20px] text-espresso">
-              you&rsquo;re on the list!
+              You&rsquo;re on the list!
             </h3>
             <p className="text-[12.5px] text-grey font-sans max-w-sm mx-auto leading-relaxed">
               thanks for joining, <span className="text-espresso font-medium">{fullName || 'friend'}</span>. we have reserved your early spot with email <span className="text-espresso font-medium">{email}</span>. you are #2,482 in line. we will be in touch!

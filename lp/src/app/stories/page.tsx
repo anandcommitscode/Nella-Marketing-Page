@@ -30,7 +30,7 @@ export default function StoriesHubPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Stories</span>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function StoriesHubPage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">the editorial</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                stories.
+                Stories.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-[#1F1410]/80 max-w-[420px] font-sans leading-relaxed">
                 thoughts on aesthetic science, the modern beauty drawer, and why we built nella.
@@ -83,7 +83,7 @@ export default function StoriesHubPage() {
             <div className="space-y-3 z-10 relative">
               <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide uppercase">EDITORIAL</span>
               <h3 className="font-sans font-[600] text-[20px] text-espresso leading-tight group-hover:text-[#8F6F3E] transition-colors duration-300">
-                why your notes app is failing your beauty routine.
+                Why your notes app is failing your beauty routine.
               </h3>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 your botox units are in a note from 2022. your retinol schedule is in your head. why the modern beauty drawer needs a dedicated system.
@@ -105,7 +105,7 @@ export default function StoriesHubPage() {
             <div className="space-y-3 z-10 relative">
               <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide uppercase">BUSINESS</span>
               <h3 className="font-sans font-[600] text-[20px] text-espresso leading-tight group-hover:text-[#8F6F3E] transition-colors duration-300">
-                why we built nella on a subscription model.
+                Why we built nella on a subscription model.
               </h3>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 we don't sell your face to skincare brands. we don't do affiliate links. we charge £4.99 a month so we work for you.
@@ -127,7 +127,7 @@ export default function StoriesHubPage() {
             <div className="space-y-3 z-10 relative">
               <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide uppercase">SCIENCE</span>
               <h3 className="font-sans font-[600] text-[20px] text-espresso leading-tight group-hover:text-[#8F6F3E] transition-colors duration-300">
-                the myth of the ten-step routine.
+                The myth of the ten-step routine.
               </h3>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 why your skin barrier is angry, your wallet is empty, and what happens when you let nella strip your routine back to the essentials.

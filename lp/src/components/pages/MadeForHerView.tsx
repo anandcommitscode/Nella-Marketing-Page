@@ -44,13 +44,20 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">tailored tracking</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-                made for her.
+                Made for her.
               </h1>
               <p className="text-[14px] sm:text-[15px] text-grey max-w-2xl font-sans leading-relaxed">
                 nella is for the woman who has money in her beauty, attention in her routine, and no system holding any of it together. you might recognise yourself in one of these three. you might recognise yourself in all of them.
               </p>
-              <p className="text-[13px] font-medium text-espresso uppercase tracking-wider font-sans">
+              <p className="text-[13px] font-medium text-espresso tracking-wider font-sans">
                 either way, this is where to start.
+              </p>
+            </div>
+            
+            <div className="text-center space-y-3 mb-10 mt-12">
+              <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">Three women nella is made for.</h2>
+              <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
+                broadly, we see three types of women using her.
               </p>
             </div>
 
@@ -66,7 +73,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                     📅
                   </div>
                   <h3 className="font-display font-semibold text-[17px] text-espresso leading-snug">
-                    you&rsquo;ve forgotten when you last booked.
+                    You&rsquo;ve forgotten when you last booked.
                   </h3>
                   <p className="text-[12px] text-grey font-sans leading-relaxed">
                     your nails are due, your brows are overdue, your botox is somewhere on the calendar but you can&rsquo;t remember. you have a notes app, three group chats and a vague feeling of being behind.
@@ -90,7 +97,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                     🧪
                   </div>
                   <h3 className="font-display font-semibold text-[17px] text-espresso leading-snug">
-                    you&rsquo;ve built the routine, but not sure if it is working.
+                    You&rsquo;ve built the routine, but not sure if it is working.
                   </h3>
                   <p className="text-[12px] text-grey font-sans leading-relaxed">
                     five products in the AM, six in the PM. retinol on monday and thursday, vitamin C until you read the thing that said maybe not. you want to know what&rsquo;s doing the work and what&rsquo;s along for the ride.
@@ -114,7 +121,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                     ✨
                   </div>
                   <h3 className="font-display font-semibold text-[17px] text-espresso leading-snug">
-                    you&rsquo;ve tried more in the last year than most try in five.
+                    You&rsquo;ve tried more in the last year than most try in five.
                   </h3>
                   <p className="text-[12px] text-grey font-sans leading-relaxed">
                     skin boosters last spring, polynucleotides in september, the new thing your aesthetician mentioned last week. you go in informed and you come out with results.
@@ -157,7 +164,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                 <span className="font-display italic text-[11px] text-[#8F6F3E]">the tracker pathway</span>
               </div>
               <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight">
-                for the woman who has forgotten when she last booked.
+                For the woman who has forgotten when she last booked.
               </h1>
               <p className="text-[14px] text-grey font-sans">
                 your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
@@ -172,7 +179,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* What nella does */}
             <div className="space-y-6">
-              <h2 className="font-display font-semibold text-[22px] text-espresso">what nella does about it.</h2>
+              <h2 className="font-display font-semibold text-[22px] text-espresso">What nella does about it.</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <h4 className="font-semibold text-[14px] text-espresso">every treatment in one place.</h4>
@@ -191,7 +198,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* A small story */}
             <div className=" pt-8 space-y-3">
-              <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
+              <h4 className="font-display font-semibold text-[18px] text-espresso">What it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 rachel gets her nails done every three weeks, her brows every six, her botox quarterly, and her hair when she remembers. before nella, that was four calendars and one ongoing feeling of being behind.
               </p>
@@ -200,7 +207,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
               </p>
             </div>
 
-            <div className="pt-4 flex gap-4">
+            <div className="pt-4 flex justify-center w-full">
               <button 
                 onClick={() => onNavigate('tracking')}
                 className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer"
@@ -227,7 +234,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                 <span className="font-display italic text-[11px] text-[#8F6F3E]">the refiner pathway</span>
               </div>
               <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight">
-                for the woman who built the routine and wants to know if it works.
+                For the woman who built the routine and wants to know if it works.
               </h1>
               <p className="text-[14px] text-grey font-sans">
                 AM, PM, actives, conflicts, consistency. nella tells you whether the work is paying off.
@@ -242,7 +249,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* What nella does */}
             <div className="space-y-6">
-              <h2 className="font-display font-semibold text-[22px] text-espresso">what nella does about it.</h2>
+              <h2 className="font-display font-semibold text-[22px] text-espresso">What nella does about it.</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <h4 className="font-semibold text-[14px] text-espresso">a routine that orders itself.</h4>
@@ -261,7 +268,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* A small story */}
             <div className=" pt-8 space-y-3">
-              <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
+              <h4 className="font-display font-semibold text-[18px] text-espresso">What it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 priya has six products in her PM routine. retinol on mondays and thursdays, an AHA on wednesdays, vitamin C every morning. before nella, that was a recurring fear that something was cancelling something else out.
               </p>
@@ -270,7 +277,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
               </p>
             </div>
 
-            <div className="pt-4 flex gap-4">
+            <div className="pt-4 flex justify-center w-full">
               <button 
                 onClick={() => onNavigate('routines')}
                 className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer"
@@ -297,7 +304,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
                 <span className="font-display italic text-[11px] text-[#8F6F3E]">the explorer pathway</span>
               </div>
               <h1 className="font-display font-[600] text-[28px] sm:text-[38px] leading-tight text-espresso tracking-tight">
-                for the woman investing in more than most try in five years.
+                For the woman investing in more than most try in five years.
               </h1>
               <p className="text-[14px] text-grey font-sans">
                 skin boosters in march, polynucleotides in september, microneedling in between. you have invested. nella holds the record.
@@ -312,7 +319,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* What nella does */}
             <div className="space-y-6">
-              <h2 className="font-display font-semibold text-[22px] text-espresso">what nella does about it.</h2>
+              <h2 className="font-display font-semibold text-[22px] text-espresso">What nella does about it.</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="space-y-2">
                   <h4 className="font-semibold text-[14px] text-espresso">a record that holds everything.</h4>
@@ -331,7 +338,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
 
             {/* A small story */}
             <div className=" pt-8 space-y-3">
-              <h4 className="font-display font-semibold text-[18px] text-espresso">what it looks like in real life.</h4>
+              <h4 className="font-display font-semibold text-[18px] text-espresso">What it looks like in real life.</h4>
               <p className="text-[13px] text-grey font-sans leading-relaxed">
                 hannah has tried more treatments in the last year than most women try in five. she does her research and goes to the best clinics, but she wanted a record that lived up to her standard of care.
               </p>
@@ -340,7 +347,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
               </p>
             </div>
 
-            <div className="pt-4 flex gap-4">
+            <div className="pt-4 flex justify-center w-full">
               <button 
                 onClick={() => onNavigate('aftercare')}
                 className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer"
@@ -356,7 +363,7 @@ export default function MadeForHerView({ onNavigate, initialSubTab = null }: Mad
       <section className="p-8 pb-10 bg-[#1F1410] text-[#FAF7F2] rounded-3xl text-center space-y-6 !mt-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#8F6F3E]/5 pointer-events-none"></div>
         <h2 className="font-display font-[600] text-[26px] sm:text-[32px] text-[#FAF7F2] tracking-tight">
-          stop trying to remember it all.
+          Stop trying to remember it all.
         </h2>
         <p className="text-[13px] text-white/80 max-w-lg mx-auto font-sans leading-relaxed">
           let nella hold the details so you can focus on the results.

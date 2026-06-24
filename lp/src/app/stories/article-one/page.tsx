@@ -30,10 +30,10 @@ export default function ArticleTwoPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/stories" className="hover:text-espresso transition-colors">Stories</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
-              <span className="text-espresso font-semibold">why your notes app is failing your beauty routine</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
+              <span className="text-espresso font-semibold">article-one</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ export default function ArticleTwoPage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">editorial</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                why your notes app is failing your beauty routine.
+                Why your notes app is failing your beauty routine.
               </h1>
             </div>
 
@@ -66,7 +66,7 @@ export default function ArticleTwoPage() {
             You log a microneedling treatment on a tuesday afternoon. By wednesday morning, your retinol is gone from tonight&rsquo;s routine. Your vitamin C is paused for three days. Your AHA will not return for five.
           </p>
           <p>
-            You didn&rsquo;t do anything. Nella did.
+            You didn&rsquo;t do anything. nella did.
           </p>
           <p className="font-semibold text-espresso">
             This is the aftercare engine.
@@ -124,21 +124,21 @@ export default function ArticleTwoPage() {
             At the end of each pause window, the product quietly returns to your nightly checklist. No notification. No ceremony. It is just there again, because the science says it is safe.
           </p>
           <p>
-            This is what we mean when we say nella does the remembering. You spent the money. Nella protects the investment.
+            This is what we mean when we say nella does the remembering. You spent the money. nella protects the investment.
           </p>
         </div>
 
         <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-12 max-w-3xl mx-auto">
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
           <h4 className="font-semibold text-espresso mb-1">Why this matters</h4>
-          Nella does not warn you. She does not send you a pop-up. She simply removes the product from tonight&rsquo;s list. The decision is already made.
+          nella does not warn you. She does not send you a pop-up. She simply removes the product from tonight&rsquo;s list. The decision is already made.
         </div>
 
       </article>
 
       <CtaSection
         title="The aftercare engine."
-        subtitle="You spent the money. Nella protects the investment. Join the waitlist."
+        subtitle="You spent the money. nella protects the investment. Join the waitlist."
         backgroundClass="bg-transparent"
       />
     </div>

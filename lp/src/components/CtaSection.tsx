@@ -43,7 +43,7 @@ export default function CtaSection({
           </div>
 
           {disclaimer && (
-            <p className="text-[10.5px] text-[#FAF7F2]/50 font-sans uppercase tracking-wider pt-2">
+            <p className="text-[10.5px] text-[#FAF7F2]/50 font-sans tracking-wider pt-2">
               {disclaimer}
             </p>
           )}

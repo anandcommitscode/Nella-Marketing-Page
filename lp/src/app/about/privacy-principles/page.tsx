@@ -31,9 +31,9 @@ export default function PrivacyPrinciplesPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/about" className="hover:text-espresso transition-colors">About</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Privacy</span>
             </div>
           </div>
@@ -71,35 +71,35 @@ export default function PrivacyPrinciplesPage() {
             <div className="space-y-8">
                <div>
                  <h4 className="font-sans font-[600] text-[16px] text-espresso mb-1">
-                   <span className="mr-2">1.</span>your data is not sold.
+                   <span className="mr-2">1.</span>Your data is not sold.
                  </h4>
                  <p className="text-[14px] text-grey font-sans leading-relaxed">not to brands, not to clinics, not to advertisers, not to anyone. your treatment history is not a product. your spend is not a metric for someone else's quarterly review.</p>
                </div>
  
                <div>
                  <h4 className="font-sans font-[600] text-[16px] text-espresso mb-1">
-                   <span className="mr-2">2.</span>no ads in the app.
+                   <span className="mr-2">2.</span>No ads in the app.
                  </h4>
                  <p className="text-[14px] text-grey font-sans leading-relaxed">nella's business is the subscription. that means the only person nella has to please is you.</p>
                </div>
  
                <div>
                  <h4 className="font-sans font-[600] text-[16px] text-espresso mb-1">
-                   <span className="mr-2">3.</span>no sponsored content.
+                   <span className="mr-2">3.</span>No sponsored content.
                  </h4>
                  <p className="text-[14px] text-grey font-sans leading-relaxed">no "featured" treatments. no paid placement in your routine. no brand-sponsored reviews. if nella recommends something, it's because it earned the recommendation.</p>
                </div>
  
                <div>
                  <h4 className="font-sans font-[600] text-[16px] text-espresso mb-1">
-                   <span className="mr-2">4.</span>your data will never be shared with your clinic.
+                   <span className="mr-2">4.</span>Your data will never be shared with your clinic.
                  </h4>
                  <p className="text-[14px] text-grey font-sans leading-relaxed">nella sits across every clinic you use. that means no single clinic gets to see what you have done at the others. this is the whole point.</p>
                </div>
  
                <div>
                  <h4 className="font-sans font-[600] text-[16px] text-espresso mb-1">
-                   <span className="mr-2">5.</span>easy to leave.
+                   <span className="mr-2">5.</span>Easy to leave.
                  </h4>
                  <p className="text-[14px] text-grey font-sans leading-relaxed">you can export everything you have logged at any time. you can delete your account at any time. your data is yours, every step of the way.</p>
                </div>

@@ -30,10 +30,10 @@ export default function ArticleThreePage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/stories" className="hover:text-espresso transition-colors">Stories</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
-              <span className="text-espresso font-semibold">why we built nella on a subscription model</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
+              <span className="text-espresso font-semibold">article-two</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ export default function ArticleThreePage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">business</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                why we built nella on a subscription model.
+                Why we built nella on a subscription model.
               </h1>
             </div>
 
@@ -78,17 +78,17 @@ export default function ArticleThreePage() {
 
 
           <p>
-            Nella Core is free. It always will be. You get treatment logging, basic reminders, routine tracking, and your glow score. For most women, that is enough to feel in control.
+            nella Core is free. It always will be. You get treatment logging, basic reminders, routine tracking, and your glow score. For most women, that is enough to feel in control.
           </p>
           <p>
-            Nella Pro costs £4.99 a month. It unlocks the intelligence layer: advanced conflict detection, full aftercare automation, spending analytics by clinic and treatment type, the monthly wrap card, and the full glow score breakdown.
+            nella Pro costs £4.99 a month. It unlocks the intelligence layer: advanced conflict detection, full aftercare automation, spending analytics by clinic and treatment type, the monthly wrap card, and the full glow score breakdown.
           </p>
 
           <div className="p-8 sm:p-10 bg-white border border-[#E8E5DC] rounded-3xl space-y-8 shadow-sm my-10 relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
 
             <div className="relative z-10 pb-6">
-              <span className="text-[11px] font-semibold tracking-widest uppercase text-[#8F6F3E] mb-2 block">Level Two</span>
+              <span className="text-[11px] font-semibold tracking-widest text-[#8F6F3E] mb-2 block">level two</span>
               <h3 className="font-display font-[600] text-[24px] sm:text-[28px] text-espresso">What £4.99 buys you.</h3>
             </div>
 

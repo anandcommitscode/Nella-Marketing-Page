@@ -19,6 +19,30 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
     { name: 'clinic & treatment spend insights', core: 'standard totals', pro: '✓ deep multi-metric breakdown' },
   ];
 
+  const renderCell = (val: string, isPro: boolean) => {
+    if (val.startsWith('✓ ')) {
+      const text = val.replace('✓ ', '');
+      return (
+        <div className="flex items-center gap-2">
+          {isPro ? (
+            <div
+              className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 shadow-xs"
+              style={{
+                background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+              }}
+            >
+              <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+            </div>
+          ) : (
+            <Check size={14} className="text-[#A3A095] shrink-0" strokeWidth={2.5} />
+          )}
+          <span className="ml-1">{text}</span>
+        </div>
+      );
+    }
+    return <span>{val}</span>;
+  };
+
   return (
     <div className="lowercase text-left max-w-4xl mx-auto px-6 py-12 space-y-16">
       {/* Hero */}
@@ -30,7 +54,7 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
         </div>
 
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none text-center">
-          free to start. £4.99 to understand.
+          Free to start. £4.99 to understand.
         </h1>
 
         <p className="text-[14px] sm:text-[15px] text-grey max-w-2xl mx-auto font-sans leading-relaxed text-center">
@@ -44,7 +68,7 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
         <div className="p-8 bg-white border border-[#E8E5DC] rounded-3xl space-y-6 flex flex-col justify-between">
           <div className="space-y-4">
             <div className="space-y-1">
-              <span className="text-[11px] uppercase tracking-wider text-grey block font-semibold">level one</span>
+              <span className="text-[11px] tracking-wider text-grey block font-semibold">level one</span>
               <h3 className="font-display font-semibold text-[24px] text-espresso">nella Core</h3>
               <p className="text-[13px] text-[#8F6F3E] font-semibold">free, forever</p>
             </div>
@@ -52,15 +76,22 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
             <div className="h-[1px] bg-[#FAF7F2]"></div>
             <ul className="space-y-3 text-[12.5px] text-espresso/80 font-sans">
               {[
-                'track every treatment, every product, every day',
+                'Track every treatment, every product, every day',
                 'AM and PM routine with active conflict logic',
-                'daily skin check-ins & monthly wraps',
-                'aftercare and smart reminders',
-                'virtual product shelf up to 20 products',
+                'Daily skin check-ins & monthly wraps',
+                'Aftercare and smart reminders',
+                'Virtual product shelf up to 20 products',
                 '3-month rolling history logs'
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-2.5 items-start">
-                  <Check size={14} className="text-deep-sage shrink-0 mt-0.5" />
+                  <div
+                    className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                    style={{
+                      background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                    }}
+                  >
+                    <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                  </div>
                   <span>{item}</span>
                 </li>
               ))}
@@ -79,7 +110,7 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
           <span className="absolute top-4 right-4 bg-[#8F6F3E]/8 text-[#8F6F3E] text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">unlimited</span>
           <div className="space-y-4">
             <div className="space-y-1">
-              <span className="text-[11px] uppercase tracking-wider text-[#8F6F3E] block font-semibold">level two</span>
+              <span className="text-[11px] tracking-wider text-[#8F6F3E] block font-semibold">level two</span>
               <h3 className="font-display font-semibold text-[24px] text-espresso">nella Pro</h3>
               <p className="text-[13px] text-[#8F6F3E] font-semibold">£4.99/month or £39.99/year</p>
             </div>
@@ -87,15 +118,22 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
             <div className="h-[1px] bg-[#FAF7F2]"></div>
             <ul className="space-y-3 text-[12.5px] text-espresso/80 font-sans">
               {[
-                'the full glow score breakdown daily, weekly, monthly',
-                'day-by-day customized aftercare plans',
-                'unlimited virtual cabinet product slots',
-                'complete historical records from day one',
-                'spending insights by treatment type and clinic',
-                'exclusive beauty intelligence cards'
+                'The full glow score breakdown daily, weekly, monthly',
+                'Day-by-day customized aftercare plans',
+                'Unlimited virtual cabinet product slots',
+                'Complete historical records from day one',
+                'Spending insights by treatment type and clinic',
+                'Exclusive beauty intelligence cards'
               ].map((item, idx) => (
                 <li key={idx} className="flex gap-2.5 items-start">
-                  <Check size={14} className="text-[#8F6F3E] shrink-0 mt-0.5" />
+                  <div
+                    className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                    style={{
+                      background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                    }}
+                  >
+                    <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                  </div>
                   <span>{item}</span>
                 </li>
               ))}
@@ -115,7 +153,7 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
 
       {/* Comparison table */}
       <section className="space-y-6 pt-4">
-        <h3 className="font-display font-semibold text-[22px] text-espresso tracking-tight text-center">what is in each.</h3>
+        <h3 className="font-display font-semibold text-[22px] text-espresso tracking-tight text-center">What is in each.</h3>
         <div className="overflow-x-auto shadow-2xs border border-[#E8E5DC] rounded-2xl bg-white">
           <table className="w-full text-left font-sans text-[12.5px]">
             <thead>
@@ -129,8 +167,8 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
               {comparisonRows.map((row, idx) => (
                 <tr key={idx} className="hover:bg-[#FAF7F2]/50 text-grey">
                   <td className="p-4 text-espresso font-medium">{row.name}</td>
-                  <td className="p-4">{row.core}</td>
-                  <td className="p-4 font-medium text-espresso">{row.pro}</td>
+                  <td className="p-4">{renderCell(row.core, false)}</td>
+                  <td className="p-4 font-medium text-espresso">{renderCell(row.pro, true)}</td>
                 </tr>
               ))}
             </tbody>
@@ -140,7 +178,7 @@ export default function PricingView({ onNavigate }: PricingViewProps) {
 
       {/* Transparency section */}
       <section className="p-6 bg-gradient-to-r from-teal-50/10 to-emerald-50/10 border border-[#E8E5DC] rounded-2xl space-y-2 text-center text-[12.5px] text-grey">
-        <h4 className="font-semibold text-espresso">our pricing promise</h4>
+        <h4 className="font-semibold text-espresso">Our pricing promise</h4>
         <p className="max-w-xl mx-auto leading-relaxed">
           we believe beauty metadata shouldn&rsquo;t be traded. there are index ads, no brand tracking, and no sponsor kickbacks. our Pro tier keeps us completely independent so we can keep building exactly for you.
         </p>

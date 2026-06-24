@@ -57,7 +57,7 @@ export default function SupportPage() {
             <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 z-10 pb-0 self-start lg:pt-12">
               <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60 mb-2">
                 <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-                <span className="font-normal">&gt;</span>
+                <span className="font-normal">›</span>
                 <span className="text-espresso">Support</span>
               </div>
               <div className="inline-flex items-center gap-1.5 justify-start">

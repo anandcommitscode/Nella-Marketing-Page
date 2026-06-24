@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { AlertTriangle, Sparkles, Activity, Plus, Sun, Moon, PauseCircle, ShieldAlert, Lock } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import PhaseAwareCta from '../../../components/PhaseAwareCta';
 import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export default function IngredientConflictsPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Ingredient Conflicts</span>
             </div>
           </div>
@@ -37,11 +38,21 @@ export default function IngredientConflictsPage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">conflict logic</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                ingredient conflicts.
+                Ingredient conflicts.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                 retinol and vitamin C, AHA and BHA, niacinamide and acid. the science behind nella's conflict logic, in plain english.
               </p>
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
             </div>
 
             {/* Right Column */}
@@ -57,17 +68,8 @@ export default function IngredientConflictsPage() {
       <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
 
         <div className="space-y-10 w-full">
-          <div className="space-y-4 max-w-3xl">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">How nella thinks about conflicts.</h2>
-            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
-              <p>a conflict is not always a hard stop. some pairs are myths. some pairs are fine if you separate them by twelve hours. some pairs genuinely need a pause for a number of days.</p>
-              <p>nella treats them differently because they're different. every product in your routine is tagged for its active ingredients. every treatment you log carries its own rules about which actives go off the menu and for how long. when a conflict appears, nella tells you what's happening and what to do about it.</p>
-              <p className="font-medium text-espresso">what follows is the conflict logic for the pairs that come up most. the full library lives inside the app.</p>
-            </div>
-          </div>
-
           <div className="space-y-6 pt-2 w-full">
-            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4">The conflicts that come up most.</h2>
+            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4 text-center">The conflicts that come up most.</h2>
             <div className="flex flex-wrap justify-center gap-4">
               {/* Card 1: Retinol & Vit C */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group w-full md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.7rem)]">
@@ -94,7 +96,7 @@ export default function IngredientConflictsPage() {
                   </div>
                 </div>
                 <div className="p-5 md:p-6 space-y-2.5 flex-grow">
-                  <h4 className="font-sans font-[600] text-[16px] text-espresso">retinol and vitamin C.</h4>
+                  <h4 className="font-sans font-[600] text-[16px] text-espresso">Retinol and vitamin C.</h4>
                   <p className="text-[13.5px] text-grey font-sans leading-relaxed">the myth says they cancel each other out. the reality says they work on different pathways and most skin tolerates them on different days. nella keeps them apart in the schedule. vitamin C in the AM, retinol in the PM, on the nights you've set retinol to run.</p>
                 </div>
               </div>
@@ -119,7 +121,7 @@ export default function IngredientConflictsPage() {
                   </div>
                 </div>
                 <div className="p-5 md:p-6 space-y-2.5 flex-grow">
-                  <h4 className="font-sans font-[600] text-[16px] text-espresso">retinol and AHA or BHA.</h4>
+                  <h4 className="font-sans font-[600] text-[16px] text-espresso">Retinol and AHA or BHA.</h4>
                   <p className="text-[13.5px] text-grey font-sans leading-relaxed">both are exfoliating. used together they can overwhelm the skin barrier. nella separates them: AHA on one PM, retinol on another, never on the same night.</p>
                 </div>
               </div>
@@ -145,7 +147,7 @@ export default function IngredientConflictsPage() {
                   </div>
                 </div>
                 <div className="p-5 md:p-6 space-y-2.5 flex-grow">
-                  <h4 className="font-sans font-[600] text-[16px] text-espresso">retinol and microneedling.</h4>
+                  <h4 className="font-sans font-[600] text-[16px] text-espresso">Retinol and microneedling.</h4>
                   <p className="text-[13.5px] text-grey font-sans leading-relaxed">retinol pauses for seven days post-microneedling. the skin barrier is recovering. retinol on day three is not how you protect a £180 treatment.</p>
                 </div>
               </div>
@@ -165,7 +167,7 @@ export default function IngredientConflictsPage() {
                   </div>
                 </div>
                 <div className="p-5 md:p-6 space-y-2.5 flex-grow">
-                  <h4 className="font-sans font-[600] text-[16px] text-espresso">vitamin C and microneedling.</h4>
+                  <h4 className="font-sans font-[600] text-[16px] text-espresso">Vitamin C and microneedling.</h4>
                   <p className="text-[13.5px] text-grey font-sans leading-relaxed">vitamin C pauses for three days post-microneedling. low pH on a recovering barrier is a bad idea. nella holds it back automatically.</p>
                 </div>
               </div>
@@ -188,27 +190,13 @@ export default function IngredientConflictsPage() {
                   </div>
                 </div>
                 <div className="p-5 md:p-6 space-y-2.5 flex-grow">
-                  <h4 className="font-sans font-[600] text-[16px] text-espresso">niacinamide and vitamin C.</h4>
+                  <h4 className="font-sans font-[600] text-[16px] text-espresso">Niacinamide and vitamin C.</h4>
                   <p className="text-[13.5px] text-grey font-sans leading-relaxed max-w-3xl">the older science said they cancelled out. the newer science says modern formulations are mostly fine. nella allows them together but flags it if your formulation is one of the older versions.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="space-y-4 pt-8 max-w-3xl">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">What happens when you log a treatment.</h2>
-            <p className="text-[14px] text-grey font-sans leading-relaxed">
-              you log a glycolic peel on saturday. the moment you save the entry, your AHA pauses for five days. your retinol pauses for seven. your routine checklist for tonight updates: gentle cleanser, ceramide moisturiser, SPF tomorrow morning. day five: AHA returns. day seven: retinol returns. nella tells you. your routine resumes itself.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8 max-w-3xl">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-            <h2 className="font-semibold text-espresso mb-1 text-[16px]">A note on the science.</h2>
-            <p>
-              nella's conflict logic was built with input from licenced practioners and published dermatology research. the rules are reviewed quarterly. where the science is unsettled, nella errs on the side of the longer pause. your face is not the place for guesswork.
-            </p>
-          </div>
 
           <div className="space-y-4 pt-12 mt-12 w-full">
             <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
@@ -216,14 +204,14 @@ export default function IngredientConflictsPage() {
               <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">routines</h4>
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Routines</h4>
                   <p className="text-[14px] text-grey">see how the conflict logic lives inside your daily checklist.</p>
                 </div>
               </Link>
               <Link href="/what-it-does/aftercare" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">aftercare</h4>
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Aftercare</h4>
                   <p className="text-[14px] text-grey">the treatments that trigger the pauses, day by day.</p>
                 </div>
               </Link>

@@ -121,15 +121,15 @@ export default function App() {
               honest skincare tracking and offline skin journaling. crafted with total biometric privacy.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="p-2 rounded-full border border-light-grey hover:border-espresso transition-colors text-espresso">
+              <div className="p-2 rounded-full border border-light-grey/60 text-espresso/40 cursor-default">
                 <Instagram size={14} className="stroke-[2.5]" />
-              </a>
-              <a href="#" className="p-2 rounded-full border border-light-grey hover:border-espresso transition-colors text-espresso">
+              </div>
+              <div className="p-2 rounded-full border border-light-grey/60 text-espresso/40 cursor-default">
                 <Send size={14} className="stroke-[2.5]" />
-              </a>
-              <a href="#" className="p-2 rounded-full border border-light-grey hover:border-espresso transition-colors text-espresso">
+              </div>
+              <div className="p-2 rounded-full border border-light-grey/60 text-espresso/40 cursor-default">
                 <MessageCircle size={14} className="stroke-[2.5]" />
-              </a>
+              </div>
             </div>
           </div>
 

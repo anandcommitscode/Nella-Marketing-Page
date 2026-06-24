@@ -134,7 +134,7 @@ export function StoriesHeroIllustration() {
               Ingredient Conflict Detected
             </h4>
             <p className="text-[10px] text-[#E8D5CE] mt-1 leading-relaxed font-sans">
-              Retinol & BHA (salicylic acid) should not be used together in the same routine to avoid skin barrier irritation. Nella automatically schedules conflicting ingredients to safe, alternating days.
+              Retinol & BHA (salicylic acid) should not be used together in the same routine to avoid skin barrier irritation. nella automatically schedules conflicting ingredients to safe, alternating days.
             </p>
           </div>
         </div>
@@ -482,7 +482,7 @@ export function PressRoomIllustration() {
           <FileText size={18} />
         </div>
         
-        <h4 className="font-display font-semibold text-[15px] text-espresso mb-1">Nella Media kit</h4>
+        <h4 className="font-display font-semibold text-[15px] text-espresso mb-1">nella media kit</h4>
         <p className="text-[10px] text-grey leading-relaxed mb-4.5">download assets, screenshots, and brand assets.</p>
         
         <button className="w-full py-2.5 bg-[#3A2418] hover:bg-black text-[#FAF7F2] text-[10px] font-bold rounded-lg flex items-center justify-center gap-1.5 transition-colors">

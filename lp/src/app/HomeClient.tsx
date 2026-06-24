@@ -60,7 +60,7 @@ export default function HomeClient() {
                 <span className="font-display italic text-[13px] text-[#C4A067]/90">beauty companion</span>
               </div>
               <h1 className="font-display font-[600] text-[32px] sm:text-[44px] md:text-[50px] leading-[1.05] tracking-tight text-[#FAF7F2] text-left">
-                the beauty companion that keeps up with you.
+                The beauty companion that keeps up with you.
               </h1>
 
               <p className="text-[14px] sm:text-[15px] text-[#FAF7F2]/70 leading-relaxed max-w-xl text-balance">
@@ -98,7 +98,7 @@ export default function HomeClient() {
                       ))}
                     </div>
                   </div>
-                  <span className="text-[10px] text-[#FAF7F2]/50 uppercase tracking-wider font-semibold mt-1 text-left">
+                  <span className="text-[10px] text-[#FAF7F2]/50 tracking-wider font-semibold mt-1 text-left">
                     app store rating
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">the problem</span>
             </div>
             <h2 className="font-display font-[600] text-[28px] sm:text-[36px] text-espresso tracking-tight text-left">
-              you're already doing the work
+              You're already doing the work
             </h2>
           </div>
 
@@ -161,7 +161,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">four things</span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              four things, done properly.
+              Four things, done properly.
             </h2>
             <p className="text-[13.5px] text-grey font-sans">
               your treatments, your routines, your aftercare, and the bits you would have missed, finally seen.
@@ -244,7 +244,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">intelligence moment</span>
             </div>
             <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
-              the bit a notes app cannot do.
+              The bit a notes app cannot do.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -276,9 +276,9 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">process</span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              how it works.
+              How it works.
             </h2>
-            <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+            <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
               four steps. nothing complicated.
             </p>
           </div>
@@ -427,7 +427,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">glow score</span>
             </div>
             <h2 className="font-display font-[600] text-[34px] md:text-[40px] leading-tight text-espresso tracking-tight text-left">
-              the only score that tells you the truth.
+              The only score that tells you the truth.
             </h2>
 
             <p className="text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans">
@@ -455,7 +455,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">social proof</span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              loved by the women who built her.
+              Loved by the women who built her.
             </h2>
             <p className="text-[14px] text-grey font-sans">
               nella was built by a community of women who take their beauty and self-care seriously.
@@ -528,7 +528,7 @@ export default function HomeClient() {
               <span className="font-display italic text-[13px] text-[#8F6F3E]">pricing</span>
             </div>
             <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">
-              free to start. £4.99 to understand.
+              Free to start. £4.99 to understand.
             </h2>
           </div>
 
@@ -552,7 +552,14 @@ export default function HomeClient() {
               <ul className="space-y-3.5 text-[13.5px] text-espresso/80 font-sans flex-1 mb-8">
                 {['track every treatment, every product, every day', 'your AM and PM routine, with conflict logic', 'daily check-in and monthly wrap', 'aftercare and smart reminders', 'up to 20 products'].map((item, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
-                    <Check size={16} className="text-[#8F6F3E] shrink-0 mt-0.5" />
+                    <div
+                      className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      style={{
+                        background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                      }}
+                    >
+                      <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -593,10 +600,17 @@ export default function HomeClient() {
               </div>
 
               <ul className="space-y-3.5 text-[13.5px] text-espresso/80 font-sans flex-1 mb-8">
-                <div className="text-[12px] font-semibold text-espresso uppercase tracking-wider mb-4 pb-2">Everything in Core, plus:</div>
+                <div className="text-[12px] font-semibold text-espresso tracking-wider mb-4 pb-2">Everything in Core, plus:</div>
                 {['the full glow score breakdown, daily, weekly, monthly', 'day-by-day aftercare for every treatment', 'spend insights by treatment and all time', 'your full history, from day one', 'unlimited product shelf'].map((item, idx) => (
                   <li key={idx} className="flex gap-2.5 items-start">
-                    <Check size={16} className="text-[#8F6F3E] shrink-0 mt-0.5" />
+                    <div
+                      className="w-[18px] h-[18px] rounded-full flex items-center justify-center shrink-0 mt-0.5 shadow-xs"
+                      style={{
+                        background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                      }}
+                    >
+                      <Check size={11} strokeWidth={3.5} className="text-white shrink-0" />
+                    </div>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -659,8 +673,8 @@ export default function HomeClient() {
 
       {/* SECTION 10: FINAL CTA */}
       <CtaSection
-        title="your beauty, one clean thread."
-        subtitle="join the women who have stopped trying to remember it all."
+        title="Your beauty, one clean thread."
+        subtitle="Join the women who have stopped trying to remember it all."
       />
     </div>
   );

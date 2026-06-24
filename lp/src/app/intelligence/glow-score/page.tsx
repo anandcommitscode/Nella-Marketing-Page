@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Sparkles, CalendarCheck, CheckCircle2, TrendingUp, Activity, BarChart2, Check, ArrowUpRight, ArrowRight, X } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import PhaseAwareCta from '../../../components/PhaseAwareCta';
 import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export default function GlowScorePage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">The Glow Score</span>
             </div>
           </div>
@@ -37,11 +38,21 @@ export default function GlowScorePage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                the glow score.
+                The glow score.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                 one number, 0 to 100, every day. it moves with your treatments, your routine, your check-ins, your skin. calibrates over your first two weeks.
               </p>
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
             </div>
 
             {/* Right Column */}
@@ -55,17 +66,9 @@ export default function GlowScorePage() {
       </div>
 
       <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
-        <div className="space-y-10 max-w-3xl">
-          <div className="space-y-4">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">What a score should actually do.</h2>
-            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
-              <p>a score that goes up when nothing has changed is a vanity metric. a score that goes up when you take care of yourself tells you something. nella's score is the second one.</p>
-              <p>four things feed it. each one is something you actually do. each one moves the number, in its own way.</p>
-            </div>
-          </div>
-
+        <div className="space-y-10 max-w-3xl mx-auto">
           <div className="space-y-6 pt-2">
-            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4">The four things your score responds to.</h2>
+            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4 text-center">The four things your score responds to.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Card 1: Treatments on Track */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group">
@@ -89,7 +92,7 @@ export default function GlowScorePage() {
                   </div>
                 </div>
                 <div className="p-6 md:p-8 space-y-3 flex-grow">
-                  <h4 className="font-sans font-[600] text-[18px] text-espresso">treatments on track.</h4>
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">Treatments on track.</h4>
                   <p className="text-[14px] text-grey font-sans leading-relaxed">how many of your treatments are inside their expected cycle window. nails due, brows due, botox holding. the cycle of treatments is the spine of your beauty life. the largest single input because the cycle of treatments is the spine of your beauty life.</p>
                 </div>
               </div>
@@ -110,7 +113,7 @@ export default function GlowScorePage() {
                   </div>
                 </div>
                 <div className="p-6 md:p-8 space-y-3 flex-grow">
-                  <h4 className="font-sans font-[600] text-[18px] text-espresso">skin trend.</h4>
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">Skin trend.</h4>
                   <p className="text-[14px] text-grey font-sans leading-relaxed">the direction of your daily skin check-in responses over the last fourteen days. moving up, holding steady, slipping. the second largest input because your skin is the result that everything else feeds.</p>
                 </div>
               </div>
@@ -131,7 +134,7 @@ export default function GlowScorePage() {
                   </div>
                 </div>
                 <div className="p-6 md:p-8 space-y-3 flex-grow">
-                  <h4 className="font-sans font-[600] text-[18px] text-espresso">check-in streak.</h4>
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">Check-in streak.</h4>
                   <p className="text-[14px] text-grey font-sans leading-relaxed">how consistently you have done your daily skin check-in over the last 14 days. not the absolute streak, the percentage. the input that rewards consistency without punishing a bad week.</p>
                 </div>
               </div>
@@ -151,54 +154,31 @@ export default function GlowScorePage() {
                   </div>
                 </div>
                 <div className="p-6 md:p-8 space-y-3 flex-grow">
-                  <h4 className="font-sans font-[600] text-[18px] text-espresso">routine consistency.</h4>
+                  <h4 className="font-sans font-[600] text-[18px] text-espresso">Routine consistency.</h4>
                   <p className="text-[14px] text-grey font-sans leading-relaxed">how many of your scheduled routine steps you've completed in the last fortnight. AM and PM. retinol on the right nights. SPF in the morning. the smallest of the four because consistency without trend is not the whole picture.</p>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="space-y-4 pt-8">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">What the number actually means.</h2>
-            <p className="text-[14px] text-grey font-sans leading-relaxed">
-              a 67 today is not the same as a 67 last month. the score moves with your routine, your treatments, your check-ins, and your skin. its job is to show you the trend, not give you a grade. if it's moving up, something is working. if it's moving down, something is slipping. if it's holding, you're on rhythm. nella will tell you why it moved. that's the part that's useful.
-            </p>
-          </div>
-
-          <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
-            <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-            <h2 className="font-semibold text-espresso mb-1 text-[16px]">The first 14 days.</h2>
-            <p>
-              your score isn't visible for the first fourteen days. nella needs that time to learn your patterns: your treatment cycles, your check-in habit, your routine consistency. without it, the number would be a guess. on day fifteen, the score appears.
-            </p>
-          </div>
-
-          <div className="space-y-4 pt-8">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">What you see on Core and what you see on Pro.</h2>
-            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
-              <p>on Core, you see the score and a one-line statement. "on your game. everything is working." or "drifting. the brows are overdue." the headline.</p>
-              <p>on Pro, you see why. a breakdown of what's working for you, and what isn't. nella will personalise your recommendations to get your score moving in the right direction. "your skin trend is pulling your score down. you've missed three evening check-ins this week."</p>
-            </div>
-          </div>
-
-          <div className="space-y-4 pt-12 mt-12">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Link href="/what-it-does/insights" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">insights</h4>
-                  <p className="text-[14px] text-grey">the score is one part of the insights picture. see the rest.</p>
-                </div>
-              </Link>
-              <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">routines</h4>
-                  <p className="text-[14px] text-grey">routine consistency is one of the four inputs.</p>
-                </div>
-              </Link>
-            </div>
+        <div className="space-y-4 pt-12 mt-12 w-full">
+          <h2 className="font-display font-semibold text-[24px] text-espresso">Related.</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/what-it-does/insights" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <div className="group-hover:translate-x-1 transition-transform duration-300">
+                <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Insights</h4>
+                <p className="text-[14px] text-grey">the score is one part of the insights picture. see the rest.</p>
+              </div>
+            </Link>
+            <Link href="/what-it-does/routines" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <div className="group-hover:translate-x-1 transition-transform duration-300">
+                <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Routines</h4>
+                <p className="text-[14px] text-grey">routine consistency is one of the four inputs.</p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

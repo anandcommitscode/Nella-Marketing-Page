@@ -30,10 +30,10 @@ export default function ArticleOnePage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/stories" className="hover:text-espresso transition-colors">Stories</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
-              <span className="text-espresso font-semibold">the myth of the ten-step routine</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
+              <span className="text-espresso font-semibold">article-three</span>
             </div>
           </div>
 
@@ -44,7 +44,7 @@ export default function ArticleOnePage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">science</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                the myth of the ten-step routine.
+                The myth of the ten-step routine.
               </h1>
             </div>
 
@@ -86,7 +86,7 @@ export default function ArticleOnePage() {
         <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-12 max-w-3xl mx-auto">
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
           <h4 className="font-semibold text-espresso mb-1">Why this matters</h4>
-          Nella was built to cut through the noise. The glow score doesn&rsquo;t reward you for logging more products; it rewards you for consistency and clinical adherence.
+          nella was built to cut through the noise. The glow score doesn&rsquo;t reward you for logging more products; it rewards you for consistency and clinical adherence.
         </div>
 
       </article>

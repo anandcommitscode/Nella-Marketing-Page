@@ -32,13 +32,13 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               {activeTab === 'hub' ? (
                 <span className="text-espresso font-semibold">What it Does</span>
               ) : (
                 <>
                   <button onClick={() => selectTab('hub')} className="hover:text-espresso transition-colors font-semibold">What it Does</button>
-                  <span className="font-normal text-[#1F1410]/30">&gt;</span>
+                  <span className="font-normal text-[#1F1410]/30">›</span>
                   <span className="text-espresso font-semibold">
                     {activeTab === 'tracking' && 'Tracking'}
                     {activeTab === 'routines' && 'Routines'}
@@ -60,7 +60,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    what it actually does.
+                    What it actually does.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     your treatments logged. your routines conflict-checked. your aftercare automated. four things, done properly.
@@ -74,7 +74,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    tracking.
+                    Tracking.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     every treatment, every clinic, every cost, in one place that remembers. injectables, facials, hair, nails, brows, lashes, body. nella nudges you before each one is due.
@@ -88,7 +88,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    routines.
+                    Routines.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     your AM and PM, in the right order, with the conflicts already sorted. build your routine and nella runs it, adjusts it, and tells you what is on tonight.
@@ -102,7 +102,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    aftercare.
+                    Aftercare.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     what to do, what to pause, what to put back on. day by day.
@@ -116,7 +116,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">what it actually does</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    insights.
+                    Insights.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     a daily score, a monthly wrap, and the patterns you could not see before.
@@ -149,6 +149,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
                           activeTab === 'insights' ? 'insights' :
                             'what-it-does'
                   }
+                  customImage={activeTab === 'aftercare' ? '/aftercarekamobile.jpeg' : undefined}
                   autoPlay
                   lockedTab
                 />
@@ -172,7 +173,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
               <div className="space-y-6">
                 <div className="text-center space-y-3 mb-10">
                   <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">The four-step flow.</h2>
-                  <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                  <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
                     four steps. nothing complicated.
                   </p>
                 </div>
@@ -367,7 +368,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
             >
               <div className="text-center space-y-3 mb-6">
                 <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How tracking works.</h2>
-                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
                   every appointment and cost, logged in seconds.
                 </p>
               </div>
@@ -460,7 +461,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
             >
               <div className="text-center space-y-3 mb-6">
                 <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How routines work.</h2>
-                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
                   active ingredient management, science-backed.
                 </p>
               </div>
@@ -536,7 +537,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
             >
               <div className="text-center space-y-3 mb-6">
                 <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How aftercare works.</h2>
-                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
                   personalized, day-by-day healing protocols.
                 </p>
               </div>
@@ -625,7 +626,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
             >
               <div className="text-center space-y-3 mb-6">
                 <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">How insights work.</h2>
-                <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+                <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
                   clear metrics matching your skin's actual progress.
                 </p>
               </div>
@@ -695,7 +696,7 @@ export default function WhatItDoesClient({ activeTab }: WhatItDoesClientProps) {
 
       <CtaSection
         title="Take control of your vanity."
-        subtitle="stop throwing money at vague skincare routines. track, refine, and see what works."
+        subtitle="Stop throwing money at vague skincare routines. Track, refine, and see what works."
         backgroundClass="bg-transparent"
       />
     </div>

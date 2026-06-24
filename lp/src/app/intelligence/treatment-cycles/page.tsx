@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CalendarDays, Activity, Bell, Clock, RefreshCw, Scissors, Sparkles, Syringe } from 'lucide-react';
 import CtaSection from '../../../components/CtaSection';
+import PhaseAwareCta from '../../../components/PhaseAwareCta';
 import SurgicalMobileMockup from '../../../components/SurgicalMobileMockup';
 
 export const metadata: Metadata = {
@@ -22,9 +23,9 @@ export default function TreatmentCyclesPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <Link href="/intelligence" className="hover:text-espresso transition-colors">Intelligence</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Treatment Cycles</span>
             </div>
           </div>
@@ -37,11 +38,21 @@ export default function TreatmentCyclesPage() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">system logic</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                treatment cycles.
+                Treatment cycles.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                 botox wears off. microneedling needs a course. fillers dissolve. nella knows the timeline of your treatment and reminds you when it's time to go back.
               </p>
+              <div className="pt-4 flex justify-start">
+                <PhaseAwareCta
+                  preLaunchText="Join the waitlist"
+                  postLaunchText="Start your free trial"
+                  className="w-[180px] py-4 text-[#1F1410] rounded-full font-semibold text-[14px] transition-all cursor-pointer text-center flex justify-center items-center hover:opacity-90 shadow-md"
+                  style={{
+                    background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
+                  }}
+                />
+              </div>
             </div>
 
             {/* Right Column */}
@@ -57,16 +68,8 @@ export default function TreatmentCyclesPage() {
       <div className="text-left max-w-7xl mx-auto px-6 pt-36 md:pt-56 space-y-8 md:space-y-12 relative z-0">
 
         <div className="space-y-10 w-full">
-          <div className="space-y-4 max-w-3xl">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">How nella thinks about cycles.</h2>
-            <div className="space-y-4 text-[14px] text-grey font-sans leading-relaxed">
-              <p>every treatment has its own cycle length. nails grow in three weeks. brows in six. botox holds for twelve to sixteen. dermal filler lasts six to twelve months depending on the product and the area. these aren't arbitrary. they're biological.</p>
-              <p>nella holds the cycle for every treatment you log. so the reminder you get is based on when this one is actually due.</p>
-            </div>
-          </div>
-
           <div className="space-y-6 pt-2">
-            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4">Your beauty rotation.</h2>
+            <h2 className="font-display font-semibold text-[24px] text-espresso mb-4 text-center">Your beauty rotation.</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 items-stretch">
               {/* Card 1: Nails */}
               <div className="bg-white border border-[#E8E5DC] rounded-[32px] overflow-hidden flex flex-col shadow-sm hover:shadow-md transition-shadow group lg:col-span-2 h-full">
@@ -164,15 +167,12 @@ export default function TreatmentCyclesPage() {
                 </div>
               </div>
             </div>
-            <div className="text-[14px] text-grey font-sans leading-relaxed mt-4 max-w-3xl">
-              <p>a treatment that needs three weeks gets a three-week cycle. one that needs three months gets three months. nella holds the right one for each.</p>
-              <p className="font-medium text-espresso mt-2">the full list of treatments and their cycles lives inside the app.</p>
-            </div>
+
           </div>
 
-          <div className="space-y-4 pt-8 max-w-3xl">
-            <h2 className="font-display font-semibold text-[24px] text-espresso">The reminder logic.</h2>
-            <p className="text-[14px] text-grey font-sans leading-relaxed mb-6">
+          <div className="space-y-4 pt-8 max-w-3xl mx-auto">
+            <h2 className="font-display font-semibold text-[24px] text-espresso text-center">The reminder logic.</h2>
+            <p className="text-[14px] text-grey font-sans leading-relaxed mb-6 text-center">
               for every treatment, nella sends four nudges across roughly a month.
             </p>
 
@@ -182,7 +182,7 @@ export default function TreatmentCyclesPage() {
                   <span className="text-[12px] font-bold text-[#8F6F3E]">1</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-espresso text-[14px]">seven days before due.</h4>
+                  <h4 className="font-semibold text-espresso text-[14px]">Seven days before due.</h4>
                   <p className="text-[13.5px] text-grey mt-0.5">a heads-up. plenty of time to book.</p>
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function TreatmentCyclesPage() {
                   <span className="text-[12px] font-bold text-[#8F6F3E]">2</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-espresso text-[14px]">on the day.</h4>
+                  <h4 className="font-semibold text-espresso text-[14px]">On the day.</h4>
                   <p className="text-[13.5px] text-grey mt-0.5">if you have not booked yet, this is the nudge.</p>
                 </div>
               </div>
@@ -202,7 +202,7 @@ export default function TreatmentCyclesPage() {
                   <span className="text-[12px] font-bold text-[#8F6F3E]">3</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-espresso text-[14px]">three days overdue.</h4>
+                  <h4 className="font-semibold text-espresso text-[14px]">Three days overdue.</h4>
                   <p className="text-[13.5px] text-grey mt-0.5">it is slipping. one more chance to catch it.</p>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function TreatmentCyclesPage() {
                   <span className="text-[12px] font-bold text-[#8F6F3E]">4</span>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-espresso text-[14px]">fourteen days overdue.</h4>
+                  <h4 className="font-semibold text-espresso text-[14px]">Fourteen days overdue.</h4>
                   <p className="text-[13.5px] text-grey mt-0.5">the cycle has broken. nella tells you, then stops nagging.</p>
                 </div>
               </div>
@@ -225,14 +225,14 @@ export default function TreatmentCyclesPage() {
               <Link href="/what-it-does/tracking" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">tracking</h4>
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Tracking</h4>
                   <p className="text-[14px] text-grey">see how the cycle data fits inside the treatment log.</p>
                 </div>
               </Link>
               <Link href="/stories/treatments" className="block p-6 md:p-8 bg-white border border-[#E8E5DC] rounded-3xl relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
                 <div className="group-hover:translate-x-1 transition-transform duration-300">
-                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">stories on treatments</h4>
+                  <h4 className="font-semibold text-[16px] md:text-[18px] text-espresso mb-2 group-hover:text-[#8F6F3E] transition-colors">Stories on treatments</h4>
                   <p className="text-[14px] text-grey">honest guides to what treatments cost, last, and feel like.</p>
                 </div>
               </Link>

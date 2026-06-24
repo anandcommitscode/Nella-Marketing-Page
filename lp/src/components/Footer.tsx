@@ -22,15 +22,15 @@ export default function Footer() {
             honest skincare tracking and offline skin journaling. crafted with total biometric privacy.
           </p>
           <div className="flex gap-4 pt-2">
-            <a href="#" className="p-2.5 rounded-full border border-[#3A2418] hover:border-[#8F6F3E] hover:bg-[#8F6F3E]/10 transition-all text-[#FAF7F2]">
+            <div className="p-2.5 rounded-full border border-[#3A2418]/60 text-[#FAF7F2]/40 cursor-default">
               <Instagram size={14} className="stroke-[2.5]" />
-            </a>
-            <a href="#" className="p-2.5 rounded-full border border-[#3A2418] hover:border-[#8F6F3E] hover:bg-[#8F6F3E]/10 transition-all text-[#FAF7F2]">
+            </div>
+            <div className="p-2.5 rounded-full border border-[#3A2418]/60 text-[#FAF7F2]/40 cursor-default">
               <Twitter size={14} className="stroke-[2.5]" />
-            </a>
-            <a href="#" className="p-2.5 rounded-full border border-[#3A2418] hover:border-[#8F6F3E] hover:bg-[#8F6F3E]/10 transition-all text-[#FAF7F2]">
+            </div>
+            <div className="p-2.5 rounded-full border border-[#3A2418]/60 text-[#FAF7F2]/40 cursor-default">
               <Linkedin size={14} className="stroke-[2.5]" />
-            </a>
+            </div>
           </div>
         </div>
 

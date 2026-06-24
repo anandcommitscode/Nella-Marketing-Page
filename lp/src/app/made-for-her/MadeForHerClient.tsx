@@ -32,13 +32,13 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               {activeTab === 'hub' ? (
                 <span className="text-espresso font-semibold">Made for Her</span>
               ) : (
                 <>
                   <button onClick={() => selectTab('hub')} className="hover:text-espresso transition-colors font-semibold">Made for Her</button>
-                  <span className="font-normal text-[#1F1410]/30">&gt;</span>
+                  <span className="font-normal text-[#1F1410]/30">›</span>
                   <span className="text-espresso font-semibold">
                     {activeTab === 'track' && 'Tracker'}
                     {activeTab === 'refine' && 'Refiner'}
@@ -59,7 +59,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    made for her.
+                    Made for her.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     if you have a face, and you occasionally put things on it, she is for you.
@@ -73,7 +73,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    the woman who has forgotten when she last booked.
+                    The woman who has forgotten when she last booked.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
@@ -87,7 +87,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    the woman who wants to dial it in.
+                    The woman who wants to dial it in.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     she has a ten-step routine but isn't sure what's working. nella strips it back to the essentials.
@@ -101,7 +101,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     <span className="font-display italic text-[13px] text-[#8F6F3E]">made for her</span>
                   </div>
                   <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                    the woman who tries everything.
+                    The woman who tries everything.
                   </h1>
                   <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                     her algorithm is a dangerous place. nella helps her figure out what actually works.
@@ -128,7 +128,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 <SurgicalMobileMockup
                   key={activeTab}
                   initialScreen={
-                    activeTab === 'track' ? 'checkin' :
+                    activeTab === 'track' ? 'history' :
                       activeTab === 'refine' ? 'routines' :
                         activeTab === 'discover' ? 'shelf' :
                           'shelf'
@@ -153,9 +153,10 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
               transition={{ duration: 0.25 }}
               className="space-y-6 md:space-y-12 max-w-[1002px] mx-auto w-full"
             >
-              <div className="space-y-6 pt-4 text-center">
-                <p className="text-[13px] font-medium text-espresso uppercase tracking-wider font-sans text-center">
-                  but broadly, we see three types of women using her.
+              <div className="text-center space-y-3 mb-10">
+                <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight text-center">Three women nella is made for.</h2>
+                <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
+                  broadly, we see three types of women using her.
                 </p>
               </div>
 
@@ -163,7 +164,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 {/* Card 1 */}
                 <div
                   onClick={() => selectTab('track')}
-                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden relative cursor-pointer"
+                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md hover:border-[#8F6F3E]/40 transition-all duration-300 transform hover:-translate-y-1 group overflow-hidden relative cursor-pointer"
                 >
                   <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
                   {/* Graphic */}
@@ -180,15 +181,15 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="mt-auto text-left w-full">
+                  <div className="flex-1 flex flex-col text-left w-full">
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      the woman who has forgotten when she last booked.
+                      The woman who has forgotten when she last booked.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
                       your nails, your brows, your botox, your hair. nella keeps the diary you should have been keeping.
                     </p>
-                    <div className="pt-4 flex flex-col gap-1">
-                      <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
+                    <div className="mt-auto pt-4 flex flex-col gap-1">
+                      <span className="text-[12px] font-semibold text-[#8F6F3E] flex items-center gap-1 group-hover:underline transition-all duration-300">
                         see how she uses nella &rarr;
                       </span>
                     </div>
@@ -198,7 +199,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 {/* Card 2 */}
                 <div
                   onClick={() => selectTab('refine')}
-                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden relative cursor-pointer"
+                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md hover:border-[#8F6F3E]/40 transition-all duration-300 transform hover:-translate-y-1 group overflow-hidden relative cursor-pointer"
                 >
                   <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
                   {/* Graphic */}
@@ -216,15 +217,15 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="mt-auto text-left w-full">
+                  <div className="flex-1 flex flex-col text-left w-full">
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      the woman who wants to dial it in.
+                      The woman who wants to dial it in.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
                       she has a ten-step routine but isn't sure what's working. nella strips it back to the essentials.
                     </p>
-                    <div className="pt-4 flex flex-col gap-1">
-                      <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
+                    <div className="mt-auto pt-4 flex flex-col gap-1">
+                      <span className="text-[12px] font-semibold text-[#8F6F3E] flex items-center gap-1 group-hover:underline transition-all duration-300">
                         see how she uses nella &rarr;
                       </span>
                     </div>
@@ -234,7 +235,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 {/* Card 3 */}
                 <div
                   onClick={() => selectTab('discover')}
-                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden relative cursor-pointer"
+                  className="bg-white border border-[#E8E5DC] rounded-[32px] p-6 flex flex-col h-full shadow-sm hover:shadow-md hover:border-[#8F6F3E]/40 transition-all duration-300 transform hover:-translate-y-1 group overflow-hidden relative cursor-pointer"
                 >
                   <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#DEC68B]/10 to-transparent rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
                   {/* Graphic */}
@@ -247,15 +248,15 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     </div>
                   </div>
                   {/* Content */}
-                  <div className="mt-auto text-left w-full">
+                  <div className="flex-1 flex flex-col text-left w-full">
                     <h4 className="font-display font-[600] text-[24px] text-espresso leading-tight mb-3">
-                      the woman who tries everything.
+                      The woman who tries everything.
                     </h4>
                     <p className="text-[14px] text-grey font-sans leading-relaxed">
                       her algorithm is a dangerous place. nella helps her figure out what actually works.
                     </p>
-                    <div className="pt-4 flex flex-col gap-1">
-                      <span className="text-[12px] font-semibold text-espresso flex items-center gap-1 group-hover:text-[#8F6F3E] transition-colors">
+                    <div className="mt-auto pt-4 flex flex-col gap-1">
+                      <span className="text-[12px] font-semibold text-[#8F6F3E] flex items-center gap-1 group-hover:underline transition-all duration-300">
                         see how she uses nella &rarr;
                       </span>
                     </div>
@@ -265,7 +266,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h4 className="font-semibold text-espresso mb-1">Nella adapts to you.</h4>
+                <h4 className="font-semibold text-espresso mb-1">nella adapts to you.</h4>
                 to whatever shape your beauty life is in this month. the score, the reminders, the routine, the aftercare. they all change based on what you actually do.
               </div>
             </motion.div>
@@ -284,7 +285,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h3 className="font-semibold text-espresso mb-1">sound like you?</h3>
+                <h3 className="font-semibold text-espresso mb-1">Sound like you?</h3>
                 you spent £250 on beauty last month... you think. your nail tech has texted twice. your highlights were march or april, you can&rsquo;t quite remember. your botox is due. or overdue. you&rsquo;ve meant to write it all down. you haven&rsquo;t.
               </div>
 
@@ -329,7 +330,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                           </div>
                         ))}
                         <div className="mt-2 bg-espresso p-4 rounded-2xl shadow-sm flex flex-col items-center justify-center gap-1 group-hover:scale-105 transition-transform duration-500">
-                          <span className="text-[10px] text-warm-ivory uppercase tracking-wider">This Month</span>
+                          <span className="text-[10px] text-warm-ivory tracking-wider">This Month</span>
                           <span className="text-[18px] font-display font-bold text-white">£450</span>
                         </div>
                       </div>
@@ -370,7 +371,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                 <span className="font-medium text-espresso">now it&rsquo;s one dashboard, one reminder system, and a running spend total she actually looks at. her brows haven&rsquo;t been overdue since february.</span>
               </div>
 
-              <div className="pt-4 flex gap-4">
+              <div className="pt-4 flex justify-center w-full">
                 <Link
                   href="/what-it-does/tracking"
                   className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer inline-flex"
@@ -394,7 +395,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h3 className="font-semibold text-espresso mb-1">sound like you?</h3>
+                <h3 className="font-semibold text-espresso mb-1">Sound like you?</h3>
                 you use retinol on monday and thursday. your bathroom cabinet is worth £600. you still break out on your chin. you suspect the new serum is doing it, but you changed three things at once.
               </div>
 
@@ -429,7 +430,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                       <div className="w-[85%] bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 group-hover:-translate-y-2 transition-transform duration-500 z-10 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-[#DEC68B]/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
                         <div className="flex justify-between items-start mb-4 relative z-10">
-                          <span className="text-[11px] font-bold uppercase tracking-widest text-[#8F6F3E]">Glow Score</span>
+                          <span className="text-[11px] font-bold tracking-widest text-[#8F6F3E]">Glow Score</span>
                           <span className="text-[11px] font-bold text-[#8F6F3E] bg-[#FAF7F2] px-2 py-0.5 rounded-full border border-[#E8E5DC]">+8 pts</span>
                         </div>
                         <div className="flex items-end gap-3 mb-2 relative z-10">
@@ -474,13 +475,13 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h4 className="font-semibold text-espresso mb-1">what it looks like in real life</h4>
+                <h4 className="font-semibold text-espresso mb-1">What it looks like in real life</h4>
                 priya thought her routine was working. it was fine. but nella's glow score showed her that every time she used the £80 peel, her skin dipped for three days before recovering.
                 <br /><br />
                 <span className="font-medium text-espresso">she swapped it for a gentler lactic acid. her score went up twelve points. her barrier thanked her.</span>
               </div>
 
-              <div className="pt-4 flex gap-4">
+              <div className="pt-4 flex justify-center w-full">
                 <Link
                   href="/what-it-does/routines"
                   className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer inline-flex"
@@ -504,7 +505,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h3 className="font-semibold text-espresso mb-1">sound like you?</h3>
+                <h3 className="font-semibold text-espresso mb-1">Sound like you?</h3>
                 you bought the LED mask. you tried polynucleotides. you have four different cleansers. you know exactly what is new. but you couldn't honestly tell someone what is actually making the difference.
               </div>
 
@@ -519,11 +520,11 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                     <div className="bg-[#FAF7F2] w-full flex-1 flex items-center justify-center p-6 relative overflow-hidden">
                       <div className="flex gap-4 z-10">
                         <div className="bg-white p-3 rounded-xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:-translate-y-2 transition-transform duration-500">
-                          <span className="text-[10px] text-grey uppercase font-bold">New Serum</span>
+                          <span className="text-[10px] text-grey font-bold">New Serum</span>
                           <span className="text-[14px] font-display font-bold text-espresso">£120</span>
                         </div>
                         <div className="bg-white p-3 rounded-xl shadow-sm border border-[#E8E5DC] flex flex-col gap-1 group-hover:translate-y-2 transition-transform duration-500 delay-75">
-                          <span className="text-[10px] text-grey uppercase font-bold">LED Mask</span>
+                          <span className="text-[10px] text-grey font-bold">LED Mask</span>
                           <span className="text-[14px] font-display font-bold text-espresso">£350</span>
                         </div>
                       </div>
@@ -540,7 +541,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
                       <div className="w-[85%] h-[80%] bg-white rounded-2xl shadow-sm border border-[#E8E5DC] p-4 flex flex-col gap-3 z-10 group-hover:scale-105 transition-transform duration-500">
                         <div className="flex items-center justify-between border-b border-[#FAF7F2] pb-2">
                           <LineChart size={14} className="text-[#8F6F3E]" />
-                          <span className="text-[9px] font-bold text-espresso uppercase">Glow Score</span>
+                          <span className="text-[9px] font-bold text-espresso">Glow Score</span>
                         </div>
                         <div className="flex-1 w-full flex items-end gap-1.5 pt-4 pb-2">
                           {[30, 40, 35, 50, 70, 85, 80].map((h, i) => (
@@ -576,13 +577,13 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
               <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl text-[13.5px] text-grey font-sans leading-relaxed shadow-sm relative overflow-hidden mt-8">
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E]"></div>
-                <h4 className="font-semibold text-espresso mb-1">what it looks like in real life</h4>
+                <h4 className="font-semibold text-espresso mb-1">What it looks like in real life</h4>
                 hannah used to try things for a week and move on. her cabinet was full, her skin was angry.
                 <br /><br />
                 <span className="font-medium text-espresso">now she logs a new product in nella. the timeline shows her it takes three weeks for her glow score to catch up. she stops panic-buying. she lets the actives do their job.</span>
               </div>
 
-              <div className="pt-4 flex gap-4">
+              <div className="pt-4 flex justify-center w-full">
                 <Link
                   href="/what-it-does/aftercare"
                   className="text-[12px] font-semibold text-[#8F6F3E] hover:underline cursor-pointer inline-flex"
@@ -598,7 +599,7 @@ export default function MadeForHerClient({ activeTab }: MadeForHerClientProps) {
 
       <CtaSection
         title="Stop trying to remember it all."
-        subtitle="let nella hold the details so you can focus on the results."
+        subtitle="Let nella hold the details so you can focus on the results."
         backgroundClass="bg-transparent"
       />
     </div>

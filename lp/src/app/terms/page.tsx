@@ -19,12 +19,12 @@ export default function TermsOfServicePage() {
       <div className="space-y-6 pt-4 pb-12">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
+          <span className="text-grey font-normal">›</span>
           <span className="text-espresso">Terms of Service</span>
         </div>
         
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] tracking-tight text-espresso leading-none">
-          terms of service.
+          Terms of service.
         </h1>
         <p className="text-[14px] text-grey font-sans">
           nella is not a medical device. it is a tracking and logic system based on standard clinical guidelines. it does not replace the advice of your dermatologist or aesthetic practitioner.

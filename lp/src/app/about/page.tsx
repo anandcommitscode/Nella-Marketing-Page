@@ -30,7 +30,7 @@ export default function AboutHubPage() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">About</span>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function AboutHubPage() {
               <BookOpen size={16} strokeWidth={2.5} />
             </div>
             <h3 className="font-display font-semibold text-[18px] sm:text-[20px] text-espresso mb-2">
-              our story.
+              Our story.
             </h3>
             <p className="text-[13.5px] text-grey font-sans leading-relaxed flex-grow">
               why nella exists. the gap, the build, and the women who shaped her.
@@ -92,7 +92,7 @@ export default function AboutHubPage() {
               <Shield size={16} strokeWidth={2.5} />
             </div>
             <h3 className="font-display font-semibold text-[18px] sm:text-[20px] text-espresso mb-2">
-              how nella thinks about your data.
+              How nella thinks about your data.
             </h3>
             <p className="text-[13.5px] text-grey font-sans leading-relaxed flex-grow">
               no ads. no data sales. no sponsored content. your beauty life is yours. here is how it stays that way.
@@ -111,7 +111,7 @@ export default function AboutHubPage() {
               <Newspaper size={16} strokeWidth={2.5} />
             </div>
             <h3 className="font-display font-semibold text-[18px] sm:text-[20px] text-espresso mb-2">
-              press.
+              Press.
             </h3>
             <p className="text-[13.5px] text-grey font-sans leading-relaxed flex-grow">
               coverage, press kit, and contact details for journalists and partners.

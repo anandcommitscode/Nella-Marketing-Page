@@ -30,7 +30,7 @@ export default function WaitlistClient() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
             <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-            <span className="font-normal text-[#1F1410]/30">&gt;</span>
+            <span className="font-normal text-[#1F1410]/30">›</span>
             <span className="text-espresso font-semibold">Waitlist</span>
           </div>
         </div>
@@ -54,7 +54,7 @@ export default function WaitlistClient() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">early reservation</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] tracking-tight text-espresso leading-none">
-                join the waitlist.
+                Join the waitlist.
               </h1>
               <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
                 nella is currently in closed beta. we launch on iOS in August 2026. reserve your spot below.
@@ -99,7 +99,7 @@ export default function WaitlistClient() {
                   placeholder="your name"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-[#D3D1C7]/70 text-[13px] placeholder-grey/50 bg-[#FAF7F2]/30 focus:outline-none focus:ring-1 focus:ring-[#8F6F3E]/40 focus:border-[#8F6F3E]/40 font-sans"
+                  className="w-full px-5 py-3 rounded-full border border-[#D3D1C7]/70 text-[13px] placeholder-grey/50 bg-[#FAF7F2]/30 focus:outline-none focus:ring-1 focus:ring-[#8F6F3E]/40 focus:border-[#8F6F3E]/40 font-sans"
                 />
               </div>
 
@@ -114,7 +114,7 @@ export default function WaitlistClient() {
                   placeholder="you@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl border border-[#D3D1C7]/70 text-[13px] placeholder-grey/50 bg-[#FAF7F2]/30 focus:outline-none focus:ring-1 focus:ring-[#8F6F3E]/40 focus:border-[#8F6F3E]/40 font-sans"
+                  className="w-full px-5 py-3 rounded-full border border-[#D3D1C7]/70 text-[13px] placeholder-grey/50 bg-[#FAF7F2]/30 focus:outline-none focus:ring-1 focus:ring-[#8F6F3E]/40 focus:border-[#8F6F3E]/40 font-sans"
                 />
               </div>
 
@@ -122,7 +122,7 @@ export default function WaitlistClient() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full relative overflow-hidden group py-3.5 rounded-xl text-[#1F1410] text-[13px] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm uppercase tracking-wider block cursor-pointer hover:opacity-90"
+                  className="w-full relative overflow-hidden group py-3.5 rounded-full text-[#1F1410] text-[13px] font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm block cursor-pointer hover:opacity-90"
                   style={{
                     background: 'linear-gradient(135deg, #DEC68B 0%, #C4A067 50%, #B8924A 100%)'
                   }}

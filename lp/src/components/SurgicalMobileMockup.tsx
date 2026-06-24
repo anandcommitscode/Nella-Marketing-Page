@@ -467,7 +467,7 @@ export default function SurgicalMobileMockup({
               <img
                 src={customImage}
                 alt="App Screen"
-                className={`w-full h-full object-contain object-top ${imageClassName}`}
+                className={`w-full h-full object-cover object-top scale-[1.03] ${imageClassName}`}
               />
             </div>
           )}
@@ -495,9 +495,9 @@ export default function SurgicalMobileMockup({
 
                 {/* center logo & beauty intelligence */}
                 <div className="text-center space-y-4 relative z-10">
-                  <img 
-                    src="/nellaBrown.png" 
-                    alt="nella logo" 
+                  <img
+                    src="/nellaBrown.png"
+                    alt="nella logo"
                     className="h-16 w-auto object-contain mx-auto mb-2"
                   />
 
@@ -549,7 +549,7 @@ export default function SurgicalMobileMockup({
                     <div className="space-y-1.5 text-left">
                       <div className="flex items-center gap-1.5">
                         <span className="h-[1.5px] w-4 bg-deep-gold"></span>
-                        <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider font-sans">let's get to know each other</span>
+                        <span className="text-[10px] font-bold text-deep-gold tracking-wider font-sans">let's get to know each other</span>
                       </div>
                       <h2 className="text-[28px] font-display font-medium text-espresso leading-tight">
                         Welcome <span className="italic">back.</span>
@@ -650,7 +650,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="flex-1 overflow-y-auto py-5 space-y-6 text-left" style={{ scrollbarWidth: 'none' }}>
                   <div className="space-y-1.5">
-                    <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider block font-sans">welcome to nella</span>
+                    <span className="text-[10px] font-bold text-deep-gold tracking-wider block font-sans">welcome to nella</span>
                     <h2 className="text-[26px] font-display font-medium text-espresso leading-tight">
                       What should we call <span className="italic font-bold">you?</span>
                     </h2>
@@ -703,7 +703,7 @@ export default function SurgicalMobileMockup({
                                 }`}
                             >
                               <div className="flex items-center gap-3">
-                                <div className={`w-5 h-5 rounded-full border flex items-center justify-center ${isSelected ? 'border-deep-gold bg-[#8F6F3E] text-white' : 'border-light-grey bg-white'
+                                <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ${isSelected ? 'border-deep-gold bg-[#8F6F3E] text-white' : 'border-light-grey bg-white'
                                   }`}>
                                   {isSelected && <Check size={10} className="stroke-[3]" />}
                                 </div>
@@ -752,7 +752,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="flex-1 overflow-y-auto py-5 space-y-5 text-left" style={{ scrollbarWidth: 'none' }}>
                   <div className="space-y-1.5">
-                    <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider block font-sans">your skin goals</span>
+                    <span className="text-[10px] font-bold text-deep-gold tracking-wider block font-sans">your skin goals</span>
                     <h2 className="text-[26px] font-display font-medium text-espresso leading-tight">
                       What's on your <span className="italic font-bold">mind?</span>
                     </h2>
@@ -838,7 +838,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="flex-1 overflow-y-auto py-5 space-y-5 text-left" style={{ scrollbarWidth: 'none' }}>
                   <div className="space-y-1.5">
-                    <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider block font-sans">your beauty rotation</span>
+                    <span className="text-[10px] font-bold text-deep-gold tracking-wider block font-sans">your beauty rotation</span>
                     <h2 className="text-[26px] font-display font-medium text-espresso leading-tight text-balance">
                       What do you treat yourself <span className="italic font-bold">to?</span>
                     </h2>
@@ -1026,7 +1026,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="flex-1 overflow-y-auto py-4 space-y-4 text-left font-sans" style={{ scrollbarWidth: 'none' }}>
                   <div className="space-y-1">
-                    <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider block font-sans">let's build your avatar...</span>
+                    <span className="text-[10px] font-bold text-deep-gold tracking-wider block font-sans">let's build your avatar...</span>
                     <h2 className="text-[22px] font-display font-medium text-espresso leading-tight">
                       How do you usually wear your <span className="italic font-bold">hair?</span>
                     </h2>
@@ -1105,7 +1105,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="flex-1 overflow-y-auto py-4 space-y-4 text-left font-sans" style={{ scrollbarWidth: 'none' }}>
                   <div className="space-y-1">
-                    <span className="text-[10px] font-bold text-deep-gold uppercase tracking-wider block font-sans">your current set up</span>
+                    <span className="text-[10px] font-bold text-deep-gold tracking-wider block font-sans">your current set up</span>
                     <h2 className="text-[22px] font-display font-medium text-espresso leading-tight">
                       What's on your <span className="italic font-bold">shelf?</span>
                     </h2>
@@ -1169,7 +1169,7 @@ export default function SurgicalMobileMockup({
 
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <span className="text-[11.5px] font-bold text-deep-gold uppercase tracking-wider block font-sans">you're in</span>
+                    <span className="text-[11.5px] font-bold text-deep-gold tracking-wider block font-sans">you're in</span>
                     <h2 className="text-[34px] font-display font-medium text-espresso leading-tight">
                       Welcome, <span className="italic font-bold text-deep-gold">{userName || 'Nella'}.</span>
                     </h2>
@@ -1184,7 +1184,7 @@ export default function SurgicalMobileMockup({
                       { text: "Your dashboard is live" }
                     ].map((idx) => (
                       <div key={idx.text} className="flex items-center gap-3">
-                        <div className="w-5 h-5 bg-deep-sage/12 text-deep-sage rounded-full flex items-center justify-center">
+                        <div className="w-5 h-5 bg-[#8F6F3E]/10 text-[#8F6F3E] rounded-full flex items-center justify-center shrink-0">
                           <Check size={12} className="stroke-[3]" />
                         </div>
                         <span className="text-[12.5px]">{idx.text}</span>
@@ -1267,8 +1267,8 @@ export default function SurgicalMobileMockup({
                                     setInsightsCategory(cat);
                                   }}
                                   className={`px-3 py-1.5 border rounded-full capitalize shrink-0 cursor-pointer transition-all ${isSelected
-                                      ? 'bg-[#1F1410] border-transparent text-[#FAF7F2] shadow-2xs'
-                                      : 'bg-transparent border-very-light-grey text-grey hover:text-espresso'
+                                    ? 'bg-[#1F1410] border-transparent text-[#FAF7F2] shadow-2xs'
+                                    : 'bg-transparent border-very-light-grey text-grey hover:text-espresso'
                                     }`}
                                 >
                                   {cat}
@@ -1463,7 +1463,7 @@ export default function SurgicalMobileMockup({
                               <div className="relative w-36 h-36 mx-auto rounded-full border-4 border-dashed border-[#EFD9A8]/50 flex flex-col items-center justify-center bg-white shadow-md">
                                 <span className="text-[10px] font-bold tracking-widest text-[#8F6F3E] uppercase leading-none font-sans">current score</span>
                                 <span className="font-display font-black text-5xl text-espresso tracking-tighter mt-1">83</span>
-                                <span className="text-[10px] font-bold text-deep-sage tracking-wider mt-1 flex items-center gap-0.5 font-sans">
+                                <span className="text-[10px] font-bold text-[#8F6F3E] tracking-wider mt-1 flex items-center gap-0.5 font-sans">
                                   ▲ +4 pts <span className="text-grey font-medium">this wk</span>
                                 </span>
                               </div>
@@ -1551,8 +1551,8 @@ export default function SurgicalMobileMockup({
                               <div className="absolute -left-12 -bottom-12 w-32 h-32 bg-[#FAF7F2]/10 rounded-full blur-2xl pointer-events-none" />
 
                               <div className="flex justify-between items-center">
-                                <span className="text-[9px] font-bold text-[#EFD9A8] uppercase tracking-widest block font-sans font-semibold">nella wrap</span>
-                                <span className="text-[9px] uppercase font-bold tracking-wider font-mono text-[#FAF7F2]/60">may 2026</span>
+                                <span className="text-[9px] font-bold text-[#EFD9A8] tracking-widest block font-sans font-semibold">nella wrap</span>
+                                <span className="text-[9px] font-bold tracking-wider font-mono text-[#FAF7F2]/60">may 2026</span>
                               </div>
 
                               <div className="space-y-3 pt-2 text-center pointer-events-none">
@@ -1828,7 +1828,7 @@ export default function SurgicalMobileMockup({
                                 <h4 className="text-[12px] font-bold text-espresso leading-snug line-clamp-2">{p.name}</h4>
                               </div>
                             </div>
-                            <span className="text-[8px] font-bold px-2 py-0.5 bg-deep-sage/10 text-deep-sage rounded-full uppercase shrink-0">active</span>
+                            <span className="text-[8px] font-bold px-2 py-0.5 bg-[#8F6F3E]/10 text-[#8F6F3E] rounded-full uppercase shrink-0">active</span>
                           </div>
                         ))}
                       </div>
@@ -1877,21 +1877,27 @@ export default function SurgicalMobileMockup({
                             <p className="text-[11px] text-grey leading-relaxed">
                               <strong>Retinol</strong> and <strong>Vitamin C</strong> are scheduled together in AM. We recommend separating them.
                             </p>
-                            <button
-                              onClick={() => {
-                                setConflictResolved(true);
-                                setTimeout(() => {
-                                  setShowConflictWarning(false);
-                                  setShelfProducts(prev => prev.map(p => p.id === '2' ? { ...p, timing: 'PM' } : p));
-                                }, 1000);
-                              }}
-                              className={`py-1.5 px-3 rounded-full text-[10.5px] font-bold transition-all self-start ${conflictResolved
-                                  ? 'bg-deep-sage text-white'
-                                  : 'bg-espresso hover:bg-darkest-espresso text-[#FAF7F2]'
-                                }`}
-                            >
-                              {conflictResolved ? '✓ Retinol moved to PM' : 'Move Retinol to PM'}
-                            </button>
+                            {conflictResolved ? (
+                              <div className="flex items-center gap-2 mt-1 self-start">
+                                <div className="w-5 h-5 rounded-full bg-[#FAF7F2] border border-[#8F6F3E] flex items-center justify-center text-[#8F6F3E] shrink-0">
+                                  <Check size={10} className="stroke-[3]" />
+                                </div>
+                                <span className="text-[10.5px] font-bold text-espresso">Retinol moved to PM</span>
+                              </div>
+                            ) : (
+                              <button
+                                onClick={() => {
+                                  setConflictResolved(true);
+                                  setTimeout(() => {
+                                    setShowConflictWarning(false);
+                                    setShelfProducts(prev => prev.map(p => p.id === '2' ? { ...p, timing: 'PM' } : p));
+                                  }, 1200);
+                                }}
+                                className="py-1.5 px-3 rounded-full text-[10.5px] font-bold transition-all self-start bg-espresso hover:bg-darkest-espresso text-[#FAF7F2]"
+                              >
+                                Move Retinol to PM
+                              </button>
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
@@ -1912,19 +1918,19 @@ export default function SurgicalMobileMockup({
                                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                   key={p.id}
                                   onClick={() => setRoutineChecks(prev => ({ ...prev, [p.id]: !isDone }))}
-                                  className={`p-3.5 rounded-2.5xl border flex items-center justify-between cursor-pointer transition-all ${isDone ? 'bg-cream/30 border-deep-sage/40 opacity-80' : 'bg-white border-very-light-grey hover:bg-cream/10'
+                                  className={`p-3.5 rounded-2.5xl border flex items-center justify-between cursor-pointer transition-all ${isDone ? 'bg-white border-[#E8E5DC] opacity-75' : 'bg-white border-very-light-grey hover:bg-cream/10'
                                     }`}
                                 >
                                   <div className="flex items-center gap-3">
                                     {/* drag dots */}
                                     <div className="text-light-grey text-xs tracking-tighter select-none">::</div>
                                     <div>
-                                      <h4 className={`text-[12.5px] font-bold text-espresso leading-tight ${isDone ? 'line-through text-grey' : ''}`}>{p.name}</h4>
+                                      <h4 className="text-[12.5px] font-bold text-espresso leading-tight">{p.name}</h4>
                                       <p className="text-[10px] text-grey mt-0.5">{p.brand}</p>
                                     </div>
                                   </div>
-                                  <button className={`w-5.5 h-5.5 rounded-full border flex items-center justify-center transition-all ${isDone ? 'bg-deep-sage border-transparent text-white' : 'border-light-grey bg-white'}`}>
-                                    {isDone && <Check size={11} className="stroke-[3]" />}
+                                  <button className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all shrink-0 ${isDone ? 'border-[#8F6F3E] bg-[#FAF7F2] text-[#8F6F3E]' : 'border-light-grey bg-white'}`}>
+                                    {isDone && <Check size={11} className="stroke-[3] text-[#8F6F3E]" />}
                                   </button>
                                 </motion.div>
                               );
@@ -1947,11 +1953,11 @@ export default function SurgicalMobileMockup({
                   {/* YOU tab - Profile & Reset options */}
                   {activeTab === 'you' && (
                     <div className="space-y-4">
-                      <div className="text-[10px] font-bold text-grey uppercase tracking-wider font-sans">your profile</div>
+                      <div className="text-[10px] font-bold text-grey tracking-wider font-sans">your profile</div>
 
                       <div className="space-y-1">
                         <h2 className="text-[26px] font-display font-medium text-espresso leading-none">{userName || 'Nella'}.</h2>
-                        <p className="text-[10.5px] text-grey font-sans uppercase font-bold tracking-wider">member since june 2026 · 1 days of glowing</p>
+                        <p className="text-[10.5px] text-grey font-sans font-bold tracking-wider">member since june 2026 · 1 days of glowing</p>
                       </div>
 
                       {/* At a glance block */}

@@ -19,7 +19,7 @@ export default function CookiePolicyPage() {
       <div className="space-y-6 pt-4 pb-12">
         <div className="flex items-center gap-2 text-[13px] font-semibold text-grey">
           <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-          <span className="text-grey font-normal">&gt;</span>
+          <span className="text-grey font-normal">›</span>
           <span className="text-espresso">Cookie Policy</span>
         </div>
         

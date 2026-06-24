@@ -15,7 +15,7 @@ export default function WhyNellaClient() {
           <div className="max-w-7xl mx-auto px-6 pt-6 pb-0 relative z-10">
             <div className="flex items-center gap-2 text-[12px] font-semibold text-[#1F1410]/60">
               <Link href="/" className="hover:text-espresso transition-colors">Home</Link>
-              <span className="font-normal text-[#1F1410]/30">&gt;</span>
+              <span className="font-normal text-[#1F1410]/30">›</span>
               <span className="text-espresso font-semibold">Why Nella</span>
             </div>
           </div>
@@ -27,7 +27,7 @@ export default function WhyNellaClient() {
                 <span className="font-display italic text-[13px] text-[#8F6F3E]">every woman has her people</span>
               </div>
               <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[54px] leading-tight tracking-tight text-espresso">
-                why nella.
+                Why Nella.
               </h1>
               <div className="space-y-4">
                 <p className="text-[15px] sm:text-[16px] text-espresso/80 max-w-[420px] font-sans leading-relaxed">
@@ -64,9 +64,9 @@ export default function WhyNellaClient() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-5xl mx-auto">
           {/* Section 2: The Problem */}
           <div className="p-8 rounded-[32px] bg-[#FAF7F2] border border-[#E8E5DC] space-y-4 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
-            <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide uppercase">The Problem</span>
+            <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide">the problem</span>
             <h2 className="font-display font-[600] text-[24px] md:text-[28px] text-espresso leading-tight">
-              your beauty drawer is chaos.
+              Your beauty drawer is chaos.
             </h2>
             <p className="text-[14px] text-grey font-sans leading-relaxed">
               your clinic visits are unconnected. your phone notes are full of units, dates, and names you can't remember. you spend money at different places, but no single record holds the investment.
@@ -77,7 +77,7 @@ export default function WhyNellaClient() {
           <div className="p-8 rounded-[32px] bg-white border border-[#E8E5DC] space-y-4 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden group">
             <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-50 group-hover:opacity-100 transition-opacity"></div>
             <div className="group-hover:translate-x-1 transition-transform duration-300 space-y-4">
-              <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide uppercase">The Solution</span>
+              <span className="text-[11px] text-[#8F6F3E] font-medium tracking-wide">the solution</span>
               <h2 className="font-display font-[600] text-[24px] md:text-[28px] text-espresso leading-tight">
                 nella holds the whole picture.
               </h2>
@@ -91,8 +91,8 @@ export default function WhyNellaClient() {
         {/* Section 4: What this means in practice */}
         <div className="space-y-8 max-w-5xl mx-auto">
           <div className="text-center space-y-3 max-w-xl mx-auto pb-4">
-            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight">what she actually does.</h2>
-            <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">four things, done properly.</p>
+            <h2 className="font-display font-[600] text-[32px] sm:text-[40px] text-espresso tracking-tight">What she actually does.</h2>
+            <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">four things, done properly.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -129,7 +129,7 @@ export default function WhyNellaClient() {
             <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl relative overflow-hidden shadow-sm group hover:shadow-md transition-shadow duration-300 my-8">
               <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-30 group-hover:opacity-100 transition-opacity duration-300"></div>
               <h3 className="font-display font-[600] text-[20px] md:text-[24px] leading-tight text-espresso cursor-default">
-                if you value evidence over vibes, nella is for you.
+                If you value evidence over vibes, nella is for you.
               </h3>
             </div>
             <a href="/made-for-her" className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-[#8F6F3E] hover:underline">
@@ -141,7 +141,7 @@ export default function WhyNellaClient() {
         {/* CTA Section */}
         <div className="w-full bg-[#FAF7F2] pt-8 rounded-3xl mt-16 overflow-hidden">
           <CtaSection
-            title="let nella hold the full picture."
+            title="Let nella hold the full picture."
             subtitle="free to use. £4.99 a month for pro. cancel anytime."
             backgroundClass="bg-transparent"
           />

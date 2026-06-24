@@ -17,7 +17,7 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
         </div>
 
         <h1 className="font-display font-[600] text-[36px] sm:text-[48px] md:text-[56px] leading-[1.1] tracking-tight text-espresso text-balance">
-          every woman has her people.
+          Every woman has her people.
         </h1>
 
         <div className="space-y-4 text-[14px] sm:text-[15px] text-grey leading-relaxed font-sans max-w-2xl">
@@ -36,7 +36,7 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
       {/* SECTION 2: THE PROBLEM */}
       <section className="p-8 rounded-3xl bg-gradient-to-br from-[#FAF7F2] to-[#F5EDE0] border border-[#E8E5DC] space-y-4">
         <h2 className="font-display font-semibold text-[22px] sm:text-[26px] text-espresso tracking-tight">
-          the system you have right now is a notes app and a memory.
+          The system you have right now is a notes app and a memory.
         </h2>
         <div className="space-y-4 text-[13.5px] text-grey leading-relaxed font-sans">
           <p>
@@ -69,9 +69,9 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
       {/* SECTION 4: WHAT THIS MEANS IN PRACTICE */}
       <section className="space-y-6">
         <h2 className="font-display font-semibold text-[24px] text-espresso tracking-tight">
-          what it actually does.
+          What it actually does.
         </h2>
-        <p className="text-[13px] text-grey font-sans uppercase tracking-widest font-semibold">
+        <p className="text-[13px] text-grey font-sans tracking-widest font-semibold">
           four things, done properly.
         </p>
 
@@ -90,7 +90,7 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
         </div>
 
         <div className="pt-2">
-          <button 
+          <button
             onClick={() => onNavigate('what-it-does')}
             className="text-[12.5px] font-semibold text-[#8F6F3E] hover:underline flex items-center gap-1 cursor-pointer"
           >
@@ -111,13 +111,13 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
           <div className="p-6 bg-white border border-[#E8E5DC] rounded-2xl relative overflow-hidden shadow-sm group hover:shadow-md transition-shadow duration-300 my-6">
             <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#DEC68B] to-[#8F6F3E] opacity-30 group-hover:opacity-100 transition-opacity duration-300"></div>
             <h3 className="font-display font-[600] text-[20px] leading-tight text-espresso cursor-default">
-              if you value evidence over vibes, nella is for you.
+              If you value evidence over vibes, nella is for you.
             </h3>
           </div>
         </div>
 
         <div className="pt-2">
-          <button 
+          <button
             onClick={() => onNavigate('made-for-her')}
             className="text-[12.5px] font-semibold text-[#8F6F3E] hover:underline flex items-center gap-1 cursor-pointer"
           >
@@ -130,7 +130,7 @@ export default function WhyNellaView({ onNavigate }: WhyNellaViewProps) {
       <section className="p-8 pb-10 bg-[#1F1410] text-[#FAF7F2] rounded-3xl text-center space-y-6 !mt-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#8F6F3E]/5 pointer-events-none"></div>
         <h2 className="font-display font-[600] text-[26px] sm:text-[32px] text-[#FAF7F2] tracking-tight">
-          let nella hold the full picture.
+          Let nella hold the full picture.
         </h2>
         <p className="text-[13px] text-white/80 max-w-lg mx-auto font-sans leading-relaxed">
           join the women who have stopped relying on screenshot albums and a notes app.
